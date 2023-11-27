@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "e93a2b50-3f50-4670-8242-8b9af26a3584",
+  "meta": {
+    "lastUpdated": "2020-03-13T20:01:09.625+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRJurisdicaoOrgaoEmissor-1.0",
+  "version": "1.0",
+  "name": "BRJurisdicaoOrgaoExpedidor",
+  "title": "Jurisdição do Órgão Expedidor",
+  "status": "active",
+  "date": "2020-03-13T20:01:33.7451754+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Jurisdição de Órgãos Expedidores",
+  "fhirVersion": "4.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient.identifier"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Jurisdição do Órgão Expedidor",
+        "definition": "Unidade Federativa ou o número da região do Órgão Expedidor de um documento.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRJurisdicaoOrgaoEmissor-1.0"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "positiveInt"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Unidade Federativa",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRUnidadeFederativa-1.0"
+        }
+      }
+    ]
+  }
+}

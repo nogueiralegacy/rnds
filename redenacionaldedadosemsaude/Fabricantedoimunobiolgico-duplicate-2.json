@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2021-02-05T14:54:32.806+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRFabricanteImunobiologico-1.0",
+  "version": "1.0",
+  "name": "Fabricante do imunobiológico",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-02-05T14:54:32.2909517+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Fabricante do imunobiológico administrado",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFabricantePNI",
+        "version": "*"
+      }
+    ]
+  }
+}

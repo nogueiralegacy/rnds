@@ -1,0 +1,100 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-11T19:14:51.806+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRPapelProblemaDiagnostico",
+  "version": "1.0",
+  "name": "Classificação do papel de um problema e diagnóstico.",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-03-11T19:15:12.2909517+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Tradução para o português do brasil da classificação do papel de um problema/diagnóstico.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPapelProblemaDiagnostico",
+        "version": "*"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+        "version": "*",
+        "concept": [
+          {
+            "code": "AD",
+            "display": "Admission diagnosis",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Diagnóstico presente na admissão"
+              }
+            ]
+          },
+          {
+            "code": "DD",
+            "display": "Discharge diagnosis",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Diagnóstico de alta"
+              }
+            ]
+          },
+          {
+            "code": "CC",
+            "display": "Chief complaint",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Queixa principal."
+              }
+            ]
+          },
+          {
+            "code": "CM",
+            "display": "Comorbidity diagnosis",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Diagnóstico de comorbidade"
+              }
+            ]
+          },
+          {
+            "code": "pre-op",
+            "display": "pre-op diagnosis",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Diagnóstico pré-operatório"
+              }
+            ]
+          },
+          {
+            "code": "post-op",
+            "display": "post-op diagnosis",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Diagnóstico pós-operatório"
+              }
+            ]
+          },
+          {
+            "code": "billing",
+            "display": "Billing",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Faturamento"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

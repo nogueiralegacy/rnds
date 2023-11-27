@@ -1,0 +1,429 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "7ba7dc20-9251-417f-bc02-0a08c2986710",
+  "meta": {
+    "lastUpdated": "2020-03-13T19:47:50.646+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+  "version": "01.10",
+  "name": "BRIndividuo",
+  "title": "Indivíduo",
+  "status": "active",
+  "date": "2020-03-13T19:48:14.539093+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Indíviduo, sujeito da assistência à saúde.",
+  "purpose": "O indivíudo é o sujeito central para os processos informativos de dados em saúde. Não deve ser utilizado quando na condição de profissional.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "short": "Indivíduo",
+        "definition": "Dados demográficos sobre um indivíduo enquanto sujeito de ações e serviços de saúde.",
+        "alias": [
+          "Paciente",
+          "Cidadão",
+          "Pessoa",
+          "Usuário"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.extension:registerQuality",
+        "path": "Patient.extension",
+        "sliceName": "registerQuality",
+        "definition": "Grau de completude do cadastro do indivíduo, escore de 0 a 100.",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQualidadeCadastroIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:registerQuality.value[x]",
+        "path": "Patient.extension.value[x]",
+        "mustSupport": false
+      },
+      {
+        "id": "Patient.extension:parents",
+        "path": "Patient.extension",
+        "sliceName": "parents",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRParentesIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:parents.extension",
+        "path": "Patient.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2
+      },
+      {
+        "id": "Patient.extension:parents.extension:relationship",
+        "path": "Patient.extension.extension",
+        "sliceName": "relationship",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:parents.extension:parent",
+        "path": "Patient.extension.extension",
+        "sliceName": "parent",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:raceEthnicity",
+        "path": "Patient.extension",
+        "sliceName": "raceEthnicity",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRacaCorEtnia-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:raceEthnicity.extension",
+        "path": "Patient.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.extension:raceEthnicity.extension:race",
+        "path": "Patient.extension.extension",
+        "sliceName": "race",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:raceEthnicity.extension:indigenousEthnicity",
+        "path": "Patient.extension.extension",
+        "sliceName": "indigenousEthnicity",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:birthCity",
+        "path": "Patient.extension",
+        "sliceName": "birthCity",
+        "short": "Município de Nascimento",
+        "definition": "Município onde o indivíduo nasceu.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMunicipio-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:birthCountry",
+        "path": "Patient.extension",
+        "sliceName": "birthCountry",
+        "short": "País de Origem",
+        "definition": "País de Origem do indivíduo.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:Nationality",
+        "path": "Patient.extension",
+        "sliceName": "Nationality",
+        "definition": "Nacionalidade do indivíduo.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNacionalidade"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:protectedPerson",
+        "path": "Patient.extension",
+        "sliceName": "protectedPerson",
+        "short": "Indivíduo com Dados Protegidos",
+        "definition": "Indivíduo com maior restrição à disponibilização de seus dados, por possuir grande exposição pública (ex.: político, esportista, artista famoso etc.), estar em programa de proteção à testemunha, o objeto de seu trabalho colocá-lo em risco (investigadores da inteligência, p.ex.), dentre outros.",
+        "alias": [
+          "VIP"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoProtegido-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:naturalization",
+        "path": "Patient.extension",
+        "sliceName": "naturalization",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNaturalizacao-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDocumentoIndividuo-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "short": "Registro em Uso",
+        "definition": "Indica se o registro desse indivíduo ainda está em uso.\r\nA codição de inativo pode indicar que tanto uma informação errada quanto um indivíduo falecido, e indivíduos falecidos podem permanecer ativos por algum tempo após o falecimento para fins de registro da informação.\r\nLogo, esta não deve ser opção para identificar um indivíduo falecido, sendo mais adequado o elemento deceased.",
+        "comment": "Valor padrão é true.",
+        "requirements": "Identificar registros que não estão mais em uso.",
+        "min": 1,
+        "mustSupport": true,
+        "isModifierReason": "Indica que o registro não deve mais se tratado como válido."
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "type": [
+          {
+            "code": "HumanName",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNomeIndividuo-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "type": [
+          {
+            "code": "ContactPoint",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMeioContato-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "short": "Sexo",
+        "definition": "male: masculino.\r\nfemale: feminino.\r\nunknown: ignorado.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Sexo",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"
+        }
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "short": "Data de Nascimento",
+        "definition": "Data de nascimento do indivíduo",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "short": "Óbito",
+        "definition": "Indica se o indivíduo foi a óbito. O óbito pode ser interpretado pelo booleano = true ou pela existência de uma data/hora.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "definition": "Dados do(s) endereço(s) onde o indivíduo pode ser localizado.",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREndereco-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.address.use",
+        "path": "Patient.address.use",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.type",
+        "path": "Patient.address.type",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.line:streetType",
+        "path": "Patient.address.line",
+        "sliceName": "streetType",
+        "min": 1
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "short": "Estado Civil",
+        "definition": "Complexo das qualidades do indivíudo referentes à ordem pública, à ordem privada e à ordem física do ser humano. Refere-se, assim, à cidadania, à família, e à capacidade civil.\r\nMIRABETE, Julio Fabbrini. Código de processo penal interpretado.11. ed. 6. tir. São Paulo: Atlas, 2003.",
+        "max": "0",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.maritalStatus.coding",
+        "path": "Patient.maritalStatus.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.maritalStatus.coding.system",
+        "path": "Patient.maritalStatus.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Patient.maritalStatus.coding.code",
+        "path": "Patient.maritalStatus.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Patient.maritalStatus.coding.display",
+        "path": "Patient.maritalStatus.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Patient.maritalStatus.coding.userSelected",
+        "path": "Patient.maritalStatus.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.maritalStatus.text",
+        "path": "Patient.maritalStatus.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.multipleBirth[x]",
+        "path": "Patient.multipleBirth[x]",
+        "short": "Indivíduo Nasceu em Parto Gemelar",
+        "definition": "Indica se o indivíduo é parte de um parto múltiplo (gemelar) de forma booleana (true = sim) ou pela ordem de nascimento (inteiro).",
+        "max": "0"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact",
+        "path": "Patient.contact",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner",
+        "path": "Patient.generalPractitioner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization",
+        "path": "Patient.managingOrganization",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
+        "max": "0"
+      }
+    ]
+  }
+}

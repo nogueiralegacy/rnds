@@ -1,0 +1,256 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "abe19423-94f2-490a-911e-a82ff5665164",
+  "meta": {
+    "lastUpdated": "2020-03-13T19:55:15.942+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLotacaoProfissional-1.0",
+  "version": "1.0",
+  "name": "BRLotacaoProfissional",
+  "title": "Lotação Profissional",
+  "status": "active",
+  "date": "2020-03-13T19:55:40.0631986+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Lotação de um profissional em um Estabelecimento de Saúde.",
+  "purpose": "É necessário entender o vínculo entre profissionais e seus papéis/cargos/funções de atuação dentro de um Estabelecimento de Saúde.",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole",
+        "path": "PractitionerRole",
+        "short": "Lotação Profissional",
+        "definition": "Um conjunto específico de funções / locais / especialidades / serviços que um profissional pode executar em uma organização por um período de tempo.",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.extension",
+        "path": "PractitionerRole.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "PractitionerRole.extension:isSUS",
+        "path": "PractitionerRole.extension",
+        "sliceName": "isSUS",
+        "short": "Atende SUS",
+        "definition": "True = Sim; False = Não.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAtendeSUS-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.identifier",
+        "path": "PractitionerRole.identifier",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.active",
+        "path": "PractitionerRole.active",
+        "short": "Registro em Uso",
+        "definition": "Indica se o registro dessa lotação profissional ainda está em uso.\r\nA codição de inativo pode indicar que tanto uma informação errada quanto o profissional não estar mais lotado no Estabelecimento de Saúde.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.period",
+        "path": "PractitionerRole.period",
+        "short": "Período da Lotação",
+        "definition": "Período em que o profissional está ou esteve lotado no Estabelecimento de Saúde.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.period.start",
+        "path": "PractitionerRole.period.start",
+        "short": "Início da Lotação",
+        "definition": "Competência (mês/ano) ou data em que o profissional foi lotado no Estabelecimento de Saúde.",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.period.end",
+        "path": "PractitionerRole.period.end",
+        "short": "Término da Lotação",
+        "definition": "Competência (mês/ano) ou data em que o profissional foi desligado da lotação no Estabelecimento de Saúde."
+      },
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "short": "Profissional",
+        "definition": "O profissional que está ou foi lotado no Estabelecimento de Saúde.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.practitioner.reference",
+        "path": "PractitionerRole.practitioner.reference",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.practitioner.type",
+        "path": "PractitionerRole.practitioner.type",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.practitioner.identifier",
+        "path": "PractitionerRole.practitioner.identifier",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.practitioner.display",
+        "path": "PractitionerRole.practitioner.display",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "short": "Estabelecimento de Saúde",
+        "definition": "O Estabelecimento de Saúde onde o profissional está ou foi lotado.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization.reference",
+        "path": "PractitionerRole.organization.reference",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.organization.type",
+        "path": "PractitionerRole.organization.type",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.organization.identifier",
+        "path": "PractitionerRole.organization.identifier",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.organization.display",
+        "path": "PractitionerRole.organization.display",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
+        "short": "Ocupação",
+        "definition": "Ocupação(ões) do indivíduo durante a lotação.",
+        "comment": "Uma pessoa pode ter mais de um papel.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Ocupacao",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
+        }
+      },
+      {
+        "id": "PractitionerRole.code.coding",
+        "path": "PractitionerRole.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "PractitionerRole.code.coding.system",
+        "path": "PractitionerRole.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.code.coding.code",
+        "path": "PractitionerRole.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.code.coding.display",
+        "path": "PractitionerRole.code.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.code.coding.userSelected",
+        "path": "PractitionerRole.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.code.text",
+        "path": "PractitionerRole.code.text",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.healthcareService",
+        "path": "PractitionerRole.healthcareService",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.telecom",
+        "path": "PractitionerRole.telecom",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.availableTime",
+        "path": "PractitionerRole.availableTime",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.notAvailable",
+        "path": "PractitionerRole.notAvailable",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.availabilityExceptions",
+        "path": "PractitionerRole.availabilityExceptions",
+        "max": "0"
+      },
+      {
+        "id": "PractitionerRole.endpoint",
+        "path": "PractitionerRole.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}

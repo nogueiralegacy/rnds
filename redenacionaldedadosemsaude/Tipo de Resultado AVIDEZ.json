@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-26T13:16:11.587+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoAVIDEZ",
+  "version": "1.0",
+  "name": "Tipo de Resultado AVIDEZ",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-26T13:16:09.8385573+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Code System utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo com o tipo de resultado AVIDEZ.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Baixa Avidez"
+    },
+    {
+      "code": "2",
+      "display": "Alta Avidez"
+    },
+    {
+      "code": "3",
+      "display": "Indeterminado"
+    }
+  ]
+}

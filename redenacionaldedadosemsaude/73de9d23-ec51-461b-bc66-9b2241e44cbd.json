@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "73de9d23-ec51-461b-bc66-9b2241e44cbd",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-20T20:31:13.276+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMotivoDesfechoDocumentos-1.0",
+  "version": "1.0",
+  "name": "Motivo do desfecho do Contato Assistencial (SA, RAC e CMD)",
+  "title": "Motivo do desfecho do Contato Assistencial (SA, RAC e CMD)",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-09-20T20:31:12.9132459+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "ValueSet utilizado para classificar o motivo de conclusão total ou parcial do contato assistencial. Para uso com o Sumário de Alta, Registro de Atendimento Clínico e Conjunto Mínimo de Dados gerado por integradores.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRMotivoDesfecho",
+        "version": "*",
+        "concept": [
+          {
+            "code": "01"
+          },
+          {
+            "code": "02"
+          },
+          {
+            "code": "03"
+          },
+          {
+            "code": "04"
+          },
+          {
+            "code": "05"
+          },
+          {
+            "code": "06"
+          },
+          {
+            "code": "07"
+          },
+          {
+            "code": "08"
+          },
+          {
+            "code": "09"
+          }
+        ]
+      }
+    ]
+  }
+}
