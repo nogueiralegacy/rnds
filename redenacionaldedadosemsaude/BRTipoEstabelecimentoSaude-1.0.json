@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-12T13:27:41.424+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoEstabelecimentoSaude-1.0",
+  "version": "1.0",
+  "name": "Tipo de Estabelecimento de Saúde",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-12T13:27:40.6996671+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "ValueSet utilizado para classificar o tipo de estabelecimento de saúde.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoEstabelecimentoSaude",
+        "version": "*"
+      }
+    ]
+  }
+}

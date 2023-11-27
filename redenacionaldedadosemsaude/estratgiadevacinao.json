@@ -1,0 +1,170 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2021-12-24T12:00:59.742+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BREstrategiaVacinacao",
+  "version": "01.01",
+  "name": "Estratégia de Vacinação",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-11T18:12:20.2627546+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica a estratégia de vacinação adotada.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Rotina",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Routine immunization"
+        },
+        {
+          "language": "es",
+          "value": "Rutina"
+        }
+      ]
+    },
+    {
+      "code": "2",
+      "display": "Especial",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Special"
+        },
+        {
+          "language": "es",
+          "value": "Especial"
+        }
+      ]
+    },
+    {
+      "code": "3",
+      "display": "Bloqueio",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Blocking vaccination"
+        },
+        {
+          "language": "es",
+          "value": "Vacunación de bloqueo"
+        }
+      ]
+    },
+    {
+      "code": "4",
+      "display": "Intensificação",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Intensification"
+        },
+        {
+          "language": "es",
+          "value": "Intensificación"
+        }
+      ]
+    },
+    {
+      "code": "5",
+      "display": "Campanha indiscriminada",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Indiscriminate campaign"
+        },
+        {
+          "language": "es",
+          "value": "Campaña indiscriminada"
+        }
+      ]
+    },
+    {
+      "code": "6",
+      "display": "Campanha seletiva",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Selective campaign"
+        },
+        {
+          "language": "es",
+          "value": "Campaña selectiva"
+        }
+      ]
+    },
+    {
+      "code": "7",
+      "display": "Soroterapia",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Serum therapy"
+        },
+        {
+          "language": "es",
+          "value": "Sueroterapia"
+        }
+      ]
+    },
+    {
+      "code": "8",
+      "display": "Serviço Privado",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Private Sector"
+        },
+        {
+          "language": "es",
+          "value": "Servicio privado"
+        }
+      ]
+    },
+    {
+      "code": "9",
+      "display": "Monitoramento rápido de cobertura vacinal",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Rapid monitoring of vaccination coverage"
+        },
+        {
+          "language": "es",
+          "value": "Seguimiento rápido de la cobertura de vacunación"
+        }
+      ]
+    },
+    {
+      "code": "10",
+      "display": "Pesquisa",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Trials"
+        },
+        {
+          "language": "es",
+          "value": "Ensayos clínicos"
+        }
+      ]
+    },
+    {
+      "code": "11",
+      "display": "Pré-exposição"
+    },
+    {
+      "code": "12",
+      "display": "Pós-exposição"
+    },
+    {
+      "code": "13",
+      "display": "Reexposição"
+    }
+  ]
+}

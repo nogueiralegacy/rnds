@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-11T19:14:51.806+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaCondicao",
+  "version": "1.0",
+  "name": "Classificação de uma condição.",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-03-11T19:15:12.2909517+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Tradução para o português do brasil da classificação de uma condição",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+        "version": "*",
+        "concept": [
+          {
+            "code": "problem-list-item",
+            "display": "Problem List Item",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Problema listado"
+              }
+            ]
+          },
+          {
+            "code": "encounter-diagnosis",
+            "display": "Encounter Diagnosis",
+            "designation": [
+              {
+                "language": "pt-br",
+                "value": "Diagnóstico"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,1 +1,12 @@
-# rnds
+# Guia de mudanças
+## Descrição
+Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](https://simplifier.net/RedeNacionaldeDadosemSaude) para ficarem compativeis com o padrão FHIR, versão R4. Essas mudanças são mínimas e visam manter total coerência com os artefatos originais disponibilizados.
+
+| Resource Type | Arquivo | ERRO | Mudança
+| ------------- | ------------- | ------------- | ------------- |
+| StructureDefinition | BRAgendamentoRegulacaoAssistencial | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusAgendamentoRegulacaoAssistencial a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável | Substitui o Value Set BRStatusAgendamentoRegulacaoAssistencial pelo original appointmentstatus\|4.0.1, tendo em vista que o Value Set brasileiro é apenas uma tradução do oficial.
+| CodeSystem | CondioMaternal | Tanto a variável "meta.lastUpdate" quanto a variável "date" estão no formato errado | Foi adcionado "Z" ao final do valor das variáveis para indicar o fuso horário.
+| ConceptMap | COVID-19VaccineMarketingAuthorizationHolderManufacturerBRImunobiologicoUE | Elemento "id" ultrapassava o limite superior de 64 caracteres | Substitui o id COVID-19VaccineMarketingAuthorizationHolderManufacturerBRImunobiologicoUE por cOVID-19VaccineMarketingAuthorizationManufacturerBRImunobiologico, como "id" é um identificador lógico, servindo somente para identifica-lo no servidor local, essa mudança não o afeta.
+| ConceptMap | ImunobiologicoUECOVID-19VaccineMarketingAuthorizationHolderM | Elemento "id" ultrapassava o limite superior de 64 caracteres | Substitui o id ImunobiologicoUECOVID-19VaccineMarketingAuthorizationHolderM por ImunobiologicoCOVID-19VaccineMarketingAuthorizationM, como "id" é um identificador lógico, servindo somente para identifica-lo no servidor local, essa mudança não o afeta.
+| ValueSet | valuesetbrgrupoatendimento | A variável "date" esta no formato errado | Foi adicionado "Z" ao final do valor da variável para indicar o fuso horário.
+| StructureDefinition | BRRegistroImunobiologicoAdministradoRotina | A variável "date" esta no formato errado | Foi adicionado "Z" ao final do valor da variável para indicar o fuso horário.

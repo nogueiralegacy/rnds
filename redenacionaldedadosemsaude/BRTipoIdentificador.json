@@ -1,0 +1,316 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-11T18:25:18.303+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
+  "version": "201701A",
+  "name": "Tipo de Identificador",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-11T18:25:38.8137622+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o tipo de indicador que está sendo utilizado.",
+  "content": "complete",
+  "property": [
+    {
+      "code": "use",
+      "description": "Uso do Tipo do Identificador",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "AUTH",
+      "display": "Código de Autorização",
+      "definition": "Identificador da permissão para a realização de um procedimento.",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "procedure"
+        }
+      ]
+    },
+    {
+      "code": "BRACRA",
+      "display": "Número de inscrição no Conselho Regional de Administração (CRA)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRESS",
+      "display": "Número de inscrição no Conselho Regional de Serviço Social (CRESS)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRB",
+      "display": "Número de inscrição no Conselho Regional de Biblioteconomia (CRB)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRC",
+      "display": "Número de inscrição no Conselho Regional de Contabilidade (CRC)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRECI",
+      "display": "Número de inscrição no Conselho Regional de Corretores de Imóveis (CRECI)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACORECON",
+      "display": "Número de inscrição no Conselho Regional de Economia (CORECON)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACREA",
+      "display": "Número de inscrição no Conselho Regional de Engenharia e Agronomia (CREA)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACONFRE",
+      "display": "Número de inscrição no Conselho Regional de Estatística (CONRE)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRF",
+      "display": "Número de inscrição no Conselho Regional de Farmácia (CRF)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACREFITO",
+      "display": "Número de inscrição no Conselho Regional de Fisioterapia e Terapia Ocupacional (CREFITO)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRMV",
+      "display": "Número de inscrição no Conselho Regional de Medicina Veterinária (CRMV)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRN",
+      "display": "Número de inscrição no Conselho Regional de Nutrição (CRN)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACONRERP",
+      "display": "Número de inscrição no Conselho Regional de Reçações Públicas (CONRERP)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRP",
+      "display": "Número de inscrição no Conselho Regional de Psicologia (CRP)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRQ",
+      "display": "Número de inscrição no Conselho Regional de Química (CRQ)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACORE",
+      "display": "Número de inscrição no Conselho Regional de Representantes Comerciais (CORE)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACREF",
+      "display": "Número de inscrição no Conselho Regional de Educação Física (CREF)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACAU",
+      "display": "Número de inscrição no Conselho Regional de Arquitetura e Urbanismo (CAU)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRBIO",
+      "display": "Número de inscrição no Conselho Regional de Biologia (CRBio)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRBM",
+      "display": "Número da inscrição no Conselho Regional de Biomedicina (CRBM)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRBM",
+      "display": "Número da inscrição no Conselho Regional de Biomedicina (CRBM)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRFA",
+      "display": "Número da inscrição no Conselho Regional de Fonoaudiologia (CRFa/CREFONO)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRTR",
+      "display": "Número da inscrição no Conselho Regional de Técnicos em Radiologia (CRTR)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACRT",
+      "display": "Número da inscrição no Conselho Regional dos Técnicos Industriais (CRT)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRAOAB",
+      "display": "Número de inscrição na Ordem dos Advogados do BRAasil (OAB)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRAIDMIL",
+      "display": "Número da Identidade Militar",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRAIDFUNC",
+      "display": "Número da Identidade Funcional",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "patient"
+        }
+      ]
+    },
+    {
+      "code": "BRACNPJ",
+      "display": "Número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ)",
+      "property": [
+        {
+          "code": "use",
+          "valueCode": "organization"
+        }
+      ]
+    }
+  ]
+}

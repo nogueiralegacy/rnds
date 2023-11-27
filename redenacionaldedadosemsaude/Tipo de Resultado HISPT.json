@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-26T13:16:11.587+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoHISPT",
+  "version": "1.0",
+  "name": "Tipo de Resultado HISPT",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-26T13:16:09.8385573+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Code System utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo com o tipo de resultado HISPT.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Compatível"
+    },
+    {
+      "code": "2",
+      "display": "Não Compatível"
+    },
+    {
+      "code": "3",
+      "display": "Inconclusivo"
+    }
+  ]
+}
