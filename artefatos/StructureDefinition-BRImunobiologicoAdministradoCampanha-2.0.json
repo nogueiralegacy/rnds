@@ -72,7 +72,7 @@
         "binding": {
           "strength": "required",
           "description": "Estado do evento",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status"
         }
       },
       {

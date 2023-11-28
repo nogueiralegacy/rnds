@@ -135,7 +135,7 @@
         "binding": {
           "strength": "required",
           "description": "Estado da Solicitação de Medicamento",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/medication-status"
         }
       },
       {
