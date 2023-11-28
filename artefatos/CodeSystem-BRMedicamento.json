@@ -1905,10 +1905,6 @@
       "display": "LORATADINA 1 MG/ML XAROPE  120 ML"
     },
     {
-      "code": "BR0278283U0042",
-      "display": "ACETAZOLAMIDA 250 MG COMPRIMIDO ELENCO ESTADUAL"
-    },
-    {
       "code": "BR0267502U0042",
       "display": "ÁCIDO ACETILSALICÍLICO  100 MG COMPRIMIDO"
     },
@@ -2979,10 +2975,6 @@
     {
       "code": "BR0267294",
       "display": "IMIPRAMINA, PAMOATO 75 MG CÁPSULA"
-    },
-    {
-      "code": "BR0296742",
-      "display": "OLMESARTANA 40 MG COMPRIMIDO"
     },
     {
       "code": "BR0272423-2",
@@ -4557,10 +4549,6 @@
       "display": "EVEROLIMO 1 MG COMP GRUPO 1.A"
     },
     {
-      "code": "BR0292240U0136",
-      "display": "MESALAZINA 1000 MG SUPOS GRUPO 2"
-    },
-    {
       "code": "BR0267081U0041",
       "display": "FENOFIBRATO 200 MG CAP GRUPO 2"
     },
@@ -4817,10 +4805,6 @@
       "display": "BEZAFIBRATO 200 MG DRÁGEA OU COMP GRUPO 2"
     },
     {
-      "code": "BR0268084U0042",
-      "display": "CABERGOLINA 0,5 MG COMP GRUPO 1.A"
-    },
-    {
       "code": "BR0271373U0041",
       "display": "FORMOTEROL 12 MCG CAP INAL GRUPO 2"
     },
@@ -4911,10 +4895,6 @@
     {
       "code": "BR0271106U0041",
       "display": "CICLOSPORINA 50 MG CAP GRUPO 2"
-    },
-    {
-      "code": "BR0272780U0042",
-      "display": "CLOROQUINA 150 MG COMP GRUPO 2"
     },
     {
       "code": "BR0273258E",
@@ -5557,14 +5537,6 @@
       "display": "IMUNOGLOBULINA HUMANA 6 G INJ (FR) GRUPO 1.B"
     },
     {
-      "code": "BR0268345U0042",
-      "display": "LAMIVUDINA 150 MG COMP GRUPO 1.A"
-    },
-    {
-      "code": "BR0328810U0087",
-      "display": "LAMIVUDINA 10 MG/ML SOL ORAL (FR) 240 ML GRUPO 1.A"
-    },
-    {
       "code": "BR0295040U0042",
       "display": "LAMOTRIGINA 25 MG COMP GRUPO 2"
     },
@@ -6079,10 +6051,6 @@
     {
       "code": "BR0326057",
       "display": "FERRO QUELATO GLICINATO 300 MG COMPRIMIDO"
-    },
-    {
-      "code": "BR0267271U0042",
-      "display": "HIDRÓXIDO DE ALUMÍNIO 300 MG COMP GRUPO 2"
     },
     {
       "code": "BR0266825U0118",
@@ -8827,10 +8795,6 @@
     {
       "code": "BR0342682U0135",
       "display": "TRIPTORRELINA 3,75 MG SUSP INJ (FR-AMP) GRUPO 1.B"
-    },
-    {
-      "code": "BR0340783U0087",
-      "display": "HIDRÓXIDO DE ALUMÍNIO 61,5 MG SUSP ORAL (FR) 240 ML GRUPO 2"
     },
     {
       "code": "BR0290947",
@@ -14697,10 +14661,6 @@
       "display": "ANAMIRTA COCCULUS D4 + ASSOCIAÇÃO 210 + 30 + 30 MG COMPRIMIDO"
     },
     {
-      "code": "BR0420463",
-      "display": "UREIA + OLEO DE SEMENTE DE UVA 3% + 5% BISNAGA 150G"
-    },
-    {
       "code": "BR0435745U0041",
       "display": "MORUS NIGRA L. - AMORA  50 G DROGA VEGETAL"
     },
@@ -15131,10 +15091,6 @@
     {
       "code": "BR0410008U0130",
       "display": "MICRONUTRIENTES - SUPLEMENTO DE VITAMINAS E MINERAIS EM PÓ PÓ"
-    },
-    {
-      "code": "BR0292240",
-      "display": "MESALAZINA 1000 MG SUPOSITÓRIO  ELENCO ESTADUAL"
     },
     {
       "code": "BR0309040U0042",

@@ -36,4 +36,4 @@ def main():
         print(f"Erro inesperado: {e}")
 
 if __name__ == "__main__":
-main()
+    main()
