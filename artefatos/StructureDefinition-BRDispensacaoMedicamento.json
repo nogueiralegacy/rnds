@@ -242,15 +242,7 @@
         "path": "MedicationDispense.authorizingPrescription",
         "short": "Identificação do registro de prescrição eletrônica",
         "definition": "Referência às informações do registro de prescrição do medicamento.",
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegistroPrescricaoMedicamento"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "MedicationDispense.authorizingPrescription.id",
