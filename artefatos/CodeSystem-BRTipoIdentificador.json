@@ -233,16 +233,6 @@
       ]
     },
     {
-      "code": "BRACRBM",
-      "display": "Número da inscrição no Conselho Regional de Biomedicina (CRBM)",
-      "property": [
-        {
-          "code": "use",
-          "valueCode": "patient"
-        }
-      ]
-    },
-    {
       "code": "BRACRFA",
       "display": "Número da inscrição no Conselho Regional de Fonoaudiologia (CRFa/CREFONO)",
       "property": [
