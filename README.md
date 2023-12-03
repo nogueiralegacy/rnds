@@ -32,9 +32,12 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 
 ## Desenvolvedores FHIR
 
+Os passos abaixo dependem dos aplicativos **hapi-fhir-cli.jar** disponível em https://github.com/hapifhir/hapi-fhir/releases e **fhir** disponível em 
+https://fire.ly/products/firely-terminal/.
+
 - Para gerar o NPM Package execute
 ```
-java -jar %hapifhircli% create-package --version 0.0.1 -v r4 --description "rnds.ajustes" --name rnds.ajustes --include-package "./*.json"
+java -jar hapi-fhir-cli.jar create-package --version 0.0.1 -v r4 --description "rnds.ajustes" --name rnds.ajustes --include-package "./*.json"
 ```
 
 - Para instalar localmente o NPM Package gerado
