@@ -1,4 +1,4 @@
-# Artefatos FHIR "ajustados"
+# Artefatos da RNDS "ajustados" e empacotados em NPM Package
 
 O conteúdo de dados enviados para a RNDS (_payload_) pode
 ser validado por meio de artefatos FHIR disponibilizados pelo Ministério da Saúde (Brasil).
