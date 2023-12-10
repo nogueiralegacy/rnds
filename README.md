@@ -1,4 +1,4 @@
-# Artefatos FHIR "ajustados"
+# Artefatos da RNDS "ajustados" e empacotados em NPM Package
 
 O conteúdo de dados enviados para a RNDS (_payload_) pode
 ser validado por meio de artefatos FHIR disponibilizados pelo Ministério da Saúde (Brasil).
@@ -29,3 +29,18 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | StructDefinition    | StructureDefinition-BRImunobiologicoAdministrado-2.0                                 | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required                       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 pelo original http://hl7.org/fhir/ValueSet/immunization-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros.               |
 | StructDefinition    | StructureDefinition-BRImunobiologicoAdministradoCampanha-2.0                         | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required                       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 pelo original http://hl7.org/fhir/ValueSet/immunization-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros.               |
 | StructDefinition    | StructureDefinition-BRMedicamento                                                    | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0 pelo original http://hl7.org/fhir/ValueSet/medication-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros. |
+
+## Desenvolvedores FHIR
+
+Os passos abaixo dependem dos aplicativos **hapi-fhir-cli.jar** disponível em https://github.com/hapifhir/hapi-fhir/releases e **fhir** disponível em 
+https://fire.ly/products/firely-terminal/.
+
+- Para gerar o NPM Package execute
+```
+java -jar hapi-fhir-cli.jar create-package --version 0.0.1 -v r4 --description "rnds.ajustes" --name rnds.ajustes --include-package "./*.json"
+```
+
+- Para instalar localmente o NPM Package gerado
+```
+fhir install rnds.ajustes-0.0.1.tgz --file
+```
