@@ -26,7 +26,6 @@
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation": "constraint",
-<<<<<<< HEAD:artefatos/extension/BRNacionalidade.json
   "snapshot": {
     "element": [
       {
@@ -894,9 +893,7 @@
       }
     ]
   },
-=======
->>>>>>> d047d2b57107aa9930828110ff7e991e1c6965a8:redenacionaldedadosemsaude/BRNacionalidade.json
-  "differential": {
+"differential": {
     "element": [
       {
         "id": "Extension",
