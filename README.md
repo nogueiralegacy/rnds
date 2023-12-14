@@ -46,3 +46,8 @@ java -jar hapi-fhir-cli.jar create-package --version 0.0.1 -v r4 --description "
 ```
 fhir install rnds.ajustes-0.0.1.tgz --file
 ```
+
+- Para validar artefatos (diretório exemplos)
+```
+java -jar validador_cli.jar exemplos\paciente-01.json -version 4.0.1 -watch-mode all -ig artefatos
+```
