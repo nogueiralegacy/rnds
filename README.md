@@ -29,6 +29,8 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | StructDefinition    | StructureDefinition-BRImunobiologicoAdministrado-2.0                                 | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required                       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 pelo original http://hl7.org/fhir/ValueSet/immunization-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros.               |
 | StructDefinition    | StructureDefinition-BRImunobiologicoAdministradoCampanha-2.0                         | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required                       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0 pelo original http://hl7.org/fhir/ValueSet/immunization-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros.               |
 | StructDefinition    | StructureDefinition-BRMedicamento                                                    | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0 pelo original http://hl7.org/fhir/ValueSet/medication-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros. |
+| CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil.json | Incompleto (apenas uma única cidade) | Atualizado com os municípios e versão para 2023-12-14 |
+| ValueSet   | ValueSet-BRMunicipio-1.0                  | Asterisco (*) em versões gera erro HAPI FHIR | Fornecida versão específica 2023-12-14 |
 
 ## Desenvolvedores FHIR
 
@@ -43,4 +45,9 @@ java -jar hapi-fhir-cli.jar create-package --version 0.0.1 -v r4 --description "
 - Para instalar localmente o NPM Package gerado
 ```
 fhir install rnds.ajustes-0.0.1.tgz --file
+```
+
+- Para validar artefatos (diretório exemplos)
+```
+java -jar validador_cli.jar exemplos\paciente-01.json -version 4.0.1 -watch-mode all -ig artefatos
 ```
