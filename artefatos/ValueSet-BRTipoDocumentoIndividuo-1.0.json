@@ -18,7 +18,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/ValueSet/identifier-type",
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
         "version": "*",
         "concept": [
           {
