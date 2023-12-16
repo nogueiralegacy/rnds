@@ -31,7 +31,9 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | StructDefinition    | StructureDefinition-BRMedicamento                                                    | Foi vinculado o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0 a variável "status" e esse Value Set não é um subconjunto do Value Set já vinculado a essa variável, do tipo required       | Substituição o Value Set http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoSolicitacaoMedicamento-1.0 pelo original http://hl7.org/fhir/ValueSet/medication-status. O Value Set Brasileiro engloba mais definições do que são restritas pelo conjunto do Value Set original, podendo gerar transtornos futuros. |
 | CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil.json | Incompleto (apenas uma única cidade) | Atualizado com os municípios e versão para 2023-12-14 |
 | ValueSet   | ValueSet-BRMunicipio-1.0                  | Asterisco (*) em versões gera erro HAPI FHIR | Fornecida versão específica 2023-12-14 |
-| ValueSet | ValueSet-BRTipoDocumentoIndividuo-1.0 | Atribuindo um ValueSet (http://hl7.org/fhir/ValueSet/identifier-type) em local restrito a CodeSystem. Além disso, esse ValueSet é da versão 5.| O ValueSet foi substituido pelo CodeSystem (http://terminology.hl7.org/CodeSystem/v2-0203). Esse CodeSystem estava totalmente incluso no ValueSet e o ValueSet não incluia outro CodeSystem.
+| ValueSet | ValueSet-BRTipoDocumentoIndividuo-1.0 | Atribuição de um ValueSet (http://hl7.org/fhir/ValueSet/identifier-type) em local restrito a CodeSystem. Além disso, esse ValueSet é da versão 5.| O ValueSet foi substituido pelo CodeSystem (http://terminology.hl7.org/CodeSystem/v2-0203). Esse CodeSystem estava totalmente incluso no ValueSet e o ValueSet não incluia outro CodeSystem.|
+| StructDefinition | StructureDefinition-BREndereco-1.0 | Elemento fhirVersion identificado como na versão 4.0.0 | Atribuição da versão 4.0.1 |
+| StructDefinition | StructureDefinition-BREndereco-1.0 | Dificuldade de identificar os slices no slicing do elemento address.line | Retirada do slicing do elemento address.line | 
 
 ## Desenvolvedores FHIR
 

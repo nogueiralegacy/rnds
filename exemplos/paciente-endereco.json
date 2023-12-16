@@ -1,0 +1,41 @@
+{
+  "resourceType": "Patient",
+  "id": "Paciente",
+  "meta": {
+    "profile": [
+      "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+    ]
+  },
+  "gender": "male",
+  "active": true,
+  "birthDate": "2023",
+  "address": [
+    {
+      "use": "home",
+      "type": "physical",
+      "city": "520870",
+      "state": "52",
+      "postalCode": "74134-423",
+      "line": [
+        "008",
+        "Rua das Laranjeiras",
+        "123",
+        "Na frente do pé de goiaba",
+        "Bairro Girasol"
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "10",
+            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais"
+          }
+        ]
+      }
+    }
+  ]
+}
