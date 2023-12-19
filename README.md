@@ -34,6 +34,10 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | ValueSet | ValueSet-BRTipoDocumentoIndividuo-1.0 | Atribuição de um ValueSet (http://hl7.org/fhir/ValueSet/identifier-type) em local restrito a CodeSystem. Além disso, esse ValueSet é da versão 5.| O ValueSet foi substituido pelo CodeSystem (http://terminology.hl7.org/CodeSystem/v2-0203). Esse CodeSystem estava totalmente incluso no ValueSet e o ValueSet não incluia outro CodeSystem.|
 | StructureDefinition | StructureDefinition-BREndereco-1.0 | Elemento fhirVersion identificado como na versão 4.0.0 | Atribuição da versão 4.0.1 |
 | StructureDefinition | StructureDefinition-BREndereco-1.0 | Dificuldade de identificar os slices no slicing do elemento address.line | Retirada do slicing do elemento address.line | 
+| StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Vinculação a ValueSet (http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0) não disponibilizado. | Subistituição do ValueSet o ValueSet http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0, que não foi divuldado pelo http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype de relacionamentos já definidos pelo FHIR. |
+| StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Binding não estava no local adequado, ocasionando na não validação dos códigos | Ajustou o binding para o local certo |
+| StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Uso do tipo de dados "code" para binding de um ValueSet que inclui mais de um CodeSystem | Troca do tipo de dados "code" para o tipo "CodeableConcept" |
+
 ## Desenvolvedores FHIR
 
 Os passos abaixo dependem dos aplicativos **hapi-fhir-cli.jar** disponível em https://github.com/hapifhir/hapi-fhir/releases e **fhir** disponível em 
