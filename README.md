@@ -34,6 +34,8 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | ValueSet | ValueSet-BRTipoDocumentoIndividuo-1.0 | Atribuição de um ValueSet (http://hl7.org/fhir/ValueSet/identifier-type) em local restrito a CodeSystem. Além disso, esse ValueSet é da versão 5.| O ValueSet foi substituido pelo CodeSystem (http://terminology.hl7.org/CodeSystem/v2-0203). Esse CodeSystem estava totalmente incluso no ValueSet e o ValueSet não incluia outro CodeSystem.|
 | StructDefinition | StructureDefinition-BREndereco-1.0 | Elemento fhirVersion identificado como na versão 4.0.0 | Atribuição da versão 4.0.1 |
 | StructDefinition | StructureDefinition-BREndereco-1.0 | Dificuldade de identificar os slices no slicing do elemento address.line | Retirada do slicing do elemento address.line | 
+| StructDefinition | StructureDefinition-BRParentesIndividuo-1.0 | ValueSet no elemento Extension.extension:relationship inexistente (http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0) | Substituição por ValueSet correspondente HL7 FHIR (Value Set http://hl7.org/fhir/ValueSet/parent-relationship-codes) | 
+| StructDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Elemento Extension.extension:relationship.value não avaliava respectivos ValueSets de Relationships | Binding do Relationship removido de Extension.extension:relationship e incluido em Extension.extension:relationship.value |
 
 ## Desenvolvedores FHIR
 

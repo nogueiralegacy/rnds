@@ -1,0 +1,45 @@
+{
+    "resourceType": "Patient",
+    "meta": {
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+        ]
+    },
+    "gender": "male",
+    "active": true,
+    "birthDate": "2023",
+    "extension": [
+        {
+          "extension": [
+            {
+              "url": "relationship",
+              "valueCode": "MTH"
+            },
+            {
+              "url": "parent",
+              "valueHumanName": {
+                "use": "official",
+                "text": "MÃE DO PACIENTE DE TESTE"
+              }
+            }
+          ],
+          "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRParentesIndividuo-1.0"
+        },
+        {
+          "extension": [
+            {
+              "url": "relationship",
+              "valueCode": "FTH"
+            },
+            {
+              "url": "parent",
+              "valueHumanName": {
+                "use": "official",
+                "text": "PAI DO PACIENTE DE TESTE"
+              }
+            }
+          ],
+          "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRParentesIndividuo-1.0"
+        }
+    ]
+}
