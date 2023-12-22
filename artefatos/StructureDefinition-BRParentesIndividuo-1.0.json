@@ -88,7 +88,7 @@
         "binding": {
           "strength": "required",
           "description": "Parentesco",
-          "valueSet": "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+          "valueSet": "http://hl7.org/fhir/ValueSet/parent-relationship-codes"
         }
       },
       {

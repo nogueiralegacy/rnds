@@ -1,0 +1,139 @@
+{
+        "resourceType": "Patient",
+        "id": "c88f56ab-8b8c-f597-ff79-6f808e2767f3",
+        "meta": {
+          "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+          ]
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "relationship",
+                "valueCode": "MTH"
+              },
+              {
+                "url": "parent",
+                "valueHumanName": {
+                  "use": "official",
+                  "text": "MÃE DO PACIENTE DE TESTE"
+                }
+              }
+            ],
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRParentesIndividuo-1.0"
+          },
+          {
+            "extension": [
+              {
+                "url": "relationship",
+                "valueCode": "FTH"
+              },
+              {
+                "url": "parent",
+                "valueHumanName": {
+                  "use": "official",
+                  "text": "PAI DO PACIENTE DE TESTE"
+                }
+              }
+            ],
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRParentesIndividuo-1.0"
+          },
+          {
+            "extension": [
+              {
+                "url": "race",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRacaCor",
+                      "code": "04"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRacaCorEtnia-1.0"
+          },
+          {
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMunicipio-1.0",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRDivisaoGeograficaBrasil",
+                  "code": "520500"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais",
+                  "code": "10"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "TAX"
+                }
+              ]
+            },
+            "value": "12345678900"
+          },
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "HC"
+                }
+              ]
+            },
+            "value": "123456789101112"
+          }
+        ],
+        "active": false,
+        "name": [
+          {
+            "use": "official",
+            "text": "PACIENTE DE TESTE"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "62-999999999"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1999-01-01",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "type": "physical",
+            "line" : [
+                    "081",
+                    "SQN  BLOCO M",
+                    "604",
+                    "APARTAMENTO",
+                    "ASA NORTE"
+                ],
+            "city": "520500",
+            "state": "52",
+            "postalCode": "74910090"
+          }
+	]
+}

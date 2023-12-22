@@ -32,11 +32,12 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil.json | Incompleto (apenas uma única cidade) | Atualizado com os municípios e versão para 2023-12-14 |
 | ValueSet   | ValueSet-BRMunicipio-1.0                  | Asterisco (*) em versões gera erro HAPI FHIR | Fornecida versão específica 2023-12-14 |
 | ValueSet | ValueSet-BRTipoDocumentoIndividuo-1.0 | Atribuição de um ValueSet (http://hl7.org/fhir/ValueSet/identifier-type) em local restrito a CodeSystem. Além disso, esse ValueSet é da versão 5.| O ValueSet foi substituido pelo CodeSystem (http://terminology.hl7.org/CodeSystem/v2-0203). Esse CodeSystem estava totalmente incluso no ValueSet e o ValueSet não incluia outro CodeSystem.|
-| StructureDefinition | StructureDefinition-BREndereco-1.0 | Elemento fhirVersion identificado como na versão 4.0.0 | Atribuição da versão 4.0.1 |
-| StructureDefinition | StructureDefinition-BREndereco-1.0 | Dificuldade de identificar os slices no slicing do elemento address.line | Retirada do slicing do elemento address.line | 
-| StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Vinculação a ValueSet (http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0) não disponibilizado. | Subistituição do ValueSet o ValueSet http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0, que não foi divuldado pelo http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype de relacionamentos já definidos pelo FHIR. |
-| StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Binding não estava no local adequado, ocasionando na não validação dos códigos | Ajustou o binding para o local certo |
-| StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Uso do tipo de dados "code" para binding de um ValueSet que inclui mais de um CodeSystem | Troca do tipo de dados "code" para o tipo "CodeableConcept" |
+| StructDefinition | StructureDefinition-BREndereco-1.0 | Elemento fhirVersion identificado como na versão 4.0.0 | Atribuição da versão 4.0.1 |
+| StructDefinition | StructureDefinition-BREndereco-1.0 | Dificuldade de identificar os slices no slicing do elemento address.line | Retirada do slicing do elemento address.line | 
+| StructDefinition | StructureDefinition-BRParentesIndividuo-1.0 | ValueSet no elemento Extension.extension:relationship inexistente (http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0) | Substituição por ValueSet correspondente HL7 FHIR (Value Set http://hl7.org/fhir/ValueSet/parent-relationship-codes) | 
+| StructDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Elemento Extension.extension:relationship.value não avaliava respectivos ValueSets de Relationships | Binding do Relationship removido de Extension.extension:relationship e incluido em Extension.extension:relationship.value |
+| StructDefinition | StructureDefinition-BRRacaCorEtnia-1.0 | Patient.extension:raceEthnicity.extension:race.value não avaliava respectivos ValueSets de Race (Raça) | Binding do Race removido de Patient.extension:raceEthnicity.extension:race e incluido em Patient.extension:raceEthnicity.extension:race.value |
+
 
 ## Desenvolvedores FHIR
 
