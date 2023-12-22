@@ -1,0 +1,21 @@
+{
+    "resourceType": "Practitioner",
+    "meta": {
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0"
+        ]
+    },
+    "active": true,
+    "qualification": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+                        "code": "225305"
+                    }
+                ]
+            }
+        }
+    ]
+}
