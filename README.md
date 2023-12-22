@@ -36,6 +36,7 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | StructDefinition | StructureDefinition-BREndereco-1.0 | Dificuldade de identificar os slices no slicing do elemento address.line | Retirada do slicing do elemento address.line | 
 | StructDefinition | StructureDefinition-BRParentesIndividuo-1.0 | ValueSet no elemento Extension.extension:relationship inexistente (http://www.saude.gov.br/fhir/r4/ValueSet/BRParentesco-1.0) | Substituição por ValueSet correspondente HL7 FHIR (Value Set http://hl7.org/fhir/ValueSet/parent-relationship-codes) | 
 | StructDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Elemento Extension.extension:relationship.value não avaliava respectivos ValueSets de Relationships | Binding do Relationship removido de Extension.extension:relationship e incluido em Extension.extension:relationship.value |
+| StructDefinition | StructureDefinition-BRRacaCorEtnia-1.0 | Patient.extension:raceEthnicity.extension:race.value não avaliava respectivos ValueSets de Race (Raça) | Binding do Race removido de Patient.extension:raceEthnicity.extension:race e incluido em Patient.extension:raceEthnicity.extension:race.value |
 
 ## Desenvolvedores FHIR
 
