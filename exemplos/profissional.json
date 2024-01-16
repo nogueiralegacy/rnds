@@ -1,0 +1,30 @@
+{
+    "resourceType": "Practitioner",
+    "id": "profissional",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0"
+      ]
+    },
+    "identifier": [
+      {
+        "use": "official",
+        "type": {
+          "coding": [
+            {
+              "code": "RRI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "value": "12345"
+      }
+    ],
+    "active": true,
+    "name": [
+      {
+        "use": "official",
+        "text": "Maria Antonia"
+      }
+    ]
+  }

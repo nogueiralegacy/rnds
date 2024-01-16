@@ -1,0 +1,70 @@
+{
+    "resourceType": "Composition",
+    "id": "conjunto",
+    "status": "final",
+    "type": {
+      "coding": [
+        {
+          "code": "CMD",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "code": "01",
+            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial"
+          }
+        ]
+      }
+    ],
+    "date": "2023-12-25",
+    "title": "Documento com conjunto mínimo de dados para a assistência básica",
+    "subject": {
+      "extension": [
+        {
+          "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0",
+          "extension": [
+            {
+              "url": "reason",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "01",
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "gender",
+              "valueCode": "male"
+            },
+            {
+              "url": "birthYear",
+              "valueDate": "1999"
+            }
+          ]
+        }
+      ]
+    },
+    "author": [
+      {
+        "identifier": {
+          "system": "http://hl7.org/fhir/sid/passport-BRA",
+          "value": "12345"
+        }
+      }
+    ],
+    "section": [
+      {
+        "entry": [
+          {
+            "reference": "ProcedimentoRealizado/123"
+          }
+        ]
+      }
+    ]
+  }

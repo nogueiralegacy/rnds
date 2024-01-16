@@ -1,0 +1,17 @@
+{
+    "resourceType": "Specimen",
+    "id": "amostra",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAmostraBiologica-1.0"
+      ]
+    },
+    "type": {
+      "coding": [
+        {
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAmostraGAL",
+          "code": "SWNAFA"
+        }
+      ]
+    }
+  }

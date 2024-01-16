@@ -1,0 +1,99 @@
+{
+    "resourceType": "Bundle",
+    "id": "colecao-paciente",
+    "type": "collection",
+    "entry": [
+        {
+            "fullUrl": "https://github.com/nogueiralegacy/rnds/blob/d9091e81dd4a6e1c03ecb6a328b5f404cb94f99d/exemplos/paciente-pais.json",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "SantosDumont",
+                "meta": {
+                    "profile": [
+                        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais",
+                                    "code": "10"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "TAX"
+                                }
+                            ]
+                        },
+                        "value": "01234567891"
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "official",
+                        "text": "Santos Dumont"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1873-07-20"
+            }
+        },
+        {
+            "fullUrl": "https://github.com/nogueiralegacy/rnds/blob/d9091e81dd4a6e1c03ecb6a328b5f404cb94f99d/exemplos/paciente-endereco.json",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "Paciente",
+                "meta": {
+                    "profile": [
+                        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+                    ]
+                },
+                "gender": "male",
+                "active": true,
+                "birthDate": "2023",
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "physical",
+                        "city": "520870",
+                        "state": "52",
+                        "postalCode": "74134-423",
+                        "line": [
+                            "008",
+                            "Rua das Laranjeiras",
+                            "123",
+                            "Na frente do pé de goiaba",
+                            "Bairro Girasol"
+                        ]
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "code": "10",
+                                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
