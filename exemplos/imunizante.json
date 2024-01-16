@@ -1,0 +1,65 @@
+{
+    "resourceType": "Immunization",
+    "id": "imunizante",
+    "status": "completed",
+    "vaccineCode": {
+      "coding": [
+        {
+          "code": "1",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico"
+        }
+      ]
+    },
+    "patient": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "occurrenceDateTime": "2023-12-25",
+    "primarySource": true,
+    "reportOrigin": {
+      "coding": [
+        {
+          "code": "02",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRegistroOrigem"
+        }
+      ]
+    },
+    "manufacturer": {
+      "identifier": {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFabricantePNI",
+        "value": "239"
+      }
+    },
+    "lotNumber": "1230",
+    "expirationDate": "2023-12-25",
+    "site": {
+      "coding": [
+        {
+          "code": "1",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRLocalAplicacao"
+        }
+      ]
+    },
+    "route": {
+      "coding": [
+        {
+          "code": "10864",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRViaAdministracao"
+        }
+      ]
+    },
+    "performer": [
+      {
+        "actor": {
+          "reference": "profissional/123"
+        }
+      }
+    ],
+    "protocolApplied": [
+      {
+        "doseNumberString": "1"
+      }
+    ]
+  }

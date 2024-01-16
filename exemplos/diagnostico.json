@@ -1,0 +1,57 @@
+{
+    "resourceType": "Observation",
+    "id": "observacao",
+    "status": "final",
+    "category": [
+      {
+        "coding": [
+          {
+            "code": "0202",
+            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRSubgrupoTabelaSUS"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC",
+          "code": "94507-1"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "effectiveDateTime": "2023-12-25",
+    "performer": [
+      {
+        "identifier": {
+          "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0",
+          "value": "12345"
+        }
+      }
+    ],
+    "valueCodeableConcept": {
+      "coding": [
+        {
+          "code": "1",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"
+        }
+      ]
+    },
+    "method": {
+      "text": "Coleta de amostra"
+    },
+    "specimen": {
+      "reference": "amostra/123"
+    },
+    "referenceRange": [
+      {
+        "text": "Sem faixa de valores de referência"
+      }
+    ]
+  }
