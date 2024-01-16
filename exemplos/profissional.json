@@ -26,5 +26,17 @@
         "use": "official",
         "text": "Maria Antonia"
       }
-    ]
+    ],
+    "qualification": [
+      {
+          "code": {
+              "coding": [
+                  {
+                      "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+                      "code": "225305"
+                  }
+              ]
+          }
+      }
+  ]
   }
