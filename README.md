@@ -38,6 +38,8 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Binding não estava no local adequado, ocasionando na não validação dos códigos | Ajustou o binding para o local certo |
 | StructureDefinition | StructureDefinition-BRParentesIndividuo-1.0 | Uso do tipo de dados "code" para binding de um ValueSet que inclui mais de um CodeSystem | Troca do tipo de dados "code" para o tipo "CodeableConcept" |
 | ValueSet | ValueSet-BRLocalAplicacao-1.0 | O perfil de imunizante StructureDefinition-BRImunobiologicoAdministrado-2.0 tem um binding para o ValueSet ValueSet-LocalAplicacao-1.0 , contudo esse ValueSet não foi encontrado | Criação do ValueSet ValueSet-BRLocalAplicacao-1.0, o ValueSet inclui todos os códigos do CodeSystem CodeSystem-BRLocalAplicacao |
+| StructureDefinition | StructureDefinition-BRDiagnosticoCOVID19-TesteRapido-01.01 | O elemento value[x], que é um valueCodeableConcept, da Observation StructureDefinition-BRDiagnosticoCOVID19-TesteRapido-01.01 tem um binding para o ValueSet http://www.saude.gov.br/fhir/r4/ValueSet/BRResultadoQualitativoExame-1.0, esse ValueSet não foi encontrado | Existe o ValueSet http://www.saude.gov.br/fhir/r4/ValueSet/BRResultadoQualitativoExame-2.0, dessas forma o binding foi atribuido ao ValueSet que foi disponibilizado|
+
 
 ## Desenvolvedores FHIR
 

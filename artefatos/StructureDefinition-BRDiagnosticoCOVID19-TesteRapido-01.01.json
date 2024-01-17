@@ -651,7 +651,7 @@
         "binding": {
           "strength": "required",
           "description": "Resultado Qualitativo do Exame",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRResultadoQualitativoExame-1.0"
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRResultadoQualitativoExame-2.0"
         }
       },
       {
