@@ -1,0 +1,51 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "44373204",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-01-17T17:57:49.537+00:00",
+        "source": "#SI13LFXBtExRgaQU"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNaturezaJuridica",
+    "version": "2018",
+    "name": "Natureza Jurídica",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-30T18:15:18.1570669+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Identifica a constituição jurídico-institucional das entidades públicas e privadas nos cadastros da administração pública do Brasil.",
+    "content": "complete",
+    "property": [
+        {
+            "code": "type",
+            "description": "tipo",
+            "type": "code"
+        }
+    ],
+    "concept": [
+        {
+            "code": "1",
+            "display": "Administração Pública",
+            "property": [
+                {
+                    "code": "type",
+                    "valueCode": "grupo"
+                }
+            ],
+            "concept": [
+                {
+                    "code": "101-5",
+                    "display": "Órgão Público do Poder Executivo Federal",
+                    "definition": "Esta Natureza Jurídica compreende:\r\n- os órgãos públicos do Poder Executivo Federal\r\nEsta Natureza Jurídica compreende também:\r\n- as embaixadas, os consulados, os escritórios de representações e demais unidades diplomáticas e consulares do Governo brasileiro em outros países ou em organizações internacionais\r\n- o Conselho Nacional dos Direitos da Criança e do Adolescente (Conanda)\r\n- a Advocacia-Geral da União\r\nEsta Natureza Jurídica não compreende:\r\n- as autarquias (110-4)\r\n-as fundações públicas (113-9)\r\n- os órgãos do Ministério Público da União (116-3)\r\n- os fundos especiais de natureza contábil e/ou financeira, não dotados de personalidade jurídica, previstos nos artigos 71 a 74 da Lei n. º 4.320, de 17/03/1964, criados no âmbito do Poder Executivo da União (131-7)\r\n- os fundos de avais públicos: União (131-7), Estadual ou do Distrito Federal (132-5) e Municipal (133-3)\r\n- a União (134-1)\r\n- as empresas públicas (201-1)\r\n- as sociedades de economia mista federais (203-8)\r\n- as embaixadas, os consulados, os escritórios de representações e as demais unidades diplomáticas do Governo brasileiro em outros países ou em organizações internacionais (502-9)",
+                    "property": [
+                        {
+                            "code": "type",
+                            "valueCode": "categoria"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
