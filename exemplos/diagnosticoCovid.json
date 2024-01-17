@@ -1,6 +1,11 @@
 {
     "resourceType": "Observation",
     "id": "observacaoCovid",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoCOVID19-TesteRapido-01.01"
+      ]
+    },
     "status": "final",
     "code": {
       "coding": [
@@ -12,7 +17,7 @@
     },
     "subject": {
       "identifier": {
-        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
         "value": "12345"
       }
     },

@@ -1,0 +1,43 @@
+{
+    "resourceType": "Composition",
+    "id": "conjunto",
+    "meta": {
+        "profile": [
+          "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegistroImunobiologicoAdministradoCampanha-2.0"
+        ]
+      },
+    "status": "final",
+    "type": {
+      "coding": [
+        {
+          "code": "RIA",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"
+        }
+      ]
+    },
+    "date": "2023-12-25",
+    "title": "Registro de Imunobiologico Administrado na Campanha",
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "54321"
+      }
+    },
+    "author": [
+      {
+        "identifier": {
+          "system": "http://hl7.org/fhir/sid/passport-BRA",
+          "value": "12345"
+        }
+      }
+    ],
+    "section": [
+      {
+        "entry": [
+          {
+            "reference": "imunizanteAdministradoCampanha/123"
+          }
+        ]
+      }
+    ]
+  }

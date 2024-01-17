@@ -1,6 +1,11 @@
 {
     "resourceType": "Immunization",
     "id": "imunizante",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRImunobiologicoAdministrado-2.0"
+      ]
+    },
     "status": "completed",
     "vaccineCode": {
       "coding": [

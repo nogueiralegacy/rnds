@@ -1,24 +1,35 @@
 {
-    "resourceType": "PractitionerRole",
-    "id": "lotacaoProfisisonal",
-    "active": true,
-    "period": {
-      "start": "2023-12-23"
-    },
-    "practitioner": {
-      "reference": "profssional/123"
-    },
-    "organization": {
-      "reference": "estabelecimentoDeSaude/123"
-    },
-    "code": [
-      {
-        "coding": [
-          {
-            "code": "223505",
-            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"
-          }
-        ]
-      }
+  "resourceType": "PractitionerRole",
+  "id": "lotacaoProfisisonal",
+  "meta": {
+    "profile": [
+      "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLotacaoProfissional-1.0"
     ]
-  }
+  },
+  "active": true,
+  "period": {
+    "start": "2023-12-23"
+  },
+  "practitioner": {
+    "reference": "profssional/123"
+  },
+  "organization": {
+    "reference": "estabelecimentoDeSaude/123"
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "code": "223505",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAtendeSUS-1.0",
+      "valueBoolean": true
+    }
+  ]
+}
