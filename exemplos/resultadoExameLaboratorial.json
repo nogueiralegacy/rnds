@@ -1,0 +1,34 @@
+{
+    "resourceType": "Composition",
+    "id": "resultado",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResultadoExameLaboratorial-3.2.1"
+      ]
+    },
+    "status": "final",
+    "type": {
+      "coding": [
+        {
+          "code": "REL",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "value": "12345",
+        "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+      }
+    },
+    "date": "2023-12-13",
+    "author": [
+      {
+        "identifier": {
+          "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+          "value": "12345"
+        }
+      }
+    ],
+    "title": "Resultado de Exame Laboratorial"
+  }

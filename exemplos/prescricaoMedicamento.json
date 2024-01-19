@@ -1,0 +1,27 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "prescricao",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPrescricaoMedicamento"
+      ]
+    },
+    "status": "completed",
+    "intent": "order",
+    "medicationReference": {
+      "reference": "Medication/123"
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "authoredOn": "2023-12-24",
+    "recorder": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "54321"
+      }
+    }
+  }

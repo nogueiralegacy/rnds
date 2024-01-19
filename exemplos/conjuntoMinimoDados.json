@@ -67,14 +67,14 @@
     {
       "entry": [
         {
-          "reference": "ProcedimentoRealizado/123"
+          "reference": "Procedure/123"
         }
       ]
     },
     {
       "entry": [
         {
-          "reference": "InformacaoContato/123"
+          "reference": "Encounter/"
         }
       ]
     }

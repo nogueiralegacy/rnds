@@ -1,0 +1,18 @@
+{
+    "resourceType": "CarePlan",
+    "id": "plano",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPlanoCuidados-1.0"
+      ]
+    },
+    "status": "active",
+    "intent": "plan",
+    "description": "Um bom plano de cuidados",
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    }
+  }
