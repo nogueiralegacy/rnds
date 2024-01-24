@@ -1,0 +1,49 @@
+{
+    "resourceType": "Procedure",
+    "id": "procedimento",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProcedimentoRealizado-1.0"
+      ]
+    },
+    "extension": [
+      {
+        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQuantidade-1.0",
+        "valuePositiveInt": 1
+      }
+    ],
+    "status": "completed",
+    "code": {
+      "coding": [
+        {
+          "code": "0201010038",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "performedDateTime": "2023-12-24",
+    "performer": [
+      {
+        "function": {
+          "coding": [
+            {
+              "code": "225125",
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO"
+            }
+          ]
+        },
+        "actor": {
+          "identifier": {
+            "system": "http://hl7.org/fhir/sid/passport-BRA",
+            "value": "54321"
+          }
+        }
+      }
+    ]
+  }

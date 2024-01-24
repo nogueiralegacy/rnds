@@ -1,0 +1,25 @@
+{
+    "resourceType": "Observation",
+    "id": "observacao",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRObservacaoDescritiva-1.0"
+      ]
+    },
+    "status": "final",
+    "code": {
+      "coding": [
+        {
+          "code": "48767-8",
+          "system": "https://loinc.org/"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "issued": "2023-12-24T00:00:00Z"
+  }
