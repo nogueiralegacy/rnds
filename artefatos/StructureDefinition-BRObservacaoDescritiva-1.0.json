@@ -70,7 +70,7 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "system": "https://loinc.org/",
+              "system": "http://loinc.org",
               "code": "48767-8"
             }
           ]

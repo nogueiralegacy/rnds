@@ -20,7 +20,7 @@
         "version": "*"
       },
       {
-        "system": "https://loinc.org/",
+        "system": "http://loinc.org",
         "version": "*",
         "concept": [
           {
