@@ -1,0 +1,24 @@
+{
+    "resourceType": "Medication",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedicamento"
+      ]
+    },
+    "code": {
+      "coding": [
+        {
+          "code": "1236100020010",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmANVISA"
+        }
+      ]
+    },
+    "form": {
+      "coding": [
+        {
+          "code": "9",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida"
+        }
+      ]
+    }
+  }

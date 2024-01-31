@@ -1,0 +1,53 @@
+{
+    "resourceType": "MedicationDispense",
+    "id": "dispensacao",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDispensacaoMedicamento"
+      ]
+    },
+    "extension": [
+      {
+        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao",
+        "valueDateTime": "2023-12-24"
+      }
+    ],
+    "status": "preparation",
+    "category": {
+      "coding": [
+        {
+          "code": "01",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeFinanceira"
+        }
+      ]
+    },
+    "medicationCodeableConcept": {
+      "coding": [
+        {
+          "system": "http://QUALQUERSTRING",
+          "code": "QUALQUERSTRING"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "performer": [
+      {
+        "actor": {
+          "identifier": {
+            "system": "http://hl7.org/fhir/sid/passport-BRA",
+            "value": "54321"
+          }
+        }
+      }
+    ],
+    "whenHandedOver": "2023-12-24",
+    "quantity": {
+      "unit": "kg",
+      "value": 2
+    }
+  }

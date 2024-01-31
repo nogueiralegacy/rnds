@@ -1,0 +1,18 @@
+{
+    "resourceType": "Observation",
+    "id": "medidaobservacao",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedidaObservada"
+      ]
+    },
+    "status": "final",
+    "code": {
+      "coding": [
+        {
+          "code": "29463-7",
+          "system": "http://loinc.org"
+        }
+      ]
+    }
+  }

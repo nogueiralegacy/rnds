@@ -1,0 +1,32 @@
+{
+    "resourceType": "Condition",
+    "id": "condicao",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCondicaoSaude"
+      ]
+    },
+    "code": {
+      "coding": [
+        {
+          "code": "B342",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "stage": [
+      {
+        "assessment": [
+          {
+            "reference": "Observation/123"
+          }
+        ]
+      }
+    ]
+  }

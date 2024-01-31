@@ -1,0 +1,12 @@
+{
+    "resourceType": "Location",
+    "id": "local",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLocalAtendimento-1.0"
+      ]
+    },
+    "status": "active",
+    "name": "UFG-INF",
+    "mode": "kind"
+  }

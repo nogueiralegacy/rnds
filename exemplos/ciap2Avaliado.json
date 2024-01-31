@@ -1,0 +1,23 @@
+{
+    "resourceType": "Condition",
+    "id": "condicao",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCIAP2Avaliado-1.0"
+      ]
+    },
+    "code": {
+      "coding": [
+        {
+          "code": "A03",
+          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"
+        }
+      ]
+    },
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    }
+  }

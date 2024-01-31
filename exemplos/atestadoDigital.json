@@ -1,0 +1,42 @@
+{
+    "resourceType": "CarePlan",
+    "id": "atestado",
+    "meta": {
+      "profile": [
+        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAtestado"
+      ]
+    },
+    "status": "active",
+    "intent": "plan",
+    "subject": {
+      "identifier": {
+        "system": "http://hl7.org/fhir/sid/passport-BRA",
+        "value": "12345"
+      }
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento",
+            "code": "ATM"
+          }
+        ]
+      }
+    ],
+    "activity": [
+      {
+        "detail": {
+          "status": "unknown",
+          "scheduledTiming": {
+            "event": [
+              "2023-12-24"
+            ],
+            "repeat": {
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  }

@@ -11,7 +11,7 @@
       "coding": [
         {
           "code": "48767-8",
-          "system": "https://loinc.org/"
+          "system": "http://loinc.org"
         }
       ]
     },
