@@ -1,6 +1,5 @@
 {
   "resourceType": "ServiceRequest",
-  "id": "regulacao",
   "meta": {
     "profile": [
       "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
