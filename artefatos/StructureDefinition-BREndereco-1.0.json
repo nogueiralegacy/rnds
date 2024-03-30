@@ -12,7 +12,6 @@
   "date": "2020-03-11T04:06:40.3767721+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Padronização de endereços no Brasil.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "type": "Address",

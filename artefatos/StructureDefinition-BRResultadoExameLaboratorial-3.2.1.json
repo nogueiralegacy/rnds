@@ -12,7 +12,6 @@
   "date": "2021-04-12",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Documento que apresenta resultados de exames laboratoriais.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Composition",

@@ -14,7 +14,6 @@
   "date": "2020-09-20T20:51:44.9643607+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Descreve o plano de cuidados, instruções e recomendações.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "CarePlan",

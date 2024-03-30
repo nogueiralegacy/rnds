@@ -12,7 +12,6 @@
   "date": "2020-03-11T01:07:05.6772929+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Uma referência genérica aos locais onde um Contato Assistencial pode acontecer.",
-  "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "Location",

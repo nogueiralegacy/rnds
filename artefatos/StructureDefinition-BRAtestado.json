@@ -7,7 +7,6 @@
   "status": "active",
   "description": "Informações de atestado médico/odontológico",
   "purpose": "Modelo destinado a estruturar as informações de atestado médico/odontológico",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "CarePlan",

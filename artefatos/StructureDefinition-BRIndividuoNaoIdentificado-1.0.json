@@ -14,7 +14,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Informações complementares necessárias ao Contato Assistencial na hipótese do indivíduo não poder ser identificado.",
   "purpose": "Deve ser utilizado sempre nas hipóteses legais previstas na Port. nº 84/SAS/MS/1997 e na Port. nº02/SAS/SGEP/MS/2012, situações onde é impossível identificar o indivíduo durante o Contato Assistencial.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

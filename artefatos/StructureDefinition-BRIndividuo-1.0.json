@@ -14,7 +14,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Indíviduo, sujeito da assistência à saúde.",
   "purpose": "O indivíudo é o sujeito central para os processos informativos de dados em saúde. Não deve ser utilizado quando na condição de profissional.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Patient",

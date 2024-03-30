@@ -4,7 +4,6 @@
   "name": "BRCodigoSerialMedicamento",
   "title": "Código Serial de Medicamento",
   "status": "draft",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

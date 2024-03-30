@@ -12,7 +12,6 @@
   "date": "2020-03-13T19:42:44.3852866+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para informar um município.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

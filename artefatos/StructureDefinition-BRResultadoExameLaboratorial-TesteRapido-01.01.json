@@ -11,7 +11,6 @@
   "status": "active",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Documento que apresenta resultados de exames laboratoriais de COVID-19, em testes rápidos.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Composition",

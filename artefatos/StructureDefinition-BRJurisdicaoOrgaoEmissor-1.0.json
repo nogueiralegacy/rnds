@@ -13,7 +13,6 @@
   "date": "2020-03-13T20:01:33.7451754+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Jurisdição de Órgãos Expedidores",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

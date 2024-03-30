@@ -7,7 +7,6 @@
   "status": "draft",
   "publisher": "Ministério da Saúde",
   "description": "Extensão para incluir a origem da medição corpórea (altura e peso).",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

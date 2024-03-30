@@ -14,7 +14,6 @@
   "experimental": false,
   "date": "2020-09-17T18:54:32.5701295+00:00",
   "publisher": "Ministério da Saúde do Brasil",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

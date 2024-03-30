@@ -14,7 +14,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para permitir informar o código do Identificador Nacional de Equipe.",
   "purpose": "Identificar equipes formais de trabalho no Brasil.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

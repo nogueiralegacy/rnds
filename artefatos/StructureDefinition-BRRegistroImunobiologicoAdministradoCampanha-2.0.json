@@ -9,7 +9,6 @@
   "date": "2020-12-08",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Documento que aprepresenta o registro da administração de imunobiológicos em campanha vacinal.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Composition",

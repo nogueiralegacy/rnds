@@ -13,7 +13,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Indivíduo que realiza atividades profissionais.",
   "purpose": "O profissional de saúde é sujeito ativo para os processos informativos de dados em saúde, por isso é necessário a criação de um profile para esse recurso, que se adpate à realidade brasileira.",
-  "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "Practitioner",

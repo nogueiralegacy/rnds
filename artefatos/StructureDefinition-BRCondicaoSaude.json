@@ -8,7 +8,6 @@
   "date": "2022-09-16",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Contém os dados relacionados à condição de saúde ou condição alvo do paciente avaliado.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Condition",

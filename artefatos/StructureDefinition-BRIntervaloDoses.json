@@ -5,7 +5,6 @@
   "name": "BRIntervaloDoses",
   "status": "draft",
   "description": "Extensão para descrever uma unidade de tempo referenciada pelo UCUM.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

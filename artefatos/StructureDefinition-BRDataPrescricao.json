@@ -4,7 +4,6 @@
   "name": "BRDataPrescricao",
   "title": "Data de Prescrição",
   "status": "draft",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

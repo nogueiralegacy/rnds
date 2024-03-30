@@ -4,7 +4,6 @@
   "version": "1.0",
   "name": "BRMedicamento",
   "status": "draft",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Medication",

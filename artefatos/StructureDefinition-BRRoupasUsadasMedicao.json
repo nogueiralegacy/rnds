@@ -7,7 +7,6 @@
   "status": "draft",
   "publisher": "Ministério da Saúde",
   "description": "Descreve o tipo de roupas usadas durante a medição com base no código LOINC 8352-7.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

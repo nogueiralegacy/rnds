@@ -6,7 +6,6 @@
   "title": "Requisição de Regulação Assistencial",
   "status": "active",
   "date": "2023-04-04",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "ServiceRequest",

@@ -12,7 +12,6 @@
   "date": "2020-03-11T04:06:21.7150652+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Padronização de meios de contato no Brasil.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "type": "ContactPoint",

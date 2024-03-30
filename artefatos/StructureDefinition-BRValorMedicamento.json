@@ -5,7 +5,6 @@
   "title": "Valor Monetário de Medicamento",
   "status": "draft",
   "description": "Extensão destinada a caracterizar o valor monetário pago em medicamentos dispensados pelo Ministério da Saúde do Brasil.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

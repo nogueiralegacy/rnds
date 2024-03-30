@@ -12,7 +12,6 @@
   "date": "2020-03-11T04:13:12.172535+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Padronização de uso de nomes de indivíduo no Brasil.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "type": "HumanName",

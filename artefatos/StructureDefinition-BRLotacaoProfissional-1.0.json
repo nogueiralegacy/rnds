@@ -14,7 +14,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Lotação de um profissional em um Estabelecimento de Saúde.",
   "purpose": "É necessário entender o vínculo entre profissionais e seus papéis/cargos/funções de atuação dentro de um Estabelecimento de Saúde.",
-  "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "PractitionerRole",

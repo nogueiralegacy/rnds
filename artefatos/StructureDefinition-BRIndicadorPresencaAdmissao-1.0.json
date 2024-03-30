@@ -14,7 +14,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para a informação do Indicador de Presença na Admissão.",
   "purpose": "O Indicador de Presença na Admissão é utilizado para identifica se um problema/diagnóstico é previamente conhecido na admissão de um indivíduo no contato assistencial.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

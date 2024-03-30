@@ -22,7 +22,6 @@
   "date": "2020-03-11T04:16:19.3374511+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Resource para representar parentescos de indivíduo.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

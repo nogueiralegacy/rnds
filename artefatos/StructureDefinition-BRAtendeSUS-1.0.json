@@ -12,7 +12,6 @@
   "date": "2020-03-13T20:26:23.0414137+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão utilizada para identificar se um profissional ou Estabelecimento de Saúde oferece atendimento pelo Sistema Único de Saúde (SUS).",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

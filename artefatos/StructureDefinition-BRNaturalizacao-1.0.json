@@ -13,7 +13,6 @@
   "date": "2020-03-11T11:34:13.9129444+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para as informações de naturalização de um indivíduo.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

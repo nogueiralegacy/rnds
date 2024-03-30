@@ -43,7 +43,7 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | CodeSystem | CodeSystem-BRNaturezaJuridica | O ValueSet ValueSet-BRNaturezaJuridica-1.0 inclui o CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRNaturezaJuridica que não foi disponibilizado no simplifier.| No portal https://servicos-datasus.saude.gov.br/detalhe/UZQjoYDDFN foi baixado os artefatos da RNDS disponibilizados e lá foi encontrado o CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRNaturezaJuridica que foi incrementado nos artefatos desse repositório |
 | StructureDefinition | StructureDefinition-BRRacaCorEtnia-1.0 | Binding da extensão "race" e "indigenousEthnicity" não estava no local adequado, dessa forma não efetivando a ação do binding | Ajuste do binding para o local correto |
 | * | ValueSet-RoupasUsadasMedicao, StructureDefinition-BRObservacaoDescritiva-1.0, ValueSet-BROrigemMedida, ValueSet-BRPosicaoIndividuo, ValueSet-BRTipoObservacao-1.0 | Essas instâncias de recursos FHIR faziam referência para o CodeSystem LOINC com o valor da URI incorreto. URI referenciada: https://loinc.org/. URI do CodeSystem LOINC: http://loinc.org|  Foi feita a substituição da URI referenciada pela URI do CodeSystem LOINC|
-
+| * | * | Elemento "fhirVersions" em versões diferentes. | Foi retirado o elemento "fhirVersions" de todas as instâncias de recursos. |
 
 ## Desenvolvedores FHIR
 

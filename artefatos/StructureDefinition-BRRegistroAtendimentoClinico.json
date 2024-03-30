@@ -8,7 +8,6 @@
   "date": "2023-07-25",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Documento destinado a modelar dados essenciais de uma consulta realizada a um indivíduo no âmbito da atenção básica, especializada ou domiciliar.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Composition",

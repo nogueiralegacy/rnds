@@ -13,7 +13,6 @@
   "date": "2020-04-07T17:02:17.5770638+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão utilizada para identificar financiamento.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

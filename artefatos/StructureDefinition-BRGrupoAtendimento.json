@@ -9,7 +9,6 @@
   "date": "2020-12-15",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Identificação do grupo de atendimento para vacinação.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

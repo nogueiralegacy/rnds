@@ -9,7 +9,6 @@
   "date": "2021-08-30T14:05:47Z",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Documento que aprepresenta o registro da administração de imunobiológicos na rotina de imunização.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Composition",

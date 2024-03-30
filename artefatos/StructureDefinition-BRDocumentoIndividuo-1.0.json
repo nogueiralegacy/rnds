@@ -8,7 +8,6 @@
   "title": "Documento do Indivíduo",
   "status": "active",
   "date": "2020-03-11T04:12:06.1755665+00:00",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "type": "Identifier",

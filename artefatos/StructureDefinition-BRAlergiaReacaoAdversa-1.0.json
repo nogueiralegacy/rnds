@@ -14,7 +14,6 @@
   "experimental": false,
   "date": "2020-09-20T20:40:24.2353053+00:00",
   "publisher": "Ministério da Saúde do Brasil",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "AllergyIntolerance",

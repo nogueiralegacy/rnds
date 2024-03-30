@@ -15,7 +15,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Resumo ou sumário referente a um atendimento ininterrupto dispensado a um indivíduo em uma mesma modalidade assistencial e em um mesmo estabelecimento de saúde, gerado após a conclusão deste atendimento.\r\nReferência: <a href=\"https://wiki.saude.gov.br/cmd/index.php/Página_principal#Contato_Assistencial\">https://wiki.saude.gov.br/cmd/index.php/Página_principal#Contato_Assistencial</a>",
   "purpose": "Reportar para o Sistema Único de Saúde dados mínimos referentes a um atendimento concluído, de forma a possibilitar seu compartilhamento entre profissionais de saúde, o próprio indivíduo que recebeu o atendimento, assim como possibilitar o uso secundário das informações para atividades faturamento, auditoria, formulação e monitoramento de políticas públicas, por exemplo, nas esferas municipal, estadual e federal.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Encounter",

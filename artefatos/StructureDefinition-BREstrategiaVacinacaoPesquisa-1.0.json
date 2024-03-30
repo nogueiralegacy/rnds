@@ -7,7 +7,6 @@
   "date": "2021-09-03",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para as informações relacionadas aos dados da pesquisa clínica registrada na ANVISA.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

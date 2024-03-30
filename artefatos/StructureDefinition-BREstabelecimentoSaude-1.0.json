@@ -13,7 +13,6 @@
   "date": "2020-03-13T20:46:45.7872438+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Espaço físico delimitado e permanente onde são realizadas ações e serviços de saúde humana sob responsabilidade técnica.",
-  "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "Organization",

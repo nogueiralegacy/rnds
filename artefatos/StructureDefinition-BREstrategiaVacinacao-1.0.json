@@ -13,7 +13,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Identifica a estratégia de vacinação adotada.",
   "purpose": "Informação sobre o tipo de estratégia referente ao imunobiológico administrado.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

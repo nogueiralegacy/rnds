@@ -5,7 +5,6 @@
   "name": "BRDispensacaoMedicamento",
   "status": "draft",
   "description": "Dispensação do Medicamento prescrito.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "MedicationDispense",

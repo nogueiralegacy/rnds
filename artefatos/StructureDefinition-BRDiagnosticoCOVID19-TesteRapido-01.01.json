@@ -10,7 +10,6 @@
   "title": "Diagnóstico em Laboratório Clínico para COVID-19 - Teste Rápido",
   "status": "active",
   "description": "Diagnóstico em Laboratório Clínico para os testes rápidos de COVID-19. Baseado no BRDiagnosticoLaboratorioClinico2.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",

@@ -7,7 +7,6 @@
   "status": "draft",
   "publisher": "Ministério da Saúde",
   "description": "Registra as informações relacionadas a um tipo de observação.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",

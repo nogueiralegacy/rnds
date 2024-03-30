@@ -6,7 +6,6 @@
   "title": "Registro de Dispensação de Medicamento",
   "status": "draft",
   "description": "Modelo que gera o documento de Registro de Dispensação de Medicamento",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Composition",

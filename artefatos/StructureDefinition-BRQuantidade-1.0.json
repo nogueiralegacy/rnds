@@ -14,7 +14,6 @@
   "date": "2020-09-17T18:44:13.1606848+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para identificar quantidades.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

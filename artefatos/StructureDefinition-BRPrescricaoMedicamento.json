@@ -6,7 +6,6 @@
   "title": "Prescrição de Medicamento",
   "status": "draft",
   "purpose": "Descreve a prescrição de um medicamento.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "MedicationRequest",

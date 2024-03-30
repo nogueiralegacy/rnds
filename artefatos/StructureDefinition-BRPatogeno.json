@@ -6,7 +6,6 @@
   "status": "draft",
   "date": "2022-09-19",
   "description": "Extensão para inserção dos termos relacionados ao Patógeno identificado.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

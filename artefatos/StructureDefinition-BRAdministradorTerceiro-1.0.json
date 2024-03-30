@@ -12,7 +12,6 @@
   "date": "2020-03-13T20:46:11.8055992+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Identifica organizações que são gerentes/administradoras (terceiras) ou intervenientes de outras.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

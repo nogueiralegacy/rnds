@@ -14,7 +14,6 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Extensão para representar uma nacionalidade.",
   "purpose": "Identificar origem, nacionalidade, região etc.",
-  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

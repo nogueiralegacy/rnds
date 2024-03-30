@@ -12,7 +12,6 @@
   "date": "2020-03-26T13:02:02.6493634+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Amostra de origem humana/animal usada em investigações biológicas/laboratoriais para fins diagnósticos.",
-  "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "Specimen",

@@ -13,7 +13,6 @@
   "date": "2020-04-07T20:48:17.2731654+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Problema atribuído pelo profissional de saúde ao indivíduo no contato assistencial.",
-  "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Condition",

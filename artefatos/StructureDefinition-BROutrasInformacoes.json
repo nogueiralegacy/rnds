@@ -6,7 +6,6 @@
   "status": "draft",
   "date": "2022-05-26",
   "description": "Representa quaisquer outras informações acerca dos dados de desfecho do atendimento registrad.",
-  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
