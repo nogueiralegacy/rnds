@@ -13,7 +13,7 @@
   "date": "2020-03-13T19:47:42.7344057+00:00",
   "publisher": "Datasus",
   "description": "Extensão para para representar dados relacionados à raça/cor e etnia de um indivíduo.",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
