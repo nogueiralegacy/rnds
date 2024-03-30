@@ -1,6 +1,7 @@
-# Arquivos em que os resultados do validador são disponibilizados
-*.html 
-
-# Ignore JS
-node_modules
-**/package-lock.json
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
