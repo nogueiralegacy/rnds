@@ -1,24 +1,25 @@
 {
-  "resourceType": "ValueSet",
-  "meta": {
-    "lastUpdated": "2020-03-12T13:18:05.304+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMotivoDesfecho-1.0",
-  "version": "1.0",
-  "name": "Motivo do desfecho do Contato assistencial",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-03-12T13:18:04.0945614+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "ValueSet utilizado para classificar o motivo de conclusão total ou parcial do contato assistencial.",
-  "immutable": false,
-  "compose": {
-    "include": [
-      {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRMotivoDesfecho",
-        "version": "*"
-      }
-    ]
-  }
+    "resourceType": "ValueSet",
+    "meta": {
+        "lastUpdated": "2020-03-12T13:18:05.304+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMotivoDesfecho-1.0",
+    "version": "1.0",
+    "name": "Motivo do desfecho do Contato assistencial",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-12T13:18:04.0945614+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "ValueSet utilizado para classificar o motivo de conclusão total ou parcial do contato assistencial.",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRMotivoDesfecho",
+                "version": "*"
+            }
+        ]
+    },
+    "id": "30a1244c-2015-4ae0-8f9d-3b8cfcd6623d"
 }

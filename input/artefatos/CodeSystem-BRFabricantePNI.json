@@ -1,1023 +1,1024 @@
 {
-  "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2022-12-16T18:15:54.9540124+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFabricantePNI",
-  "version": "1.1.2",
-  "name": "Fabricante do imunobiológico",
-  "status": "active",
-  "experimental": false,
-  "date": "2023-01-02T18:15:54.9540124+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Apresenta o fabricante do imunobiológico.",
-  "content": "complete",
-  "concept": [
-    {
-      "code": "141",
-      "display": "IVB",
-      "definition": "INSTITUTO VITAL BRAZIL S.A",
-      "designation": [
-        {
-          "language": "en",
-          "value": "INSTITUTO VITAL BRAZIL S.A"
-        },
-        {
-          "language": "es",
-          "value": "INSTITUTO VITAL BRAZIL S.A"
-        }
-      ]
-    },
-    {
-      "code": "142",
-      "display": "PFIZER",
-      "definition": "LABORATORIOS PFIZER LTDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "LABORATORIOS PFIZER LTDA"
-        },
-        {
-          "language": "es",
-          "value": "LABORATORIOS PFIZER LTDA"
-        }
-      ]
-    },
-    {
-      "code": "149",
-      "display": "FIOCRUZ",
-      "definition": "FUNDACAO OSWALDO CRUZ",
-      "designation": [
-        {
-          "language": "en",
-          "value": "FUNDACAO OSWALDO CRUZ"
-        },
-        {
-          "language": "es",
-          "value": "FUNDACAO OSWALDO CRUZ"
-        }
-      ]
-    },
-    {
-      "code": "150",
-      "display": "FUNED",
-      "definition": "FUNDACAO EZEQUIEL DIAS",
-      "designation": [
-        {
-          "language": "en",
-          "value": "FUNDACAO EZEQUIEL DIAS"
-        },
-        {
-          "language": "es",
-          "value": "FUNDACAO EZEQUIEL DIAS"
-        }
-      ]
-    },
-    {
-      "code": "151",
-      "display": "F.A.P.",
-      "definition": "FUNDACAO ATAULPHO DE PAIVA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "FUNDACAO ATAULPHO DE PAIVA"
-        },
-        {
-          "language": "es",
-          "value": "FUNDACAO ATAULPHO DE PAIVA"
-        }
-      ]
-    },
-    {
-      "code": "152",
-      "display": "BUTANTAN",
-      "definition": "FUNDACAO BUTANTAN",
-      "designation": [
-        {
-          "language": "en",
-          "value": "FUNDACAO BUTANTAN"
-        },
-        {
-          "language": "es",
-          "value": "FUNDACAO BUTANTAN"
-        }
-      ]
-    },
-    {
-      "code": "153",
-      "display": "TECPAR",
-      "definition": "INSTITUTO DE TECNOLOGIA DO PARANA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "INSTITUTO DE TECNOLOGIA DO PARANA"
-        },
-        {
-          "language": "es",
-          "value": "INSTITUTO DE TECNOLOGIA DO PARANA"
-        }
-      ]
-    },
-    {
-      "code": "156",
-      "display": "DADO B.",
-      "definition": "DADE BEHRING MARBUG GMBH",
-      "designation": [
-        {
-          "language": "en",
-          "value": "DADE BEHRING MARBUG GMBH"
-        },
-        {
-          "language": "es",
-          "value": "DADE BEHRING MARBUG GMBH"
-        }
-      ]
-    },
-    {
-      "code": "159",
-      "display": "SMITHKLINE",
-      "definition": "GLAXOSMITHKLINE BEECHAM",
-      "designation": [
-        {
-          "language": "en",
-          "value": "GLAXOSMITHKLINE BEECHAM"
-        },
-        {
-          "language": "es",
-          "value": "GLAXOSMITHKLINE BEECHAM"
-        }
-      ]
-    },
-    {
-      "code": "160",
-      "display": "GREENCROSS",
-      "definition": "GREEN CROSS - PHARMACEUTICAL B. M. CORP.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "GREEN CROSS - PHARMACEUTICAL B. M. CORP."
-        },
-        {
-          "language": "es",
-          "value": "GREEN CROSS - PHARMACEUTICAL B. M. CORP."
-        }
-      ]
-    },
-    {
-      "code": "161",
-      "display": "AVENTIS",
-      "definition": "AVENTIS PASTEUR S.A.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "AVENTIS PASTEUR S.A."
-        },
-        {
-          "language": "es",
-          "value": "AVENTIS PASTEUR S.A."
-        }
-      ]
-    },
-    {
-      "code": "162",
-      "display": "CHIRON SPA",
-      "definition": "NOVARTIS/CHIRON S.P.A. VACCINES",
-      "designation": [
-        {
-          "language": "en",
-          "value": "NOVARTIS/CHIRON S.P.A. VACCINES"
-        },
-        {
-          "language": "es",
-          "value": "NOVARTIS/CHIRON S.P.A. VACCINES"
-        }
-      ]
-    },
-    {
-      "code": "163",
-      "display": "SERUM-INDIA",
-      "definition": "SERUM INSTITUTE OF INDIA LTD.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SERUM INSTITUTE OF INDIA LTD."
-        },
-        {
-          "language": "es",
-          "value": "SERUM INSTITUTE OF INDIA LTD."
-        }
-      ]
-    },
-    {
-      "code": "164",
-      "display": "LGCHEMICAL",
-      "definition": "LG CHEMICAL INVESTIMENT LTD",
-      "designation": [
-        {
-          "language": "en",
-          "value": "LG CHEMICAL INVESTIMENT LTD"
-        },
-        {
-          "language": "es",
-          "value": "LG CHEMICAL INVESTIMENT LTD"
-        }
-      ]
-    },
-    {
-      "code": "165",
-      "display": "MERCK",
-      "definition": "MERCK SHARP DOHME CO., INC.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "MERCK SHARP DOHME CO., INC."
-        },
-        {
-          "language": "es",
-          "value": "MERCK SHARP DOHME CO., INC."
-        }
-      ]
-    },
-    {
-      "code": "166",
-      "display": "BIKEN",
-      "definition": "FUNDACAO INVEST. DE INFERM. MICROB. DA UNIVERSIDADE DE OSAKA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "FUNDACAO INVEST. DE INFERM. MICROB. DA UNIVERSIDADE DE OSAKA"
-        },
-        {
-          "language": "es",
-          "value": "FUNDACAO INVEST. DE INFERM. MICROB. DA UNIVERSIDADE DE OSAKA"
-        }
-      ]
-    },
-    {
-      "code": "167",
-      "display": "SEVAC",
-      "definition": "SEVAC S.A.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SEVAC S.A."
-        },
-        {
-          "language": "es",
-          "value": "SEVAC S.A."
-        }
-      ]
-    },
-    {
-      "code": "168",
-      "display": "BERNE",
-      "definition": "SWISS SERUM AND VACCINES INSTITUTE BERNE",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SWISS SERUM AND VACCINES INSTITUTE BERNE"
-        },
-        {
-          "language": "es",
-          "value": "SWISS SERUM AND VACCINES INSTITUTE BERNE"
-        }
-      ]
-    },
-    {
-      "code": "235",
-      "display": "INCQS",
-      "definition": "INSTITUTO NACIONAL DE CONTROLE DE QUALIDADE EM SAUDE",
-      "designation": [
-        {
-          "language": "en",
-          "value": "INSTITUTO NACIONAL DE CONTROLE DE QUALIDADE EM SAUDE"
-        },
-        {
-          "language": "es",
-          "value": "INSTITUTO NACIONAL DE CONTROLE DE QUALIDADE EM SAUDE"
-        }
-      ]
-    },
-    {
-      "code": "239",
-      "display": "BAYER",
-      "definition": "BAYER CORPORATION - BIOLOGICAL PRODUCTS",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BAYER CORPORATION - BIOLOGICAL PRODUCTS"
-        },
-        {
-          "language": "es",
-          "value": "BAYER CORPORATION - BIOLOGICAL PRODUCTS"
-        }
-      ]
-    },
-    {
-      "code": "608",
-      "display": "BAXTER",
-      "definition": "BAXTER VACCINE AKTIENGESELLSCHAFT",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BAXTER VACCINE AKTIENGESELLSCHAFT"
-        },
-        {
-          "language": "es",
-          "value": "BAXTER VACCINE AKTIENGESELLSCHAFT"
-        }
-      ]
-    },
-    {
-      "code": "1659",
-      "display": "CYANAMID",
-      "definition": "AMERICAN CYANAMID COMPANY",
-      "designation": [
-        {
-          "language": "en",
-          "value": "AMERICAN CYANAMID COMPANY"
-        },
-        {
-          "language": "es",
-          "value": "AMERICAN CYANAMID COMPANY"
-        }
-      ]
-    },
-    {
-      "code": "1913",
-      "display": "CPPI",
-      "definition": "CENTRO DE PRODUCAO E PESQUISA DE IMUNOBIOLOGICOS",
-      "designation": [
-        {
-          "language": "en",
-          "value": "CENTRO DE PRODUCAO E PESQUISA DE IMUNOBIOLOGICOS"
-        },
-        {
-          "language": "es",
-          "value": "CENTRO DE PRODUCAO E PESQUISA DE IMUNOBIOLOGICOS"
-        }
-      ]
-    },
-    {
-      "code": "2250",
-      "display": "IIMUNO",
-      "definition": "INSTITUTE OF IMMUNOLOGY - CROACIA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "INSTITUTE OF IMMUNOLOGY - CROACIA"
-        },
-        {
-          "language": "es",
-          "value": "INSTITUTE OF IMMUNOLOGY - CROACIA"
-        }
-      ]
-    },
-    {
-      "code": "2260",
-      "display": "CSL",
-      "definition": "CSL BEHRING GMBH",
-      "designation": [
-        {
-          "language": "en",
-          "value": "CSL BEHRING GMBH"
-        },
-        {
-          "language": "es",
-          "value": "CSL BEHRING GMBH"
-        }
-      ]
-    },
-    {
-      "code": "2263",
-      "display": "WYETH",
-      "definition": "WYETH PHARMACEUTICALS",
-      "designation": [
-        {
-          "language": "en",
-          "value": "WYETH PHARMACEUTICALS"
-        },
-        {
-          "language": "es",
-          "value": "WYETH PHARMACEUTICALS"
-        }
-      ]
-    },
-    {
-      "code": "2355",
-      "display": "NOVARTIS",
-      "definition": "NOVARTIS PHARMA SERVICES INC.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "NOVARTIS PHARMA SERVICES INC."
-        },
-        {
-          "language": "es",
-          "value": "NOVARTIS PHARMA SERVICES INC."
-        }
-      ]
-    },
-    {
-      "code": "2560",
-      "display": "HEBER",
-      "definition": "HEBER BIOTEC",
-      "designation": [
-        {
-          "language": "en",
-          "value": "HEBER BIOTEC"
-        },
-        {
-          "language": "es",
-          "value": "HEBER BIOTEC"
-        }
-      ]
-    },
-    {
-      "code": "2769",
-      "display": "BERNA",
-      "definition": "BERNA BIOTECH KOREA CORPORATION",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BERNA BIOTECH KOREA CORPORATION"
-        },
-        {
-          "language": "es",
-          "value": "BERNA BIOTECH KOREA CORPORATION"
-        }
-      ]
-    },
-    {
-      "code": "2862",
-      "display": "SANPASTEUR",
-      "definition": "SANOFI PASTEUR",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SANOFI PASTEUR"
-        },
-        {
-          "language": "es",
-          "value": "SANOFI PASTEUR"
-        }
-      ]
-    },
-    {
-      "code": "2901",
-      "display": "MERIAL",
-      "definition": "MERIAL MEXICO, SA BECV",
-      "designation": [
-        {
-          "language": "en",
-          "value": "MERIAL MEXICO, SA BECV"
-        },
-        {
-          "language": "es",
-          "value": "MERIAL MEXICO, SA BECV"
-        }
-      ]
-    },
-    {
-      "code": "3521",
-      "display": "BIOVET",
-      "definition": "BIOVET",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BIOVET"
-        },
-        {
-          "language": "es",
-          "value": "BIOVET"
-        }
-      ]
-    },
-    {
-      "code": "10534",
-      "display": "CRUCELL",
-      "definition": "CRUCELL SWEDEN AB",
-      "designation": [
-        {
-          "language": "en",
-          "value": "CRUCELL SWEDEN AB"
-        },
-        {
-          "language": "es",
-          "value": "CRUCELL SWEDEN AB"
-        }
-      ]
-    },
-    {
-      "code": "11347",
-      "display": "VIRBAC",
-      "definition": "VIRBAC S.A",
-      "designation": [
-        {
-          "language": "en",
-          "value": "VIRBAC S.A"
-        },
-        {
-          "language": "es",
-          "value": "VIRBAC S.A"
-        }
-      ]
-    },
-    {
-      "code": "12551",
-      "display": "GRIFOLS",
-      "definition": "GRIFOLS BRASIL LTDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "GRIFOLS BRASIL LTDA"
-        },
-        {
-          "language": "es",
-          "value": "GRIFOLS BRASIL LTDA"
-        }
-      ]
-    },
-    {
-      "code": "12572",
-      "display": "KEDRION",
-      "definition": "KEDRION BIOPHARMA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "KEDRION BIOPHARMA"
-        },
-        {
-          "language": "es",
-          "value": "KEDRION BIOPHARMA"
-        }
-      ]
-    },
-    {
-      "code": "13219",
-      "display": "BIOGENESIS",
-      "definition": "BIOGENESIS-BAGO S/A",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BIOGENESIS-BAGO S/A"
-        },
-        {
-          "language": "es",
-          "value": "BIOGENESIS-BAGO S/A"
-        }
-      ]
-    },
-    {
-      "code": "13688",
-      "display": "SHANTHA",
-      "definition": "SHANTHA BIOTECHNICS",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SHANTHA BIOTECHNICS"
-        },
-        {
-          "language": "es",
-          "value": "SHANTHA BIOTECHNICS"
-        }
-      ]
-    },
-    {
-      "code": "16763",
-      "display": "BIOFARMA",
-      "definition": "BIOFARMA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BIOFARMA"
-        },
-        {
-          "language": "es",
-          "value": "BIOFARMA"
-        }
-      ]
-    },
-    {
-      "code": "17934",
-      "display": "BIOLOGICAL",
-      "definition": "BIOLOGICAL E. LIMITED",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BIOLOGICAL E. LIMITED"
-        },
-        {
-          "language": "es",
-          "value": "BIOLOGICAL E. LIMITED"
-        }
-      ]
-    },
-    {
-      "code": "18189",
-      "display": "INTERVAX",
-      "definition": "INTERVAX LTDA.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "INTERVAX LTDA."
-        },
-        {
-          "language": "es",
-          "value": "INTERVAX LTDA."
-        }
-      ]
-    },
-    {
-      "code": "18190",
-      "display": "BB-NCIPD",
-      "definition": "BB-NCIPD LTD.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BB-NCIPD LTD."
-        },
-        {
-          "language": "es",
-          "value": "BB-NCIPD LTD."
-        }
-      ]
-    },
-    {
-      "code": "22942",
-      "display": "LGLIFE",
-      "definition": "LG LIFE SCIENCES LTDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "LG LIFE SCIENCES LTDA"
-        },
-        {
-          "language": "es",
-          "value": "LG LIFE SCIENCES LTDA"
-        }
-      ]
-    },
-    {
-      "code": "26313",
-      "display": "MERCK-GO",
-      "definition": "MERCK SHARP E DOHME FARMACEUTICA LTDA / GO",
-      "designation": [
-        {
-          "language": "en",
-          "value": "MERCK SHARP E DOHME FARMACEUTICA LTDA / GO"
-        },
-        {
-          "language": "es",
-          "value": "MERCK SHARP E DOHME FARMACEUTICA LTDA / GO"
-        }
-      ]
-    },
-    {
-      "code": "27816",
-      "display": "EUBIOLOGI",
-      "definition": "EUBIOLOGICS CO., LTD.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "EUBIOLOGICS CO., LTD."
-        },
-        {
-          "language": "es",
-          "value": "EUBIOLOGICS CO., LTD."
-        }
-      ]
-    },
-    {
-      "code": "27880",
-      "display": "GSK-BRASIL",
-      "definition": "GLAXOSMITHKLINE BRASIL LTDA.",
-      "designation": [
-        {
-          "language": "en",
-          "value": "GLAXOSMITHKLINE BRASIL LTDA."
-        },
-        {
-          "language": "es",
-          "value": "GLAXOSMITHKLINE BRASIL LTDA."
-        }
-      ]
-    },
-    {
-      "code": "28211",
-      "display": "KAMADA",
-      "definition": "KAMADA PHARMACEUTICAL",
-      "designation": [
-        {
-          "language": "en",
-          "value": "KAMADA PHARMACEUTICAL"
-        },
-        {
-          "language": "es",
-          "value": "KAMADA PHARMACEUTICAL"
-        }
-      ]
-    },
-    {
-      "code": "28251",
-      "display": "SANMEDLEY",
-      "definition": "SANOFI MEDLEY FARMACEUTICA LTDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SANOFI MEDLEY FARMACEUTICA LTDA"
-        },
-        {
-          "language": "es",
-          "value": "SANOFI MEDLEY FARMACEUTICA LTDA"
-        }
-      ]
-    },
-    {
-      "code": "28283",
-      "display": "VINS",
-      "definition": "VINS BIOPRODUCTS LIMITED",
-      "designation": [
-        {
-          "language": "en",
-          "value": "VINS BIOPRODUCTS LIMITED"
-        },
-        {
-          "language": "es",
-          "value": "VINS BIOPRODUCTS LIMITED"
-        }
-      ]
-    },
-    {
-      "code": "28290",
-      "display": "PFIZER-BELGICA",
-      "definition": "PFIZER MANUFACTURING BELGIUM NV - BELGIVA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "PFIZER MANUFACTURING BELGIUM NV - BELGIVA"
-        },
-        {
-          "language": "es",
-          "value": "PFIZER MANUFACTURING BELGIUM NV - BELGIVA"
-        }
-      ]
-    },
-    {
-      "code": "28303",
-      "display": "PANACEA",
-      "definition": "PANACEA BIOTEC LTD",
-      "designation": [
-        {
-          "language": "en",
-          "value": "PANACEA BIOTEC LTD"
-        },
-        {
-          "language": "es",
-          "value": "PANACEA BIOTEC LTD"
-        }
-      ]
-    },
-    {
-      "code": "28425",
-      "display": "BIOGENESIS",
-      "definition": "BIOGENESIS BAGO SAUDE ANIMAL LTDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BIOGENESIS BAGO SAUDE ANIMAL LTDA"
-        },
-        {
-          "language": "es",
-          "value": "BIOGENESIS BAGO SAUDE ANIMAL LTDA"
-        }
-      ]
-    },
-    {
-      "code": "28738",
-      "display": "BOEHRINGER",
-      "definition": "BOEHRINGER INGELHEIM ANIMAL HEALTH",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BOEHRINGER INGELHEIM ANIMAL HEALTH"
-        },
-        {
-          "language": "es",
-          "value": "BOEHRINGER INGELHEIM ANIMAL HEALTH"
-        }
-      ]
-    },
-    {
-      "code": "29501",
-      "display": "SINOVAC",
-      "definition": "SINOVAC LIFE SCIENCE CO., LTD",
-      "designation": [
-        {
-          "language": "en",
-          "value": "SINOVAC LIFE SCIENCE CO., LTD"
-        },
-        {
-          "language": "es",
-          "value": "SINOVAC LIFE SCIENCE CO., LTD"
-        }
-      ]
-    },
-    {
-      "code": "29909",
-      "display": "ASTRAZENECA",
-      "definition": "ASTRAZENECA AB",
-      "designation": [
-        {
-          "language": "en",
-          "value": "ASTRAZENECA AB"
-        },
-        {
-          "language": "es",
-          "value": "ASTRAZENECA AB"
-        }
-      ]
-    },
-    {
-      "code": "30357",
-      "display": "EQUIPLEX",
-      "definition": "EQUIPLEX INDUSTRIA FARMACEUTICA LTDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "EQUIPLEX INDUSTRIA FARMACEUTICA LTDA"
-        },
-        {
-          "language": "es",
-          "value": "EQUIPLEX INDUSTRIA FARMACEUTICA LTDA"
-        }
-      ]
-    },
-    {
-      "code": "30587",
-      "display": "JANSSEN",
-      "definition": "JANSSEN PHARMACEUTICA NV",
-      "designation": [
-        {
-          "language": "en",
-          "value": "JANSSEN PHARMACEUTICA NV"
-        },
-        {
-          "language": "es",
-          "value": "JANSSEN PHARMACEUTICA NV"
-        }
-      ]
-    },
-    {
-      "code": "33502",
-      "display": "BAV-NORDIC",
-      "definition": "BAVARIAN NORDIC A/S",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BAVARIAN NORDIC A/S"
-        },
-        {
-          "language": "es",
-          "value": "BAVARIAN NORDIC A/S"
-        }
-      ]
-    },
-    {
-      "code": "33713",
-      "display": "AMYIN",
-      "definition": "AMYIN OHIO LLC",
-      "designation": [
-        {
-          "language": "en",
-          "value": "AMYIN OHIO LLC"
-        },
-        {
-          "language": "es",
-          "value": "AMYIN OHIO LLC"
-        }
-      ]
-    },
-    {
-      "code": "35977",
-      "display": "GAMALEYA",
-      "definition": "INSTITUTO GAMALEYA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "INSTITUTO GAMALEYA"
-        },
-        {
-          "language": "es",
-          "value": "INSTITUTO GAMALEYA"
-        }
-      ]
-    },
-    {
-      "code": "35978",
-      "display": "MODERNA",
-      "definition": "MODERNA BIOTECH",
-      "designation": [
-        {
-          "language": "en",
-          "value": "MODERNA BIOTECH"
-        },
-        {
-          "language": "es",
-          "value": "MODERNA BIOTECH"
-        }
-      ]
-    },
-    {
-      "code": "35979",
-      "display": "BHARAT",
-      "definition": "BHARAT BIOTECH",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BHARAT BIOTECH"
-        },
-        {
-          "language": "es",
-          "value": "BHARAT BIOTECH"
-        }
-      ]
-    },
-    {
-      "code": "169",
-      "display": "FINLAY",
-      "definition": "FINLAY VACUNAS Y SUEROS",
-      "designation": [
-        {
-          "language": "en",
-          "value": "FINLAY VACUNAS Y SUEROS"
-        },
-        {
-          "language": "es",
-          "value": "FINLAY VACUNAS Y SUEROS"
-        }
-      ]
-    },
-    {
-      "code": "712",
-      "display": "BIOMERIEUX",
-      "definition": "BIO LAB MERIEUX",
-      "designation": [
-        {
-          "language": "en",
-          "value": "BIO LAB MERIEUX"
-        },
-        {
-          "language": "es",
-          "value": "BIO LAB MERIEUX"
-        }
-      ]
-    },
-    {
-      "code": "36271",
-      "display": "ABBOTT-HOLAN",
-      "definition": "ABBOTT BIOLOGICALS B.V. WEESP HOLANDA",
-      "designation": [
-        {
-          "language": "en",
-          "value": "ABBOTT BIOLOGICALS B.V. WEESP HOLANDA"
-        },
-        {
-          "language": "es",
-          "value": "ABBOTT BIOLOGICALS B.V. WEESP HOLANDA"
-        }
-      ]
-    },
-    {
-      "code": "28289",
-      "display": "GLAXO-BIO",
-      "definition": "GLAXOSMITHKLINE BIOLOGICALS S.A. - BELGICA"
-    },
-    {
-      "code": "9406",
-      "display": "HALEXISTAR",
-      "definition": "HALEX ISTAR INDUSTRIA FARMACEUTICA"
-    },
-    {
-      "code": "37646",
-      "display": "EMERGENT",
-      "definition": "EMERGENT BIOSOLUTIONS INC."
-    },
-    {
-      "code": "26513",
-      "display": "BEHRING",
-      "definition": "CSL BEHRING COMERCIO DE PRODUTOS FARMACEUTICOS LTDA"
-    },
-    {
-      "code": "39263",
-      "display": "TAKEDA",
-      "definition": "TAKEDA PHARMA LTDA."
-    },
-    {
-      "code": "39262",
-      "display": "IDT BIOLOGIKA",
-      "definition": "IDT BIOLOGIKA GMBH"
-    }
-  ]
+    "resourceType": "CodeSystem",
+    "meta": {
+        "lastUpdated": "2022-12-16T18:15:54.9540124+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFabricantePNI",
+    "version": "1.1.2",
+    "name": "Fabricante do imunobiológico",
+    "status": "active",
+    "experimental": false,
+    "date": "2023-01-02T18:15:54.9540124+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Apresenta o fabricante do imunobiológico.",
+    "content": "complete",
+    "concept": [
+        {
+            "code": "141",
+            "display": "IVB",
+            "definition": "INSTITUTO VITAL BRAZIL S.A",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "INSTITUTO VITAL BRAZIL S.A"
+                },
+                {
+                    "language": "es",
+                    "value": "INSTITUTO VITAL BRAZIL S.A"
+                }
+            ]
+        },
+        {
+            "code": "142",
+            "display": "PFIZER",
+            "definition": "LABORATORIOS PFIZER LTDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "LABORATORIOS PFIZER LTDA"
+                },
+                {
+                    "language": "es",
+                    "value": "LABORATORIOS PFIZER LTDA"
+                }
+            ]
+        },
+        {
+            "code": "149",
+            "display": "FIOCRUZ",
+            "definition": "FUNDACAO OSWALDO CRUZ",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "FUNDACAO OSWALDO CRUZ"
+                },
+                {
+                    "language": "es",
+                    "value": "FUNDACAO OSWALDO CRUZ"
+                }
+            ]
+        },
+        {
+            "code": "150",
+            "display": "FUNED",
+            "definition": "FUNDACAO EZEQUIEL DIAS",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "FUNDACAO EZEQUIEL DIAS"
+                },
+                {
+                    "language": "es",
+                    "value": "FUNDACAO EZEQUIEL DIAS"
+                }
+            ]
+        },
+        {
+            "code": "151",
+            "display": "F.A.P.",
+            "definition": "FUNDACAO ATAULPHO DE PAIVA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "FUNDACAO ATAULPHO DE PAIVA"
+                },
+                {
+                    "language": "es",
+                    "value": "FUNDACAO ATAULPHO DE PAIVA"
+                }
+            ]
+        },
+        {
+            "code": "152",
+            "display": "BUTANTAN",
+            "definition": "FUNDACAO BUTANTAN",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "FUNDACAO BUTANTAN"
+                },
+                {
+                    "language": "es",
+                    "value": "FUNDACAO BUTANTAN"
+                }
+            ]
+        },
+        {
+            "code": "153",
+            "display": "TECPAR",
+            "definition": "INSTITUTO DE TECNOLOGIA DO PARANA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "INSTITUTO DE TECNOLOGIA DO PARANA"
+                },
+                {
+                    "language": "es",
+                    "value": "INSTITUTO DE TECNOLOGIA DO PARANA"
+                }
+            ]
+        },
+        {
+            "code": "156",
+            "display": "DADO B.",
+            "definition": "DADE BEHRING MARBUG GMBH",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "DADE BEHRING MARBUG GMBH"
+                },
+                {
+                    "language": "es",
+                    "value": "DADE BEHRING MARBUG GMBH"
+                }
+            ]
+        },
+        {
+            "code": "159",
+            "display": "SMITHKLINE",
+            "definition": "GLAXOSMITHKLINE BEECHAM",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "GLAXOSMITHKLINE BEECHAM"
+                },
+                {
+                    "language": "es",
+                    "value": "GLAXOSMITHKLINE BEECHAM"
+                }
+            ]
+        },
+        {
+            "code": "160",
+            "display": "GREENCROSS",
+            "definition": "GREEN CROSS - PHARMACEUTICAL B. M. CORP.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "GREEN CROSS - PHARMACEUTICAL B. M. CORP."
+                },
+                {
+                    "language": "es",
+                    "value": "GREEN CROSS - PHARMACEUTICAL B. M. CORP."
+                }
+            ]
+        },
+        {
+            "code": "161",
+            "display": "AVENTIS",
+            "definition": "AVENTIS PASTEUR S.A.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "AVENTIS PASTEUR S.A."
+                },
+                {
+                    "language": "es",
+                    "value": "AVENTIS PASTEUR S.A."
+                }
+            ]
+        },
+        {
+            "code": "162",
+            "display": "CHIRON SPA",
+            "definition": "NOVARTIS/CHIRON S.P.A. VACCINES",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "NOVARTIS/CHIRON S.P.A. VACCINES"
+                },
+                {
+                    "language": "es",
+                    "value": "NOVARTIS/CHIRON S.P.A. VACCINES"
+                }
+            ]
+        },
+        {
+            "code": "163",
+            "display": "SERUM-INDIA",
+            "definition": "SERUM INSTITUTE OF INDIA LTD.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SERUM INSTITUTE OF INDIA LTD."
+                },
+                {
+                    "language": "es",
+                    "value": "SERUM INSTITUTE OF INDIA LTD."
+                }
+            ]
+        },
+        {
+            "code": "164",
+            "display": "LGCHEMICAL",
+            "definition": "LG CHEMICAL INVESTIMENT LTD",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "LG CHEMICAL INVESTIMENT LTD"
+                },
+                {
+                    "language": "es",
+                    "value": "LG CHEMICAL INVESTIMENT LTD"
+                }
+            ]
+        },
+        {
+            "code": "165",
+            "display": "MERCK",
+            "definition": "MERCK SHARP DOHME CO., INC.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "MERCK SHARP DOHME CO., INC."
+                },
+                {
+                    "language": "es",
+                    "value": "MERCK SHARP DOHME CO., INC."
+                }
+            ]
+        },
+        {
+            "code": "166",
+            "display": "BIKEN",
+            "definition": "FUNDACAO INVEST. DE INFERM. MICROB. DA UNIVERSIDADE DE OSAKA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "FUNDACAO INVEST. DE INFERM. MICROB. DA UNIVERSIDADE DE OSAKA"
+                },
+                {
+                    "language": "es",
+                    "value": "FUNDACAO INVEST. DE INFERM. MICROB. DA UNIVERSIDADE DE OSAKA"
+                }
+            ]
+        },
+        {
+            "code": "167",
+            "display": "SEVAC",
+            "definition": "SEVAC S.A.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SEVAC S.A."
+                },
+                {
+                    "language": "es",
+                    "value": "SEVAC S.A."
+                }
+            ]
+        },
+        {
+            "code": "168",
+            "display": "BERNE",
+            "definition": "SWISS SERUM AND VACCINES INSTITUTE BERNE",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SWISS SERUM AND VACCINES INSTITUTE BERNE"
+                },
+                {
+                    "language": "es",
+                    "value": "SWISS SERUM AND VACCINES INSTITUTE BERNE"
+                }
+            ]
+        },
+        {
+            "code": "235",
+            "display": "INCQS",
+            "definition": "INSTITUTO NACIONAL DE CONTROLE DE QUALIDADE EM SAUDE",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "INSTITUTO NACIONAL DE CONTROLE DE QUALIDADE EM SAUDE"
+                },
+                {
+                    "language": "es",
+                    "value": "INSTITUTO NACIONAL DE CONTROLE DE QUALIDADE EM SAUDE"
+                }
+            ]
+        },
+        {
+            "code": "239",
+            "display": "BAYER",
+            "definition": "BAYER CORPORATION - BIOLOGICAL PRODUCTS",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BAYER CORPORATION - BIOLOGICAL PRODUCTS"
+                },
+                {
+                    "language": "es",
+                    "value": "BAYER CORPORATION - BIOLOGICAL PRODUCTS"
+                }
+            ]
+        },
+        {
+            "code": "608",
+            "display": "BAXTER",
+            "definition": "BAXTER VACCINE AKTIENGESELLSCHAFT",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BAXTER VACCINE AKTIENGESELLSCHAFT"
+                },
+                {
+                    "language": "es",
+                    "value": "BAXTER VACCINE AKTIENGESELLSCHAFT"
+                }
+            ]
+        },
+        {
+            "code": "1659",
+            "display": "CYANAMID",
+            "definition": "AMERICAN CYANAMID COMPANY",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "AMERICAN CYANAMID COMPANY"
+                },
+                {
+                    "language": "es",
+                    "value": "AMERICAN CYANAMID COMPANY"
+                }
+            ]
+        },
+        {
+            "code": "1913",
+            "display": "CPPI",
+            "definition": "CENTRO DE PRODUCAO E PESQUISA DE IMUNOBIOLOGICOS",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "CENTRO DE PRODUCAO E PESQUISA DE IMUNOBIOLOGICOS"
+                },
+                {
+                    "language": "es",
+                    "value": "CENTRO DE PRODUCAO E PESQUISA DE IMUNOBIOLOGICOS"
+                }
+            ]
+        },
+        {
+            "code": "2250",
+            "display": "IIMUNO",
+            "definition": "INSTITUTE OF IMMUNOLOGY - CROACIA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "INSTITUTE OF IMMUNOLOGY - CROACIA"
+                },
+                {
+                    "language": "es",
+                    "value": "INSTITUTE OF IMMUNOLOGY - CROACIA"
+                }
+            ]
+        },
+        {
+            "code": "2260",
+            "display": "CSL",
+            "definition": "CSL BEHRING GMBH",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "CSL BEHRING GMBH"
+                },
+                {
+                    "language": "es",
+                    "value": "CSL BEHRING GMBH"
+                }
+            ]
+        },
+        {
+            "code": "2263",
+            "display": "WYETH",
+            "definition": "WYETH PHARMACEUTICALS",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "WYETH PHARMACEUTICALS"
+                },
+                {
+                    "language": "es",
+                    "value": "WYETH PHARMACEUTICALS"
+                }
+            ]
+        },
+        {
+            "code": "2355",
+            "display": "NOVARTIS",
+            "definition": "NOVARTIS PHARMA SERVICES INC.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "NOVARTIS PHARMA SERVICES INC."
+                },
+                {
+                    "language": "es",
+                    "value": "NOVARTIS PHARMA SERVICES INC."
+                }
+            ]
+        },
+        {
+            "code": "2560",
+            "display": "HEBER",
+            "definition": "HEBER BIOTEC",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "HEBER BIOTEC"
+                },
+                {
+                    "language": "es",
+                    "value": "HEBER BIOTEC"
+                }
+            ]
+        },
+        {
+            "code": "2769",
+            "display": "BERNA",
+            "definition": "BERNA BIOTECH KOREA CORPORATION",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BERNA BIOTECH KOREA CORPORATION"
+                },
+                {
+                    "language": "es",
+                    "value": "BERNA BIOTECH KOREA CORPORATION"
+                }
+            ]
+        },
+        {
+            "code": "2862",
+            "display": "SANPASTEUR",
+            "definition": "SANOFI PASTEUR",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SANOFI PASTEUR"
+                },
+                {
+                    "language": "es",
+                    "value": "SANOFI PASTEUR"
+                }
+            ]
+        },
+        {
+            "code": "2901",
+            "display": "MERIAL",
+            "definition": "MERIAL MEXICO, SA BECV",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "MERIAL MEXICO, SA BECV"
+                },
+                {
+                    "language": "es",
+                    "value": "MERIAL MEXICO, SA BECV"
+                }
+            ]
+        },
+        {
+            "code": "3521",
+            "display": "BIOVET",
+            "definition": "BIOVET",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BIOVET"
+                },
+                {
+                    "language": "es",
+                    "value": "BIOVET"
+                }
+            ]
+        },
+        {
+            "code": "10534",
+            "display": "CRUCELL",
+            "definition": "CRUCELL SWEDEN AB",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "CRUCELL SWEDEN AB"
+                },
+                {
+                    "language": "es",
+                    "value": "CRUCELL SWEDEN AB"
+                }
+            ]
+        },
+        {
+            "code": "11347",
+            "display": "VIRBAC",
+            "definition": "VIRBAC S.A",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "VIRBAC S.A"
+                },
+                {
+                    "language": "es",
+                    "value": "VIRBAC S.A"
+                }
+            ]
+        },
+        {
+            "code": "12551",
+            "display": "GRIFOLS",
+            "definition": "GRIFOLS BRASIL LTDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "GRIFOLS BRASIL LTDA"
+                },
+                {
+                    "language": "es",
+                    "value": "GRIFOLS BRASIL LTDA"
+                }
+            ]
+        },
+        {
+            "code": "12572",
+            "display": "KEDRION",
+            "definition": "KEDRION BIOPHARMA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "KEDRION BIOPHARMA"
+                },
+                {
+                    "language": "es",
+                    "value": "KEDRION BIOPHARMA"
+                }
+            ]
+        },
+        {
+            "code": "13219",
+            "display": "BIOGENESIS",
+            "definition": "BIOGENESIS-BAGO S/A",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BIOGENESIS-BAGO S/A"
+                },
+                {
+                    "language": "es",
+                    "value": "BIOGENESIS-BAGO S/A"
+                }
+            ]
+        },
+        {
+            "code": "13688",
+            "display": "SHANTHA",
+            "definition": "SHANTHA BIOTECHNICS",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SHANTHA BIOTECHNICS"
+                },
+                {
+                    "language": "es",
+                    "value": "SHANTHA BIOTECHNICS"
+                }
+            ]
+        },
+        {
+            "code": "16763",
+            "display": "BIOFARMA",
+            "definition": "BIOFARMA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BIOFARMA"
+                },
+                {
+                    "language": "es",
+                    "value": "BIOFARMA"
+                }
+            ]
+        },
+        {
+            "code": "17934",
+            "display": "BIOLOGICAL",
+            "definition": "BIOLOGICAL E. LIMITED",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BIOLOGICAL E. LIMITED"
+                },
+                {
+                    "language": "es",
+                    "value": "BIOLOGICAL E. LIMITED"
+                }
+            ]
+        },
+        {
+            "code": "18189",
+            "display": "INTERVAX",
+            "definition": "INTERVAX LTDA.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "INTERVAX LTDA."
+                },
+                {
+                    "language": "es",
+                    "value": "INTERVAX LTDA."
+                }
+            ]
+        },
+        {
+            "code": "18190",
+            "display": "BB-NCIPD",
+            "definition": "BB-NCIPD LTD.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BB-NCIPD LTD."
+                },
+                {
+                    "language": "es",
+                    "value": "BB-NCIPD LTD."
+                }
+            ]
+        },
+        {
+            "code": "22942",
+            "display": "LGLIFE",
+            "definition": "LG LIFE SCIENCES LTDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "LG LIFE SCIENCES LTDA"
+                },
+                {
+                    "language": "es",
+                    "value": "LG LIFE SCIENCES LTDA"
+                }
+            ]
+        },
+        {
+            "code": "26313",
+            "display": "MERCK-GO",
+            "definition": "MERCK SHARP E DOHME FARMACEUTICA LTDA / GO",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "MERCK SHARP E DOHME FARMACEUTICA LTDA / GO"
+                },
+                {
+                    "language": "es",
+                    "value": "MERCK SHARP E DOHME FARMACEUTICA LTDA / GO"
+                }
+            ]
+        },
+        {
+            "code": "27816",
+            "display": "EUBIOLOGI",
+            "definition": "EUBIOLOGICS CO., LTD.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "EUBIOLOGICS CO., LTD."
+                },
+                {
+                    "language": "es",
+                    "value": "EUBIOLOGICS CO., LTD."
+                }
+            ]
+        },
+        {
+            "code": "27880",
+            "display": "GSK-BRASIL",
+            "definition": "GLAXOSMITHKLINE BRASIL LTDA.",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "GLAXOSMITHKLINE BRASIL LTDA."
+                },
+                {
+                    "language": "es",
+                    "value": "GLAXOSMITHKLINE BRASIL LTDA."
+                }
+            ]
+        },
+        {
+            "code": "28211",
+            "display": "KAMADA",
+            "definition": "KAMADA PHARMACEUTICAL",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "KAMADA PHARMACEUTICAL"
+                },
+                {
+                    "language": "es",
+                    "value": "KAMADA PHARMACEUTICAL"
+                }
+            ]
+        },
+        {
+            "code": "28251",
+            "display": "SANMEDLEY",
+            "definition": "SANOFI MEDLEY FARMACEUTICA LTDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SANOFI MEDLEY FARMACEUTICA LTDA"
+                },
+                {
+                    "language": "es",
+                    "value": "SANOFI MEDLEY FARMACEUTICA LTDA"
+                }
+            ]
+        },
+        {
+            "code": "28283",
+            "display": "VINS",
+            "definition": "VINS BIOPRODUCTS LIMITED",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "VINS BIOPRODUCTS LIMITED"
+                },
+                {
+                    "language": "es",
+                    "value": "VINS BIOPRODUCTS LIMITED"
+                }
+            ]
+        },
+        {
+            "code": "28290",
+            "display": "PFIZER-BELGICA",
+            "definition": "PFIZER MANUFACTURING BELGIUM NV - BELGIVA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "PFIZER MANUFACTURING BELGIUM NV - BELGIVA"
+                },
+                {
+                    "language": "es",
+                    "value": "PFIZER MANUFACTURING BELGIUM NV - BELGIVA"
+                }
+            ]
+        },
+        {
+            "code": "28303",
+            "display": "PANACEA",
+            "definition": "PANACEA BIOTEC LTD",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "PANACEA BIOTEC LTD"
+                },
+                {
+                    "language": "es",
+                    "value": "PANACEA BIOTEC LTD"
+                }
+            ]
+        },
+        {
+            "code": "28425",
+            "display": "BIOGENESIS",
+            "definition": "BIOGENESIS BAGO SAUDE ANIMAL LTDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BIOGENESIS BAGO SAUDE ANIMAL LTDA"
+                },
+                {
+                    "language": "es",
+                    "value": "BIOGENESIS BAGO SAUDE ANIMAL LTDA"
+                }
+            ]
+        },
+        {
+            "code": "28738",
+            "display": "BOEHRINGER",
+            "definition": "BOEHRINGER INGELHEIM ANIMAL HEALTH",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BOEHRINGER INGELHEIM ANIMAL HEALTH"
+                },
+                {
+                    "language": "es",
+                    "value": "BOEHRINGER INGELHEIM ANIMAL HEALTH"
+                }
+            ]
+        },
+        {
+            "code": "29501",
+            "display": "SINOVAC",
+            "definition": "SINOVAC LIFE SCIENCE CO., LTD",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "SINOVAC LIFE SCIENCE CO., LTD"
+                },
+                {
+                    "language": "es",
+                    "value": "SINOVAC LIFE SCIENCE CO., LTD"
+                }
+            ]
+        },
+        {
+            "code": "29909",
+            "display": "ASTRAZENECA",
+            "definition": "ASTRAZENECA AB",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "ASTRAZENECA AB"
+                },
+                {
+                    "language": "es",
+                    "value": "ASTRAZENECA AB"
+                }
+            ]
+        },
+        {
+            "code": "30357",
+            "display": "EQUIPLEX",
+            "definition": "EQUIPLEX INDUSTRIA FARMACEUTICA LTDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "EQUIPLEX INDUSTRIA FARMACEUTICA LTDA"
+                },
+                {
+                    "language": "es",
+                    "value": "EQUIPLEX INDUSTRIA FARMACEUTICA LTDA"
+                }
+            ]
+        },
+        {
+            "code": "30587",
+            "display": "JANSSEN",
+            "definition": "JANSSEN PHARMACEUTICA NV",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "JANSSEN PHARMACEUTICA NV"
+                },
+                {
+                    "language": "es",
+                    "value": "JANSSEN PHARMACEUTICA NV"
+                }
+            ]
+        },
+        {
+            "code": "33502",
+            "display": "BAV-NORDIC",
+            "definition": "BAVARIAN NORDIC A/S",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BAVARIAN NORDIC A/S"
+                },
+                {
+                    "language": "es",
+                    "value": "BAVARIAN NORDIC A/S"
+                }
+            ]
+        },
+        {
+            "code": "33713",
+            "display": "AMYIN",
+            "definition": "AMYIN OHIO LLC",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "AMYIN OHIO LLC"
+                },
+                {
+                    "language": "es",
+                    "value": "AMYIN OHIO LLC"
+                }
+            ]
+        },
+        {
+            "code": "35977",
+            "display": "GAMALEYA",
+            "definition": "INSTITUTO GAMALEYA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "INSTITUTO GAMALEYA"
+                },
+                {
+                    "language": "es",
+                    "value": "INSTITUTO GAMALEYA"
+                }
+            ]
+        },
+        {
+            "code": "35978",
+            "display": "MODERNA",
+            "definition": "MODERNA BIOTECH",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "MODERNA BIOTECH"
+                },
+                {
+                    "language": "es",
+                    "value": "MODERNA BIOTECH"
+                }
+            ]
+        },
+        {
+            "code": "35979",
+            "display": "BHARAT",
+            "definition": "BHARAT BIOTECH",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BHARAT BIOTECH"
+                },
+                {
+                    "language": "es",
+                    "value": "BHARAT BIOTECH"
+                }
+            ]
+        },
+        {
+            "code": "169",
+            "display": "FINLAY",
+            "definition": "FINLAY VACUNAS Y SUEROS",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "FINLAY VACUNAS Y SUEROS"
+                },
+                {
+                    "language": "es",
+                    "value": "FINLAY VACUNAS Y SUEROS"
+                }
+            ]
+        },
+        {
+            "code": "712",
+            "display": "BIOMERIEUX",
+            "definition": "BIO LAB MERIEUX",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "BIO LAB MERIEUX"
+                },
+                {
+                    "language": "es",
+                    "value": "BIO LAB MERIEUX"
+                }
+            ]
+        },
+        {
+            "code": "36271",
+            "display": "ABBOTT-HOLAN",
+            "definition": "ABBOTT BIOLOGICALS B.V. WEESP HOLANDA",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "ABBOTT BIOLOGICALS B.V. WEESP HOLANDA"
+                },
+                {
+                    "language": "es",
+                    "value": "ABBOTT BIOLOGICALS B.V. WEESP HOLANDA"
+                }
+            ]
+        },
+        {
+            "code": "28289",
+            "display": "GLAXO-BIO",
+            "definition": "GLAXOSMITHKLINE BIOLOGICALS S.A. - BELGICA"
+        },
+        {
+            "code": "9406",
+            "display": "HALEXISTAR",
+            "definition": "HALEX ISTAR INDUSTRIA FARMACEUTICA"
+        },
+        {
+            "code": "37646",
+            "display": "EMERGENT",
+            "definition": "EMERGENT BIOSOLUTIONS INC."
+        },
+        {
+            "code": "26513",
+            "display": "BEHRING",
+            "definition": "CSL BEHRING COMERCIO DE PRODUTOS FARMACEUTICOS LTDA"
+        },
+        {
+            "code": "39263",
+            "display": "TAKEDA",
+            "definition": "TAKEDA PHARMA LTDA."
+        },
+        {
+            "code": "39262",
+            "display": "IDT BIOLOGIKA",
+            "definition": "IDT BIOLOGIKA GMBH"
+        }
+    ],
+    "id": "4be07155-a108-4221-8a69-63400e69168d"
 }

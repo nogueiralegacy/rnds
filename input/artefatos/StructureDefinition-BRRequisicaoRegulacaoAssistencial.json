@@ -1,600 +1,601 @@
 {
-  "resourceType": "StructureDefinition",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial",
-  "version": "1.0",
-  "name": "BRRequisicaoRegulacaoAssistencial",
-  "title": "Requisição de Regulação Assistencial",
-  "status": "active",
-  "date": "2023-04-04",
-  "kind": "resource",
-  "abstract": false,
-  "type": "ServiceRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "ServiceRequest.id",
-        "path": "ServiceRequest.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.implicitRules",
-        "path": "ServiceRequest.implicitRules",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.language",
-        "path": "ServiceRequest.language",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.text",
-        "path": "ServiceRequest.text",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.contained",
-        "path": "ServiceRequest.contained",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.identifier",
-        "path": "ServiceRequest.identifier",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.instantiatesCanonical",
-        "path": "ServiceRequest.instantiatesCanonical",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.instantiatesUri",
-        "path": "ServiceRequest.instantiatesUri",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.basedOn",
-        "path": "ServiceRequest.basedOn",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.replaces",
-        "path": "ServiceRequest.replaces",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requisition",
-        "path": "ServiceRequest.requisition",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.status",
-        "path": "ServiceRequest.status",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
-        }
-      },
-      {
-        "id": "ServiceRequest.intent",
-        "path": "ServiceRequest.intent",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"
-        }
-      },
-      {
-        "id": "ServiceRequest.category",
-        "path": "ServiceRequest.category",
-        "short": "Modalidade assistencial.",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "description": "Modalidade assistencial.",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA"
-        }
-      },
-      {
-        "id": "ServiceRequest.category.id",
-        "path": "ServiceRequest.category.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.category.coding",
-        "path": "ServiceRequest.category.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "ServiceRequest.category.coding.id",
-        "path": "ServiceRequest.category.coding.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.category.coding.system",
-        "path": "ServiceRequest.category.coding.system",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.category.coding.code",
-        "path": "ServiceRequest.category.coding.code",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.category.coding.userSelected",
-        "path": "ServiceRequest.category.coding.userSelected",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.category.text",
-        "path": "ServiceRequest.category.text",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.priority",
-        "path": "ServiceRequest.priority",
-        "short": "Caráter do atendimento.",
-        "min": 1,
-        "binding": {
-          "strength": "required",
-          "description": "Caráter do atendimento",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"
-        }
-      },
-      {
-        "id": "ServiceRequest.doNotPerform",
-        "path": "ServiceRequest.doNotPerform",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.code",
-        "path": "ServiceRequest.code",
-        "short": "Código do procedimento.",
-        "min": 1,
-        "binding": {
-          "strength": "required",
-          "description": "SIGTAP",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"
-        }
-      },
-      {
-        "id": "ServiceRequest.code.id",
-        "path": "ServiceRequest.code.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.code.coding",
-        "path": "ServiceRequest.code.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "ServiceRequest.code.coding.id",
-        "path": "ServiceRequest.code.coding.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.code.coding.system",
-        "path": "ServiceRequest.code.coding.system",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.code.coding.code",
-        "path": "ServiceRequest.code.coding.code",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.code.coding.userSelected",
-        "path": "ServiceRequest.code.coding.userSelected",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.code.text",
-        "path": "ServiceRequest.code.text",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.orderDetail",
-        "path": "ServiceRequest.orderDetail",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.quantity[x]",
-        "path": "ServiceRequest.quantity[x]",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject",
-        "path": "ServiceRequest.subject",
-        "short": "Paciente",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-            ]
-          }
+    "resourceType": "StructureDefinition",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial",
+    "version": "1.0",
+    "name": "BRRequisicaoRegulacaoAssistencial",
+    "title": "Requisição de Regulação Assistencial",
+    "status": "active",
+    "date": "2023-04-04",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ServiceRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "ServiceRequest.id",
+                "path": "ServiceRequest.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.implicitRules",
+                "path": "ServiceRequest.implicitRules",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.language",
+                "path": "ServiceRequest.language",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.text",
+                "path": "ServiceRequest.text",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.contained",
+                "path": "ServiceRequest.contained",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.identifier",
+                "path": "ServiceRequest.identifier",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.instantiatesCanonical",
+                "path": "ServiceRequest.instantiatesCanonical",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.instantiatesUri",
+                "path": "ServiceRequest.instantiatesUri",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.basedOn",
+                "path": "ServiceRequest.basedOn",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.replaces",
+                "path": "ServiceRequest.replaces",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requisition",
+                "path": "ServiceRequest.requisition",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.status",
+                "path": "ServiceRequest.status",
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRequisicaoRegulacaoAssistencial"
+                }
+            },
+            {
+                "id": "ServiceRequest.intent",
+                "path": "ServiceRequest.intent",
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoRegulacao"
+                }
+            },
+            {
+                "id": "ServiceRequest.category",
+                "path": "ServiceRequest.category",
+                "short": "Modalidade assistencial.",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "description": "Modalidade assistencial.",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA"
+                }
+            },
+            {
+                "id": "ServiceRequest.category.id",
+                "path": "ServiceRequest.category.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.category.coding",
+                "path": "ServiceRequest.category.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "ServiceRequest.category.coding.id",
+                "path": "ServiceRequest.category.coding.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.category.coding.system",
+                "path": "ServiceRequest.category.coding.system",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.category.coding.code",
+                "path": "ServiceRequest.category.coding.code",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.category.coding.userSelected",
+                "path": "ServiceRequest.category.coding.userSelected",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.category.text",
+                "path": "ServiceRequest.category.text",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.priority",
+                "path": "ServiceRequest.priority",
+                "short": "Caráter do atendimento.",
+                "min": 1,
+                "binding": {
+                    "strength": "required",
+                    "description": "Caráter do atendimento",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"
+                }
+            },
+            {
+                "id": "ServiceRequest.doNotPerform",
+                "path": "ServiceRequest.doNotPerform",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.code",
+                "path": "ServiceRequest.code",
+                "short": "Código do procedimento.",
+                "min": 1,
+                "binding": {
+                    "strength": "required",
+                    "description": "SIGTAP",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"
+                }
+            },
+            {
+                "id": "ServiceRequest.code.id",
+                "path": "ServiceRequest.code.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.code.coding",
+                "path": "ServiceRequest.code.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "ServiceRequest.code.coding.id",
+                "path": "ServiceRequest.code.coding.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.code.coding.system",
+                "path": "ServiceRequest.code.coding.system",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.code.coding.code",
+                "path": "ServiceRequest.code.coding.code",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.code.coding.userSelected",
+                "path": "ServiceRequest.code.coding.userSelected",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.code.text",
+                "path": "ServiceRequest.code.text",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.orderDetail",
+                "path": "ServiceRequest.orderDetail",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.quantity[x]",
+                "path": "ServiceRequest.quantity[x]",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject",
+                "path": "ServiceRequest.subject",
+                "short": "Paciente",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.subject.id",
+                "path": "ServiceRequest.subject.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.reference",
+                "path": "ServiceRequest.subject.reference",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.type",
+                "path": "ServiceRequest.subject.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.identifier",
+                "path": "ServiceRequest.subject.identifier",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.id",
+                "path": "ServiceRequest.subject.identifier.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.use",
+                "path": "ServiceRequest.subject.identifier.use",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.type",
+                "path": "ServiceRequest.subject.identifier.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.system",
+                "path": "ServiceRequest.subject.identifier.system",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.value",
+                "path": "ServiceRequest.subject.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.period",
+                "path": "ServiceRequest.subject.identifier.period",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.identifier.assigner",
+                "path": "ServiceRequest.subject.identifier.assigner",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.subject.display",
+                "path": "ServiceRequest.subject.display",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.encounter",
+                "path": "ServiceRequest.encounter",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.occurrence[x]",
+                "path": "ServiceRequest.occurrence[x]",
+                "short": "Quando o procedimento foi executado",
+                "definition": "Data e hora da execução do procedimento no padrão ISO8601.",
+                "type": [
+                    {
+                        "code": "dateTime"
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.occurrence[x].id",
+                "path": "ServiceRequest.occurrence[x].id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.asNeeded[x]",
+                "path": "ServiceRequest.asNeeded[x]",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.authoredOn",
+                "path": "ServiceRequest.authoredOn",
+                "short": "Data e hora em que o procediento foi solicitado.",
+                "definition": "Data e hora da solicitação do procedimento no padrão ISO8601.",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.requester",
+                "path": "ServiceRequest.requester",
+                "short": "Estabelecimento de saúde solicitante",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.requester.id",
+                "path": "ServiceRequest.requester.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.reference",
+                "path": "ServiceRequest.requester.reference",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.type",
+                "path": "ServiceRequest.requester.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.identifier",
+                "path": "ServiceRequest.requester.identifier",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.id",
+                "path": "ServiceRequest.requester.identifier.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.use",
+                "path": "ServiceRequest.requester.identifier.use",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.type",
+                "path": "ServiceRequest.requester.identifier.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.system",
+                "path": "ServiceRequest.requester.identifier.system",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.value",
+                "path": "ServiceRequest.requester.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.period",
+                "path": "ServiceRequest.requester.identifier.period",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.identifier.assigner",
+                "path": "ServiceRequest.requester.identifier.assigner",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.requester.display",
+                "path": "ServiceRequest.requester.display",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performerType",
+                "path": "ServiceRequest.performerType",
+                "short": "Identificador da especialidade médica do executante.",
+                "binding": {
+                    "strength": "required",
+                    "description": "Classificação Brasileira de Ocupações.",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
+                }
+            },
+            {
+                "id": "ServiceRequest.performerType.id",
+                "path": "ServiceRequest.performerType.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performerType.coding",
+                "path": "ServiceRequest.performerType.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "ServiceRequest.performerType.coding.id",
+                "path": "ServiceRequest.performerType.coding.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performerType.coding.system",
+                "path": "ServiceRequest.performerType.coding.system",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.performerType.coding.code",
+                "path": "ServiceRequest.performerType.coding.code",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.performerType.coding.userSelected",
+                "path": "ServiceRequest.performerType.coding.userSelected",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performerType.text",
+                "path": "ServiceRequest.performerType.text",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer",
+                "path": "ServiceRequest.performer",
+                "short": "Estabelecimento de sáude executante",
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.performer.id",
+                "path": "ServiceRequest.performer.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.reference",
+                "path": "ServiceRequest.performer.reference",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.type",
+                "path": "ServiceRequest.performer.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.identifier",
+                "path": "ServiceRequest.performer.identifier",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.id",
+                "path": "ServiceRequest.performer.identifier.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.use",
+                "path": "ServiceRequest.performer.identifier.use",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.type",
+                "path": "ServiceRequest.performer.identifier.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.system",
+                "path": "ServiceRequest.performer.identifier.system",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.value",
+                "path": "ServiceRequest.performer.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.period",
+                "path": "ServiceRequest.performer.identifier.period",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.identifier.assigner",
+                "path": "ServiceRequest.performer.identifier.assigner",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.performer.display",
+                "path": "ServiceRequest.performer.display",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.locationCode",
+                "path": "ServiceRequest.locationCode",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.locationReference",
+                "path": "ServiceRequest.locationReference",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.reasonCode",
+                "path": "ServiceRequest.reasonCode",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.reasonReference",
+                "path": "ServiceRequest.reasonReference",
+                "short": "Motivo da solicitação",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ServiceRequest.reasonReference.id",
+                "path": "ServiceRequest.reasonReference.id",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.reasonReference.reference",
+                "path": "ServiceRequest.reasonReference.reference",
+                "min": 1
+            },
+            {
+                "id": "ServiceRequest.reasonReference.type",
+                "path": "ServiceRequest.reasonReference.type",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.reasonReference.identifier",
+                "path": "ServiceRequest.reasonReference.identifier",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.reasonReference.display",
+                "path": "ServiceRequest.reasonReference.display",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.insurance",
+                "path": "ServiceRequest.insurance",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.supportingInfo",
+                "path": "ServiceRequest.supportingInfo",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.specimen",
+                "path": "ServiceRequest.specimen",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.bodySite",
+                "path": "ServiceRequest.bodySite",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.note",
+                "path": "ServiceRequest.note",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.patientInstruction",
+                "path": "ServiceRequest.patientInstruction",
+                "max": "0"
+            },
+            {
+                "id": "ServiceRequest.relevantHistory",
+                "path": "ServiceRequest.relevantHistory",
+                "max": "0"
+            }
         ]
-      },
-      {
-        "id": "ServiceRequest.subject.id",
-        "path": "ServiceRequest.subject.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.reference",
-        "path": "ServiceRequest.subject.reference",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.type",
-        "path": "ServiceRequest.subject.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.identifier",
-        "path": "ServiceRequest.subject.identifier",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.id",
-        "path": "ServiceRequest.subject.identifier.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.use",
-        "path": "ServiceRequest.subject.identifier.use",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.type",
-        "path": "ServiceRequest.subject.identifier.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.system",
-        "path": "ServiceRequest.subject.identifier.system",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.value",
-        "path": "ServiceRequest.subject.identifier.value",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.period",
-        "path": "ServiceRequest.subject.identifier.period",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.identifier.assigner",
-        "path": "ServiceRequest.subject.identifier.assigner",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.subject.display",
-        "path": "ServiceRequest.subject.display",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.encounter",
-        "path": "ServiceRequest.encounter",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.occurrence[x]",
-        "path": "ServiceRequest.occurrence[x]",
-        "short": "Quando o procedimento foi executado",
-        "definition": "Data e hora da execução do procedimento no padrão ISO8601.",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ]
-      },
-      {
-        "id": "ServiceRequest.occurrence[x].id",
-        "path": "ServiceRequest.occurrence[x].id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.asNeeded[x]",
-        "path": "ServiceRequest.asNeeded[x]",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.authoredOn",
-        "path": "ServiceRequest.authoredOn",
-        "short": "Data e hora em que o procediento foi solicitado.",
-        "definition": "Data e hora da solicitação do procedimento no padrão ISO8601.",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.requester",
-        "path": "ServiceRequest.requester",
-        "short": "Estabelecimento de saúde solicitante",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ServiceRequest.requester.id",
-        "path": "ServiceRequest.requester.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.reference",
-        "path": "ServiceRequest.requester.reference",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.type",
-        "path": "ServiceRequest.requester.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.identifier",
-        "path": "ServiceRequest.requester.identifier",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.id",
-        "path": "ServiceRequest.requester.identifier.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.use",
-        "path": "ServiceRequest.requester.identifier.use",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.type",
-        "path": "ServiceRequest.requester.identifier.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.system",
-        "path": "ServiceRequest.requester.identifier.system",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.value",
-        "path": "ServiceRequest.requester.identifier.value",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.period",
-        "path": "ServiceRequest.requester.identifier.period",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.identifier.assigner",
-        "path": "ServiceRequest.requester.identifier.assigner",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.requester.display",
-        "path": "ServiceRequest.requester.display",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performerType",
-        "path": "ServiceRequest.performerType",
-        "short": "Identificador da especialidade médica do executante.",
-        "binding": {
-          "strength": "required",
-          "description": "Classificação Brasileira de Ocupações.",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
-        }
-      },
-      {
-        "id": "ServiceRequest.performerType.id",
-        "path": "ServiceRequest.performerType.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performerType.coding",
-        "path": "ServiceRequest.performerType.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "ServiceRequest.performerType.coding.id",
-        "path": "ServiceRequest.performerType.coding.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performerType.coding.system",
-        "path": "ServiceRequest.performerType.coding.system",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.performerType.coding.code",
-        "path": "ServiceRequest.performerType.coding.code",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.performerType.coding.userSelected",
-        "path": "ServiceRequest.performerType.coding.userSelected",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performerType.text",
-        "path": "ServiceRequest.performerType.text",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer",
-        "path": "ServiceRequest.performer",
-        "short": "Estabelecimento de sáude executante",
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ServiceRequest.performer.id",
-        "path": "ServiceRequest.performer.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.reference",
-        "path": "ServiceRequest.performer.reference",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.type",
-        "path": "ServiceRequest.performer.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.identifier",
-        "path": "ServiceRequest.performer.identifier",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.id",
-        "path": "ServiceRequest.performer.identifier.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.use",
-        "path": "ServiceRequest.performer.identifier.use",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.type",
-        "path": "ServiceRequest.performer.identifier.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.system",
-        "path": "ServiceRequest.performer.identifier.system",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.value",
-        "path": "ServiceRequest.performer.identifier.value",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.period",
-        "path": "ServiceRequest.performer.identifier.period",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.identifier.assigner",
-        "path": "ServiceRequest.performer.identifier.assigner",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.performer.display",
-        "path": "ServiceRequest.performer.display",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.locationCode",
-        "path": "ServiceRequest.locationCode",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.locationReference",
-        "path": "ServiceRequest.locationReference",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.reasonCode",
-        "path": "ServiceRequest.reasonCode",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.reasonReference",
-        "path": "ServiceRequest.reasonReference",
-        "short": "Motivo da solicitação",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ServiceRequest.reasonReference.id",
-        "path": "ServiceRequest.reasonReference.id",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.reasonReference.reference",
-        "path": "ServiceRequest.reasonReference.reference",
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.reasonReference.type",
-        "path": "ServiceRequest.reasonReference.type",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.reasonReference.identifier",
-        "path": "ServiceRequest.reasonReference.identifier",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.reasonReference.display",
-        "path": "ServiceRequest.reasonReference.display",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.insurance",
-        "path": "ServiceRequest.insurance",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.supportingInfo",
-        "path": "ServiceRequest.supportingInfo",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.specimen",
-        "path": "ServiceRequest.specimen",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.bodySite",
-        "path": "ServiceRequest.bodySite",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.note",
-        "path": "ServiceRequest.note",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.patientInstruction",
-        "path": "ServiceRequest.patientInstruction",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.relevantHistory",
-        "path": "ServiceRequest.relevantHistory",
-        "max": "0"
-      }
-    ]
-  }
+    },
+    "id": "ffb12e5f-9e72-412c-8d0c-4bff2ae36bda"
 }

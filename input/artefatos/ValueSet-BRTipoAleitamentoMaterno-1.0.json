@@ -1,21 +1,22 @@
 {
-  "resourceType": "ValueSet",
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoAleitamentoMaterno-1.0",
-  "version": "1.0",
-  "name": "Tipo de Aleitamento Materno",
-  "status": "draft",
-  "experimental": false,
-  "date": "2020-03-12T14:51:30.2531733+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Definição do tipo de aleitamento materno realizado a uma criança.",
-  "immutable": false,
-  "compose": {
-    "include": [
-      {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAleitamentoMaterno",
-        "version": "*"
-      }
-    ]
-  }
+    "resourceType": "ValueSet",
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoAleitamentoMaterno-1.0",
+    "version": "1.0",
+    "name": "Tipo de Aleitamento Materno",
+    "status": "draft",
+    "experimental": false,
+    "date": "2020-03-12T14:51:30.2531733+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Definição do tipo de aleitamento materno realizado a uma criança.",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAleitamentoMaterno",
+                "version": "*"
+            }
+        ]
+    },
+    "id": "e625d83b-5198-4947-8382-c14f1780e21c"
 }

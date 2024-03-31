@@ -1,272 +1,273 @@
 {
-  "resourceType": "StructureDefinition",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRValorMedicamento",
-  "name": "BRValorMedicamento",
-  "title": "Valor Monetário de Medicamento",
-  "status": "draft",
-  "description": "Extensão destinada a caracterizar o valor monetário pago em medicamentos dispensados pelo Ministério da Saúde do Brasil.",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "MedicationDispense"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension.id",
-        "path": "Extension.id",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRValorMedicamento",
+    "name": "BRValorMedicamento",
+    "title": "Valor Monetário de Medicamento",
+    "status": "draft",
+    "description": "Extensão destinada a caracterizar o valor monetário pago em medicamentos dispensados pelo Ministério da Saúde do Brasil.",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "MedicationDispense"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "value",
-              "path": "url"
+                "id": "Extension.id",
+                "path": "Extension.id",
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 0
+            },
+            {
+                "id": "Extension.extension:productValue",
+                "path": "Extension.extension",
+                "sliceName": "productValue",
+                "short": "Valor em reais da apresentação dispensada.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:productValue.id",
+                "path": "Extension.extension.id",
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:productValue.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "productValue"
+            },
+            {
+                "id": "Extension.extension:productValue.value[x]",
+                "path": "Extension.extension.value[x]",
+                "short": "Valor em reais da apresentação dispensada.",
+                "type": [
+                    {
+                        "code": "Money"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:productValue.value[x].currency",
+                "path": "Extension.extension.value[x].currency",
+                "fixedCode": "BRL"
+            },
+            {
+                "id": "Extension.extension:productValueMinistryOfHealth",
+                "path": "Extension.extension",
+                "sliceName": "productValueMinistryOfHealth",
+                "short": "Valor pago Ministério da Saúde",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:productValueMinistryOfHealth.id",
+                "path": "Extension.extension.id",
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:productValueMinistryOfHealth.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "productValueMinistryOfHealth"
+            },
+            {
+                "id": "Extension.extension:productValueMinistryOfHealth.value[x]",
+                "path": "Extension.extension.value[x]",
+                "short": "Valor pago Ministério da Saúde",
+                "type": [
+                    {
+                        "code": "Money"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:productValueMinistryOfHealth.value[x].value",
+                "path": "Extension.extension.value[x].value",
+                "short": "Valor em reais da apresentação dispensada."
+            },
+            {
+                "id": "Extension.extension:productValueMinistryOfHealth.value[x].currency",
+                "path": "Extension.extension.value[x].currency",
+                "fixedCode": "BRL"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRValorMedicamento"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "0",
+                "type": [
+                    {
+                        "code": "base64Binary"
+                    },
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "canonical"
+                    },
+                    {
+                        "code": "code"
+                    },
+                    {
+                        "code": "date"
+                    },
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "decimal"
+                    },
+                    {
+                        "code": "id"
+                    },
+                    {
+                        "code": "instant"
+                    },
+                    {
+                        "code": "integer"
+                    },
+                    {
+                        "code": "markdown"
+                    },
+                    {
+                        "code": "oid"
+                    },
+                    {
+                        "code": "positiveInt"
+                    },
+                    {
+                        "code": "string"
+                    },
+                    {
+                        "code": "time"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "uri"
+                    },
+                    {
+                        "code": "url"
+                    },
+                    {
+                        "code": "uuid"
+                    },
+                    {
+                        "code": "Address"
+                    },
+                    {
+                        "code": "Age"
+                    },
+                    {
+                        "code": "Annotation"
+                    },
+                    {
+                        "code": "Attachment"
+                    },
+                    {
+                        "code": "CodeableConcept"
+                    },
+                    {
+                        "code": "Coding"
+                    },
+                    {
+                        "code": "ContactPoint"
+                    },
+                    {
+                        "code": "Count"
+                    },
+                    {
+                        "code": "Distance"
+                    },
+                    {
+                        "code": "Duration"
+                    },
+                    {
+                        "code": "HumanName"
+                    },
+                    {
+                        "code": "Identifier"
+                    },
+                    {
+                        "code": "Money"
+                    },
+                    {
+                        "code": "Period"
+                    },
+                    {
+                        "code": "Quantity"
+                    },
+                    {
+                        "code": "Range"
+                    },
+                    {
+                        "code": "Ratio"
+                    },
+                    {
+                        "code": "Reference"
+                    },
+                    {
+                        "code": "SampledData"
+                    },
+                    {
+                        "code": "Signature"
+                    },
+                    {
+                        "code": "Timing"
+                    },
+                    {
+                        "code": "ContactDetail"
+                    },
+                    {
+                        "code": "Contributor"
+                    },
+                    {
+                        "code": "DataRequirement"
+                    },
+                    {
+                        "code": "Expression"
+                    },
+                    {
+                        "code": "ParameterDefinition"
+                    },
+                    {
+                        "code": "RelatedArtifact"
+                    },
+                    {
+                        "code": "TriggerDefinition"
+                    },
+                    {
+                        "code": "UsageContext"
+                    },
+                    {
+                        "code": "Dosage"
+                    }
+                ]
             }
-          ],
-          "rules": "open"
-        },
-        "min": 0
-      },
-      {
-        "id": "Extension.extension:productValue",
-        "path": "Extension.extension",
-        "sliceName": "productValue",
-        "short": "Valor em reais da apresentação dispensada.",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:productValue.id",
-        "path": "Extension.extension.id",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:productValue.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "productValue"
-      },
-      {
-        "id": "Extension.extension:productValue.value[x]",
-        "path": "Extension.extension.value[x]",
-        "short": "Valor em reais da apresentação dispensada.",
-        "type": [
-          {
-            "code": "Money"
-          }
         ]
-      },
-      {
-        "id": "Extension.extension:productValue.value[x].currency",
-        "path": "Extension.extension.value[x].currency",
-        "fixedCode": "BRL"
-      },
-      {
-        "id": "Extension.extension:productValueMinistryOfHealth",
-        "path": "Extension.extension",
-        "sliceName": "productValueMinistryOfHealth",
-        "short": "Valor pago Ministério da Saúde",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:productValueMinistryOfHealth.id",
-        "path": "Extension.extension.id",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:productValueMinistryOfHealth.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "productValueMinistryOfHealth"
-      },
-      {
-        "id": "Extension.extension:productValueMinistryOfHealth.value[x]",
-        "path": "Extension.extension.value[x]",
-        "short": "Valor pago Ministério da Saúde",
-        "type": [
-          {
-            "code": "Money"
-          }
-        ]
-      },
-      {
-        "id": "Extension.extension:productValueMinistryOfHealth.value[x].value",
-        "path": "Extension.extension.value[x].value",
-        "short": "Valor em reais da apresentação dispensada."
-      },
-      {
-        "id": "Extension.extension:productValueMinistryOfHealth.value[x].currency",
-        "path": "Extension.extension.value[x].currency",
-        "fixedCode": "BRL"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRValorMedicamento"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "max": "0",
-        "type": [
-          {
-            "code": "base64Binary"
-          },
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "canonical"
-          },
-          {
-            "code": "code"
-          },
-          {
-            "code": "date"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "decimal"
-          },
-          {
-            "code": "id"
-          },
-          {
-            "code": "instant"
-          },
-          {
-            "code": "integer"
-          },
-          {
-            "code": "markdown"
-          },
-          {
-            "code": "oid"
-          },
-          {
-            "code": "positiveInt"
-          },
-          {
-            "code": "string"
-          },
-          {
-            "code": "time"
-          },
-          {
-            "code": "unsignedInt"
-          },
-          {
-            "code": "uri"
-          },
-          {
-            "code": "url"
-          },
-          {
-            "code": "uuid"
-          },
-          {
-            "code": "Address"
-          },
-          {
-            "code": "Age"
-          },
-          {
-            "code": "Annotation"
-          },
-          {
-            "code": "Attachment"
-          },
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "Coding"
-          },
-          {
-            "code": "ContactPoint"
-          },
-          {
-            "code": "Count"
-          },
-          {
-            "code": "Distance"
-          },
-          {
-            "code": "Duration"
-          },
-          {
-            "code": "HumanName"
-          },
-          {
-            "code": "Identifier"
-          },
-          {
-            "code": "Money"
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "Reference"
-          },
-          {
-            "code": "SampledData"
-          },
-          {
-            "code": "Signature"
-          },
-          {
-            "code": "Timing"
-          },
-          {
-            "code": "ContactDetail"
-          },
-          {
-            "code": "Contributor"
-          },
-          {
-            "code": "DataRequirement"
-          },
-          {
-            "code": "Expression"
-          },
-          {
-            "code": "ParameterDefinition"
-          },
-          {
-            "code": "RelatedArtifact"
-          },
-          {
-            "code": "TriggerDefinition"
-          },
-          {
-            "code": "UsageContext"
-          },
-          {
-            "code": "Dosage"
-          }
-        ]
-      }
-    ]
-  }
+    },
+    "id": "9ae32c36-e14d-4989-acc8-d9ca29645b47"
 }

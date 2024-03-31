@@ -1,43 +1,44 @@
 {
-  "resourceType": "StructureDefinition",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao",
-  "name": "BRDataPrescricao",
-  "title": "Data de Prescrição",
-  "status": "draft",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "MedicationDispense"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension.id",
-        "path": "Extension.id",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "short": "Data de prescrição do medicamento",
-        "min": 1,
-        "type": [
-          {
-            "code": "dateTime"
-          }
+    "resourceType": "StructureDefinition",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao",
+    "name": "BRDataPrescricao",
+    "title": "Data de Prescrição",
+    "status": "draft",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "MedicationDispense"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension.id",
+                "path": "Extension.id",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "short": "Data de prescrição do medicamento",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "dateTime"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    },
+    "id": "0b3ea54f-9bb2-4992-a634-823cd806a06f"
 }

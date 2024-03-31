@@ -1,494 +1,495 @@
 {
-  "resourceType": "StructureDefinition",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial",
-  "version": "1.0",
-  "name": "BRAgendamentoRegulacaoAssistencial",
-  "title": "Agendamento de Regulação Assistencial",
-  "status": "active",
-  "date": "2023-04-04",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Appointment",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Appointment.id",
-        "path": "Appointment.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.implicitRules",
-        "path": "Appointment.implicitRules",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.language",
-        "path": "Appointment.language",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.text",
-        "path": "Appointment.text",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.contained",
-        "path": "Appointment.contained",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.identifier",
-        "path": "Appointment.identifier",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.status",
-        "path": "Appointment.status",
-        "short": "Status da solicitação.",
-        "definition": "O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.",
-        "binding": {
-          "strength": "required",
-          "description": "Status do agendamento",
-          "valueSet": "http://hl7.org/fhir/ValueSet/appointmentstatus"
-        }
-      },
-      {
-        "id": "Appointment.cancelationReason",
-        "path": "Appointment.cancelationReason",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.serviceCategory",
-        "path": "Appointment.serviceCategory",
-        "short": "Modalidade assistencial.",
-        "definition": "O código que identifica unicamente a modalidade, conforme tabela de modalidades.",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "description": "Modalidade Assistencial",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA"
-        }
-      },
-      {
-        "id": "Appointment.serviceCategory.coding",
-        "path": "Appointment.serviceCategory.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Appointment.serviceCategory.coding.system",
-        "path": "Appointment.serviceCategory.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Appointment.serviceCategory.coding.code",
-        "path": "Appointment.serviceCategory.coding.code",
-        "min": 1
-      },
-      {
-        "id": "Appointment.serviceCategory.text",
-        "path": "Appointment.serviceCategory.text",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.serviceType",
-        "path": "Appointment.serviceType",
-        "short": "Código do procedimento.",
-        "definition": "O código que identifica unicamente o procedimento conforme tabela SUS.",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "description": "SIGTAP",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"
-        }
-      },
-      {
-        "id": "Appointment.serviceType.coding",
-        "path": "Appointment.serviceType.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Appointment.serviceType.coding.system",
-        "path": "Appointment.serviceType.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Appointment.serviceType.coding.code",
-        "path": "Appointment.serviceType.coding.code",
-        "min": 1
-      },
-      {
-        "id": "Appointment.serviceType.text",
-        "path": "Appointment.serviceType.text",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.specialty",
-        "path": "Appointment.specialty",
-        "short": "Identificador da especialidade médica do executante.",
-        "definition": "O código que identifica unicamente a especialidade do executante conforme tabela de CBO.",
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "description": "Classificação Brasileira de Ocupações.",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
-        }
-      },
-      {
-        "id": "Appointment.specialty.coding",
-        "path": "Appointment.specialty.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Appointment.specialty.coding.system",
-        "path": "Appointment.specialty.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Appointment.specialty.coding.code",
-        "path": "Appointment.specialty.coding.code",
-        "min": 1
-      },
-      {
-        "id": "Appointment.specialty.text",
-        "path": "Appointment.specialty.text",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.appointmentType",
-        "path": "Appointment.appointmentType",
-        "short": "Caráter da solicitação.",
-        "definition": "O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação.",
-        "min": 1,
-        "binding": {
-          "strength": "preferred",
-          "description": "Caráter de atendimento.",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"
-        }
-      },
-      {
-        "id": "Appointment.appointmentType.coding",
-        "path": "Appointment.appointmentType.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Appointment.appointmentType.coding.system",
-        "path": "Appointment.appointmentType.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Appointment.appointmentType.coding.code",
-        "path": "Appointment.appointmentType.coding.code",
-        "min": 1
-      },
-      {
-        "id": "Appointment.appointmentType.text",
-        "path": "Appointment.appointmentType.text",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.reasonCode",
-        "path": "Appointment.reasonCode",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.reasonReference",
-        "path": "Appointment.reasonReference",
-        "short": "Motivo da solicitação",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
-            ]
-          }
+    "resourceType": "StructureDefinition",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial",
+    "version": "1.0",
+    "name": "BRAgendamentoRegulacaoAssistencial",
+    "title": "Agendamento de Regulação Assistencial",
+    "status": "active",
+    "date": "2023-04-04",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Appointment",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Appointment.id",
+                "path": "Appointment.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.implicitRules",
+                "path": "Appointment.implicitRules",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.language",
+                "path": "Appointment.language",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.text",
+                "path": "Appointment.text",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.contained",
+                "path": "Appointment.contained",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.identifier",
+                "path": "Appointment.identifier",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.status",
+                "path": "Appointment.status",
+                "short": "Status da solicitação.",
+                "definition": "O código que identifica unicamente o status da solicitação, conforme tabela de status de solicitação.",
+                "binding": {
+                    "strength": "required",
+                    "description": "Status do agendamento",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/appointmentstatus"
+                }
+            },
+            {
+                "id": "Appointment.cancelationReason",
+                "path": "Appointment.cancelationReason",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.serviceCategory",
+                "path": "Appointment.serviceCategory",
+                "short": "Modalidade assistencial.",
+                "definition": "O código que identifica unicamente a modalidade, conforme tabela de modalidades.",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "description": "Modalidade Assistencial",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA"
+                }
+            },
+            {
+                "id": "Appointment.serviceCategory.coding",
+                "path": "Appointment.serviceCategory.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Appointment.serviceCategory.coding.system",
+                "path": "Appointment.serviceCategory.coding.system",
+                "min": 1
+            },
+            {
+                "id": "Appointment.serviceCategory.coding.code",
+                "path": "Appointment.serviceCategory.coding.code",
+                "min": 1
+            },
+            {
+                "id": "Appointment.serviceCategory.text",
+                "path": "Appointment.serviceCategory.text",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.serviceType",
+                "path": "Appointment.serviceType",
+                "short": "Código do procedimento.",
+                "definition": "O código que identifica unicamente o procedimento conforme tabela SUS.",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "description": "SIGTAP",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"
+                }
+            },
+            {
+                "id": "Appointment.serviceType.coding",
+                "path": "Appointment.serviceType.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Appointment.serviceType.coding.system",
+                "path": "Appointment.serviceType.coding.system",
+                "min": 1
+            },
+            {
+                "id": "Appointment.serviceType.coding.code",
+                "path": "Appointment.serviceType.coding.code",
+                "min": 1
+            },
+            {
+                "id": "Appointment.serviceType.text",
+                "path": "Appointment.serviceType.text",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.specialty",
+                "path": "Appointment.specialty",
+                "short": "Identificador da especialidade médica do executante.",
+                "definition": "O código que identifica unicamente a especialidade do executante conforme tabela de CBO.",
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "description": "Classificação Brasileira de Ocupações.",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
+                }
+            },
+            {
+                "id": "Appointment.specialty.coding",
+                "path": "Appointment.specialty.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Appointment.specialty.coding.system",
+                "path": "Appointment.specialty.coding.system",
+                "min": 1
+            },
+            {
+                "id": "Appointment.specialty.coding.code",
+                "path": "Appointment.specialty.coding.code",
+                "min": 1
+            },
+            {
+                "id": "Appointment.specialty.text",
+                "path": "Appointment.specialty.text",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.appointmentType",
+                "path": "Appointment.appointmentType",
+                "short": "Caráter da solicitação.",
+                "definition": "O código que identifica unicamente o caráter da solicitação, conforme tabela de caráter da solicitação.",
+                "min": 1,
+                "binding": {
+                    "strength": "preferred",
+                    "description": "Caráter de atendimento.",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA"
+                }
+            },
+            {
+                "id": "Appointment.appointmentType.coding",
+                "path": "Appointment.appointmentType.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Appointment.appointmentType.coding.system",
+                "path": "Appointment.appointmentType.coding.system",
+                "min": 1
+            },
+            {
+                "id": "Appointment.appointmentType.coding.code",
+                "path": "Appointment.appointmentType.coding.code",
+                "min": 1
+            },
+            {
+                "id": "Appointment.appointmentType.text",
+                "path": "Appointment.appointmentType.text",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.reasonCode",
+                "path": "Appointment.reasonCode",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.reasonReference",
+                "path": "Appointment.reasonReference",
+                "short": "Motivo da solicitação",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Appointment.reasonReference.id",
+                "path": "Appointment.reasonReference.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.reasonReference.reference",
+                "path": "Appointment.reasonReference.reference",
+                "min": 1
+            },
+            {
+                "id": "Appointment.reasonReference.type",
+                "path": "Appointment.reasonReference.type",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.reasonReference.identifier",
+                "path": "Appointment.reasonReference.identifier",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.reasonReference.display",
+                "path": "Appointment.reasonReference.display",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.priority",
+                "path": "Appointment.priority",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.description",
+                "path": "Appointment.description",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.supportingInformation",
+                "path": "Appointment.supportingInformation",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.start",
+                "path": "Appointment.start",
+                "short": "Data de execução.",
+                "definition": "A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601."
+            },
+            {
+                "id": "Appointment.end",
+                "path": "Appointment.end",
+                "short": "Data de execução.",
+                "definition": "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601."
+            },
+            {
+                "id": "Appointment.minutesDuration",
+                "path": "Appointment.minutesDuration",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.slot",
+                "path": "Appointment.slot",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.created",
+                "path": "Appointment.created",
+                "short": "Data da solicitação",
+                "definition": "A data e hora de criação da solicitação do procedimento regulado no padrão ISO 8601.",
+                "min": 1
+            },
+            {
+                "id": "Appointment.comment",
+                "path": "Appointment.comment",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.patientInstruction",
+                "path": "Appointment.patientInstruction",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.basedOn",
+                "path": "Appointment.basedOn",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Appointment.basedOn.id",
+                "path": "Appointment.basedOn.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.basedOn.reference",
+                "path": "Appointment.basedOn.reference",
+                "min": 1
+            },
+            {
+                "id": "Appointment.basedOn.type",
+                "path": "Appointment.basedOn.type",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.basedOn.identifier",
+                "path": "Appointment.basedOn.identifier",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.basedOn.display",
+                "path": "Appointment.basedOn.display",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant",
+                "path": "Appointment.participant",
+                "short": "Paciente",
+                "max": "1"
+            },
+            {
+                "id": "Appointment.participant.id",
+                "path": "Appointment.participant.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.type",
+                "path": "Appointment.participant.type",
+                "short": "Função do participante da solicitação",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "description": "Função do participante da solicitação",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante"
+                }
+            },
+            {
+                "id": "Appointment.participant.type.id",
+                "path": "Appointment.participant.type.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.type.coding",
+                "path": "Appointment.participant.type.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Appointment.participant.type.coding.id",
+                "path": "Appointment.participant.type.coding.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.type.coding.system",
+                "path": "Appointment.participant.type.coding.system",
+                "min": 1
+            },
+            {
+                "id": "Appointment.participant.type.coding.code",
+                "path": "Appointment.participant.type.coding.code",
+                "min": 1,
+                "fixedCode": "PCT"
+            },
+            {
+                "id": "Appointment.participant.type.coding.userSelected",
+                "path": "Appointment.participant.type.coding.userSelected",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.type.text",
+                "path": "Appointment.participant.type.text",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor",
+                "path": "Appointment.participant.actor",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Appointment.participant.actor.id",
+                "path": "Appointment.participant.actor.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.reference",
+                "path": "Appointment.participant.actor.reference",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.type",
+                "path": "Appointment.participant.actor.type",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.identifier",
+                "path": "Appointment.participant.actor.identifier",
+                "min": 1
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.id",
+                "path": "Appointment.participant.actor.identifier.id",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.use",
+                "path": "Appointment.participant.actor.identifier.use",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.type",
+                "path": "Appointment.participant.actor.identifier.type",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.system",
+                "path": "Appointment.participant.actor.identifier.system",
+                "min": 1
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.value",
+                "path": "Appointment.participant.actor.identifier.value",
+                "min": 1
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.period",
+                "path": "Appointment.participant.actor.identifier.period",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.identifier.assigner",
+                "path": "Appointment.participant.actor.identifier.assigner",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.actor.display",
+                "path": "Appointment.participant.actor.display",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.required",
+                "path": "Appointment.participant.required",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.participant.status",
+                "path": "Appointment.participant.status",
+                "short": "Status da participação no agendamento.",
+                "binding": {
+                    "strength": "required",
+                    "description": "Status da participação no agendamento.",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante"
+                }
+            },
+            {
+                "id": "Appointment.participant.period",
+                "path": "Appointment.participant.period",
+                "max": "0"
+            },
+            {
+                "id": "Appointment.requestedPeriod",
+                "path": "Appointment.requestedPeriod",
+                "max": "0"
+            }
         ]
-      },
-      {
-        "id": "Appointment.reasonReference.id",
-        "path": "Appointment.reasonReference.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.reasonReference.reference",
-        "path": "Appointment.reasonReference.reference",
-        "min": 1
-      },
-      {
-        "id": "Appointment.reasonReference.type",
-        "path": "Appointment.reasonReference.type",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.reasonReference.identifier",
-        "path": "Appointment.reasonReference.identifier",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.reasonReference.display",
-        "path": "Appointment.reasonReference.display",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.priority",
-        "path": "Appointment.priority",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.description",
-        "path": "Appointment.description",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.supportingInformation",
-        "path": "Appointment.supportingInformation",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.start",
-        "path": "Appointment.start",
-        "short": "Data de execução.",
-        "definition": "A data e hora em que a solicitação de procedimento regulado foi autorizada no padrão ISO 8601."
-      },
-      {
-        "id": "Appointment.end",
-        "path": "Appointment.end",
-        "short": "Data de execução.",
-        "definition": "A data e hora em que o procedimento regulado foi executado no padrão ISO 8601."
-      },
-      {
-        "id": "Appointment.minutesDuration",
-        "path": "Appointment.minutesDuration",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.slot",
-        "path": "Appointment.slot",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.created",
-        "path": "Appointment.created",
-        "short": "Data da solicitação",
-        "definition": "A data e hora de criação da solicitação do procedimento regulado no padrão ISO 8601.",
-        "min": 1
-      },
-      {
-        "id": "Appointment.comment",
-        "path": "Appointment.comment",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.patientInstruction",
-        "path": "Appointment.patientInstruction",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.basedOn",
-        "path": "Appointment.basedOn",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Appointment.basedOn.id",
-        "path": "Appointment.basedOn.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.basedOn.reference",
-        "path": "Appointment.basedOn.reference",
-        "min": 1
-      },
-      {
-        "id": "Appointment.basedOn.type",
-        "path": "Appointment.basedOn.type",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.basedOn.identifier",
-        "path": "Appointment.basedOn.identifier",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.basedOn.display",
-        "path": "Appointment.basedOn.display",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant",
-        "path": "Appointment.participant",
-        "short": "Paciente",
-        "max": "1"
-      },
-      {
-        "id": "Appointment.participant.id",
-        "path": "Appointment.participant.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.type",
-        "path": "Appointment.participant.type",
-        "short": "Função do participante da solicitação",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "description": "Função do participante da solicitação",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante"
-        }
-      },
-      {
-        "id": "Appointment.participant.type.id",
-        "path": "Appointment.participant.type.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.type.coding",
-        "path": "Appointment.participant.type.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Appointment.participant.type.coding.id",
-        "path": "Appointment.participant.type.coding.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.type.coding.system",
-        "path": "Appointment.participant.type.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Appointment.participant.type.coding.code",
-        "path": "Appointment.participant.type.coding.code",
-        "min": 1,
-        "fixedCode": "PCT"
-      },
-      {
-        "id": "Appointment.participant.type.coding.userSelected",
-        "path": "Appointment.participant.type.coding.userSelected",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.type.text",
-        "path": "Appointment.participant.type.text",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor",
-        "path": "Appointment.participant.actor",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Appointment.participant.actor.id",
-        "path": "Appointment.participant.actor.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.reference",
-        "path": "Appointment.participant.actor.reference",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.type",
-        "path": "Appointment.participant.actor.type",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.identifier",
-        "path": "Appointment.participant.actor.identifier",
-        "min": 1
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.id",
-        "path": "Appointment.participant.actor.identifier.id",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.use",
-        "path": "Appointment.participant.actor.identifier.use",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.type",
-        "path": "Appointment.participant.actor.identifier.type",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.system",
-        "path": "Appointment.participant.actor.identifier.system",
-        "min": 1
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.value",
-        "path": "Appointment.participant.actor.identifier.value",
-        "min": 1
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.period",
-        "path": "Appointment.participant.actor.identifier.period",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.identifier.assigner",
-        "path": "Appointment.participant.actor.identifier.assigner",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.actor.display",
-        "path": "Appointment.participant.actor.display",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.required",
-        "path": "Appointment.participant.required",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.participant.status",
-        "path": "Appointment.participant.status",
-        "short": "Status da participação no agendamento.",
-        "binding": {
-          "strength": "required",
-          "description": "Status da participação no agendamento.",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusParticipante"
-        }
-      },
-      {
-        "id": "Appointment.participant.period",
-        "path": "Appointment.participant.period",
-        "max": "0"
-      },
-      {
-        "id": "Appointment.requestedPeriod",
-        "path": "Appointment.requestedPeriod",
-        "max": "0"
-      }
-    ]
-  }
+    },
+    "id": "68d77d5f-4e79-4346-a901-d32ee2d14fbf"
 }

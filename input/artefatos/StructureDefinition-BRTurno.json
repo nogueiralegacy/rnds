@@ -1,49 +1,50 @@
 {
-  "resourceType": "StructureDefinition",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRTurno",
-  "version": "1.0",
-  "name": "BRTurno",
-  "status": "draft",
-  "description": "Extensão para descrever uma unidade de tempo referenciada pelo UCUM.",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "Element"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension.id",
-        "path": "Extension.id",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRTurno"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "short": "Turno do dia",
-        "definition": "Em qual momento do dia ocorre o consumo do medicamento: Manhã, tarde, noite.",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "Define o turno do dia",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTurno"
+    "resourceType": "StructureDefinition",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRTurno",
+    "version": "1.0",
+    "name": "BRTurno",
+    "status": "draft",
+    "description": "Extensão para descrever uma unidade de tempo referenciada pelo UCUM.",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Element"
         }
-      }
-    ]
-  }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension.id",
+                "path": "Extension.id",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRTurno"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "short": "Turno do dia",
+                "definition": "Em qual momento do dia ocorre o consumo do medicamento: Manhã, tarde, noite.",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "description": "Define o turno do dia",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTurno"
+                }
+            }
+        ]
+    },
+    "id": "6847e6e8-a5aa-4d7e-9ed7-f1a8ec5d08c2"
 }

@@ -1,175 +1,175 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "3d75211e-ccb6-4e01-b965-05382abfae5d",
-  "meta": {
-    "lastUpdated": "2020-04-07T17:02:20.726+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRFinanciamento-1.0",
-  "version": "1.0",
-  "name": "BRFinanciamento",
-  "title": "Financiamento",
-  "status": "draft",
-  "date": "2020-04-07T17:02:17.5770638+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Extensão utilizada para identificar financiamento.",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "Encounter.diagnosis.condition"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension",
-        "short": "Financiamento"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRFinanciamento-1.0"
-      },
-      {
-        "id": "Extension.value[x]",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "Financiamento",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRFinanciamento-1.0"
+    "resourceType": "StructureDefinition",
+    "id": "25f42f0a-4c1f-45aa-9da7-747ae6a3bbf1",
+    "meta": {
+        "lastUpdated": "2020-04-07T17:02:20.726+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRFinanciamento-1.0",
+    "version": "1.0",
+    "name": "BRFinanciamento",
+    "title": "Financiamento",
+    "status": "draft",
+    "date": "2020-04-07T17:02:17.5770638+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Extensão utilizada para identificar financiamento.",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Encounter.diagnosis.condition"
         }
-      },
-      {
-        "id": "Extension.value[x].coding",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension.value[x].coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Extension.value[x].coding.system",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension.value[x].coding.system",
-        "min": 1
-      },
-      {
-        "id": "Extension.value[x].coding.code",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension.value[x].coding.code",
-        "min": 1
-      },
-      {
-        "id": "Extension.value[x].coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Extension.value[x].coding.display",
-        "max": "0"
-      },
-      {
-        "id": "Extension.value[x].coding.userSelected",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension.value[x].coding.userSelected",
-        "max": "0"
-      },
-      {
-        "id": "Extension.value[x].text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Extension.value[x].text",
-        "max": "0"
-      }
-    ]
-  }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension",
+                "short": "Financiamento"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRFinanciamento-1.0"
+            },
+            {
+                "id": "Extension.value[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "description": "Financiamento",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRFinanciamento-1.0"
+                }
+            },
+            {
+                "id": "Extension.value[x].coding",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension.value[x].coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Extension.value[x].coding.system",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension.value[x].coding.system",
+                "min": 1
+            },
+            {
+                "id": "Extension.value[x].coding.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension.value[x].coding.code",
+                "min": 1
+            },
+            {
+                "id": "Extension.value[x].coding.display",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Extension.value[x].coding.display",
+                "max": "0"
+            },
+            {
+                "id": "Extension.value[x].coding.userSelected",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension.value[x].coding.userSelected",
+                "max": "0"
+            },
+            {
+                "id": "Extension.value[x].text",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Extension.value[x].text",
+                "max": "0"
+            }
+        ]
+    }
 }

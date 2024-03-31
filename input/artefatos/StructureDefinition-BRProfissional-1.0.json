@@ -1,241 +1,242 @@
 {
-  "resourceType": "StructureDefinition",
-  "meta": {
-    "lastUpdated": "2020-03-11T02:17:31.624+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0",
-  "version": "1.0",
-  "name": "BRProfissional",
-  "title": "Profissional",
-  "status": "active",
-  "date": "2020-03-11T02:17:28.7303014+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Indivíduo que realiza atividades profissionais.",
-  "purpose": "O profissional de saúde é sujeito ativo para os processos informativos de dados em saúde, por isso é necessário a criação de um profile para esse recurso, que se adpate à realidade brasileira.",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Practitioner",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Practitioner",
-        "path": "Practitioner",
-        "short": "Uma pessoa com uma responsabilidade formal no fornecimento de cuidados de saúde ou serviços relacionados",
-        "definition": "Uma pessoa que está direta ou indiretamente envolvida no fornecimento de cuidados de saúde.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier",
-        "path": "Practitioner.identifier",
-        "definition": "Documento(s) do profissional.",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDocumentoIndividuo-1.0"
-            ]
-          }
+    "resourceType": "StructureDefinition",
+    "meta": {
+        "lastUpdated": "2020-03-11T02:17:31.624+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0",
+    "version": "1.0",
+    "name": "BRProfissional",
+    "title": "Profissional",
+    "status": "active",
+    "date": "2020-03-11T02:17:28.7303014+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Indivíduo que realiza atividades profissionais.",
+    "purpose": "O profissional de saúde é sujeito ativo para os processos informativos de dados em saúde, por isso é necessário a criação de um profile para esse recurso, que se adpate à realidade brasileira.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Practitioner",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Practitioner",
+                "path": "Practitioner",
+                "short": "Uma pessoa com uma responsabilidade formal no fornecimento de cuidados de saúde ou serviços relacionados",
+                "definition": "Uma pessoa que está direta ou indiretamente envolvida no fornecimento de cuidados de saúde.",
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.identifier",
+                "path": "Practitioner.identifier",
+                "definition": "Documento(s) do profissional.",
+                "type": [
+                    {
+                        "code": "Identifier",
+                        "profile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDocumentoIndividuo-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Practitioner.identifier.type",
+                "path": "Practitioner.identifier.type",
+                "definition": "Tipo de documento utilizado para identificar o profissional."
+            },
+            {
+                "id": "Practitioner.active",
+                "path": "Practitioner.active",
+                "short": "Registro em Uso",
+                "definition": "Indica se o registro desse profissional ainda está em uso.\r\nA codição de inativo pode indicar que tanto uma informação errada quanto um profissional que não está mais atuando.",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.name",
+                "path": "Practitioner.name",
+                "short": "Nome do Profissional",
+                "definition": "Nome(s) associado(s) ao profissional.",
+                "type": [
+                    {
+                        "code": "HumanName",
+                        "profile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNomeIndividuo-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Practitioner.name.use",
+                "path": "Practitioner.name.use",
+                "definition": "official: nome oficial atual, conforme registrado na certidão de registro civil mais atual do profissional.\r\nmaiden: nome oficial de solteiro(a), quando houve uma alteração de nome decorrente de uma união de qualquer tipo.\r\nold: nome oficial anterior, quando houve uma alteração de nome em uma certidão de registro civil ou decisão judicial decorrente de qualquer outra situação que não seja uma união.\r\nusual: nome social.\r\ntemp: nome temporário, como aqueles utilizados em programas de proteção a testemunhas.\r\nanonymous: uso exclusivo para anonimização de registros de profissionais."
+            },
+            {
+                "id": "Practitioner.name.text",
+                "path": "Practitioner.name.text",
+                "definition": "Nome completo do profissional, composto pelo nome próprio, que pode ser mais de um quando trata-se de um nome composto, pelo sobrenome e pelo sufixo (Filho, Neto, Júnior etc.) quando aplicável."
+            },
+            {
+                "id": "Practitioner.telecom",
+                "path": "Practitioner.telecom",
+                "definition": "Informações do(s) meio(s) de contato com o profissional. Não devem ser informados meios de contato pessoais, apenas profissionais.",
+                "type": [
+                    {
+                        "code": "ContactPoint",
+                        "profile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMeioContato-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Practitioner.telecom.use",
+                "path": "Practitioner.telecom.use",
+                "definition": "work: comercial.\r\ntemp: temporário ou de recado.\r\nmobile: dispositivo móvel, como um telefone celular."
+            },
+            {
+                "id": "Practitioner.telecom.period",
+                "path": "Practitioner.telecom.period",
+                "definition": "Período em que o meio de contato foi utilizado pelo profisisonal."
+            },
+            {
+                "id": "Practitioner.telecom.period.start",
+                "path": "Practitioner.telecom.period.start",
+                "definition": "Data em que o meio de contato foi cadastrado ou começou a ser utilizado pelo profissional."
+            },
+            {
+                "id": "Practitioner.telecom.period.end",
+                "path": "Practitioner.telecom.period.end",
+                "definition": "Data em que o meio de contato foi desativado ou parou de ser utilizado pelo profissional."
+            },
+            {
+                "id": "Practitioner.address",
+                "path": "Practitioner.address",
+                "definition": "Dados do(s) endereço(s) onde o profissional pode ser localizado. Não devem ser informados endereços pessoais, apenas profissionais.",
+                "type": [
+                    {
+                        "code": "Address",
+                        "profile": [
+                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREndereco-1.0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Practitioner.address.use",
+                "path": "Practitioner.address.use",
+                "definition": "work: endereço comercial ou de trabalho atual.\r\ntemp: endereço temporário, como uma instalação/edificação de trabalho provisória, etc.\r\nold: endereço anterior."
+            },
+            {
+                "id": "Practitioner.gender",
+                "path": "Practitioner.gender",
+                "short": "Sexo",
+                "definition": "male: masculino.\r\nfemale: feminino.\r\nunknown: ignorado.",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "description": "Sexo",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"
+                }
+            },
+            {
+                "id": "Practitioner.birthDate",
+                "path": "Practitioner.birthDate",
+                "short": "Data de Nascimento",
+                "definition": "Data de nascimento do profissional",
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.photo",
+                "path": "Practitioner.photo",
+                "max": "0"
+            },
+            {
+                "id": "Practitioner.qualification",
+                "path": "Practitioner.qualification",
+                "short": "Qualificação",
+                "definition": "A(s) qualificação(ões), conforme a formação, certificações ou acreditações que o profissional possui.",
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.qualification.identifier",
+                "path": "Practitioner.qualification.identifier",
+                "max": "0"
+            },
+            {
+                "id": "Practitioner.qualification.code",
+                "path": "Practitioner.qualification.code",
+                "short": "Qualificação do Profissional",
+                "definition": "Qualificação do profisisonal decorrente de processo de formação, certificação ou acreditação, utilizando a Classificação Brasileira de Ocupações (CBO).",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "description": "Ocupação",
+                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
+                }
+            },
+            {
+                "id": "Practitioner.qualification.code.coding",
+                "path": "Practitioner.qualification.code.coding",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Practitioner.qualification.code.coding.system",
+                "path": "Practitioner.qualification.code.coding.system",
+                "min": 1
+            },
+            {
+                "id": "Practitioner.qualification.code.coding.code",
+                "path": "Practitioner.qualification.code.coding.code",
+                "min": 1
+            },
+            {
+                "id": "Practitioner.qualification.code.coding.display",
+                "path": "Practitioner.qualification.code.coding.display",
+                "max": "0"
+            },
+            {
+                "id": "Practitioner.qualification.code.coding.userSelected",
+                "path": "Practitioner.qualification.code.coding.userSelected",
+                "max": "0"
+            },
+            {
+                "id": "Practitioner.qualification.code.text",
+                "path": "Practitioner.qualification.code.text",
+                "max": "0"
+            },
+            {
+                "id": "Practitioner.qualification.period",
+                "path": "Practitioner.qualification.period",
+                "short": "Período da Qualificação",
+                "definition": "Datas de emissão e validade da qualificação. Não utilizar esta opção para datas de início e término de cursos.",
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.qualification.period.start",
+                "path": "Practitioner.qualification.period.start",
+                "short": "Data de Formação/Acreditação/Certificação",
+                "definition": "Data que o profissional se formou, foi certificado ou foi acreditado."
+            },
+            {
+                "id": "Practitioner.qualification.period.end",
+                "path": "Practitioner.qualification.period.end",
+                "short": "Validade da Formação/Acreditação/Certificação",
+                "definition": "Término da validade do processo de formação, certificação ou acereditação."
+            },
+            {
+                "id": "Practitioner.qualification.issuer",
+                "path": "Practitioner.qualification.issuer",
+                "max": "0"
+            },
+            {
+                "id": "Practitioner.communication",
+                "path": "Practitioner.communication",
+                "max": "0"
+            }
         ]
-      },
-      {
-        "id": "Practitioner.identifier.type",
-        "path": "Practitioner.identifier.type",
-        "definition": "Tipo de documento utilizado para identificar o profissional."
-      },
-      {
-        "id": "Practitioner.active",
-        "path": "Practitioner.active",
-        "short": "Registro em Uso",
-        "definition": "Indica se o registro desse profissional ainda está em uso.\r\nA codição de inativo pode indicar que tanto uma informação errada quanto um profissional que não está mais atuando.",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name",
-        "path": "Practitioner.name",
-        "short": "Nome do Profissional",
-        "definition": "Nome(s) associado(s) ao profissional.",
-        "type": [
-          {
-            "code": "HumanName",
-            "profile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNomeIndividuo-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Practitioner.name.use",
-        "path": "Practitioner.name.use",
-        "definition": "official: nome oficial atual, conforme registrado na certidão de registro civil mais atual do profissional.\r\nmaiden: nome oficial de solteiro(a), quando houve uma alteração de nome decorrente de uma união de qualquer tipo.\r\nold: nome oficial anterior, quando houve uma alteração de nome em uma certidão de registro civil ou decisão judicial decorrente de qualquer outra situação que não seja uma união.\r\nusual: nome social.\r\ntemp: nome temporário, como aqueles utilizados em programas de proteção a testemunhas.\r\nanonymous: uso exclusivo para anonimização de registros de profissionais."
-      },
-      {
-        "id": "Practitioner.name.text",
-        "path": "Practitioner.name.text",
-        "definition": "Nome completo do profissional, composto pelo nome próprio, que pode ser mais de um quando trata-se de um nome composto, pelo sobrenome e pelo sufixo (Filho, Neto, Júnior etc.) quando aplicável."
-      },
-      {
-        "id": "Practitioner.telecom",
-        "path": "Practitioner.telecom",
-        "definition": "Informações do(s) meio(s) de contato com o profissional. Não devem ser informados meios de contato pessoais, apenas profissionais.",
-        "type": [
-          {
-            "code": "ContactPoint",
-            "profile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMeioContato-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Practitioner.telecom.use",
-        "path": "Practitioner.telecom.use",
-        "definition": "work: comercial.\r\ntemp: temporário ou de recado.\r\nmobile: dispositivo móvel, como um telefone celular."
-      },
-      {
-        "id": "Practitioner.telecom.period",
-        "path": "Practitioner.telecom.period",
-        "definition": "Período em que o meio de contato foi utilizado pelo profisisonal."
-      },
-      {
-        "id": "Practitioner.telecom.period.start",
-        "path": "Practitioner.telecom.period.start",
-        "definition": "Data em que o meio de contato foi cadastrado ou começou a ser utilizado pelo profissional."
-      },
-      {
-        "id": "Practitioner.telecom.period.end",
-        "path": "Practitioner.telecom.period.end",
-        "definition": "Data em que o meio de contato foi desativado ou parou de ser utilizado pelo profissional."
-      },
-      {
-        "id": "Practitioner.address",
-        "path": "Practitioner.address",
-        "definition": "Dados do(s) endereço(s) onde o profissional pode ser localizado. Não devem ser informados endereços pessoais, apenas profissionais.",
-        "type": [
-          {
-            "code": "Address",
-            "profile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREndereco-1.0"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Practitioner.address.use",
-        "path": "Practitioner.address.use",
-        "definition": "work: endereço comercial ou de trabalho atual.\r\ntemp: endereço temporário, como uma instalação/edificação de trabalho provisória, etc.\r\nold: endereço anterior."
-      },
-      {
-        "id": "Practitioner.gender",
-        "path": "Practitioner.gender",
-        "short": "Sexo",
-        "definition": "male: masculino.\r\nfemale: feminino.\r\nunknown: ignorado.",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "Sexo",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRSexo-1.0"
-        }
-      },
-      {
-        "id": "Practitioner.birthDate",
-        "path": "Practitioner.birthDate",
-        "short": "Data de Nascimento",
-        "definition": "Data de nascimento do profissional",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.photo",
-        "path": "Practitioner.photo",
-        "max": "0"
-      },
-      {
-        "id": "Practitioner.qualification",
-        "path": "Practitioner.qualification",
-        "short": "Qualificação",
-        "definition": "A(s) qualificação(ões), conforme a formação, certificações ou acreditações que o profissional possui.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.qualification.identifier",
-        "path": "Practitioner.qualification.identifier",
-        "max": "0"
-      },
-      {
-        "id": "Practitioner.qualification.code",
-        "path": "Practitioner.qualification.code",
-        "short": "Qualificação do Profissional",
-        "definition": "Qualificação do profisisonal decorrente de processo de formação, certificação ou acreditação, utilizando a Classificação Brasileira de Ocupações (CBO).",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "Ocupação",
-          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
-        }
-      },
-      {
-        "id": "Practitioner.qualification.code.coding",
-        "path": "Practitioner.qualification.code.coding",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Practitioner.qualification.code.coding.system",
-        "path": "Practitioner.qualification.code.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Practitioner.qualification.code.coding.code",
-        "path": "Practitioner.qualification.code.coding.code",
-        "min": 1
-      },
-      {
-        "id": "Practitioner.qualification.code.coding.display",
-        "path": "Practitioner.qualification.code.coding.display",
-        "max": "0"
-      },
-      {
-        "id": "Practitioner.qualification.code.coding.userSelected",
-        "path": "Practitioner.qualification.code.coding.userSelected",
-        "max": "0"
-      },
-      {
-        "id": "Practitioner.qualification.code.text",
-        "path": "Practitioner.qualification.code.text",
-        "max": "0"
-      },
-      {
-        "id": "Practitioner.qualification.period",
-        "path": "Practitioner.qualification.period",
-        "short": "Período da Qualificação",
-        "definition": "Datas de emissão e validade da qualificação. Não utilizar esta opção para datas de início e término de cursos.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.qualification.period.start",
-        "path": "Practitioner.qualification.period.start",
-        "short": "Data de Formação/Acreditação/Certificação",
-        "definition": "Data que o profissional se formou, foi certificado ou foi acreditado."
-      },
-      {
-        "id": "Practitioner.qualification.period.end",
-        "path": "Practitioner.qualification.period.end",
-        "short": "Validade da Formação/Acreditação/Certificação",
-        "definition": "Término da validade do processo de formação, certificação ou acereditação."
-      },
-      {
-        "id": "Practitioner.qualification.issuer",
-        "path": "Practitioner.qualification.issuer",
-        "max": "0"
-      },
-      {
-        "id": "Practitioner.communication",
-        "path": "Practitioner.communication",
-        "max": "0"
-      }
-    ]
-  }
+    },
+    "id": "d01ac661-4d54-4012-889d-c4ac650010c6"
 }

@@ -1,24 +1,25 @@
 {
-  "resourceType": "ValueSet",
-  "meta": {
-    "lastUpdated": "2020-03-12T13:22:07.223+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
-  "version": "1.0",
-  "name": "Classificação Brasileira de Ocupações - CBO",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-03-12T13:22:05.8261152+00:00",
-  "publisher": "Ministério do Trabalho e Emprego do Brasil",
-  "description": "Classifica as profissões do mercado de trabalho brasileiro.",
-  "immutable": false,
-  "compose": {
-    "include": [
-      {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
-        "version": "*"
-      }
-    ]
-  }
+    "resourceType": "ValueSet",
+    "meta": {
+        "lastUpdated": "2020-03-12T13:22:07.223+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0",
+    "version": "1.0",
+    "name": "Classificação Brasileira de Ocupações - CBO",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-12T13:22:05.8261152+00:00",
+    "publisher": "Ministério do Trabalho e Emprego do Brasil",
+    "description": "Classifica as profissões do mercado de trabalho brasileiro.",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO",
+                "version": "*"
+            }
+        ]
+    },
+    "id": "be2413df-6119-4e95-b6aa-529f11334cd2"
 }

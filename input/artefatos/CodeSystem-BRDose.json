@@ -1,826 +1,827 @@
 {
-  "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2021-01-11T14:01:22.708+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRDose",
-  "version": "1.01",
-  "name": "Dose de Vacina",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-01-06T18:23:38.3705+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Define a dose da administração de uma substância.",
-  "content": "complete",
-  "concept": [
-    {
-      "code": "1",
-      "display": "1ª Dose",
-      "designation": [
+    "resourceType": "CodeSystem",
+    "meta": {
+        "lastUpdated": "2021-01-11T14:01:22.708+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRDose",
+    "version": "1.01",
+    "name": "Dose de Vacina",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-01-06T18:23:38.3705+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Define a dose da administração de uma substância.",
+    "content": "complete",
+    "concept": [
         {
-          "language": "en",
-          "value": "First dose"
+            "code": "1",
+            "display": "1ª Dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "First dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Primera dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Primera dosis"
-        }
-      ]
-    },
-    {
-      "code": "2",
-      "display": "2ª Dose",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Second dose"
+            "code": "2",
+            "display": "2ª Dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Second dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Segunda dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Segunda dosis"
-        }
-      ]
-    },
-    {
-      "code": "3",
-      "display": "3ª Dose",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Third dose"
+            "code": "3",
+            "display": "3ª Dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Third dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Tercera dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tercera dosis"
-        }
-      ]
-    },
-    {
-      "code": "4",
-      "display": "4ª Dose",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fourth dose"
+            "code": "4",
+            "display": "4ª Dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fourth dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Cuarta dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Cuarta dosis"
-        }
-      ]
-    },
-    {
-      "code": "5",
-      "display": "5ª Dose",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fifth dose"
+            "code": "5",
+            "display": "5ª Dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fifth dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Quinta dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Quinta dosis"
-        }
-      ]
-    },
-    {
-      "code": "6",
-      "display": "1º Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "First booster dose"
+            "code": "6",
+            "display": "1º Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "First booster dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Primer refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Primer refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "7",
-      "display": "2º Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Second booster dose"
+            "code": "7",
+            "display": "2º Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Second booster dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Segundo refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Segundo refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "8",
-      "display": "Dose",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Dose"
+            "code": "8",
+            "display": "Dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Dosis"
-        }
-      ]
-    },
-    {
-      "code": "9",
-      "display": "Única",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Single dose"
+            "code": "9",
+            "display": "Única",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Single dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Dosis única"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Dosis única"
-        }
-      ]
-    },
-    {
-      "code": "10",
-      "display": "Revacinação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Revaccination"
+            "code": "10",
+            "display": "Revacinação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Revaccination"
+                },
+                {
+                    "language": "es",
+                    "value": "Revacunación"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Revacunación"
-        }
-      ]
-    },
-    {
-      "code": "11",
-      "display": "Tratamento com uma dose",
-      "designation": [
-        {
-          "language": "en",
-          "value": "1 dose treatment"
+            "code": "11",
+            "display": "Tratamento com uma dose",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "1 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 1 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 1 dosis"
-        }
-      ]
-    },
-    {
-      "code": "12",
-      "display": "Tratamento com duas doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "2 dose treatment"
+            "code": "12",
+            "display": "Tratamento com duas doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "2 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 2 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 2 dosis"
-        }
-      ]
-    },
-    {
-      "code": "13",
-      "display": "Tratamento com três doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "3 dose treatment"
+            "code": "13",
+            "display": "Tratamento com três doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "3 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 3 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 3 dosis"
-        }
-      ]
-    },
-    {
-      "code": "14",
-      "display": "Tratamento com quatro doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "4 dose treatment"
+            "code": "14",
+            "display": "Tratamento com quatro doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "4 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 4 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 4 dosis"
-        }
-      ]
-    },
-    {
-      "code": "15",
-      "display": "Tratamento com cinco doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "5 dose treatment"
+            "code": "15",
+            "display": "Tratamento com cinco doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "5 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 5 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 5 dosis"
-        }
-      ]
-    },
-    {
-      "code": "16",
-      "display": "Tratamento com seis doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "6 dose treatment"
+            "code": "16",
+            "display": "Tratamento com seis doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "6 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 6 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 6 dosis"
-        }
-      ]
-    },
-    {
-      "code": "17",
-      "display": "Tratamento com sete doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "7 dose treatment"
+            "code": "17",
+            "display": "Tratamento com sete doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "7 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 7 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 7 dosis"
-        }
-      ]
-    },
-    {
-      "code": "18",
-      "display": "Tratamento com oito doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "8 dose treatment"
+            "code": "18",
+            "display": "Tratamento com oito doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "8 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 8 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 8 dosis"
-        }
-      ]
-    },
-    {
-      "code": "19",
-      "display": "Tratamento com nove doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "9 dose treatment"
+            "code": "19",
+            "display": "Tratamento com nove doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "9 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 9 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 9 dosis"
-        }
-      ]
-    },
-    {
-      "code": "20",
-      "display": "Tratamento com dez doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "10 dose treatment"
+            "code": "20",
+            "display": "Tratamento com dez doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "10 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 10 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 10 dosis"
-        }
-      ]
-    },
-    {
-      "code": "21",
-      "display": "Tratamento com onze doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "11 dose treatment"
+            "code": "21",
+            "display": "Tratamento com onze doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "11 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 11 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 11 dosis"
-        }
-      ]
-    },
-    {
-      "code": "22",
-      "display": "Tratamento com doze doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "12 dose treatment"
+            "code": "22",
+            "display": "Tratamento com doze doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "12 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 12 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 12 dosis"
-        }
-      ]
-    },
-    {
-      "code": "23",
-      "display": "Tratamento com treze doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "13 dose treatment"
+            "code": "23",
+            "display": "Tratamento com treze doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "13 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 13 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 13 dosis"
-        }
-      ]
-    },
-    {
-      "code": "24",
-      "display": "Tratamento com quartorze doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "14 dose treatment"
+            "code": "24",
+            "display": "Tratamento com quartorze doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "14 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 14 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 14 dosis"
-        }
-      ]
-    },
-    {
-      "code": "25",
-      "display": "Tratamento com quinze doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "15 dose treatment"
+            "code": "25",
+            "display": "Tratamento com quinze doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "15 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 15 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 15 dosis"
-        }
-      ]
-    },
-    {
-      "code": "26",
-      "display": "Tratamento com dezesseis doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "16 dose treatment"
+            "code": "26",
+            "display": "Tratamento com dezesseis doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "16 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 16 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 16 dosis"
-        }
-      ]
-    },
-    {
-      "code": "27",
-      "display": "Tratamento com dezessete doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "17 dose treatment"
+            "code": "27",
+            "display": "Tratamento com dezessete doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "17 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 17 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 17 dosis"
-        }
-      ]
-    },
-    {
-      "code": "28",
-      "display": "Tratamento com dezoito doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "18 dose treatment"
+            "code": "28",
+            "display": "Tratamento com dezoito doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "18 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 18 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 18 dosis"
-        }
-      ]
-    },
-    {
-      "code": "29",
-      "display": "Tratamento com dezenove doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "19 dose treatment"
+            "code": "29",
+            "display": "Tratamento com dezenove doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "19 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 19 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 19 dosis"
-        }
-      ]
-    },
-    {
-      "code": "30",
-      "display": "Tratamento com vinte doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "20 dose treatment"
+            "code": "30",
+            "display": "Tratamento com vinte doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "20 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 20 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 20 dosis"
-        }
-      ]
-    },
-    {
-      "code": "31",
-      "display": "Tratamento com vinte e quatro doses",
-      "designation": [
-        {
-          "language": "en",
-          "value": "24 dose treatment"
+            "code": "31",
+            "display": "Tratamento com vinte e quatro doses",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "24 dose treatment"
+                },
+                {
+                    "language": "es",
+                    "value": "Tratamiento de 24 dosis"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tratamiento de 24 dosis"
-        }
-      ]
-    },
-    {
-      "code": "32",
-      "display": "1ª Dose Revacinação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "First dose revaccinacion"
+            "code": "32",
+            "display": "1ª Dose Revacinação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "First dose revaccinacion"
+                },
+                {
+                    "language": "es",
+                    "value": "Primera dosis revacunación"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Primera dosis revacunación"
-        }
-      ]
-    },
-    {
-      "code": "33",
-      "display": "2ª Dose Revacinação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Second dose revaccinacion"
+            "code": "33",
+            "display": "2ª Dose Revacinação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Second dose revaccinacion"
+                },
+                {
+                    "language": "es",
+                    "value": "Segunda dosis revacunación"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Segunda dosis revacunación"
-        }
-      ]
-    },
-    {
-      "code": "34",
-      "display": "3ª Dose Revacinação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Third dose revaccinacion"
+            "code": "34",
+            "display": "3ª Dose Revacinação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Third dose revaccinacion"
+                },
+                {
+                    "language": "es",
+                    "value": "Tecera dosis revacunación"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tecera dosis revacunación"
-        }
-      ]
-    },
-    {
-      "code": "35",
-      "display": "4ª Dose Revacinação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fourth dose revaccinacion"
+            "code": "35",
+            "display": "4ª Dose Revacinação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fourth dose revaccinacion"
+                },
+                {
+                    "language": "es",
+                    "value": "Cuarta dosis revacunación"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Cuarta dosis revacunación"
-        }
-      ]
-    },
-    {
-      "code": "36",
-      "display": "Dose Inicial",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Initial dose"
+            "code": "36",
+            "display": "Dose Inicial",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Initial dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Dosis inicial"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Dosis inicial"
-        }
-      ]
-    },
-    {
-      "code": "37",
-      "display": "Dose Adicional",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Additional dose"
+            "code": "37",
+            "display": "Dose Adicional",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Additional dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Dosis adicional"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Dosis adicional"
-        }
-      ]
-    },
-    {
-      "code": "38",
-      "display": "Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Booster"
+            "code": "38",
+            "display": "Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Booster"
+                },
+                {
+                    "language": "es",
+                    "value": "Refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "39",
-      "display": "3º Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Third booster dose"
+            "code": "39",
+            "display": "3º Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Third booster dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Tercer refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tercer refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "40",
-      "display": "4º Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fourth booster dose"
+            "code": "40",
+            "display": "4º Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fourth booster dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Cuarto refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Cuarto refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "41",
-      "display": "5º Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fifth booster dose"
+            "code": "41",
+            "display": "5º Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fifth booster dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Quinto refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Quinto refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "42",
-      "display": "6º Reforço",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Sixth booster dose"
+            "code": "42",
+            "display": "6º Reforço",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Sixth booster dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Sexto refuerzo"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Sexto refuerzo"
-        }
-      ]
-    },
-    {
-      "code": "43",
-      "display": "5ª Dose Revacinação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fifth dose revaccinacion"
+            "code": "43",
+            "display": "5ª Dose Revacinação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fifth dose revaccinacion"
+                },
+                {
+                    "language": "es",
+                    "value": "Quinta dosis revacunación"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Quinta dosis revacunación"
-        }
-      ]
-    },
-    {
-      "code": "44",
-      "display": "1ª Dose Fracionada",
-      "designation": [
-        {
-          "language": "en",
-          "value": "First fractional dose"
+            "code": "44",
+            "display": "1ª Dose Fracionada",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "First fractional dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Primera dosis fraccionada"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Primera dosis fraccionada"
-        }
-      ]
-    },
-    {
-      "code": "45",
-      "display": "2ª Dose Fracionada",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Second fractional dose"
+            "code": "45",
+            "display": "2ª Dose Fracionada",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Second fractional dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Secunda dosis fraccionada"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Secunda dosis fraccionada"
-        }
-      ]
-    },
-    {
-      "code": "46",
-      "display": "3ª Dose Fracionada",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Third fractional dose"
+            "code": "46",
+            "display": "3ª Dose Fracionada",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Third fractional dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Tercera dosis fraccionada"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Tercera dosis fraccionada"
-        }
-      ]
-    },
-    {
-      "code": "47",
-      "display": "4ª Dose Fracionada",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fourth fractional dose"
+            "code": "47",
+            "display": "4ª Dose Fracionada",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fourth fractional dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Cuarta dosis fraccionada"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Cuarta dosis fraccionada"
-        }
-      ]
-    },
-    {
-      "code": "48",
-      "display": "5ª Dose Fracionada",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Fifth fractional dose"
+            "code": "48",
+            "display": "5ª Dose Fracionada",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Fifth fractional dose"
+                },
+                {
+                    "language": "es",
+                    "value": "Quinta dosis fraccionada"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Quinta dosis fraccionada"
+            "code": "49",
+            "display": "1ª Dose Dobrada"
+        },
+        {
+            "code": "50",
+            "display": "2ª Dose Dobrada"
+        },
+        {
+            "code": "51",
+            "display": "3ª Dose Dobrada"
+        },
+        {
+            "code": "52",
+            "display": "4ª Dose Dobrada"
+        },
+        {
+            "code": "53",
+            "display": "1ª Dose Revacinação Dobrada"
+        },
+        {
+            "code": "54",
+            "display": "2ª Dose Revacinação Dobrada"
+        },
+        {
+            "code": "55",
+            "display": "3ª Dose Revacinação Dobrada"
+        },
+        {
+            "code": "56",
+            "display": "4ª Dose Revacinação Dobrada"
+        },
+        {
+            "code": "57",
+            "display": "Dose Zero"
+        },
+        {
+            "code": "58",
+            "display": "Reforço Zero"
+        },
+        {
+            "code": "59",
+            "display": "Profilaxia com 1 frasco-ampola/ampola"
+        },
+        {
+            "code": "60",
+            "display": "Profilaxia com 2 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "61",
+            "display": "Profilaxia com 3 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "62",
+            "display": "Profilaxia com 4 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "63",
+            "display": "Profilaxia com 5 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "64",
+            "display": "Profilaxia com 6 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "65",
+            "display": "Profilaxia com 7 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "66",
+            "display": "Profilaxia com 8 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "67",
+            "display": "Profilaxia com 9 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "68",
+            "display": "Profilaxia com 10 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "69",
+            "display": "Profilaxia com 11 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "70",
+            "display": "Profilaxia com 12 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "71",
+            "display": "Profilaxia com 13 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "72",
+            "display": "Profilaxia com 14 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "73",
+            "display": "Profilaxia com 15 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "74",
+            "display": "Profilaxia com 16 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "75",
+            "display": "Profilaxia com 17 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "76",
+            "display": "Profilaxia com 18 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "77",
+            "display": "Profilaxia com 19 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "78",
+            "display": "Profilaxia com 20 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "79",
+            "display": "Profilaxia com 21 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "80",
+            "display": "Profilaxia com 22 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "81",
+            "display": "Profilaxia com 23 frascos-ampolas/ampolas"
+        },
+        {
+            "code": "82",
+            "display": "Profilaxia com 24 frascos-ampolas/ampolas"
         }
-      ]
-    },
-    {
-      "code": "49",
-      "display": "1ª Dose Dobrada"
-    },
-    {
-      "code": "50",
-      "display": "2ª Dose Dobrada"
-    },
-    {
-      "code": "51",
-      "display": "3ª Dose Dobrada"
-    },
-    {
-      "code": "52",
-      "display": "4ª Dose Dobrada"
-    },
-    {
-      "code": "53",
-      "display": "1ª Dose Revacinação Dobrada"
-    },
-    {
-      "code": "54",
-      "display": "2ª Dose Revacinação Dobrada"
-    },
-    {
-      "code": "55",
-      "display": "3ª Dose Revacinação Dobrada"
-    },
-    {
-      "code": "56",
-      "display": "4ª Dose Revacinação Dobrada"
-    },
-    {
-      "code": "57",
-      "display": "Dose Zero"
-    },
-    {
-      "code": "58",
-      "display": "Reforço Zero"
-    },
-    {
-      "code": "59",
-      "display": "Profilaxia com 1 frasco-ampola/ampola"
-    },
-    {
-      "code": "60",
-      "display": "Profilaxia com 2 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "61",
-      "display": "Profilaxia com 3 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "62",
-      "display": "Profilaxia com 4 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "63",
-      "display": "Profilaxia com 5 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "64",
-      "display": "Profilaxia com 6 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "65",
-      "display": "Profilaxia com 7 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "66",
-      "display": "Profilaxia com 8 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "67",
-      "display": "Profilaxia com 9 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "68",
-      "display": "Profilaxia com 10 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "69",
-      "display": "Profilaxia com 11 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "70",
-      "display": "Profilaxia com 12 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "71",
-      "display": "Profilaxia com 13 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "72",
-      "display": "Profilaxia com 14 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "73",
-      "display": "Profilaxia com 15 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "74",
-      "display": "Profilaxia com 16 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "75",
-      "display": "Profilaxia com 17 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "76",
-      "display": "Profilaxia com 18 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "77",
-      "display": "Profilaxia com 19 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "78",
-      "display": "Profilaxia com 20 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "79",
-      "display": "Profilaxia com 21 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "80",
-      "display": "Profilaxia com 22 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "81",
-      "display": "Profilaxia com 23 frascos-ampolas/ampolas"
-    },
-    {
-      "code": "82",
-      "display": "Profilaxia com 24 frascos-ampolas/ampolas"
-    }
-  ]
+    ],
+    "id": "d9e0e4b0-da47-4478-8bee-7e18b005cd0f"
 }

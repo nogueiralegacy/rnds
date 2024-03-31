@@ -1,46 +1,47 @@
 {
-  "resourceType": "ValueSet",
-  "meta": {
-    "lastUpdated": "2023-04-13T13:17:22.715+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
-  "version": "1.0",
-  "name": "Caráter de Atendimento no MIRA",
-  "status": "active",
-  "experimental": false,
-  "date": "2023-04-13T13:17:18.5012669+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Caráter da solicitação do procedimento.",
-  "immutable": false,
-  "compose": {
-    "include": [
-      {
-        "system": "http://hl7.org/fhir/request-priority",
-        "version": "*",
-        "concept": [
-          {
-            "code": "routine",
-            "display": "Routine",
-            "designation": [
-              {
-                "language": "pt-br",
-                "value": "Eletivo"
-              }
-            ]
-          },
-          {
-            "code": "urgent",
-            "display": "Urgent",
-            "designation": [
-              {
-                "language": "pt-br",
-                "value": "Urgência"
-              }
-            ]
-          }
+    "resourceType": "ValueSet",
+    "meta": {
+        "lastUpdated": "2023-04-13T13:17:22.715+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimentoMIRA",
+    "version": "1.0",
+    "name": "Caráter de Atendimento no MIRA",
+    "status": "active",
+    "experimental": false,
+    "date": "2023-04-13T13:17:18.5012669+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Caráter da solicitação do procedimento.",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/request-priority",
+                "version": "*",
+                "concept": [
+                    {
+                        "code": "routine",
+                        "display": "Routine",
+                        "designation": [
+                            {
+                                "language": "pt-BR",
+                                "value": "Eletivo"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "urgent",
+                        "display": "Urgent",
+                        "designation": [
+                            {
+                                "language": "pt-BR",
+                                "value": "Urgência"
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    },
+    "id": "a139e512-2223-44d4-8bc8-411b62604de5"
 }

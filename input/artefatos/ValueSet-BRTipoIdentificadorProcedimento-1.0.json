@@ -1,29 +1,30 @@
 {
-  "resourceType": "ValueSet",
-  "meta": {
-    "lastUpdated": "2020-03-12T14:50:37.306+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoIdentificadorProcedimento-1.0",
-  "version": "1.0",
-  "name": "Tipo de Identificador do Procedimento",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-03-12T14:50:35.0809802+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Classifica o tipo de identificador que está sendo utilizado para o procedimento.",
-  "immutable": false,
-  "compose": {
-    "include": [
-      {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
-        "version": "*",
-        "concept": [
-          {
-            "code": "AUTH"
-          }
+    "resourceType": "ValueSet",
+    "meta": {
+        "lastUpdated": "2020-03-12T14:50:37.306+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoIdentificadorProcedimento-1.0",
+    "version": "1.0",
+    "name": "Tipo de Identificador do Procedimento",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-12T14:50:35.0809802+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Classifica o tipo de identificador que está sendo utilizado para o procedimento.",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
+                "version": "*",
+                "concept": [
+                    {
+                        "code": "AUTH"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    },
+    "id": "b1e5f4e6-e891-48d4-9ac4-7820c219eedb"
 }

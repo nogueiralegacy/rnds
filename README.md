@@ -44,6 +44,9 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | StructureDefinition | StructureDefinition-BRRacaCorEtnia-1.0 | Binding da extensão "race" e "indigenousEthnicity" não estava no local adequado, dessa forma não efetivando a ação do binding | Ajuste do binding para o local correto |
 | * | ValueSet-RoupasUsadasMedicao, StructureDefinition-BRObservacaoDescritiva-1.0, ValueSet-BROrigemMedida, ValueSet-BRPosicaoIndividuo, ValueSet-BRTipoObservacao-1.0 | Essas instâncias de recursos FHIR faziam referência para o CodeSystem LOINC com o valor da URI incorreto. URI referenciada: https://loinc.org/. URI do CodeSystem LOINC: http://loinc.org|  Foi feita a substituição da URI referenciada pela URI do CodeSystem LOINC|
 | * | * | Elemento "fhirVersions" em versões diferentes. | Foi retirado o elemento "fhirVersions" de todas as instâncias de recursos. |
+| * | * | Instâncias de recursos sem o elemento "id" ou com o elemento "id" duplicado | Foi gerado um [UUID](https://stackoverflow.com/questions/1155008/how-unique-is-uuid) e acrescentado a cada instância de recurso no elemento "id" |
+| * | * | Instâncias utilizando código "eng" e "pt-br" para referenciar línguas, agrupadas no ValueSet http://hl7.org/fhir/ValueSet/languages. Contudo, para refereciar Inglês Americano e Português do Brasil os códigos são "en-US" e "pt-BR", respectivamente. Códigos de um CodeSystem são case sensitive, ou seja, diferenciam caractere maiúsculo de minúsculo. | Substituição de "eng" por "en-US" e "pt-br" por "pt-BR", quando referente a línguas |
+| CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil | Alguns códigos definidos nesse CodeSystem estavam declarados sem aspas no json o que acarretou um erro na decodificação do JSON | Foi acrescentado aspas aos códigos que não tinham |
 
 ## Desenvolvedores FHIR
 

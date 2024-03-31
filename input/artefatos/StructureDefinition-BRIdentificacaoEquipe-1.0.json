@@ -1,77 +1,77 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "2cc4e4e3-0f97-4b54-ab87-e73fe0758cc7",
-  "meta": {
-    "lastUpdated": "2020-04-07T12:08:01.107+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0",
-  "version": "1.0",
-  "name": "BRIdentificacaoEquipe",
-  "title": "Identificador Nacional de Equipe",
-  "status": "draft",
-  "date": "2020-04-07T12:07:57.7493336+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Extensão para permitir informar o código do Identificador Nacional de Equipe.",
-  "purpose": "Identificar equipes formais de trabalho no Brasil.",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "Encounter.participant"
+    "resourceType": "StructureDefinition",
+    "id": "b6c94e8c-949e-4172-b28c-f031391beeab",
+    "meta": {
+        "lastUpdated": "2020-04-07T12:08:01.107+00:00"
     },
-    {
-      "type": "element",
-      "expression": "Procedure.performer"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension",
-        "short": "Identificador Nacional de Equipe",
-        "definition": "Número válido do INE no CNES."
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0"
-      },
-      {
-        "id": "Extension.value[x]",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "integer"
-          }
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0",
+    "version": "1.0",
+    "name": "BRIdentificacaoEquipe",
+    "title": "Identificador Nacional de Equipe",
+    "status": "draft",
+    "date": "2020-04-07T12:07:57.7493336+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Extensão para permitir informar o código do Identificador Nacional de Equipe.",
+    "purpose": "Identificar equipes formais de trabalho no Brasil.",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Encounter.participant"
+        },
+        {
+            "type": "element",
+            "expression": "Procedure.performer"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension",
+                "short": "Identificador Nacional de Equipe",
+                "definition": "Número válido do INE no CNES."
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0"
+            },
+            {
+                "id": "Extension.value[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "normative"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+                        "valueCode": "4.0.0"
+                    }
+                ],
+                "path": "Extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "integer"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    }
 }

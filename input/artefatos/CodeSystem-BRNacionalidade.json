@@ -1,60 +1,61 @@
 {
-  "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2021-12-28T17:23:29+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade",
-  "version": "01.00",
-  "name": "Nacionalidade",
-  "status": "active",
-  "experimental": false,
-  "date": "2021-12-28T17:23:29+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Define a nacionalidade de um dado indivíduo.",
-  "content": "complete",
-  "concept": [
-    {
-      "code": "B",
-      "display": "Brasileiro",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Brazilian"
-        },
-        {
-          "language": "es",
-          "value": "Brasileño"
-        }
-      ]
+    "resourceType": "CodeSystem",
+    "meta": {
+        "lastUpdated": "2021-12-28T17:23:29+00:00"
     },
-    {
-      "code": "E",
-      "display": "Estrangeiro",
-      "designation": [
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade",
+    "version": "01.00",
+    "name": "Nacionalidade",
+    "status": "active",
+    "experimental": false,
+    "date": "2021-12-28T17:23:29+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Define a nacionalidade de um dado indivíduo.",
+    "content": "complete",
+    "concept": [
         {
-          "language": "en",
-          "value": "Foreign"
+            "code": "B",
+            "display": "Brasileiro",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Brazilian"
+                },
+                {
+                    "language": "es",
+                    "value": "Brasileño"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Extranjero"
-        }
-      ]
-    },
-    {
-      "code": "N",
-      "display": "Naturalizado",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Naturalized"
+            "code": "E",
+            "display": "Estrangeiro",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Foreign"
+                },
+                {
+                    "language": "es",
+                    "value": "Extranjero"
+                }
+            ]
         },
         {
-          "language": "es",
-          "value": "Naturalizado"
+            "code": "N",
+            "display": "Naturalizado",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Naturalized"
+                },
+                {
+                    "language": "es",
+                    "value": "Naturalizado"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "id": "dbd5fd20-5c4e-46e2-aa40-7e0c4c0c53e0"
 }

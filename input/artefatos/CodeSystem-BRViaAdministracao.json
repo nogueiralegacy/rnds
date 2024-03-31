@@ -1,998 +1,999 @@
 {
-  "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2021-01-11T14:28:22.708+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRViaAdministracao",
-  "version": "02.00",
-  "name": "Via de Administração",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-03-11T18:28:42.5310735+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Classifica a via na qual foi administrada uma substância em um indivíduo.",
-  "content": "complete",
-  "concept": [
-    {
-      "code": "0",
-      "display": "Sem registro no sistema de informação de origem",
-      "designation": [
-        {
-          "language": "en",
-          "value": "No registration in the source information system"
-        },
-        {
-          "language": "es",
-          "value": "Sin registro en el sistema de información de fuentes"
-        }
-      ]
-    },
-    {
-      "code": "10862",
-      "display": "Otológica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Auricular"
-        },
-        {
-          "language": "es",
-          "value": "Auricular"
-        }
-      ]
-    },
-    {
-      "code": "10863",
-      "display": "Bucal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Buccal"
-        },
-        {
-          "language": "es",
-          "value": "Bucal"
-        }
-      ]
-    },
-    {
-      "code": "10864",
-      "display": "Dermatológica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Cutaneous"
-        },
-        {
-          "language": "es",
-          "value": "Cutáneo"
-        }
-      ]
-    },
-    {
-      "code": "10865",
-      "display": "Intracervical",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intracervical"
-        },
-        {
-          "language": "es",
-          "value": "Intracervical"
-        }
-      ]
-    },
-    {
-      "code": "10866",
-      "display": "Endosinusial",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Endosinusal"
-        },
-        {
-          "language": "es",
-          "value": "Endosinusal"
-        }
-      ]
-    },
-    {
-      "code": "10867",
-      "display": "Endotraqueopulmonar",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Endotracheopulmonary"
-        },
-        {
-          "language": "es",
-          "value": "Endotraqueopulmonar"
-        }
-      ]
-    },
-    {
-      "code": "10868",
-      "display": "Epidural",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Epidural"
-        },
-        {
-          "language": "es",
-          "value": "Epidural"
-        }
-      ]
-    },
-    {
-      "code": "10869",
-      "display": "Epilesional",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Epilesional"
-        },
-        {
-          "language": "es",
-          "value": "Epilesional"
-        }
-      ]
-    },
-    {
-      "code": "10870",
-      "display": "Extraminiótica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Extra-amniotic"
-        },
-        {
-          "language": "es",
-          "value": "Extraamniótico"
-        }
-      ]
-    },
-    {
-      "code": "10871",
-      "display": "Gastroenteral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Gastroenteral"
-        },
-        {
-          "language": "es",
-          "value": "Gastroenteral"
-        }
-      ]
-    },
-    {
-      "code": "10874",
-      "display": "Inalatória",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Inhalation"
-        },
-        {
-          "language": "es",
-          "value": "Inhalación"
-        }
-      ]
-    },
-    {
-      "code": "10875",
-      "display": "Intra-aminiótica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intra-amniotic"
-        },
-        {
-          "language": "es",
-          "value": "Intraamniótico"
-        }
-      ]
-    },
-    {
-      "code": "10876",
-      "display": "Intra-arterial",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intra-arterial"
-        },
-        {
-          "language": "es",
-          "value": "Intraarterial"
-        }
-      ]
-    },
-    {
-      "code": "10877",
-      "display": "Intra-articular",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intra-articular"
-        },
-        {
-          "language": "es",
-          "value": "Intraarticular"
-        }
-      ]
-    },
-    {
-      "code": "10878",
-      "display": "Intrabursal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intrabursal"
-        },
-        {
-          "language": "es",
-          "value": "Intrabursal"
-        }
-      ]
-    },
-    {
-      "code": "10879",
-      "display": "Intracameral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intracameral"
-        },
-        {
-          "language": "es",
-          "value": "Intracameral"
-        }
-      ]
-    },
-    {
-      "code": "10880",
-      "display": "Intracardíaca",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intracardiac"
-        },
-        {
-          "language": "es",
-          "value": "Intracardiaco"
-        }
-      ]
-    },
-    {
-      "code": "10881",
-      "display": "Intracavernosa",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intracavernous"
-        },
-        {
-          "language": "es",
-          "value": "Intracavernoso"
-        }
-      ]
-    },
-    {
-      "code": "10882",
-      "display": "Intracerebroventricular",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intracerebroventricular"
-        },
-        {
-          "language": "es",
-          "value": "Intracerebroventricular"
-        }
-      ]
-    },
-    {
-      "code": "10884",
-      "display": "Intracoronariana",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intracoronary"
-        },
-        {
-          "language": "es",
-          "value": "Intracoronario"
-        }
-      ]
-    },
-    {
-      "code": "10885",
-      "display": "Intradérmica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intradermal"
-        },
-        {
-          "language": "es",
-          "value": "Intradérmica"
-        }
-      ]
-    },
-    {
-      "code": "10886",
-      "display": "Intradiscal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intradiscal"
-        },
-        {
-          "language": "es",
-          "value": "Intradiscal"
-        }
-      ]
-    },
-    {
-      "code": "10887",
-      "display": "Intraepidermal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intraepidermal"
-        },
-        {
-          "language": "es",
-          "value": "Intraepidérmico"
-        }
-      ]
-    },
-    {
-      "code": "10888",
-      "display": "Intralesional",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intra-lesional"
-        },
-        {
-          "language": "es",
-          "value": "Intralesional"
-        }
-      ]
-    },
-    {
-      "code": "10889",
-      "display": "Intralinfática",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intra-lymphatic"
-        },
-        {
-          "language": "es",
-          "value": "Intralinfática"
-        }
-      ]
-    },
-    {
-      "code": "10890",
-      "display": "Intramuscular",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intramuscular"
-        },
-        {
-          "language": "es",
-          "value": "Intramuscular"
-        }
-      ]
-    },
-    {
-      "code": "10891",
-      "display": "Intraocular",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intraocular"
-        },
-        {
-          "language": "es",
-          "value": "Intraocular"
-        }
-      ]
-    },
-    {
-      "code": "10892",
-      "display": "Intraóssea",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intraosseous"
-        },
-        {
-          "language": "es",
-          "value": "Intraóseo"
-        }
-      ]
-    },
-    {
-      "code": "10893",
-      "display": "Intraperitoneal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intraperitoneal"
-        },
-        {
-          "language": "es",
-          "value": "Intraperitoneal"
-        }
-      ]
-    },
-    {
-      "code": "10894",
-      "display": "Intrapleural",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intrapleural"
-        },
-        {
-          "language": "es",
-          "value": "Intrapleural"
-        }
-      ]
-    },
-    {
-      "code": "10895",
-      "display": "Intraesternal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intra-sternal"
-        },
-        {
-          "language": "es",
-          "value": "Intraósea Esternal"
-        }
-      ]
-    },
-    {
-      "code": "10896",
-      "display": "Intratecal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intrathecal"
-        },
-        {
-          "language": "es",
-          "value": "Intratecal"
-        }
-      ]
-    },
-    {
-      "code": "10897",
-      "display": "Intrauterina",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intrauterine"
-        },
-        {
-          "language": "es",
-          "value": "Intrauterino"
-        }
-      ]
-    },
-    {
-      "code": "10898",
-      "display": "Intravenosa",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intravenous"
-        },
-        {
-          "language": "es",
-          "value": "Intravenosa"
-        }
-      ]
-    },
-    {
-      "code": "10899",
-      "display": "Intraventricular cardíaca",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intraventricular cardiac"
-        },
-        {
-          "language": "es",
-          "value": "Intraventricular cardiaco"
-        }
-      ]
-    },
-    {
-      "code": "10900",
-      "display": "Intravesical",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intravesical"
-        },
-        {
-          "language": "es",
-          "value": "Intravesical"
-        }
-      ]
-    },
-    {
-      "code": "10901",
-      "display": "Intravitreal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intravitreal"
-        },
-        {
-          "language": "es",
-          "value": "Intravítreo"
-        }
-      ]
-    },
-    {
-      "code": "10902",
-      "display": "Iontoforese",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Iontophoresis"
-        },
-        {
-          "language": "es",
-          "value": "Iontoforesis"
-        }
-      ]
-    },
-    {
-      "code": "10903",
-      "display": "Irrigação",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Irrigation"
-        },
-        {
-          "language": "es",
-          "value": "Irrigación"
-        }
-      ]
-    },
-    {
-      "code": "10904",
-      "display": "Nasal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Nasal"
-        },
-        {
-          "language": "es",
-          "value": "Nasal"
-        }
-      ]
-    },
-    {
-      "code": "10905",
-      "display": "Inalatória por Via Nasal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Nasal Inhalation (restricted to nasal admnistration)"
-        },
-        {
-          "language": "es",
-          "value": "Inhalación Nasal (restringida a la administración nasal)"
-        }
-      ]
-    },
-    {
-      "code": "10906",
-      "display": "Oftálmica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Ocular (Ophtalmic)"
-        },
-        {
-          "language": "es",
-          "value": "Ocular (oftálmico)"
-        }
-      ]
-    },
-    {
-      "code": "10907",
-      "display": "Oral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Oral"
-        },
-        {
-          "language": "es",
-          "value": "Oral"
-        }
-      ]
-    },
-    {
-      "code": "10908",
-      "display": "Inalatória por Via Oral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Oral Inhalation (restricted to oral admnistration)"
-        },
-        {
-          "language": "es",
-          "value": "Inhalación Oral (restringida a la administración oral)"
-        }
-      ]
-    },
-    {
-      "code": "10910",
-      "display": "Periarticular",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Periarticular"
-        },
-        {
-          "language": "es",
-          "value": "Periarticular"
-        }
-      ]
-    },
-    {
-      "code": "10911",
-      "display": "Perineural",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Perineural"
-        },
-        {
-          "language": "es",
-          "value": "Perineural"
-        }
-      ]
-    },
-    {
-      "code": "10912",
-      "display": "Retal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Rectal"
-        },
-        {
-          "language": "es",
-          "value": "Rectal"
-        }
-      ]
-    },
-    {
-      "code": "10913",
-      "display": "Perfusão Regional",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Regional Perfusion"
-        },
-        {
-          "language": "es",
-          "value": "Perfusión regional"
-        }
-      ]
-    },
-    {
-      "code": "10915",
-      "display": "Subconjuntival",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Subconjunctival"
-        },
-        {
-          "language": "es",
-          "value": "Subconjuntival"
-        }
-      ]
-    },
-    {
-      "code": "10916",
-      "display": "Subcutânea",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Subcutaneous"
-        },
-        {
-          "language": "es",
-          "value": "Subcutáneo"
-        }
-      ]
-    },
-    {
-      "code": "10917",
-      "display": "Sublingual",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Sublingual"
-        },
-        {
-          "language": "es",
-          "value": "Sublingual"
-        }
-      ]
-    },
-    {
-      "code": "10919",
-      "display": "Transdérmica",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Transdermal"
-        },
-        {
-          "language": "es",
-          "value": "Transdérmico"
-        }
-      ]
-    },
-    {
-      "code": "10920",
-      "display": "Uretral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Urethral"
-        },
-        {
-          "language": "es",
-          "value": "Uretral"
-        }
-      ]
-    },
-    {
-      "code": "10921",
-      "display": "Vaginal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Vaginal"
-        },
-        {
-          "language": "es",
-          "value": "Vaginal"
-        }
-      ]
-    },
-    {
-      "code": "10922",
-      "display": "Capilar",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Scalp (Capillary Action)"
-        },
-        {
-          "language": "es",
-          "value": "Cuero Cabelludo (Acción Capilar)"
-        }
-      ]
-    },
-    {
-      "code": "10923",
-      "display": "Não disponível",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Unavailable"
-        },
-        {
-          "language": "es",
-          "value": "Indisponible"
-        }
-      ]
-    },
-    {
-      "code": "10926",
-      "display": "Local",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Local"
-        },
-        {
-          "language": "es",
-          "value": "Local"
-        }
-      ]
-    },
-    {
-      "code": "10928",
-      "display": "Parenteral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Parenteral"
-        },
-        {
-          "language": "es",
-          "value": "Parenteral"
-        }
-      ]
-    },
-    {
-      "code": "244899",
-      "display": "Peridural",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Peridural"
-        },
-        {
-          "language": "es",
-          "value": "Peridural"
-        }
-      ]
-    },
-    {
-      "code": "459120",
-      "display": "Espinhal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Spinal"
-        },
-        {
-          "language": "es",
-          "value": "Espinal"
-        }
-      ]
-    },
-    {
-      "code": "459530",
-      "display": "Subcapsular",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Subcapsular"
-        },
-        {
-          "language": "es",
-          "value": "Subcapsular"
-        }
-      ]
-    },
-    {
-      "code": "459531",
-      "display": "Intratraqueal",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intratracheal"
-        },
-        {
-          "language": "es",
-          "value": "Intratraqueal"
-        }
-      ]
-    },
-    {
-      "code": "464156",
-      "display": "Intrabronquial",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Intrabronchial"
-        },
-        {
-          "language": "es",
-          "value": "Intrabronquial"
-        }
-      ]
-    },
-    {
-      "code": "464157",
-      "display": "Subtenoniana",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Subtenonian"
-        },
-        {
-          "language": "es",
-          "value": "Subtenoniano"
-        }
-      ]
-    },
-    {
-      "code": "464158",
-      "display": "Tecidos Moles",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Soft Tissue"
-        },
-        {
-          "language": "es",
-          "value": "Tejido Suave"
-        }
-      ]
-    },
-    {
-      "code": "464159",
-      "display": "Mucosa Oral",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Oromucosal"
-        },
-        {
-          "language": "es",
-          "value": "Mucosa Oral"
-        }
-      ]
-    },
-    {
-      "code": "608807",
-      "display": "Retrobulbar",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Retrobulbar"
-        },
-        {
-          "language": "es",
-          "value": "Retrobulbar"
-        }
-      ]
-    },
-    {
-      "code": "608808",
-      "display": "Infiltração",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Infiltration"
-        },
-        {
-          "language": "es",
-          "value": "Infiltración"
-        }
-      ]
-    },
-    {
-      "code": "779038",
-      "display": "Mucosa",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Mucosal"
-        },
-        {
-          "language": "es",
-          "value": "Mucosa"
-        }
-      ]
-    }
-  ]
+    "resourceType": "CodeSystem",
+    "meta": {
+        "lastUpdated": "2021-01-11T14:28:22.708+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRViaAdministracao",
+    "version": "02.00",
+    "name": "Via de Administração",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-11T18:28:42.5310735+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Classifica a via na qual foi administrada uma substância em um indivíduo.",
+    "content": "complete",
+    "concept": [
+        {
+            "code": "0",
+            "display": "Sem registro no sistema de informação de origem",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "No registration in the source information system"
+                },
+                {
+                    "language": "es",
+                    "value": "Sin registro en el sistema de información de fuentes"
+                }
+            ]
+        },
+        {
+            "code": "10862",
+            "display": "Otológica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Auricular"
+                },
+                {
+                    "language": "es",
+                    "value": "Auricular"
+                }
+            ]
+        },
+        {
+            "code": "10863",
+            "display": "Bucal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Buccal"
+                },
+                {
+                    "language": "es",
+                    "value": "Bucal"
+                }
+            ]
+        },
+        {
+            "code": "10864",
+            "display": "Dermatológica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Cutaneous"
+                },
+                {
+                    "language": "es",
+                    "value": "Cutáneo"
+                }
+            ]
+        },
+        {
+            "code": "10865",
+            "display": "Intracervical",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intracervical"
+                },
+                {
+                    "language": "es",
+                    "value": "Intracervical"
+                }
+            ]
+        },
+        {
+            "code": "10866",
+            "display": "Endosinusial",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Endosinusal"
+                },
+                {
+                    "language": "es",
+                    "value": "Endosinusal"
+                }
+            ]
+        },
+        {
+            "code": "10867",
+            "display": "Endotraqueopulmonar",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Endotracheopulmonary"
+                },
+                {
+                    "language": "es",
+                    "value": "Endotraqueopulmonar"
+                }
+            ]
+        },
+        {
+            "code": "10868",
+            "display": "Epidural",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Epidural"
+                },
+                {
+                    "language": "es",
+                    "value": "Epidural"
+                }
+            ]
+        },
+        {
+            "code": "10869",
+            "display": "Epilesional",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Epilesional"
+                },
+                {
+                    "language": "es",
+                    "value": "Epilesional"
+                }
+            ]
+        },
+        {
+            "code": "10870",
+            "display": "Extraminiótica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Extra-amniotic"
+                },
+                {
+                    "language": "es",
+                    "value": "Extraamniótico"
+                }
+            ]
+        },
+        {
+            "code": "10871",
+            "display": "Gastroenteral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Gastroenteral"
+                },
+                {
+                    "language": "es",
+                    "value": "Gastroenteral"
+                }
+            ]
+        },
+        {
+            "code": "10874",
+            "display": "Inalatória",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Inhalation"
+                },
+                {
+                    "language": "es",
+                    "value": "Inhalación"
+                }
+            ]
+        },
+        {
+            "code": "10875",
+            "display": "Intra-aminiótica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intra-amniotic"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraamniótico"
+                }
+            ]
+        },
+        {
+            "code": "10876",
+            "display": "Intra-arterial",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intra-arterial"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraarterial"
+                }
+            ]
+        },
+        {
+            "code": "10877",
+            "display": "Intra-articular",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intra-articular"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraarticular"
+                }
+            ]
+        },
+        {
+            "code": "10878",
+            "display": "Intrabursal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intrabursal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intrabursal"
+                }
+            ]
+        },
+        {
+            "code": "10879",
+            "display": "Intracameral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intracameral"
+                },
+                {
+                    "language": "es",
+                    "value": "Intracameral"
+                }
+            ]
+        },
+        {
+            "code": "10880",
+            "display": "Intracardíaca",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intracardiac"
+                },
+                {
+                    "language": "es",
+                    "value": "Intracardiaco"
+                }
+            ]
+        },
+        {
+            "code": "10881",
+            "display": "Intracavernosa",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intracavernous"
+                },
+                {
+                    "language": "es",
+                    "value": "Intracavernoso"
+                }
+            ]
+        },
+        {
+            "code": "10882",
+            "display": "Intracerebroventricular",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intracerebroventricular"
+                },
+                {
+                    "language": "es",
+                    "value": "Intracerebroventricular"
+                }
+            ]
+        },
+        {
+            "code": "10884",
+            "display": "Intracoronariana",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intracoronary"
+                },
+                {
+                    "language": "es",
+                    "value": "Intracoronario"
+                }
+            ]
+        },
+        {
+            "code": "10885",
+            "display": "Intradérmica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intradermal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intradérmica"
+                }
+            ]
+        },
+        {
+            "code": "10886",
+            "display": "Intradiscal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intradiscal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intradiscal"
+                }
+            ]
+        },
+        {
+            "code": "10887",
+            "display": "Intraepidermal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intraepidermal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraepidérmico"
+                }
+            ]
+        },
+        {
+            "code": "10888",
+            "display": "Intralesional",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intra-lesional"
+                },
+                {
+                    "language": "es",
+                    "value": "Intralesional"
+                }
+            ]
+        },
+        {
+            "code": "10889",
+            "display": "Intralinfática",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intra-lymphatic"
+                },
+                {
+                    "language": "es",
+                    "value": "Intralinfática"
+                }
+            ]
+        },
+        {
+            "code": "10890",
+            "display": "Intramuscular",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intramuscular"
+                },
+                {
+                    "language": "es",
+                    "value": "Intramuscular"
+                }
+            ]
+        },
+        {
+            "code": "10891",
+            "display": "Intraocular",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intraocular"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraocular"
+                }
+            ]
+        },
+        {
+            "code": "10892",
+            "display": "Intraóssea",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intraosseous"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraóseo"
+                }
+            ]
+        },
+        {
+            "code": "10893",
+            "display": "Intraperitoneal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intraperitoneal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraperitoneal"
+                }
+            ]
+        },
+        {
+            "code": "10894",
+            "display": "Intrapleural",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intrapleural"
+                },
+                {
+                    "language": "es",
+                    "value": "Intrapleural"
+                }
+            ]
+        },
+        {
+            "code": "10895",
+            "display": "Intraesternal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intra-sternal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraósea Esternal"
+                }
+            ]
+        },
+        {
+            "code": "10896",
+            "display": "Intratecal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intrathecal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intratecal"
+                }
+            ]
+        },
+        {
+            "code": "10897",
+            "display": "Intrauterina",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intrauterine"
+                },
+                {
+                    "language": "es",
+                    "value": "Intrauterino"
+                }
+            ]
+        },
+        {
+            "code": "10898",
+            "display": "Intravenosa",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intravenous"
+                },
+                {
+                    "language": "es",
+                    "value": "Intravenosa"
+                }
+            ]
+        },
+        {
+            "code": "10899",
+            "display": "Intraventricular cardíaca",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intraventricular cardiac"
+                },
+                {
+                    "language": "es",
+                    "value": "Intraventricular cardiaco"
+                }
+            ]
+        },
+        {
+            "code": "10900",
+            "display": "Intravesical",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intravesical"
+                },
+                {
+                    "language": "es",
+                    "value": "Intravesical"
+                }
+            ]
+        },
+        {
+            "code": "10901",
+            "display": "Intravitreal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intravitreal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intravítreo"
+                }
+            ]
+        },
+        {
+            "code": "10902",
+            "display": "Iontoforese",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Iontophoresis"
+                },
+                {
+                    "language": "es",
+                    "value": "Iontoforesis"
+                }
+            ]
+        },
+        {
+            "code": "10903",
+            "display": "Irrigação",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Irrigation"
+                },
+                {
+                    "language": "es",
+                    "value": "Irrigación"
+                }
+            ]
+        },
+        {
+            "code": "10904",
+            "display": "Nasal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Nasal"
+                },
+                {
+                    "language": "es",
+                    "value": "Nasal"
+                }
+            ]
+        },
+        {
+            "code": "10905",
+            "display": "Inalatória por Via Nasal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Nasal Inhalation (restricted to nasal admnistration)"
+                },
+                {
+                    "language": "es",
+                    "value": "Inhalación Nasal (restringida a la administración nasal)"
+                }
+            ]
+        },
+        {
+            "code": "10906",
+            "display": "Oftálmica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Ocular (Ophtalmic)"
+                },
+                {
+                    "language": "es",
+                    "value": "Ocular (oftálmico)"
+                }
+            ]
+        },
+        {
+            "code": "10907",
+            "display": "Oral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Oral"
+                },
+                {
+                    "language": "es",
+                    "value": "Oral"
+                }
+            ]
+        },
+        {
+            "code": "10908",
+            "display": "Inalatória por Via Oral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Oral Inhalation (restricted to oral admnistration)"
+                },
+                {
+                    "language": "es",
+                    "value": "Inhalación Oral (restringida a la administración oral)"
+                }
+            ]
+        },
+        {
+            "code": "10910",
+            "display": "Periarticular",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Periarticular"
+                },
+                {
+                    "language": "es",
+                    "value": "Periarticular"
+                }
+            ]
+        },
+        {
+            "code": "10911",
+            "display": "Perineural",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Perineural"
+                },
+                {
+                    "language": "es",
+                    "value": "Perineural"
+                }
+            ]
+        },
+        {
+            "code": "10912",
+            "display": "Retal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Rectal"
+                },
+                {
+                    "language": "es",
+                    "value": "Rectal"
+                }
+            ]
+        },
+        {
+            "code": "10913",
+            "display": "Perfusão Regional",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Regional Perfusion"
+                },
+                {
+                    "language": "es",
+                    "value": "Perfusión regional"
+                }
+            ]
+        },
+        {
+            "code": "10915",
+            "display": "Subconjuntival",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Subconjunctival"
+                },
+                {
+                    "language": "es",
+                    "value": "Subconjuntival"
+                }
+            ]
+        },
+        {
+            "code": "10916",
+            "display": "Subcutânea",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Subcutaneous"
+                },
+                {
+                    "language": "es",
+                    "value": "Subcutáneo"
+                }
+            ]
+        },
+        {
+            "code": "10917",
+            "display": "Sublingual",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Sublingual"
+                },
+                {
+                    "language": "es",
+                    "value": "Sublingual"
+                }
+            ]
+        },
+        {
+            "code": "10919",
+            "display": "Transdérmica",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Transdermal"
+                },
+                {
+                    "language": "es",
+                    "value": "Transdérmico"
+                }
+            ]
+        },
+        {
+            "code": "10920",
+            "display": "Uretral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Urethral"
+                },
+                {
+                    "language": "es",
+                    "value": "Uretral"
+                }
+            ]
+        },
+        {
+            "code": "10921",
+            "display": "Vaginal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Vaginal"
+                },
+                {
+                    "language": "es",
+                    "value": "Vaginal"
+                }
+            ]
+        },
+        {
+            "code": "10922",
+            "display": "Capilar",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Scalp (Capillary Action)"
+                },
+                {
+                    "language": "es",
+                    "value": "Cuero Cabelludo (Acción Capilar)"
+                }
+            ]
+        },
+        {
+            "code": "10923",
+            "display": "Não disponível",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Unavailable"
+                },
+                {
+                    "language": "es",
+                    "value": "Indisponible"
+                }
+            ]
+        },
+        {
+            "code": "10926",
+            "display": "Local",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Local"
+                },
+                {
+                    "language": "es",
+                    "value": "Local"
+                }
+            ]
+        },
+        {
+            "code": "10928",
+            "display": "Parenteral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Parenteral"
+                },
+                {
+                    "language": "es",
+                    "value": "Parenteral"
+                }
+            ]
+        },
+        {
+            "code": "244899",
+            "display": "Peridural",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Peridural"
+                },
+                {
+                    "language": "es",
+                    "value": "Peridural"
+                }
+            ]
+        },
+        {
+            "code": "459120",
+            "display": "Espinhal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Spinal"
+                },
+                {
+                    "language": "es",
+                    "value": "Espinal"
+                }
+            ]
+        },
+        {
+            "code": "459530",
+            "display": "Subcapsular",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Subcapsular"
+                },
+                {
+                    "language": "es",
+                    "value": "Subcapsular"
+                }
+            ]
+        },
+        {
+            "code": "459531",
+            "display": "Intratraqueal",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intratracheal"
+                },
+                {
+                    "language": "es",
+                    "value": "Intratraqueal"
+                }
+            ]
+        },
+        {
+            "code": "464156",
+            "display": "Intrabronquial",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Intrabronchial"
+                },
+                {
+                    "language": "es",
+                    "value": "Intrabronquial"
+                }
+            ]
+        },
+        {
+            "code": "464157",
+            "display": "Subtenoniana",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Subtenonian"
+                },
+                {
+                    "language": "es",
+                    "value": "Subtenoniano"
+                }
+            ]
+        },
+        {
+            "code": "464158",
+            "display": "Tecidos Moles",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Soft Tissue"
+                },
+                {
+                    "language": "es",
+                    "value": "Tejido Suave"
+                }
+            ]
+        },
+        {
+            "code": "464159",
+            "display": "Mucosa Oral",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Oromucosal"
+                },
+                {
+                    "language": "es",
+                    "value": "Mucosa Oral"
+                }
+            ]
+        },
+        {
+            "code": "608807",
+            "display": "Retrobulbar",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Retrobulbar"
+                },
+                {
+                    "language": "es",
+                    "value": "Retrobulbar"
+                }
+            ]
+        },
+        {
+            "code": "608808",
+            "display": "Infiltração",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Infiltration"
+                },
+                {
+                    "language": "es",
+                    "value": "Infiltración"
+                }
+            ]
+        },
+        {
+            "code": "779038",
+            "display": "Mucosa",
+            "designation": [
+                {
+                    "language": "en",
+                    "value": "Mucosal"
+                },
+                {
+                    "language": "es",
+                    "value": "Mucosa"
+                }
+            ]
+        }
+    ],
+    "id": "ef5883bd-0c38-411b-8e1c-d62eeb058bc5"
 }

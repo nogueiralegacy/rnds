@@ -1,135 +1,136 @@
 {
-  "resourceType": "StructureDefinition",
-  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacaoPesquisa-1.0",
-  "version": "01.11",
-  "name": "BREstrategiaVacinacaoPesquisa",
-  "status": "active",
-  "date": "2021-09-03",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Extensão para as informações relacionadas aos dados da pesquisa clínica registrada na ANVISA.",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "Immunization.protocolApplied"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Estrategia de Vacinacao Pesquisa",
-        "definition": "Extensão para as informações relacionadas aos dados da pesquisa clínica registrada na ANVISA.",
-        "alias": [
-          "Pesquisa Clínica"
-        ],
-        "min": 1,
-        "mustSupport": false
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacaoPesquisa-1.0",
+    "version": "01.11",
+    "name": "BREstrategiaVacinacaoPesquisa",
+    "status": "active",
+    "date": "2021-09-03",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Extensão para as informações relacionadas aos dados da pesquisa clínica registrada na ANVISA.",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Immunization.protocolApplied"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "value",
-              "path": "url"
+                "id": "Extension",
+                "path": "Extension",
+                "short": "Estrategia de Vacinacao Pesquisa",
+                "definition": "Extensão para as informações relacionadas aos dados da pesquisa clínica registrada na ANVISA.",
+                "alias": [
+                    "Pesquisa Clínica"
+                ],
+                "min": 1,
+                "mustSupport": false
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 0
+            },
+            {
+                "id": "Extension.extension:numeroProtocoloEstudoANVISA",
+                "path": "Extension.extension",
+                "sliceName": "numeroProtocoloEstudoANVISA",
+                "label": "Anvisa Protocolo Estudo",
+                "short": "Anvisa Protocolo Estudo",
+                "definition": "Número do protocolo do estudo clínico na Anvisa.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:numeroProtocoloEstudoANVISA.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "numeroProtocoloEstudoANVISA"
+            },
+            {
+                "id": "Extension.extension:numeroProtocoloEstudoANVISA.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:numeroVersaoProtocoloEstudo",
+                "path": "Extension.extension",
+                "sliceName": "numeroVersaoProtocoloEstudo",
+                "label": "Anvisa Protocolo Versão",
+                "short": "Anvisa Protocolo Versão",
+                "definition": "Número da versão do protocolo do estudo na Anvisa.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:numeroVersaoProtocoloEstudo.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "numeroVersaoProtocoloEstudo"
+            },
+            {
+                "id": "Extension.extension:numeroVersaoProtocoloEstudo.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:numeroRegistroVacinaAnvisa",
+                "path": "Extension.extension",
+                "sliceName": "numeroRegistroVacinaAnvisa",
+                "label": "Anvisa Num Registro",
+                "short": "Anvisa Num Registro",
+                "definition": "Número do registro sanitário da vacina na Anvisa, seja este registro emergencial ou definitivo.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:numeroRegistroVacinaAnvisa.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "numeroRegistroVacinaAnvisa"
+            },
+            {
+                "id": "Extension.extension:numeroRegistroVacinaAnvisa.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacaoPesquisa-1.0"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "max": "0"
             }
-          ],
-          "rules": "open"
-        },
-        "min": 0
-      },
-      {
-        "id": "Extension.extension:numeroProtocoloEstudoANVISA",
-        "path": "Extension.extension",
-        "sliceName": "numeroProtocoloEstudoANVISA",
-        "label": "Anvisa Protocolo Estudo",
-        "short": "Anvisa Protocolo Estudo",
-        "definition": "Número do protocolo do estudo clínico na Anvisa.",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:numeroProtocoloEstudoANVISA.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "numeroProtocoloEstudoANVISA"
-      },
-      {
-        "id": "Extension.extension:numeroProtocoloEstudoANVISA.value[x]",
-        "path": "Extension.extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "string"
-          }
         ]
-      },
-      {
-        "id": "Extension.extension:numeroVersaoProtocoloEstudo",
-        "path": "Extension.extension",
-        "sliceName": "numeroVersaoProtocoloEstudo",
-        "label": "Anvisa Protocolo Versão",
-        "short": "Anvisa Protocolo Versão",
-        "definition": "Número da versão do protocolo do estudo na Anvisa.",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:numeroVersaoProtocoloEstudo.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "numeroVersaoProtocoloEstudo"
-      },
-      {
-        "id": "Extension.extension:numeroVersaoProtocoloEstudo.value[x]",
-        "path": "Extension.extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-      {
-        "id": "Extension.extension:numeroRegistroVacinaAnvisa",
-        "path": "Extension.extension",
-        "sliceName": "numeroRegistroVacinaAnvisa",
-        "label": "Anvisa Num Registro",
-        "short": "Anvisa Num Registro",
-        "definition": "Número do registro sanitário da vacina na Anvisa, seja este registro emergencial ou definitivo.",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:numeroRegistroVacinaAnvisa.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "numeroRegistroVacinaAnvisa"
-      },
-      {
-        "id": "Extension.extension:numeroRegistroVacinaAnvisa.value[x]",
-        "path": "Extension.extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacaoPesquisa-1.0"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "max": "0"
-      }
-    ]
-  }
+    },
+    "id": "b28b906b-9fb8-4db7-b5bc-8c9344031fb1"
 }

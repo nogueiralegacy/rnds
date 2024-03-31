@@ -1,38 +1,39 @@
 {
-  "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2020-03-11T18:19:54.794+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPosicaoIndividuo",
-  "version": "1.0",
-  "name": "Posição do Indivíduo",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-03-11T18:20:15.3085069+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Identifica a posição de um indivíduo em um determinado contexto.",
-  "content": "complete",
-  "concept": [
-    {
-      "code": "1",
-      "display": "Em pé"
+    "resourceType": "CodeSystem",
+    "meta": {
+        "lastUpdated": "2020-03-11T18:19:54.794+00:00"
     },
-    {
-      "code": "2",
-      "display": "Sentado"
-    },
-    {
-      "code": "3",
-      "display": "Reclinado"
-    },
-    {
-      "code": "4",
-      "display": "Deitado"
-    },
-    {
-      "code": "5",
-      "display": "Deitado com inclinação para esquerda"
-    }
-  ]
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPosicaoIndividuo",
+    "version": "1.0",
+    "name": "Posição do Indivíduo",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-11T18:20:15.3085069+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Identifica a posição de um indivíduo em um determinado contexto.",
+    "content": "complete",
+    "concept": [
+        {
+            "code": "1",
+            "display": "Em pé"
+        },
+        {
+            "code": "2",
+            "display": "Sentado"
+        },
+        {
+            "code": "3",
+            "display": "Reclinado"
+        },
+        {
+            "code": "4",
+            "display": "Deitado"
+        },
+        {
+            "code": "5",
+            "display": "Deitado com inclinação para esquerda"
+        }
+    ],
+    "id": "9a608397-00d7-4016-95d9-7d465d4a5e5f"
 }

@@ -1,54 +1,55 @@
 {
-  "resourceType": "ValueSet",
-  "meta": {
-    "lastUpdated": "2020-03-26T13:20:24.501+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
-  "version": "01.00",
-  "name": "Imunobiológicos - UE",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-03-26T13:20:23.3537413+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Define os códigos de Imunobiológicos mapeados para os códigos da União Européia (UE).",
-  "immutable": false,
-  "compose": {
-    "include": [
-      {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-        "version": "*",
-        "concept": [
-          {
-            "code": "85",
-            "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD"
-          },
-          {
-            "code": "86",
-            "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC"
-          },
-          {
-            "code": "87",
-            "display": "COVID-19 PFIZER - COMIRNATY"
-          },
-          {
-            "code": "88",
-            "display": "COVID-19 JANSSEN - Ad26.COV2.S"
-          },
-          {
-            "code": "89",
-            "display": "COVID-19 ASTRAZENECA - ChAdOx1-S"
-          },
-          {
-            "code": "98",
-            "display": "COVID-19 SINOVAC - CORONAVAC"
-          },
-          {
-            "code": "99",
-            "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY"
-          }
+    "resourceType": "ValueSet",
+    "meta": {
+        "lastUpdated": "2020-03-26T13:20:24.501+00:00"
+    },
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
+    "version": "01.00",
+    "name": "Imunobiológicos - UE",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-03-26T13:20:23.3537413+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "Define os códigos de Imunobiológicos mapeados para os códigos da União Européia (UE).",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+                "version": "*",
+                "concept": [
+                    {
+                        "code": "85",
+                        "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD"
+                    },
+                    {
+                        "code": "86",
+                        "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC"
+                    },
+                    {
+                        "code": "87",
+                        "display": "COVID-19 PFIZER - COMIRNATY"
+                    },
+                    {
+                        "code": "88",
+                        "display": "COVID-19 JANSSEN - Ad26.COV2.S"
+                    },
+                    {
+                        "code": "89",
+                        "display": "COVID-19 ASTRAZENECA - ChAdOx1-S"
+                    },
+                    {
+                        "code": "98",
+                        "display": "COVID-19 SINOVAC - CORONAVAC"
+                    },
+                    {
+                        "code": "99",
+                        "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    },
+    "id": "8507a81f-0552-4333-9c21-850d4dbc25e1"
 }
