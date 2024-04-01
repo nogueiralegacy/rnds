@@ -1,0 +1,2 @@
+Instance: paciente
+InstanceOf: Patient
