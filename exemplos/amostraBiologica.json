@@ -1,17 +1,17 @@
 {
     "resourceType": "Specimen",
-    "id": "amostra",
+    "id": "7ec53bdf-82b2-422b-b53b-a28ecb746e8e",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAmostraBiologica-1.0"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAmostraBiologica-1.0"
+        ]
     },
     "type": {
-      "coding": [
-        {
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAmostraGAL",
-          "code": "SWNAFA"
-        }
-      ]
+        "coding": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAmostraGAL",
+                "code": "SWNAFA"
+            }
+        ]
     }
-  }
+}

@@ -1,24 +1,25 @@
 {
     "resourceType": "Medication",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedicamento"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedicamento"
+        ]
     },
     "code": {
-      "coding": [
-        {
-          "code": "1236100020010",
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmANVISA"
-        }
-      ]
+        "coding": [
+            {
+                "code": "1236100020010",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmANVISA"
+            }
+        ]
     },
     "form": {
-      "coding": [
-        {
-          "code": "9",
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida"
-        }
-      ]
-    }
-  }
+        "coding": [
+            {
+                "code": "9",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida"
+            }
+        ]
+    },
+    "id": "a5e8b559-2e22-46c4-ab39-c8809d0f9dab"
+}

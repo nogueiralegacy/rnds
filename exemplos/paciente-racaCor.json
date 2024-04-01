@@ -1,41 +1,41 @@
 {
     "resourceType": "Patient",
-    "id": "undefined",
+    "id": "8f5a8780-90f7-4692-85bd-56c4a74ffdff",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+        ]
     },
     "gender": "male",
     "active": true,
     "birthDate": "2023",
     "extension": [
-      {
-        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "code": "10",
-              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais"
-            }
-          ]
-        }
-      },
-      {
-        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRacaCorEtnia-1.0",
-        "extension": [
-          {
-            "url": "race",
+        {
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPais-1.0",
             "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "02",
-                  "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRacaCor"
-                }
-              ]
+                "coding": [
+                    {
+                        "code": "10",
+                        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais"
+                    }
+                ]
             }
-          }
-        ]
-      }
+        },
+        {
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRacaCorEtnia-1.0",
+            "extension": [
+                {
+                    "url": "race",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "code": "02",
+                                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRacaCor"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
     ]
-  }
+}

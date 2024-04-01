@@ -1,23 +1,23 @@
 {
     "resourceType": "Condition",
-    "id": "condicao",
+    "id": "85e89932-dd8f-49ef-a3fb-02eda93738c6",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCIAP2Avaliado-1.0"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCIAP2Avaliado-1.0"
+        ]
     },
     "code": {
-      "coding": [
-        {
-          "code": "A03",
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"
-        }
-      ]
+        "coding": [
+            {
+                "code": "A03",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"
+            }
+        ]
     },
     "subject": {
-      "identifier": {
-        "system": "http://hl7.org/fhir/sid/passport-BRA",
-        "value": "12345"
-      }
+        "identifier": {
+            "system": "http://hl7.org/fhir/sid/passport-BRA",
+            "value": "12345"
+        }
     }
-  }
+}

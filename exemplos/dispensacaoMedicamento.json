@@ -1,53 +1,53 @@
 {
     "resourceType": "MedicationDispense",
-    "id": "dispensacao",
+    "id": "6839a795-c272-4737-a07a-130da68a3be0",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDispensacaoMedicamento"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDispensacaoMedicamento"
+        ]
     },
     "extension": [
-      {
-        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao",
-        "valueDateTime": "2023-12-24"
-      }
+        {
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDataPrescricao",
+            "valueDateTime": "2023-12-24"
+        }
     ],
     "status": "preparation",
     "category": {
-      "coding": [
-        {
-          "code": "01",
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeFinanceira"
-        }
-      ]
+        "coding": [
+            {
+                "code": "01",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeFinanceira"
+            }
+        ]
     },
     "medicationCodeableConcept": {
-      "coding": [
-        {
-          "system": "http://QUALQUERSTRING",
-          "code": "QUALQUERSTRING"
-        }
-      ]
+        "coding": [
+            {
+                "system": "http://QUALQUERSTRING",
+                "code": "QUALQUERSTRING"
+            }
+        ]
     },
     "subject": {
-      "identifier": {
-        "system": "http://hl7.org/fhir/sid/passport-BRA",
-        "value": "12345"
-      }
+        "identifier": {
+            "system": "http://hl7.org/fhir/sid/passport-BRA",
+            "value": "12345"
+        }
     },
     "performer": [
-      {
-        "actor": {
-          "identifier": {
-            "system": "http://hl7.org/fhir/sid/passport-BRA",
-            "value": "54321"
-          }
+        {
+            "actor": {
+                "identifier": {
+                    "system": "http://hl7.org/fhir/sid/passport-BRA",
+                    "value": "54321"
+                }
+            }
         }
-      }
     ],
     "whenHandedOver": "2023-12-24",
     "quantity": {
-      "unit": "kg",
-      "value": 2
+        "unit": "kg",
+        "value": 2
     }
-  }
+}

@@ -1,31 +1,31 @@
 {
     "resourceType": "Condition",
-    "id": "problema",
+    "id": "ba81869d-3182-46f7-9f16-ad10be254224",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"
+        ]
     },
     "clinicalStatus": {
-      "coding": [
-        {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-          "code": "active"
-        }
-      ]
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active"
+            }
+        ]
     },
     "code": {
-      "coding": [
-        {
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-          "code": "A90"
-        }
-      ]
+        "coding": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+                "code": "A90"
+            }
+        ]
     },
     "subject": {
-      "identifier": {
-        "system": "http://hl7.org/fhir/sid/passport-BRA",
-        "value": "12345"
-      }
+        "identifier": {
+            "system": "http://hl7.org/fhir/sid/passport-BRA",
+            "value": "12345"
+        }
     }
-  }
+}

@@ -1,69 +1,70 @@
 {
     "resourceType": "Appointment",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"
+        ]
     },
     "status": "proposed",
     "serviceType": [
-      {
-        "coding": [
-          {
-            "code": "015",
-            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"
-          }
-        ]
-      }
+        {
+            "coding": [
+                {
+                    "code": "015",
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"
+                }
+            ]
+        }
     ],
     "serviceCategory": [
-      {
-        "coding": [
-          {
-            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-            "code": "04"
-          }
-        ]
-      }
+        {
+            "coding": [
+                {
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+                    "code": "04"
+                }
+            ]
+        }
     ],
     "appointmentType": {
-      "coding": [
-        {
-          "code": "routine",
-          "system": "http://hl7.org/fhir/request-priority"
-        }
-      ]
+        "coding": [
+            {
+                "code": "routine",
+                "system": "http://hl7.org/fhir/request-priority"
+            }
+        ]
     },
     "created": "2020-06-01T00:00:00-03:00",
     "reasonReference": [
-      {
-        "reference": "Condition/123"
-      }
+        {
+            "reference": "Condition/123"
+        }
     ],
     "basedOn": [
-      {
-        "reference": "ServiceRequest/123"
-      }
+        {
+            "reference": "ServiceRequest/123"
+        }
     ],
     "participant": [
-      {
-        "actor": {
-          "identifier": {
-            "system": "http://hl7.org/fhir/sid/passport-BRA",
-            "value": "12345"
-          }
-        },
-        "status": "accepted",
-        "type": [
-          {
-            "coding": [
-              {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
-                "code": "PCT"
-              }
+        {
+            "actor": {
+                "identifier": {
+                    "system": "http://hl7.org/fhir/sid/passport-BRA",
+                    "value": "12345"
+                }
+            },
+            "status": "accepted",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+                            "code": "PCT"
+                        }
+                    ]
+                }
             ]
-          }
-        ]
-      }
-    ]
-  }
+        }
+    ],
+    "id": "b19135d3-9cc4-40ac-839c-ba62fe5cbe28"
+}

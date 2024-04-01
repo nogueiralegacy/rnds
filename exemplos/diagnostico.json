@@ -1,63 +1,63 @@
 {
-  "resourceType": "Observation",
-  "id": "observacao",
-  "meta": {
-    "profile": [
-      "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoLaboratorioClinico-3.2.1"
-    ]
-  },
-  "status": "final",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "Observation",
+    "id": "70a42b2b-d183-493a-a2b1-2bd9a9f898f5",
+    "meta": {
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoLaboratorioClinico-3.2.1"
+        ]
+    },
+    "status": "final",
+    "category": [
         {
-          "code": "0202",
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRSubgrupoTabelaSUS"
+            "coding": [
+                {
+                    "code": "0202",
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRSubgrupoTabelaSUS"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "code": "94507-1",
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC"
-      }
-    ]
-  },
-  "subject": {
-    "identifier": {
-      "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
-      "value": "12345"
-    }
-  },
-  "effectiveDateTime": "2023-12-25",
-  "performer": [
-    {
-      "identifier": {
-        "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
-        "value": "12345"
-      }
-    }
-  ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "1",
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"
-      }
-    ]
-  },
-  "method": {
-    "text": "Coleta de amostra"
-  },
-  "specimen": {
-    "reference": "amostra/123"
-  },
-  "referenceRange": [
-    {
-      "text": "Sem faixa de valores de referência"
-    }
-  ],
-  "issued": "2023-12-23T13:17:18.5012669+00:00"
+    ],
+    "code": {
+        "coding": [
+            {
+                "code": "94507-1",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC"
+            }
+        ]
+    },
+    "subject": {
+        "identifier": {
+            "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "12345"
+        }
+    },
+    "effectiveDateTime": "2023-12-25",
+    "performer": [
+        {
+            "identifier": {
+                "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+                "value": "12345"
+            }
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "code": "1",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"
+            }
+        ]
+    },
+    "method": {
+        "text": "Coleta de amostra"
+    },
+    "specimen": {
+        "reference": "amostra/123"
+    },
+    "referenceRange": [
+        {
+            "text": "Sem faixa de valores de referência"
+        }
+    ],
+    "issued": "2023-12-23T13:17:18.5012669+00:00"
 }

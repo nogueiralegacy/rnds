@@ -1,41 +1,41 @@
 {
     "resourceType": "Observation",
-    "id": "observacaoCovid",
+    "id": "d2bbbb0b-aad8-4e45-afbf-41da0a0e965e",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoCOVID19-TesteRapido-01.01"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoCOVID19-TesteRapido-01.01"
+        ]
     },
     "status": "final",
     "code": {
-      "coding": [
-        {
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC",
-          "code": "94507-1"
-        }
-      ]
+        "coding": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC",
+                "code": "94507-1"
+            }
+        ]
     },
     "subject": {
-      "identifier": {
-        "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
-        "value": "12345"
-      }
+        "identifier": {
+            "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "12345"
+        }
     },
     "effectiveDateTime": "2023-12-25",
     "performer": [
-      {
-        "identifier": {
-          "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0",
-          "value": "12345"
+        {
+            "identifier": {
+                "system": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0",
+                "value": "12345"
+            }
         }
-      }
     ],
     "valueCodeableConcept": {
-      "coding": [
-        {
-          "code": "1",
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"
-        }
-      ]
+        "coding": [
+            {
+                "code": "1",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"
+            }
+        ]
     }
-  }
+}

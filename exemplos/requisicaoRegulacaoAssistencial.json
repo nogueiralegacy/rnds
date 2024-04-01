@@ -1,47 +1,48 @@
 {
-  "resourceType": "ServiceRequest",
-  "meta": {
-    "profile": [
-      "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
-    ]
-  },
-  "status": "active",
-  "intent": "order",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "ServiceRequest",
+    "meta": {
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
+        ]
+    },
+    "status": "active",
+    "intent": "order",
+    "category": [
         {
-          "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-          "code": "04"
+            "coding": [
+                {
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+                    "code": "04"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "priority": "urgent",
-  "code": {
-    "coding": [
-      {
-        "code": "0201010038",
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"
-      }
-    ]
-  },
-  "subject": {
-    "identifier": {
-      "system": "http://hl7.org/fhir/sid/passport-BRA",
-      "value": "1235"
-    }
-  },
-  "authoredOn": "2023-12-24",
-  "requester": {
-    "identifier": {
-      "system": "https://rnds-fhir.saude.gov.br/NamingSystem-cnes.",
-      "value": "2338424"
-    }
-  },
-  "reasonReference": [
-    {
-      "reference": "Condition/123"
-    }
-  ]
+    ],
+    "priority": "urgent",
+    "code": {
+        "coding": [
+            {
+                "code": "0201010038",
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"
+            }
+        ]
+    },
+    "subject": {
+        "identifier": {
+            "system": "http://hl7.org/fhir/sid/passport-BRA",
+            "value": "1235"
+        }
+    },
+    "authoredOn": "2023-12-24",
+    "requester": {
+        "identifier": {
+            "system": "https://rnds-fhir.saude.gov.br/NamingSystem-cnes.",
+            "value": "2338424"
+        }
+    },
+    "reasonReference": [
+        {
+            "reference": "Condition/123"
+        }
+    ],
+    "id": "d2130c91-dcca-4dde-be7a-bf27cfb34c3e"
 }

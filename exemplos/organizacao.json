@@ -1,47 +1,47 @@
 {
     "resourceType": "Organization",
-    "id": "estabelecimento",
+    "id": "9ef09017-8d93-485b-a778-162e4af47024",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+        ]
     },
     "active": true,
     "type": [
-      {
-        "coding": [
-          {
-            "code": "5",
-            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoEstabelecimentoSaude"
-          }
-        ]
-      }
+        {
+            "coding": [
+                {
+                    "code": "5",
+                    "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoEstabelecimentoSaude"
+                }
+            ]
+        }
     ],
     "name": "Hospital das Clínicas da UFG",
     "alias": [
-      "Hospital"
+        "Hospital"
     ],
     "address": [
-      {
-        "line": [
-          "Rua",
-          "Rua dos perdidos",
-          "123",
-          "De frente para um pe de laranja",
-          "Setor universitário"
-        ],
-        "city": "520870",
-        "state": "52",
-        "postalCode": "74266-010"
-      }
+        {
+            "line": [
+                "Rua",
+                "Rua dos perdidos",
+                "123",
+                "De frente para um pe de laranja",
+                "Setor universitário"
+            ],
+            "city": "520870",
+            "state": "52",
+            "postalCode": "74266-010"
+        }
     ],
     "partOf": {
-      "reference": "Organization/123"
+        "reference": "Organization/123"
     },
     "extension": [
-      {
-        "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAtendeSUS-1.0",
-        "valueBoolean": true
-      }
+        {
+            "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAtendeSUS-1.0",
+            "valueBoolean": true
+        }
     ]
-  }
+}

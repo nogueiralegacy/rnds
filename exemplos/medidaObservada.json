@@ -1,18 +1,18 @@
 {
     "resourceType": "Observation",
-    "id": "medidaobservacao",
+    "id": "50abfac8-75c6-409d-8f3f-609894000845",
     "meta": {
-      "profile": [
-        "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedidaObservada"
-      ]
+        "profile": [
+            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedidaObservada"
+        ]
     },
     "status": "final",
     "code": {
-      "coding": [
-        {
-          "code": "29463-7",
-          "system": "http://loinc.org"
-        }
-      ]
+        "coding": [
+            {
+                "code": "29463-7",
+                "system": "http://loinc.org"
+            }
+        ]
     }
-  }
+}
