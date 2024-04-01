@@ -20,6 +20,5 @@
                 "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida"
             }
         ]
-    },
-    "id": "a5e8b559-2e22-46c4-ab39-c8809d0f9dab"
+    }
 }

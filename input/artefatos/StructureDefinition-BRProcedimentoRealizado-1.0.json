@@ -647,8 +647,8 @@
                 "slicing": {
                     "discriminator": [
                       {
-                        "type": "value",
-                        "path": "function.coding.code"
+                        "type": "profile",
+                        "path": "actor.resolve()"
                       }
                     ],
                     "rules": "open",
