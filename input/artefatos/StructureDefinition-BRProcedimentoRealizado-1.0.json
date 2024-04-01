@@ -642,6 +642,21 @@
                 "max": "0"
             },
             {
+                "id": "Procedure.performer",
+                "path": "Procedure.performer",
+                "slicing": {
+                    "discriminator": [
+                      {
+                        "type": "value",
+                        "path": "function.coding.code"
+                      }
+                    ],
+                    "rules": "open",
+                    "description": "Baseado em function"
+                  },
+                  "min": 1
+            },
+            {
                 "id": "Procedure.performer:practitioner",
                 "path": "Procedure.performer",
                 "sliceName": "practitioner",
