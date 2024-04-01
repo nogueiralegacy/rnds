@@ -46,7 +46,8 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | * | * | Elemento "fhirVersions" em versões diferentes. | Foi retirado o elemento "fhirVersions" de todas as instâncias de recursos. |
 | * | * | Instâncias de recursos sem o elemento "id" ou com o elemento "id" duplicado | Foi gerado um [UUID](https://stackoverflow.com/questions/1155008/how-unique-is-uuid) e acrescentado a cada instância de recurso no elemento "id" |
 | * | * | Instâncias utilizando código "eng" e "pt-br" para referenciar línguas, agrupadas no ValueSet http://hl7.org/fhir/ValueSet/languages. Contudo, para refereciar Inglês Americano e Português do Brasil os códigos são "en-US" e "pt-BR", respectivamente. Códigos de um CodeSystem são case sensitive, ou seja, diferenciam caractere maiúsculo de minúsculo. | Substituição de "eng" por "en-US" e "pt-br" por "pt-BR", quando referente a línguas |
-| CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil | Alguns códigos definidos nesse CodeSystem estavam declarados sem aspas no json o que acarretou um erro na decodificação do JSON | Foi acrescentado aspas aos códigos que não tinham |
+| CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil | Alguns códigos definidos nesse CodeSystem estavam declarados sem aspas no json o que acarretou um erro na decodificação do JSON. | Foi acrescentado aspas aos códigos que não tinham. |
+| StructureDefinition | StructureDefinition-BRIndividuo-1.0 | Slicing declarado de forma inadequada no elemento "address.line". | Retirada do slicing |
 
 ## Desenvolvedores FHIR
 

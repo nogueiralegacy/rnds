@@ -342,9 +342,8 @@
                 "min": 1
             },
             {
-                "id": "Patient.address.line:streetType",
+                "id": "Patient.address.line",
                 "path": "Patient.address.line",
-                "sliceName": "streetType",
                 "min": 1
             },
             {
