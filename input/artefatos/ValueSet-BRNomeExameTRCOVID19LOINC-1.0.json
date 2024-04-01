@@ -6,7 +6,7 @@
     "language": "pt-BR",
     "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRNomeExameTRCOVID19LOINC-1.0",
     "version": "1.0",
-    "name": "Nome do Exame",
+    "name": "Nome do Exame TR COVID-19 LOINC",
     "status": "active",
     "experimental": false,
     "date": "2020-03-26T13:20:23.3537413+00:00",

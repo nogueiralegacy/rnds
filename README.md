@@ -48,6 +48,8 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | * | * | Instâncias utilizando código "eng" e "pt-br" para referenciar línguas, agrupadas no ValueSet http://hl7.org/fhir/ValueSet/languages. Contudo, para refereciar Inglês Americano e Português do Brasil os códigos são "en-US" e "pt-BR", respectivamente. Códigos de um CodeSystem são case sensitive, ou seja, diferenciam caractere maiúsculo de minúsculo. | Substituição de "eng" por "en-US" e "pt-br" por "pt-BR", quando referente a línguas |
 | CodeSystem | CodeSystem-BRDivisaoGeograficaBrasil | Alguns códigos definidos nesse CodeSystem estavam declarados sem aspas no json o que acarretou um erro na decodificação do JSON. | Foi acrescentado aspas aos códigos que não tinham. |
 | StructureDefinition | StructureDefinition-BRIndividuo-1.0 | Slicing declarado de forma inadequada no elemento "address.line". | Retirada do slicing |
+| ValueSet | ValueSet-BREstadoDocumento-1.0 | O elemento "name" tem o mesmo valor que a instância http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0, comprometendo o utilização de ferramentas externas | Trocando o valor do elemento "name" para "Estado do Documento", essa alteração não acarreta em prejuízos |
+| ValueSet | ValueSet-BRNomeExameTRCOVID19LOINC-1.0 | O elemento "name" tem o mesmo valor que a instância http://www.saude.gov.br/fhir/r4/ValueSet/BRNomeExame-2.0, comprometendo o utilização de ferramentas externas | Trocando o valor do elemento "name" para "Nome do Exame TR COVID-19 LOINC", essa alteração não acarreta em prejuízos |
 
 ## Desenvolvedores FHIR
 
