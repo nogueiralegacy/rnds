@@ -5,3 +5,12 @@ Thumbs.db
 /output
 /temp
 /template
+
+# IntelliJ
+.idea
+
+# VS Code
+.vscode
+
+# Artefatos gerados pelo GOFSH
+gofsh
