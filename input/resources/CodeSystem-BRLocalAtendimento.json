@@ -1,60 +1,60 @@
 {
-    "resourceType": "CodeSystem",
-    "id": "89c8245f-1ab1-429d-8552-a4ca0a8365de",
-    "meta": {
-        "versionId": "1",
-        "lastUpdated": "2020-09-17T18:39:10.513+00:00"
+  "resourceType": "CodeSystem",
+  "id": "BRLocalAtendimento",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-17T18:39:10.513+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRLocalAtendimento",
+  "version": "201701A",
+  "name": "Tipo de Local de Atendimento",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-09-17T18:39:16.8725098+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica de forma genérica o lugar onde ocorre o atendimento ao indivíduo.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "domicilio",
+      "display": "Domicílio"
     },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRLocalAtendimento",
-    "version": "201701A",
-    "name": "Tipo de Local de Atendimento",
-    "status": "draft",
-    "experimental": false,
-    "date": "2020-09-17T18:39:16.8725098+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Classifica de forma genérica o lugar onde ocorre o atendimento ao indivíduo.",
-    "content": "complete",
-    "concept": [
-        {
-            "code": "domicilio",
-            "display": "Domicílio"
-        },
-        {
-            "code": "instituicao",
-            "display": "Instituição ou abrigo"
-        },
-        {
-            "code": "prisional",
-            "display": "Unidade prisional ou congêneres"
-        },
-        {
-            "code": "socioeducativa",
-            "display": "Unidade socioeducativa"
-        },
-        {
-            "code": "estabelecimento",
-            "display": "No próprio estabelecimento"
-        },
-        {
-            "code": "outros",
-            "display": "Outros"
-        },
-        {
-            "code": "movel",
-            "display": "Unidade móvel"
-        },
-        {
-            "code": "rua",
-            "display": "Rua"
-        },
-        {
-            "code": "educacional",
-            "display": "Escola ou creche"
-        },
-        {
-            "code": "academia-saude",
-            "display": "Pólo Academia da Saúde"
-        }
-    ]
+    {
+      "code": "instituicao",
+      "display": "Instituição ou abrigo"
+    },
+    {
+      "code": "prisional",
+      "display": "Unidade prisional ou congêneres"
+    },
+    {
+      "code": "socioeducativa",
+      "display": "Unidade socioeducativa"
+    },
+    {
+      "code": "estabelecimento",
+      "display": "No próprio estabelecimento"
+    },
+    {
+      "code": "outros",
+      "display": "Outros"
+    },
+    {
+      "code": "movel",
+      "display": "Unidade móvel"
+    },
+    {
+      "code": "rua",
+      "display": "Rua"
+    },
+    {
+      "code": "educacional",
+      "display": "Escola ou creche"
+    },
+    {
+      "code": "academia-saude",
+      "display": "Pólo Academia da Saúde"
+    }
+  ]
 }

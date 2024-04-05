@@ -1,25 +1,25 @@
 {
-    "resourceType": "ValueSet",
-    "meta": {
-        "lastUpdated": "2020-03-12T13:10:39.310+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRFinanciamento-1.0",
-    "version": "1.0",
-    "name": "Financiamento do procedimento realizado",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-03-12T13:10:38.3145222+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Descreve o agente, instituição ou entidade responsável por custear as ações e serviços de saúde.",
-    "immutable": false,
-    "compose": {
-        "include": [
-            {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFinanciamento",
-                "version": "*"
-            }
-        ]
-    },
-    "id": "14d880bf-f042-4312-bdc9-821d21a22cfc"
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-12T13:10:39.310+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRFinanciamento-1.0",
+  "version": "1.0",
+  "name": "Financiamento do procedimento realizado",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-12T13:10:38.3145222+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Descreve o agente, instituição ou entidade responsável por custear as ações e serviços de saúde.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFinanciamento",
+        "version": "*"
+      }
+    ]
+  },
+  "id": "BRFinanciamento-1.0"
 }

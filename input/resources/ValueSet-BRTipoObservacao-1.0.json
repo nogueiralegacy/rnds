@@ -1,92 +1,92 @@
 {
-    "resourceType": "ValueSet",
-    "meta": {
-        "lastUpdated": "2022-05-23T10:37:59.848+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoObservacao-1.0",
-    "version": "1.1.0",
-    "name": "Tipo de Observação",
-    "status": "draft",
-    "experimental": false,
-    "date": "2022-05-23T10:37:59.848+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Tipo de Observação.",
-    "immutable": false,
-    "compose": {
-        "include": [
-            {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoObservacao",
-                "version": "*"
-            },
-            {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-                "version": "*",
-                "concept": [
-                    {
-                        "code": "0301100039"
-                    }
-                ]
-            },
-            {
-                "system": "http://loinc.org",
-                "version": "*",
-                "concept": [
-                    {
-                        "code": "8665-2",
-                        "display": "Data da Última Menstruação"
-                    },
-                    {
-                        "code": "56832-9",
-                        "display": "Exposição à Substâncias"
-                    },
-                    {
-                        "code": "11996-6",
-                        "display": "Quantidade de Gestações"
-                    },
-                    {
-                        "code": "63895-7",
-                        "display": "Tipo de Aleitamento Materno"
-                    },
-                    {
-                        "code": "29463-7",
-                        "display": "Peso Corporal"
-                    },
-                    {
-                        "code": "8480-6",
-                        "display": "Pressão Arterial Sistólica"
-                    },
-                    {
-                        "code": "8462-4",
-                        "display": "Pressão Arterial Diastólica"
-                    },
-                    {
-                        "code": "8280-0",
-                        "display": "Circuferência Abdominal"
-                    },
-                    {
-                        "code": "9843-4",
-                        "display": "Perímetro Cefálico"
-                    },
-                    {
-                        "code": "8302-2",
-                        "display": "Altura"
-                    },
-                    {
-                        "code": "11885-1",
-                        "display": "Idade Gestacional"
-                    },
-                    {
-                        "code": "11612-9",
-                        "display": "Quantidade de Abortos"
-                    },
-                    {
-                        "code": "48767-8",
-                        "display": "Anotação de Comentário para Narrativa [Interpretação]"
-                    }
-                ]
-            }
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2022-05-23T10:37:59.848+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoObservacao-1.0",
+  "version": "1.1.0",
+  "name": "Tipo de Observação",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-05-23T10:37:59.848+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Tipo de Observação.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoObservacao",
+        "version": "*"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+        "version": "*",
+        "concept": [
+          {
+            "code": "0301100039"
+          }
         ]
-    },
-    "id": "3a51c1fc-e134-4ba3-b4bb-3c4bb3e26289"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "*",
+        "concept": [
+          {
+            "code": "8665-2",
+            "display": "Data da Última Menstruação"
+          },
+          {
+            "code": "56832-9",
+            "display": "Exposição à Substâncias"
+          },
+          {
+            "code": "11996-6",
+            "display": "Quantidade de Gestações"
+          },
+          {
+            "code": "63895-7",
+            "display": "Tipo de Aleitamento Materno"
+          },
+          {
+            "code": "29463-7",
+            "display": "Peso Corporal"
+          },
+          {
+            "code": "8480-6",
+            "display": "Pressão Arterial Sistólica"
+          },
+          {
+            "code": "8462-4",
+            "display": "Pressão Arterial Diastólica"
+          },
+          {
+            "code": "8280-0",
+            "display": "Circuferência Abdominal"
+          },
+          {
+            "code": "9843-4",
+            "display": "Perímetro Cefálico"
+          },
+          {
+            "code": "8302-2",
+            "display": "Altura"
+          },
+          {
+            "code": "11885-1",
+            "display": "Idade Gestacional"
+          },
+          {
+            "code": "11612-9",
+            "display": "Quantidade de Abortos"
+          },
+          {
+            "code": "48767-8",
+            "display": "Anotação de Comentário para Narrativa [Interpretação]"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "BRTipoObservacao-1.0"
 }

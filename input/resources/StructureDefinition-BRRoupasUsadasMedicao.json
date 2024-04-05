@@ -1,46 +1,46 @@
 {
-    "resourceType": "StructureDefinition",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRoupasUsadasMedicao",
-    "version": "01.00",
-    "name": "BRRoupasUsadasMedicao",
-    "title": "Roupas Usadas na Medição",
-    "status": "draft",
-    "publisher": "Ministério da Saúde",
-    "description": "Descreve o tipo de roupas usadas durante a medição com base no código LOINC 8352-7.",
-    "kind": "complex-type",
-    "abstract": false,
-    "context": [
-        {
-            "type": "element",
-            "expression": "Observation"
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRoupasUsadasMedicao",
+  "version": "01.00",
+  "name": "BRRoupasUsadasMedicao",
+  "title": "Roupas Usadas na Medição",
+  "status": "draft",
+  "publisher": "Ministério da Saúde",
+  "description": "Descreve o tipo de roupas usadas durante a medição com base no código LOINC 8352-7.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Observation"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRoupasUsadasMedicao"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Código do tipo de roupa usada para medição corpórea",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Roupas Usadas na Medição Corpórea",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/RoupasUsadasMedicao"
         }
-    ],
-    "type": "Extension",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Extension.url",
-                "path": "Extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRoupasUsadasMedicao"
-            },
-            {
-                "id": "Extension.value[x]",
-                "path": "Extension.value[x]",
-                "short": "Código do tipo de roupa usada para medição corpórea",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "binding": {
-                    "strength": "required",
-                    "description": "Roupas Usadas na Medição Corpórea",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/RoupasUsadasMedicao"
-                }
-            }
-        ]
-    },
-    "id": "e267edc1-f213-453a-b4f7-98abd1de9066"
+      }
+    ]
+  },
+  "id": "BRRoupasUsadasMedicao"
 }

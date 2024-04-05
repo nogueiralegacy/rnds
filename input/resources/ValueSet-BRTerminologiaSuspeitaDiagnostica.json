@@ -1,35 +1,35 @@
 {
-    "resourceType": "ValueSet",
-    "meta": {
-        "lastUpdated": "2022-12-21T15:26:40.0457007+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTerminologiaSuspeitaDiagnostica",
-    "version": "1.1",
-    "name": "Suspeita Diagnóstica",
-    "status": "active",
-    "experimental": false,
-    "date": "2022-09-16T14:11:40.0457007+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Conjunto de terminologias para indicação da Suspeita Diagnóstica.",
-    "immutable": false,
-    "compose": {
-        "include": [
-            {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-                "version": "*",
-                "concept": [
-                    {
-                        "code": "B04",
-                        "display": "Varíola dos macacos [Monkeypox]"
-                    },
-                    {
-                        "code": "B342",
-                        "display": "Infecção por coronavírus de localização não especificada"
-                    }
-                ]
-            }
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2022-12-21T15:26:40.0457007+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTerminologiaSuspeitaDiagnostica",
+  "version": "1.1",
+  "name": "Suspeita Diagnóstica",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-09-16T14:11:40.0457007+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Conjunto de terminologias para indicação da Suspeita Diagnóstica.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+        "version": "*",
+        "concept": [
+          {
+            "code": "B04",
+            "display": "Varíola dos macacos [Monkeypox]"
+          },
+          {
+            "code": "B342",
+            "display": "Infecção por coronavírus de localização não especificada"
+          }
         ]
-    },
-    "id": "65d265b1-3cba-4c5f-b5b6-e51afb407a97"
+      }
+    ]
+  },
+  "id": "BRTerminologiaSuspeitaDiagnostica"
 }

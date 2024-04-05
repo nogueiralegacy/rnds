@@ -1,592 +1,592 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "618511ec-9d93-445d-ace9-cb0d54ed7101",
-    "meta": {
-        "lastUpdated": "2023-08-16T17:21:02.7270079+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0",
-    "version": "1.1.0",
-    "name": "BRCID10Avaliado",
-    "title": "CID10 Avaliado",
-    "status": "draft",
-    "date": "2020-04-07T20:48:30.5415691+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial.",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Condition",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
+  "resourceType": "StructureDefinition",
+  "id": "BRCID10Avaliado-1.0",
+  "meta": {
+    "lastUpdated": "2023-08-16T17:21:02.7270079+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0",
+  "version": "1.1.0",
+  "name": "BRCID10Avaliado",
+  "title": "CID10 Avaliado",
+  "status": "draft",
+  "date": "2020-04-07T20:48:30.5415691+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Diagnóstico atribuído pelo profissional de saúde ao indivíduo no contato assistencial.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "short": "Diagnóstico ou Problema",
+        "definition": "Informações sobre a condição de saúde, lesão, deficiência ou qualquer outra questão que afete o bem-estar físico, mental ou social de um indivíduo identificadas em um contato assistencial. (adaptado do conceito de Problema/Diagnóstico do Clinical Knowledge Manager/OpenEHR)",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.identifier",
+        "path": "Condition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Condition.clinicalStatus",
+        "path": "Condition.clinicalStatus",
+        "short": "Estado da Resolução",
+        "definition": "Situação que o Diagnóstico/Problema se encontra no momento da informação.\r\nresolved: Resolvido\r\nactive: Resolvendo\r\nactive: Não resolvido\r\nnull: Indeterminado",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado da Resolução do Diagnóstico/Problema",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"
+        }
+      },
+      {
+        "id": "Condition.clinicalStatus.coding",
+        "path": "Condition.clinicalStatus.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.clinicalStatus.coding.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.clinicalStatus.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.clinicalStatus.coding.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.clinicalStatus.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Condition.clinicalStatus.coding.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.clinicalStatus.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Condition.clinicalStatus.coding.userSelected",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.clinicalStatus.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.clinicalStatus.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.clinicalStatus.text",
+        "max": "0"
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "max": "0"
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "short": "Categoria do diagnóstico",
+        "definition": "Condição estabelecida após estudo de forma a esclarecer qual o mais importante ou principal motivo responsável pela demanda do contato assistencial. O diagnóstico primário reflete achados clínicos descobertos durante a permanência do indivíduo no estabelecimento de saúde, podendo, portanto, ser diferente do diagnóstico de admissão. (Port. nº 1.324/SAS/MS/2014)",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Categoria do diagnóstico",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico"
+        }
+      },
+      {
+        "id": "Condition.severity",
+        "path": "Condition.severity",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "short": "Diagnóstico ou Problema",
+        "definition": "Diagnóstico ou problema avaliado no indivíduo durante o contato assistencial.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "CID-10",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0"
+        }
+      },
+      {
+        "id": "Condition.code.coding",
+        "path": "Condition.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Condition.code.coding.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Condition.code.coding.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.code.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.coding.userSelected",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Condition.code.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Condition.bodySite",
+        "path": "Condition.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "short": "Indivíduo",
+        "definition": "Indica o indivíduo ao qual o CID-10 se refere.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.extension",
+        "path": "Condition.subject.extension",
+        "slicing": {
+          "discriminator": [
             {
-                "id": "Condition",
-                "path": "Condition",
-                "short": "Diagnóstico ou Problema",
-                "definition": "Informações sobre a condição de saúde, lesão, deficiência ou qualquer outra questão que afete o bem-estar físico, mental ou social de um indivíduo identificadas em um contato assistencial. (adaptado do conceito de Problema/Diagnóstico do Clinical Knowledge Manager/OpenEHR)",
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.identifier",
-                "path": "Condition.identifier",
-                "max": "0"
-            },
-            {
-                "id": "Condition.clinicalStatus",
-                "path": "Condition.clinicalStatus",
-                "short": "Estado da Resolução",
-                "definition": "Situação que o Diagnóstico/Problema se encontra no momento da informação.\r\nresolved: Resolvido\r\nactive: Resolvendo\r\nactive: Não resolvido\r\nnull: Indeterminado",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Estado da Resolução do Diagnóstico/Problema",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoResolucaoDiagnosticoProblema-1.0"
-                }
-            },
-            {
-                "id": "Condition.clinicalStatus.coding",
-                "path": "Condition.clinicalStatus.coding",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.clinicalStatus.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.clinicalStatus.coding.system",
-                "min": 1
-            },
-            {
-                "id": "Condition.clinicalStatus.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.clinicalStatus.coding.code",
-                "min": 1
-            },
-            {
-                "id": "Condition.clinicalStatus.coding.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.clinicalStatus.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Condition.clinicalStatus.coding.userSelected",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.clinicalStatus.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Condition.clinicalStatus.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.clinicalStatus.text",
-                "max": "0"
-            },
-            {
-                "id": "Condition.verificationStatus",
-                "path": "Condition.verificationStatus",
-                "max": "0"
-            },
-            {
-                "id": "Condition.category",
-                "path": "Condition.category",
-                "short": "Categoria do diagnóstico",
-                "definition": "Condição estabelecida após estudo de forma a esclarecer qual o mais importante ou principal motivo responsável pela demanda do contato assistencial. O diagnóstico primário reflete achados clínicos descobertos durante a permanência do indivíduo no estabelecimento de saúde, podendo, portanto, ser diferente do diagnóstico de admissão. (Port. nº 1.324/SAS/MS/2014)",
-                "max": "1",
-                "binding": {
-                    "strength": "required",
-                    "description": "Categoria do diagnóstico",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaDiagnostico"
-                }
-            },
-            {
-                "id": "Condition.severity",
-                "path": "Condition.severity",
-                "max": "0"
-            },
-            {
-                "id": "Condition.code",
-                "path": "Condition.code",
-                "short": "Diagnóstico ou Problema",
-                "definition": "Diagnóstico ou problema avaliado no indivíduo durante o contato assistencial.",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "CID-10",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0"
-                }
-            },
-            {
-                "id": "Condition.code.coding",
-                "path": "Condition.code.coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Condition.code.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.code.coding.system",
-                "min": 1
-            },
-            {
-                "id": "Condition.code.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.code.coding.code",
-                "min": 1
-            },
-            {
-                "id": "Condition.code.coding.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.code.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Condition.code.coding.userSelected",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.code.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Condition.code.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.code.text",
-                "max": "0"
-            },
-            {
-                "id": "Condition.bodySite",
-                "path": "Condition.bodySite",
-                "max": "0"
-            },
-            {
-                "id": "Condition.subject",
-                "path": "Condition.subject",
-                "short": "Indivíduo",
-                "definition": "Indica o indivíduo ao qual o CID-10 se refere.",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.subject.extension",
-                "path": "Condition.subject.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 0
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient",
-                "path": "Condition.subject.extension",
-                "sliceName": "unidentifiedPatient",
-                "short": "Dados do Indivíduo Não Identificado",
-                "min": 0,
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension",
-                "path": "Condition.subject.extension.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 0
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension:gender",
-                "path": "Condition.subject.extension.extension",
-                "sliceName": "gender",
-                "min": 0,
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension:gender.url",
-                "path": "Condition.subject.extension.extension.url",
-                "fixedUri": "gender"
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension:birthYear",
-                "path": "Condition.subject.extension.extension",
-                "sliceName": "birthYear",
-                "min": 0,
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension:birthYear.url",
-                "path": "Condition.subject.extension.extension.url",
-                "fixedUri": "birthYear"
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension:reason",
-                "path": "Condition.subject.extension.extension",
-                "sliceName": "reason",
-                "min": 0,
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.extension:reason.url",
-                "path": "Condition.subject.extension.extension.url",
-                "fixedUri": "reason"
-            },
-            {
-                "id": "Condition.subject.extension:unidentifiedPatient.url",
-                "path": "Condition.subject.extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
-            },
-            {
-                "id": "Condition.subject.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.subject.reference",
-                "max": "0"
-            },
-            {
-                "id": "Condition.subject.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.subject.type",
-                "max": "0",
-                "fixedUri": "Patient"
-            },
-            {
-                "id": "Condition.subject.identifier",
-                "path": "Condition.subject.identifier",
-                "min": 1
-            },
-            {
-                "id": "Condition.subject.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.subject.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Condition.subject.identifier.type",
-                "path": "Condition.subject.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "Condition.subject.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.subject.identifier.system",
-                "min": 1
-            },
-            {
-                "id": "Condition.subject.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.subject.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Condition.subject.identifier.period",
-                "path": "Condition.subject.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Condition.subject.identifier.assigner",
-                "path": "Condition.subject.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Condition.subject.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.subject.display",
-                "max": "0"
-            },
-            {
-                "id": "Condition.encounter",
-                "path": "Condition.encounter",
-                "max": "0"
-            },
-            {
-                "id": "Condition.onset[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.onset[x]",
-                "short": "Data do início do Diagnóstico/Problema",
-                "definition": "Indica a data do início do diagnóstico ou problema identificado.",
-                "type": [
-                    {
-                        "code": "dateTime"
-                    }
-                ]
-            },
-            {
-                "id": "Condition.abatement[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.abatement[x]",
-                "max": "0"
-            },
-            {
-                "id": "Condition.recordedDate",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.recordedDate",
-                "max": "0"
-            },
-            {
-                "id": "Condition.recorder",
-                "path": "Condition.recorder",
-                "max": "0"
-            },
-            {
-                "id": "Condition.asserter",
-                "path": "Condition.asserter",
-                "max": "0"
-            },
-            {
-                "id": "Condition.stage",
-                "path": "Condition.stage",
-                "max": "0"
-            },
-            {
-                "id": "Condition.evidence",
-                "path": "Condition.evidence",
-                "max": "0"
-            },
-            {
-                "id": "Condition.note",
-                "path": "Condition.note",
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.note.author[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.note.author[x]",
-                "max": "0"
-            },
-            {
-                "id": "Condition.note.time",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.note.time",
-                "max": "0"
-            },
-            {
-                "id": "Condition.note.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Condition.note.text",
-                "short": "Nota",
-                "definition": "Informações complementares textuais acerca do CID-10 avaliado.",
-                "mustSupport": true
+              "type": "value",
+              "path": "url"
             }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient",
+        "path": "Condition.subject.extension",
+        "sliceName": "unidentifiedPatient",
+        "short": "Dados do Indivíduo Não Identificado",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension",
+        "path": "Condition.subject.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension:gender",
+        "path": "Condition.subject.extension.extension",
+        "sliceName": "gender",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension:gender.url",
+        "path": "Condition.subject.extension.extension.url",
+        "fixedUri": "gender"
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension:birthYear",
+        "path": "Condition.subject.extension.extension",
+        "sliceName": "birthYear",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension:birthYear.url",
+        "path": "Condition.subject.extension.extension.url",
+        "fixedUri": "birthYear"
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension:reason",
+        "path": "Condition.subject.extension.extension",
+        "sliceName": "reason",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.extension:reason.url",
+        "path": "Condition.subject.extension.extension.url",
+        "fixedUri": "reason"
+      },
+      {
+        "id": "Condition.subject.extension:unidentifiedPatient.url",
+        "path": "Condition.subject.extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+      },
+      {
+        "id": "Condition.subject.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.subject.type",
+        "max": "0",
+        "fixedUri": "Patient"
+      },
+      {
+        "id": "Condition.subject.identifier",
+        "path": "Condition.subject.identifier",
+        "min": 1
+      },
+      {
+        "id": "Condition.subject.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.identifier.type",
+        "path": "Condition.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.subject.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Condition.subject.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Condition.subject.identifier.period",
+        "path": "Condition.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.identifier.assigner",
+        "path": "Condition.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Condition.subject.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Condition.onset[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.onset[x]",
+        "short": "Data do início do Diagnóstico/Problema",
+        "definition": "Indica a data do início do diagnóstico ou problema identificado.",
+        "type": [
+          {
+            "code": "dateTime"
+          }
         ]
-    }
+      },
+      {
+        "id": "Condition.abatement[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.abatement[x]",
+        "max": "0"
+      },
+      {
+        "id": "Condition.recordedDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.recordedDate",
+        "max": "0"
+      },
+      {
+        "id": "Condition.recorder",
+        "path": "Condition.recorder",
+        "max": "0"
+      },
+      {
+        "id": "Condition.asserter",
+        "path": "Condition.asserter",
+        "max": "0"
+      },
+      {
+        "id": "Condition.stage",
+        "path": "Condition.stage",
+        "max": "0"
+      },
+      {
+        "id": "Condition.evidence",
+        "path": "Condition.evidence",
+        "max": "0"
+      },
+      {
+        "id": "Condition.note",
+        "path": "Condition.note",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.note.author[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "Condition.note.time",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.note.time",
+        "max": "0"
+      },
+      {
+        "id": "Condition.note.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Condition.note.text",
+        "short": "Nota",
+        "definition": "Informações complementares textuais acerca do CID-10 avaliado.",
+        "mustSupport": true
+      }
+    ]
+  }
 }

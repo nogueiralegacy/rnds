@@ -1,134 +1,134 @@
 {
-    "resourceType": "ConceptMap",
-    "id": "771cd4f9-325d-4604-89c0-ce298a4d726e",
-    "url": "http://www.saude.gov.br/fhir/r4/ConceptMap/BRImunobiologicoUECOVID19VaccineProphylaxis",
-    "version": "01.00",
-    "name": "Mapeamento dos códigos do Imunobiologico para os códigos do COVID-19 vaccine or prophylaxis",
-    "status": "draft",
-    "experimental": false,
-    "date": "2022-03-17",
-    "publisher": "Ministério da Saúde",
-    "description": "Um mapeamento dos códigos entre Imunobiológicos e COVID-19 vaccine or prophylaxis",
-    "sourceUri": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
-    "group": [
+  "resourceType": "ConceptMap",
+  "id": "BRImunobiologicoUECOVID19VaccineProphylaxis",
+  "url": "http://www.saude.gov.br/fhir/r4/ConceptMap/BRImunobiologicoUECOVID19VaccineProphylaxis",
+  "version": "01.00",
+  "name": "Mapeamento dos códigos do Imunobiologico para os códigos do COVID-19 vaccine or prophylaxis",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-03-17",
+  "publisher": "Ministério da Saúde",
+  "description": "Um mapeamento dos códigos entre Imunobiológicos e COVID-19 vaccine or prophylaxis",
+  "sourceUri": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
+  "group": [
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
         {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "85",
-                    "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "86",
-                    "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "87",
-                    "display": "COVID-19 PFIZER - COMIRNATY",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "88",
-                    "display": "COVID-19 JANSSEN - Ad26.COV2.S",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "89",
-                    "display": "COVID-19 ASTRAZENECA - ChAdOx1-S",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "98",
-                    "display": "COVID-19 SINOVAC - CORONAVAC",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "target": "http://www.whocc.no/atc",
-            "element": [
-                {
-                    "code": "99",
-                    "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY",
-                    "target": [
-                        {
-                            "code": "J07BX03",
-                            "display": "covid-19 vaccines",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
+          "code": "85",
+          "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
+        {
+          "code": "86",
+          "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
+        {
+          "code": "87",
+          "display": "COVID-19 PFIZER - COMIRNATY",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
+        {
+          "code": "88",
+          "display": "COVID-19 JANSSEN - Ad26.COV2.S",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
+        {
+          "code": "89",
+          "display": "COVID-19 ASTRAZENECA - ChAdOx1-S",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
+        {
+          "code": "98",
+          "display": "COVID-19 SINOVAC - CORONAVAC",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "target": "http://www.whocc.no/atc",
+      "element": [
+        {
+          "code": "99",
+          "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY",
+          "target": [
+            {
+              "code": "J07BX03",
+              "display": "covid-19 vaccines",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

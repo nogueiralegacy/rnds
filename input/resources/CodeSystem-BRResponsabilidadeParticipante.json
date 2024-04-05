@@ -1,39 +1,39 @@
 {
-    "resourceType": "CodeSystem",
-    "meta": {
-        "lastUpdated": "2020-03-11T18:20:28.411+00:00"
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-11T18:20:28.411+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResponsabilidadeParticipante",
+  "version": "201701A",
+  "name": "Reponsabilidade no Contato Assistencial",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-03-11T18:20:48.9276301+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o tipo de responsabilidade de indivíduos ou profissionais no Contato Assisntecial.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "solicitante",
+      "display": "Profissional que solicitou o Contato Assistencial"
     },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResponsabilidadeParticipante",
-    "version": "201701A",
-    "name": "Reponsabilidade no Contato Assistencial",
-    "status": "draft",
-    "experimental": false,
-    "date": "2020-03-11T18:20:48.9276301+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Classifica o tipo de responsabilidade de indivíduos ou profissionais no Contato Assisntecial.",
-    "content": "complete",
-    "concept": [
-        {
-            "code": "solicitante",
-            "display": "Profissional que solicitou o Contato Assistencial"
-        },
-        {
-            "code": "autorizador",
-            "display": "Profissional que autorizou a realização do Contato Assistencial"
-        },
-        {
-            "code": "admissao",
-            "display": "Profissional que admitiu do indivíduo no Contato Assistencial"
-        },
-        {
-            "code": "alta",
-            "display": "Profissional que realizou a alta do indivíduo no Contato Assistencial"
-        },
-        {
-            "code": "atendimento",
-            "display": "Profissional responsável pelo atendimento clínico Contato Assistencial"
-        }
-    ],
-    "id": "67768f41-13cf-43d1-89a7-d79f83c04f7a"
+    {
+      "code": "autorizador",
+      "display": "Profissional que autorizou a realização do Contato Assistencial"
+    },
+    {
+      "code": "admissao",
+      "display": "Profissional que admitiu do indivíduo no Contato Assistencial"
+    },
+    {
+      "code": "alta",
+      "display": "Profissional que realizou a alta do indivíduo no Contato Assistencial"
+    },
+    {
+      "code": "atendimento",
+      "display": "Profissional responsável pelo atendimento clínico Contato Assistencial"
+    }
+  ],
+  "id": "BRResponsabilidadeParticipante"
 }

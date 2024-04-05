@@ -1,25 +1,25 @@
 {
-    "resourceType": "ValueSet",
-    "meta": {
-        "lastUpdated": "2020-03-12T14:50:48.259+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoLogradouro-1.0",
-    "version": "1.0",
-    "name": "Tipo de Logradouro",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-03-12T14:50:47.8940392+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Classifica o tipo de logradouro.",
-    "immutable": false,
-    "compose": {
-        "include": [
-            {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoLogradouro",
-                "version": "*"
-            }
-        ]
-    },
-    "id": "85111641-3f01-4046-98dc-997a443aeabc"
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-12T14:50:48.259+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoLogradouro-1.0",
+  "version": "1.0",
+  "name": "Tipo de Logradouro",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-12T14:50:47.8940392+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o tipo de logradouro.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoLogradouro",
+        "version": "*"
+      }
+    ]
+  },
+  "id": "BRTipoLogradouro-1.0"
 }

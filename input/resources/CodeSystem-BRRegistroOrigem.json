@@ -1,27 +1,27 @@
 {
-    "resourceType": "CodeSystem",
-    "meta": {
-        "lastUpdated": "2022-01-21T14:38:40.0457007+00:00"
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2022-01-21T14:38:40.0457007+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRegistroOrigem",
+  "version": "01.10",
+  "name": "Registro de Origem",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-01-21T14:38:40.0457007+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Códigos para representação da Origem do Registro de Imunobiológico.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "01",
+      "display": "Registro anterior/Transcrição de caderneta"
     },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRegistroOrigem",
-    "version": "01.10",
-    "name": "Registro de Origem",
-    "status": "active",
-    "experimental": false,
-    "date": "2022-01-21T14:38:40.0457007+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Códigos para representação da Origem do Registro de Imunobiológico.",
-    "content": "complete",
-    "concept": [
-        {
-            "code": "01",
-            "display": "Registro anterior/Transcrição de caderneta"
-        },
-        {
-            "code": "02",
-            "display": "Vacina no Exterior"
-        }
-    ],
-    "id": "d72c5c8c-33e1-4f3b-b193-96c484b4bf77"
+    {
+      "code": "02",
+      "display": "Vacina no Exterior"
+    }
+  ],
+  "id": "BRRegistroOrigem"
 }

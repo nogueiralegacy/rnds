@@ -1,1160 +1,1160 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "7e313ef4-6d0e-44d2-bc15-9577b5f63eaf",
-    "meta": {
-        "lastUpdated": "2022-08-02T18:25:53.349741+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProcedimentoRealizado-1.0",
-    "version": "1.0",
-    "name": "BRProcedimentoRealizado",
-    "title": "Procedimento Realizado",
-    "status": "active",
-    "date": "2020-04-08T11:32:31.3117037+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Procedimento realizado em um indivíduo.",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Procedure",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Procedure",
-                "path": "Procedure",
-                "short": "Procedimento Realizado",
-                "definition": "Ação de saúde realizada no indivíduo.",
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.extension",
-                "path": "Procedure.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 1
-            },
-            {
-                "id": "Procedure.extension:quantity",
-                "path": "Procedure.extension",
-                "sliceName": "quantity",
-                "definition": "Quantidade realizada do procedimento.",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQuantidade-1.0"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "Procedure.extension:quantity.url",
-                "path": "Procedure.extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQuantidade-1.0"
-            },
-            {
-                "id": "Procedure.extension:quantity.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.extension.value[x]",
-                "type": [
-                    {
-                        "code": "positiveInt"
-                    }
-                ]
-            },
-            {
-                "id": "Procedure.identifier",
-                "path": "Procedure.identifier",
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.identifier.type",
-                "path": "Procedure.identifier.type",
-                "short": "Tipo de Identificador",
-                "min": 1,
-                "fixedCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
-                            "code": "AUTH"
-                        }
-                    ]
-                },
-                "binding": {
-                    "strength": "required",
-                    "description": "Tipo de Identificador",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoIdentificadorProcedimento-1.0"
-                }
-            },
-            {
-                "id": "Procedure.identifier.type.coding",
-                "path": "Procedure.identifier.type.coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Procedure.identifier.type.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.type.coding.system",
-                "min": 1
-            },
-            {
-                "id": "Procedure.identifier.type.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.type.coding.code",
-                "min": 1
-            },
-            {
-                "id": "Procedure.identifier.type.coding.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.type.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.identifier.type.coding.userSelected",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.type.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.identifier.type.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.type.text",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.system",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.identifier.value",
-                "short": "Código de Autorização",
-                "definition": "Código do identificador da permissão para a realização do procedimento.",
-                "min": 1
-            },
-            {
-                "id": "Procedure.identifier.period",
-                "path": "Procedure.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.identifier.assigner",
-                "path": "Procedure.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.instantiatesCanonical",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.instantiatesCanonical",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.instantiatesUri",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.instantiatesUri",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.basedOn",
-                "path": "Procedure.basedOn",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.partOf",
-                "path": "Procedure.partOf",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.status",
-                "short": "Estado do Procedimento",
-                "definition": "Estado da realização do procedimento.",
-                "comment": "Na primeira fase da RNDS somente serão informados procedimentos realizados ou cancelados (com erro), portanto, somente o valor completed será aceito.",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Estado do Evento",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0"
-                }
-            },
-            {
-                "id": "Procedure.statusReason",
-                "path": "Procedure.statusReason",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.category",
-                "path": "Procedure.category",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.code",
-                "path": "Procedure.code",
-                "short": "Procedimento Realizado",
-                "definition": "Identificação do procedimento que foi realizado.",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Classificações Nacionais de Procedimentos",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"
-                }
-            },
-            {
-                "id": "Procedure.code.coding",
-                "path": "Procedure.code.coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Procedure.code.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.code.coding.system",
-                "min": 1
-            },
-            {
-                "id": "Procedure.code.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.code.coding.code",
-                "min": 1
-            },
-            {
-                "id": "Procedure.code.coding.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.code.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.code.coding.userSelected",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.code.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.code.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.code.text",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject",
-                "path": "Procedure.subject",
-                "short": "Indivíduo",
-                "definition": "Indivíduo em que o procedimento foi realizado.",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.subject.extension",
-                "path": "Procedure.subject.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 0
-            },
-            {
-                "id": "Procedure.subject.extension:unidentifiedPatient",
-                "path": "Procedure.subject.extension",
-                "sliceName": "unidentifiedPatient",
-                "short": "Dados do Indivíduo Não Identificado",
-                "min": 0,
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.subject.extension:unidentifiedPatient.extension",
-                "path": "Procedure.subject.extension.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 0
-            },
-            {
-                "id": "Procedure.subject.extension:unidentifiedPatient.extension:gender",
-                "path": "Procedure.subject.extension.extension",
-                "sliceName": "gender",
-                "min": 0,
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.subject.extension:unidentifiedPatient.extension:birthYear",
-                "path": "Procedure.subject.extension.extension",
-                "sliceName": "birthYear",
-                "min": 0,
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.subject.extension:unidentifiedPatient.extension:reason",
-                "path": "Procedure.subject.extension.extension",
-                "sliceName": "reason",
-                "min": 0,
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.subject.extension:unidentifiedPatient.url",
-                "path": "Procedure.subject.extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
-            },
-            {
-                "id": "Procedure.subject.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.subject.reference",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.subject.type",
-                "short": "Recurso do sujeito",
-                "definition": "Indica o recurso FHIR que será utilizado na RNDS para identificar de forma direta o sujeito que do procedimento.",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.subject.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject.identifier.type",
-                "path": "Procedure.subject.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.subject.identifier.system",
-                "min": 1
-            },
-            {
-                "id": "Procedure.subject.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.subject.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Procedure.subject.identifier.period",
-                "path": "Procedure.subject.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject.identifier.assigner",
-                "path": "Procedure.subject.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.subject.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.subject.display",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.encounter",
-                "path": "Procedure.encounter",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performed[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performed[x]",
-                "short": "Momento da Realização do Procedimento",
-                "definition": "Competência (mês e ano), data ou data e hora que o procedimento foi realizado.",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "dateTime"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.recorder",
-                "path": "Procedure.recorder",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.asserter",
-                "path": "Procedure.asserter",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer",
-                "path": "Procedure.performer",
-                "slicing": {
-                    "discriminator": [
-                      {
-                        "type": "profile",
-                        "path": "actor.resolve()"
-                      }
-                    ],
-                    "rules": "open",
-                    "description": "Baseado em function"
-                  },
-                  "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner",
-                "path": "Procedure.performer",
-                "sliceName": "practitioner",
-                "short": "Executante",
-                "definition": "Permite identificar:\r\n- o(s) profissional(is) lotado(s) em um Estabelecimento de Saúde inscrito no CNES que realizou(aram) o procedimento, sua(s) respectiva(s) ocupação(ões) e o Estabelecimento de Saúde Terceiro (quando aplicável) - OPÇÃO PREFERENCIAL;\r\n- apenas a(s) ocupação(ões) do(s) profisssional(is) que realizou(aram) o procedimento, seu(s) Estabelecimento(s) de Saúde inscrito(s) no CNES e o Estabelecimento de Saúde Terceiro (quando aplicável) - OPÇÃO ALTERNATIVA quando o profissional não está inscrito no respectivo CNES ou o modelo de origem não disponha dessa informação;\r\n- apenas a(s) ocupação(ões) do(s) profisssional(is) que realizou(aram) o procedimento, a(s) organização(ões) identificada(s) pelo CNPJ (pessoa jurídica) ou CPF (profissional liberal) onde o procedimento foi realizado e o Estabelecimento de Saúde Terceiro (quando aplicável) - ÚLTIMA OPÇÃO, utilizar apenas quando o estabelecimento de saúde não possui inscrição no CNES ou o modelo de origem não disponha dessa informação.",
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.performer:practitioner.extension",
-                "path": "Procedure.performer.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 0
-            },
-            {
-                "id": "Procedure.performer:practitioner.extension:healthcareTeam",
-                "path": "Procedure.performer.extension",
-                "sliceName": "healthcareTeam",
-                "short": "Equipe de Saúde",
-                "definition": "Identifica a equipe de saúde que realizou o procedimento utilizando o Identificador Nacional de Equipes.",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.performer:practitioner.function",
-                "path": "Procedure.performer.function",
-                "short": "Ocupação do Profissional",
-                "definition": "Atividade desempenhada pelo profissional que realizou o procedimento.",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Ocupação Profissional",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
-                }
-            },
-            {
-                "id": "Procedure.performer:practitioner.function.coding",
-                "path": "Procedure.performer.function.coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Procedure.performer:practitioner.function.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.function.coding.system",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.function.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.function.coding.code",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.function.coding.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.function.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.function.coding.userSelected",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.function.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.function.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.function.text",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor",
-                "path": "Procedure.performer.actor",
-                "short": "Profissional",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLotacaoProfissional-1.0",
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.actor.reference",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.actor.type",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier",
-                "path": "Procedure.performer.actor.identifier",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.actor.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier.type",
-                "path": "Procedure.performer.actor.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.actor.identifier.system",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.actor.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier.period",
-                "path": "Procedure.performer.actor.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.identifier.assigner",
-                "path": "Procedure.performer.actor.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.actor.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.actor.display",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf",
-                "path": "Procedure.performer.onBehalfOf",
-                "short": "Estabelecimento de Saúde Terceiro",
-                "definition": "Estabelecimento de Saúde que realizou o procedimento como serviço terceiro do Estabelecimento de Saúde onde o procediemento foi realizado.",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.onBehalfOf.reference",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.onBehalfOf.type",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier",
-                "path": "Procedure.performer.onBehalfOf.identifier",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.onBehalfOf.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier.type",
-                "path": "Procedure.performer.onBehalfOf.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.onBehalfOf.identifier.system",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.onBehalfOf.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier.period",
-                "path": "Procedure.performer.onBehalfOf.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.identifier.assigner",
-                "path": "Procedure.performer.onBehalfOf.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.performer:practitioner.onBehalfOf.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.performer.onBehalfOf.display",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.location",
-                "path": "Procedure.location",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.reasonCode",
-                "path": "Procedure.reasonCode",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.reasonReference",
-                "path": "Procedure.reasonReference",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.bodySite",
-                "path": "Procedure.bodySite",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.outcome",
-                "path": "Procedure.outcome",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.report",
-                "path": "Procedure.report",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.complication",
-                "path": "Procedure.complication",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.complicationDetail",
-                "path": "Procedure.complicationDetail",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.followUp",
-                "path": "Procedure.followUp",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.note",
-                "path": "Procedure.note",
-                "short": "Resultado ou observações do procedimento",
-                "definition": "Possibilita realizar anotações acerca do desfecho e observações do procedimento.",
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.note.author[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.note.author[x]",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.note.time",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.note.time",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.note.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Procedure.note.text",
-                "mustSupport": true
-            },
-            {
-                "id": "Procedure.focalDevice",
-                "path": "Procedure.focalDevice",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.usedReference",
-                "path": "Procedure.usedReference",
-                "max": "0"
-            },
-            {
-                "id": "Procedure.usedCode",
-                "path": "Procedure.usedCode",
-                "max": "0"
+  "resourceType": "StructureDefinition",
+  "id": "BRProcedimentoRealizado-1.0",
+  "meta": {
+    "lastUpdated": "2022-08-02T18:25:53.349741+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProcedimentoRealizado-1.0",
+  "version": "1.0",
+  "name": "BRProcedimentoRealizado",
+  "title": "Procedimento Realizado",
+  "status": "active",
+  "date": "2020-04-08T11:32:31.3117037+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Procedimento realizado em um indivíduo.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "short": "Procedimento Realizado",
+        "definition": "Ação de saúde realizada no indivíduo.",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.extension",
+        "path": "Procedure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
             }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Procedure.extension:quantity",
+        "path": "Procedure.extension",
+        "sliceName": "quantity",
+        "definition": "Quantidade realizada do procedimento.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQuantidade-1.0"
+            ]
+          }
         ]
-    }
+      },
+      {
+        "id": "Procedure.extension:quantity.url",
+        "path": "Procedure.extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRQuantidade-1.0"
+      },
+      {
+        "id": "Procedure.extension:quantity.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.extension.value[x]",
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.identifier",
+        "path": "Procedure.identifier",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.identifier.type",
+        "path": "Procedure.identifier.type",
+        "short": "Tipo de Identificador",
+        "min": 1,
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
+              "code": "AUTH"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "required",
+          "description": "Tipo de Identificador",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoIdentificadorProcedimento-1.0"
+        }
+      },
+      {
+        "id": "Procedure.identifier.type.coding",
+        "path": "Procedure.identifier.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Procedure.identifier.type.coding.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Procedure.identifier.type.coding.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Procedure.identifier.type.coding.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.identifier.type.coding.userSelected",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.identifier.type.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.system",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.identifier.value",
+        "short": "Código de Autorização",
+        "definition": "Código do identificador da permissão para a realização do procedimento.",
+        "min": 1
+      },
+      {
+        "id": "Procedure.identifier.period",
+        "path": "Procedure.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.identifier.assigner",
+        "path": "Procedure.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.instantiatesCanonical",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.instantiatesCanonical",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.instantiatesUri",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.instantiatesUri",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.basedOn",
+        "path": "Procedure.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.partOf",
+        "path": "Procedure.partOf",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.status",
+        "short": "Estado do Procedimento",
+        "definition": "Estado da realização do procedimento.",
+        "comment": "Na primeira fase da RNDS somente serão informados procedimentos realizados ou cancelados (com erro), portanto, somente o valor completed será aceito.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado do Evento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoEvento-1.0"
+        }
+      },
+      {
+        "id": "Procedure.statusReason",
+        "path": "Procedure.statusReason",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.category",
+        "path": "Procedure.category",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.code",
+        "path": "Procedure.code",
+        "short": "Procedimento Realizado",
+        "definition": "Identificação do procedimento que foi realizado.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Classificações Nacionais de Procedimentos",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0"
+        }
+      },
+      {
+        "id": "Procedure.code.coding",
+        "path": "Procedure.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Procedure.code.coding.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Procedure.code.coding.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Procedure.code.coding.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.code.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.code.coding.userSelected",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.code.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "short": "Indivíduo",
+        "definition": "Indivíduo em que o procedimento foi realizado.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.subject.extension",
+        "path": "Procedure.subject.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Procedure.subject.extension:unidentifiedPatient",
+        "path": "Procedure.subject.extension",
+        "sliceName": "unidentifiedPatient",
+        "short": "Dados do Indivíduo Não Identificado",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.subject.extension:unidentifiedPatient.extension",
+        "path": "Procedure.subject.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Procedure.subject.extension:unidentifiedPatient.extension:gender",
+        "path": "Procedure.subject.extension.extension",
+        "sliceName": "gender",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.subject.extension:unidentifiedPatient.extension:birthYear",
+        "path": "Procedure.subject.extension.extension",
+        "sliceName": "birthYear",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.subject.extension:unidentifiedPatient.extension:reason",
+        "path": "Procedure.subject.extension.extension",
+        "sliceName": "reason",
+        "min": 0,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.subject.extension:unidentifiedPatient.url",
+        "path": "Procedure.subject.extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+      },
+      {
+        "id": "Procedure.subject.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.subject.type",
+        "short": "Recurso do sujeito",
+        "definition": "Indica o recurso FHIR que será utilizado na RNDS para identificar de forma direta o sujeito que do procedimento.",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject.identifier.type",
+        "path": "Procedure.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.subject.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Procedure.subject.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Procedure.subject.identifier.period",
+        "path": "Procedure.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject.identifier.assigner",
+        "path": "Procedure.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.subject.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.encounter",
+        "path": "Procedure.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performed[x]",
+        "short": "Momento da Realização do Procedimento",
+        "definition": "Competência (mês e ano), data ou data e hora que o procedimento foi realizado.",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.recorder",
+        "path": "Procedure.recorder",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.asserter",
+        "path": "Procedure.asserter",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer",
+        "path": "Procedure.performer",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "actor.resolve()"
+            }
+          ],
+          "rules": "open",
+          "description": "Baseado em function"
+        },
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner",
+        "path": "Procedure.performer",
+        "sliceName": "practitioner",
+        "short": "Executante",
+        "definition": "Permite identificar:\r\n- o(s) profissional(is) lotado(s) em um Estabelecimento de Saúde inscrito no CNES que realizou(aram) o procedimento, sua(s) respectiva(s) ocupação(ões) e o Estabelecimento de Saúde Terceiro (quando aplicável) - OPÇÃO PREFERENCIAL;\r\n- apenas a(s) ocupação(ões) do(s) profisssional(is) que realizou(aram) o procedimento, seu(s) Estabelecimento(s) de Saúde inscrito(s) no CNES e o Estabelecimento de Saúde Terceiro (quando aplicável) - OPÇÃO ALTERNATIVA quando o profissional não está inscrito no respectivo CNES ou o modelo de origem não disponha dessa informação;\r\n- apenas a(s) ocupação(ões) do(s) profisssional(is) que realizou(aram) o procedimento, a(s) organização(ões) identificada(s) pelo CNPJ (pessoa jurídica) ou CPF (profissional liberal) onde o procedimento foi realizado e o Estabelecimento de Saúde Terceiro (quando aplicável) - ÚLTIMA OPÇÃO, utilizar apenas quando o estabelecimento de saúde não possui inscrição no CNES ou o modelo de origem não disponha dessa informação.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:practitioner.extension",
+        "path": "Procedure.performer.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Procedure.performer:practitioner.extension:healthcareTeam",
+        "path": "Procedure.performer.extension",
+        "sliceName": "healthcareTeam",
+        "short": "Equipe de Saúde",
+        "definition": "Identifica a equipe de saúde que realizou o procedimento utilizando o Identificador Nacional de Equipes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:practitioner.function",
+        "path": "Procedure.performer.function",
+        "short": "Ocupação do Profissional",
+        "definition": "Atividade desempenhada pelo profissional que realizou o procedimento.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Ocupação Profissional",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BROcupacao-1.0"
+        }
+      },
+      {
+        "id": "Procedure.performer:practitioner.function.coding",
+        "path": "Procedure.performer.function.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Procedure.performer:practitioner.function.coding.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.function.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.function.coding.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.function.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.function.coding.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.function.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.function.coding.userSelected",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.function.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.function.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.function.text",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor",
+        "path": "Procedure.performer.actor",
+        "short": "Profissional",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLotacaoProfissional-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.actor.reference",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.actor.type",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier",
+        "path": "Procedure.performer.actor.identifier",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.actor.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier.type",
+        "path": "Procedure.performer.actor.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.actor.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.actor.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier.period",
+        "path": "Procedure.performer.actor.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.identifier.assigner",
+        "path": "Procedure.performer.actor.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.actor.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.actor.display",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf",
+        "path": "Procedure.performer.onBehalfOf",
+        "short": "Estabelecimento de Saúde Terceiro",
+        "definition": "Estabelecimento de Saúde que realizou o procedimento como serviço terceiro do Estabelecimento de Saúde onde o procediemento foi realizado.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.onBehalfOf.reference",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.onBehalfOf.type",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier",
+        "path": "Procedure.performer.onBehalfOf.identifier",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.onBehalfOf.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier.type",
+        "path": "Procedure.performer.onBehalfOf.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.onBehalfOf.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.onBehalfOf.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier.period",
+        "path": "Procedure.performer.onBehalfOf.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.identifier.assigner",
+        "path": "Procedure.performer.onBehalfOf.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.performer:practitioner.onBehalfOf.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.performer.onBehalfOf.display",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.location",
+        "path": "Procedure.location",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.reasonCode",
+        "path": "Procedure.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.bodySite",
+        "path": "Procedure.bodySite",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.outcome",
+        "path": "Procedure.outcome",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.report",
+        "path": "Procedure.report",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.complication",
+        "path": "Procedure.complication",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.complicationDetail",
+        "path": "Procedure.complicationDetail",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.followUp",
+        "path": "Procedure.followUp",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.note",
+        "path": "Procedure.note",
+        "short": "Resultado ou observações do procedimento",
+        "definition": "Possibilita realizar anotações acerca do desfecho e observações do procedimento.",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.note.author[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.note.time",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.note.time",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.note.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Procedure.note.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.focalDevice",
+        "path": "Procedure.focalDevice",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.usedReference",
+        "path": "Procedure.usedReference",
+        "max": "0"
+      },
+      {
+        "id": "Procedure.usedCode",
+        "path": "Procedure.usedCode",
+        "max": "0"
+      }
+    ]
+  }
 }

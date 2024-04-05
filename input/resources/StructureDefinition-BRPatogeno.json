@@ -1,44 +1,44 @@
 {
-    "resourceType": "StructureDefinition",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPatogeno",
-    "version": "1.0",
-    "name": "BRPatogeno",
-    "status": "draft",
-    "date": "2022-09-19",
-    "description": "Extensão para inserção dos termos relacionados ao Patógeno identificado.",
-    "kind": "complex-type",
-    "abstract": false,
-    "context": [
-        {
-            "type": "element",
-            "expression": "Observation"
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPatogeno",
+  "version": "1.0",
+  "name": "BRPatogeno",
+  "status": "draft",
+  "date": "2022-09-19",
+  "description": "Extensão para inserção dos termos relacionados ao Patógeno identificado.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Observation"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPatogeno"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "terminologia Patogeno",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTerminologiaPatogeno"
         }
-    ],
-    "type": "Extension",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Extension.url",
-                "path": "Extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPatogeno"
-            },
-            {
-                "id": "Extension.value[x]",
-                "path": "Extension.value[x]",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "binding": {
-                    "strength": "required",
-                    "description": "terminologia Patogeno",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTerminologiaPatogeno"
-                }
-            }
-        ]
-    },
-    "id": "73a8a468-3cd2-45fb-b373-3e81aad68d12"
+      }
+    ]
+  },
+  "id": "BRPatogeno"
 }

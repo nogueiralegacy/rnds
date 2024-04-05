@@ -1,106 +1,106 @@
 {
-    "resourceType": "ConceptMap",
-    "id": "8db29aef-cb3e-4558-97b6-efe0e13c3075",
-    "url": "http://www.saude.gov.br/fhir/r4/ConceptMap/COVID-19VaccineMarketingAuthorizationHolderManufacturerBRImunobiologicoUE",
-    "version": "01.00",
-    "name": "Mapeamento dos códigos do COVID-19 Vaccine Marketing Authorization Holder Manufacturer para os códigos do Imunobiologico",
-    "status": "draft",
-    "experimental": false,
-    "date": "2022-03-17",
-    "publisher": "Ministério da Saúde",
-    "description": "Um mapeamento dos códigos entre COVID-19 Vaccine Marketing Authorization Holder Manufacturer e Imunobiologico",
-    "targetUri": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
-    "group": [
+  "resourceType": "ConceptMap",
+  "id": "COVID-19VaccineMarketingAuthorizationHolderManufacturerBRImunobiologicoUE",
+  "url": "http://www.saude.gov.br/fhir/r4/ConceptMap/COVID-19VaccineMarketingAuthorizationHolderManufacturerBRImunobiologicoUE",
+  "version": "01.00",
+  "name": "Mapeamento dos códigos do COVID-19 Vaccine Marketing Authorization Holder Manufacturer para os códigos do Imunobiologico",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-03-17",
+  "publisher": "Ministério da Saúde",
+  "description": "Um mapeamento dos códigos entre COVID-19 Vaccine Marketing Authorization Holder Manufacturer e Imunobiologico",
+  "targetUri": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
+  "group": [
+    {
+      "source": "https://spor.ema.europa.eu/v1/organisations",
+      "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "element": [
         {
-            "source": "https://spor.ema.europa.eu/v1/organisations",
-            "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "element": [
-                {
-                    "code": "ORG-100030215",
-                    "display": "Biontech Manufacturing GmbH",
-                    "target": [
-                        {
-                            "code": "87",
-                            "display": "COVID-19 PFIZER - COMIRNATY",
-                            "equivalence": "equivalent"
-                        },
-                        {
-                            "code": "99",
-                            "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "element": [
-                {
-                    "code": "Sinovac-Biotech",
-                    "display": "Sinovac Biotech",
-                    "target": [
-                        {
-                            "code": "86",
-                            "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC",
-                            "equivalence": "equivalent"
-                        },
-                        {
-                            "code": "98",
-                            "display": "COVID-19 SINOVAC - CORONAVAC",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "element": [
-                {
-                    "code": "Fiocruz",
-                    "display": "Fiocruz",
-                    "target": [
-                        {
-                            "code": "85",
-                            "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "https://spor.ema.europa.eu/v1/organisations",
-            "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "element": [
-                {
-                    "code": "ORG-100001417",
-                    "display": "Janssen-Cilag International",
-                    "target": [
-                        {
-                            "code": "88",
-                            "display": "COVID-19 JANSSEN - Ad26.COV2.S",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "source": "https://spor.ema.europa.eu/v1/organisations",
-            "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
-            "element": [
-                {
-                    "code": "ORG-100001699",
-                    "display": "AstraZeneca AB",
-                    "target": [
-                        {
-                            "code": "89",
-                            "display": "COVID-19 ASTRAZENECA - ChAdOx1-S",
-                            "equivalence": "equivalent"
-                        }
-                    ]
-                }
-            ]
+          "code": "ORG-100030215",
+          "display": "Biontech Manufacturing GmbH",
+          "target": [
+            {
+              "code": "87",
+              "display": "COVID-19 PFIZER - COMIRNATY",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "99",
+              "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY",
+              "equivalence": "equivalent"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "element": [
+        {
+          "code": "Sinovac-Biotech",
+          "display": "Sinovac Biotech",
+          "target": [
+            {
+              "code": "86",
+              "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "98",
+              "display": "COVID-19 SINOVAC - CORONAVAC",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": [
+        {
+          "code": "Fiocruz",
+          "display": "Fiocruz",
+          "target": [
+            {
+              "code": "85",
+              "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://spor.ema.europa.eu/v1/organisations",
+      "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "element": [
+        {
+          "code": "ORG-100001417",
+          "display": "Janssen-Cilag International",
+          "target": [
+            {
+              "code": "88",
+              "display": "COVID-19 JANSSEN - Ad26.COV2.S",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://spor.ema.europa.eu/v1/organisations",
+      "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "element": [
+        {
+          "code": "ORG-100001699",
+          "display": "AstraZeneca AB",
+          "target": [
+            {
+              "code": "89",
+              "display": "COVID-19 ASTRAZENECA - ChAdOx1-S",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

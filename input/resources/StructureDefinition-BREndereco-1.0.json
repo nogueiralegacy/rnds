@@ -1,122 +1,122 @@
 {
-    "resourceType": "StructureDefinition",
-    "meta": {
-        "lastUpdated": "2020-03-11T04:06:40.866+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREndereco-1.0",
-    "version": "1.0",
-    "name": "BREndereco",
-    "title": "Endereço",
-    "status": "active",
-    "date": "2020-03-11T04:06:40.3767721+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Padronização de endereços no Brasil.",
-    "kind": "complex-type",
-    "abstract": false,
-    "type": "Address",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Address",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Address",
-                "path": "Address",
-                "short": "Dados de Endereçamento",
-                "definition": "Dados do(s) endereço(s) onde o sujeito do endereço pode ser localizado.",
-                "mustSupport": true
-            },
-            {
-                "id": "Address.use",
-                "path": "Address.use",
-                "short": "Uso do Endereço",
-                "definition": "home: endereço residencial atual.\r\nwork: endereço comercial ou de trabalho atual.\r\ntemp: endereço temporário, como um hotel, a casa de amigos ou familiares, uma instalação/edificação provisória, etc.\r\nold: endereço anterior.",
-                "mustSupport": true
-            },
-            {
-                "id": "Address.type",
-                "path": "Address.type",
-                "short": "Tipo de Endereço",
-                "definition": "physical: um endereço físico de um edificação ou espaço geográfico real, como de uma casa, prédio, loja, galpão, lote, etc.\r\npostal: um endereço virtual, como de uma Caixa Postal ou serviço de logística de mercadorias, p.ex.",
-                "mustSupport": true
-            },
-            {
-                "id": "Address.text",
-                "path": "Address.text",
-                "max": "0"
-            },
-            {
-                "id": "Address.line",
-                "path": "Address.line",
-                "short": "Endereço",
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Address.city",
-                "path": "Address.city",
-                "short": "Município",
-                "definition": "Município do endereço.",
-                "min": 1,
-                "binding": {
-                    "strength": "required",
-                    "description": "Município",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMunicipio-1.0"
-                }
-            },
-            {
-                "id": "Address.district",
-                "path": "Address.district",
-                "max": "0"
-            },
-            {
-                "id": "Address.state",
-                "path": "Address.state",
-                "short": "UF",
-                "definition": "Unidade Federativa (estados ou Distrito Federal) do endereço.",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Unidade Federativa",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRUnidadeFederativa-1.0"
-                }
-            },
-            {
-                "id": "Address.postalCode",
-                "path": "Address.postalCode",
-                "short": "CEP",
-                "definition": "Código de Endereçamento Postal. Utilizar a máscara XXXXX-XXXX.",
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Address.country",
-                "path": "Address.country",
-                "max": "0"
-            },
-            {
-                "id": "Address.period",
-                "path": "Address.period",
-                "short": "Período do Endereço",
-                "definition": "Período em que o endereço foi utilizado.",
-                "mustSupport": true
-            },
-            {
-                "id": "Address.period.start",
-                "path": "Address.period.start",
-                "short": "Data de Inicio do Endereço",
-                "definition": "Data em que o endereço foi cadastrado ou começou a ser utilizado.",
-                "mustSupport": true
-            },
-            {
-                "id": "Address.period.end",
-                "path": "Address.period.end",
-                "short": "Data de Término do Endereço",
-                "definition": "Data em que o endereço foi desativado ou parou de ser utilizado.",
-                "mustSupport": true
-            }
-        ]
-    },
-    "id": "6c593e1e-d2b1-457e-9e4e-09ec38c685a3"
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "lastUpdated": "2020-03-11T04:06:40.866+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREndereco-1.0",
+  "version": "1.0",
+  "name": "BREndereco",
+  "title": "Endereço",
+  "status": "active",
+  "date": "2020-03-11T04:06:40.3767721+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Padronização de endereços no Brasil.",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Address",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Address",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Address",
+        "path": "Address",
+        "short": "Dados de Endereçamento",
+        "definition": "Dados do(s) endereço(s) onde o sujeito do endereço pode ser localizado.",
+        "mustSupport": true
+      },
+      {
+        "id": "Address.use",
+        "path": "Address.use",
+        "short": "Uso do Endereço",
+        "definition": "home: endereço residencial atual.\r\nwork: endereço comercial ou de trabalho atual.\r\ntemp: endereço temporário, como um hotel, a casa de amigos ou familiares, uma instalação/edificação provisória, etc.\r\nold: endereço anterior.",
+        "mustSupport": true
+      },
+      {
+        "id": "Address.type",
+        "path": "Address.type",
+        "short": "Tipo de Endereço",
+        "definition": "physical: um endereço físico de um edificação ou espaço geográfico real, como de uma casa, prédio, loja, galpão, lote, etc.\r\npostal: um endereço virtual, como de uma Caixa Postal ou serviço de logística de mercadorias, p.ex.",
+        "mustSupport": true
+      },
+      {
+        "id": "Address.text",
+        "path": "Address.text",
+        "max": "0"
+      },
+      {
+        "id": "Address.line",
+        "path": "Address.line",
+        "short": "Endereço",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Address.city",
+        "path": "Address.city",
+        "short": "Município",
+        "definition": "Município do endereço.",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "description": "Município",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMunicipio-1.0"
+        }
+      },
+      {
+        "id": "Address.district",
+        "path": "Address.district",
+        "max": "0"
+      },
+      {
+        "id": "Address.state",
+        "path": "Address.state",
+        "short": "UF",
+        "definition": "Unidade Federativa (estados ou Distrito Federal) do endereço.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Unidade Federativa",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRUnidadeFederativa-1.0"
+        }
+      },
+      {
+        "id": "Address.postalCode",
+        "path": "Address.postalCode",
+        "short": "CEP",
+        "definition": "Código de Endereçamento Postal. Utilizar a máscara XXXXX-XXXX.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Address.country",
+        "path": "Address.country",
+        "max": "0"
+      },
+      {
+        "id": "Address.period",
+        "path": "Address.period",
+        "short": "Período do Endereço",
+        "definition": "Período em que o endereço foi utilizado.",
+        "mustSupport": true
+      },
+      {
+        "id": "Address.period.start",
+        "path": "Address.period.start",
+        "short": "Data de Inicio do Endereço",
+        "definition": "Data em que o endereço foi cadastrado ou começou a ser utilizado.",
+        "mustSupport": true
+      },
+      {
+        "id": "Address.period.end",
+        "path": "Address.period.end",
+        "short": "Data de Término do Endereço",
+        "definition": "Data em que o endereço foi desativado ou parou de ser utilizado.",
+        "mustSupport": true
+      }
+    ]
+  },
+  "id": "BREndereco-1.0"
 }

@@ -1,131 +1,131 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "7e861eb4-86e3-4f91-bd3d-7fd3fd6cc5d4",
-    "meta": {
-        "lastUpdated": "2020-03-11T11:33:54.751+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNaturalizacao-1.0",
-    "version": "1.0",
-    "name": "BRNaturalizacao",
-    "title": "Dados de Naturalização",
-    "status": "active",
-    "date": "2020-03-11T11:34:13.9129444+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Extensão para as informações de naturalização de um indivíduo.",
-    "kind": "complex-type",
-    "abstract": false,
-    "context": [
-        {
-            "type": "element",
-            "expression": "Patient"
-        }
-    ],
-    "type": "Extension",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Extension",
-                "path": "Extension",
-                "short": "Dados de Naturalização",
-                "definition": "Informações sobre a naturalização de um indivíduo."
-            },
-            {
-                "id": "Extension.extension",
-                "path": "Extension.extension",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                }
-            },
-            {
-                "id": "Extension.extension:arrival",
-                "path": "Extension.extension",
-                "sliceName": "arrival",
-                "short": "Data de Chegada",
-                "definition": "Data da chegada ao país.",
-                "max": "1"
-            },
-            {
-                "id": "Extension.extension:arrival.url",
-                "path": "Extension.extension.url",
-                "fixedUri": "arrival"
-            },
-            {
-                "id": "Extension.extension:arrival.value[x]",
-                "path": "Extension.extension.value[x]",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "date"
-                    }
-                ]
-            },
-            {
-                "id": "Extension.extension:whenNaturalized",
-                "path": "Extension.extension",
-                "sliceName": "whenNaturalized",
-                "short": "Data de Naturalização",
-                "definition": "Data em que o indivíduo foi naturalizado no país.",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Extension.extension:whenNaturalized.url",
-                "path": "Extension.extension.url",
-                "fixedUri": "whenNaturalized"
-            },
-            {
-                "id": "Extension.extension:whenNaturalized.value[x]",
-                "path": "Extension.extension.value[x]",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "date"
-                    }
-                ]
-            },
-            {
-                "id": "Extension.extension:ordinanceNaturalize",
-                "path": "Extension.extension",
-                "sliceName": "ordinanceNaturalize",
-                "short": "Portaria de Naturalização",
-                "definition": "Portaria que naturalizou o indivíduo. Utilizar preferencialmente a sintaxe Portaria nº NNN/ORGAO/YYYY, DOU de DD/MM/YYYY, onde NNN é o número da Portaria, ORGAO é a estrutura da hierarquia do órgão que publicou (ex.: SE/MS, para atos publicados pela Secretaria Executiva do Ministério da Saúde), YYYY é o ano da publicação, DD/MM/YYYY é a data em que a Portaria foi publicada no DOU.",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Extension.extension:ordinanceNaturalize.url",
-                "path": "Extension.extension.url",
-                "fixedUri": "ordinanceNaturalize"
-            },
-            {
-                "id": "Extension.extension:ordinanceNaturalize.value[x]",
-                "path": "Extension.extension.value[x]",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ]
-            },
-            {
-                "id": "Extension.url",
-                "path": "Extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNaturalizacao-1.0"
-            },
-            {
-                "id": "Extension.value[x]",
-                "path": "Extension.value[x]",
-                "max": "0"
-            }
-        ]
+  "resourceType": "StructureDefinition",
+  "id": "BRNaturalizacao-1.0",
+  "meta": {
+    "lastUpdated": "2020-03-11T11:33:54.751+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNaturalizacao-1.0",
+  "version": "1.0",
+  "name": "BRNaturalizacao",
+  "title": "Dados de Naturalização",
+  "status": "active",
+  "date": "2020-03-11T11:34:13.9129444+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Extensão para as informações de naturalização de um indivíduo.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
     }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Dados de Naturalização",
+        "definition": "Informações sobre a naturalização de um indivíduo."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Extension.extension:arrival",
+        "path": "Extension.extension",
+        "sliceName": "arrival",
+        "short": "Data de Chegada",
+        "definition": "Data da chegada ao país.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:arrival.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "arrival"
+      },
+      {
+        "id": "Extension.extension:arrival.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:whenNaturalized",
+        "path": "Extension.extension",
+        "sliceName": "whenNaturalized",
+        "short": "Data de Naturalização",
+        "definition": "Data em que o indivíduo foi naturalizado no país.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:whenNaturalized.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "whenNaturalized"
+      },
+      {
+        "id": "Extension.extension:whenNaturalized.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ordinanceNaturalize",
+        "path": "Extension.extension",
+        "sliceName": "ordinanceNaturalize",
+        "short": "Portaria de Naturalização",
+        "definition": "Portaria que naturalizou o indivíduo. Utilizar preferencialmente a sintaxe Portaria nº NNN/ORGAO/YYYY, DOU de DD/MM/YYYY, onde NNN é o número da Portaria, ORGAO é a estrutura da hierarquia do órgão que publicou (ex.: SE/MS, para atos publicados pela Secretaria Executiva do Ministério da Saúde), YYYY é o ano da publicação, DD/MM/YYYY é a data em que a Portaria foi publicada no DOU.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:ordinanceNaturalize.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "ordinanceNaturalize"
+      },
+      {
+        "id": "Extension.extension:ordinanceNaturalize.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRNaturalizacao-1.0"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
 }

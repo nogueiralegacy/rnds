@@ -1,361 +1,361 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "3ce72613-2212-455c-8dc5-6fae9fa5d033",
-    "meta": {
-        "versionId": "1",
-        "lastUpdated": "2022-06-02T20:21:40.9790981+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAlergiaReacaoAdversa-1.0",
-    "version": "01.10",
-    "name": "BRAlergiaReacaoAdversa",
-    "title": "Alergia ou Reação Adversa",
-    "status": "draft",
-    "experimental": false,
-    "date": "2020-09-20T20:40:24.2353053+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "kind": "resource",
-    "abstract": false,
-    "type": "AllergyIntolerance",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "AllergyIntolerance",
-                "path": "AllergyIntolerance",
-                "short": "Alergia ou Reação Adversa",
-                "definition": "Reatividade alterada a um antígeno pode resultar em reações patológicas consequentes à exposição subsequente àquele antígeno particular.",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.contained",
-                "path": "AllergyIntolerance.contained",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.identifier",
-                "path": "AllergyIntolerance.identifier",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus",
-                "path": "AllergyIntolerance.verificationStatus",
-                "short": "Grau de Certeza",
-                "definition": "Indica o grau de certeza que se possui ao avaliar uma alergia ou reação adversa.",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Grau de Certeza de Alergias e Reações Adversas",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRGrauCertezaAlergiasReacoesAdversas-1.0"
-                }
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus.coding",
-                "path": "AllergyIntolerance.verificationStatus.coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus.coding.system",
-                "path": "AllergyIntolerance.verificationStatus.coding.system",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus.coding.code",
-                "path": "AllergyIntolerance.verificationStatus.coding.code",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus.coding.display",
-                "path": "AllergyIntolerance.verificationStatus.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus.coding.userSelected",
-                "path": "AllergyIntolerance.verificationStatus.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus.text",
-                "path": "AllergyIntolerance.verificationStatus.text",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.type",
-                "path": "AllergyIntolerance.type",
-                "short": "Tipo de Reação",
-                "definition": "Tipo de mecanismos fisiológico subjacente à reação.\r\nallergy: alergia\r\nintolerance: intolerância",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.category",
-                "path": "AllergyIntolerance.category",
-                "short": "Categoria do Agente Causador",
-                "definition": "Categoriza a substância responsável por causar uma alergia ou reação adversa.",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Categoria do Agente da Alergia ou Reação Adversa",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaAgenteAlergiasReacoesAdversas-1.0"
-                }
-            },
-            {
-                "id": "AllergyIntolerance.criticality",
-                "path": "AllergyIntolerance.criticality",
-                "short": "Criticidade",
-                "definition": "Estimativa da criticidade do dano clínico ou gravidade da reação a uma substância identificada.",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Criticidade",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCriticidadeAlergiasReacoesAdversas-1.0"
-                }
-            },
-            {
-                "id": "AllergyIntolerance.code",
-                "path": "AllergyIntolerance.code",
-                "short": "Agente ou Substância",
-                "definition": "Agente ou substância específica responsável pela alergia ou reação adversa.",
-                "requirements": "Pode utilizar a descrição em texto livre, no elemento text, ou texto codificado utilizando o Catálogo Brasileiro de Alergias e Reações Adversas - CBARA (preferencial).",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Alérgenos",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRAlergenos-1.0"
-                }
-            },
-            {
-                "id": "AllergyIntolerance.code.coding",
-                "path": "AllergyIntolerance.code.coding",
-                "short": "Agente ou Substância Codificada",
-                "definition": "Texto codificado do agente ou substância causador da alergia ou reação adversa.",
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.code.coding.system",
-                "path": "AllergyIntolerance.code.coding.system",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.code.coding.code",
-                "path": "AllergyIntolerance.code.coding.code",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.code.coding.display",
-                "path": "AllergyIntolerance.code.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.code.coding.userSelected",
-                "path": "AllergyIntolerance.code.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.code.text",
-                "path": "AllergyIntolerance.code.text",
-                "short": "Agente ou Substância em Texto Livre",
-                "definition": "Descrição em texto livre do agente ou substância causador da alergia ou reação adversa.",
-                "requirements": "Um e somente um agente ou substância deve ser informado em cada recurso de AllergyIntolerance que compor um documento. Ou seja, na hipótese de se informar mais de um agente ou substância, deve ser enviado um recurso AllergyIntolerance para cada um deles no documento.",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.patient",
-                "path": "AllergyIntolerance.patient",
-                "short": "Indivíduo",
-                "definition": "Indivíduo que possui a alergia ou reação adversa.",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.patient.reference",
-                "path": "AllergyIntolerance.patient.reference",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.patient.type",
-                "path": "AllergyIntolerance.patient.type",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier",
-                "path": "AllergyIntolerance.patient.identifier",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier.use",
-                "path": "AllergyIntolerance.patient.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier.type",
-                "path": "AllergyIntolerance.patient.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier.system",
-                "path": "AllergyIntolerance.patient.identifier.system",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier.value",
-                "path": "AllergyIntolerance.patient.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier.period",
-                "path": "AllergyIntolerance.patient.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.patient.identifier.assigner",
-                "path": "AllergyIntolerance.patient.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.patient.display",
-                "path": "AllergyIntolerance.patient.display",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.encounter",
-                "path": "AllergyIntolerance.encounter",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.onset[x]",
-                "path": "AllergyIntolerance.onset[x]",
-                "short": "Data da Instalação da Alergia ou Reação Adversa",
-                "definition": "Ano, mês e ano ou dia, mês e ano, podendo conter também a hora em que a alergia ou reação adversa foi conhecida.",
-                "type": [
-                    {
-                        "code": "dateTime"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.recordedDate",
-                "path": "AllergyIntolerance.recordedDate",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.recorder",
-                "path": "AllergyIntolerance.recorder",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.asserter",
-                "path": "AllergyIntolerance.asserter",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.lastOccurrence",
-                "path": "AllergyIntolerance.lastOccurrence",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.note",
-                "path": "AllergyIntolerance.note",
-                "short": "Evolução da Alergia ou Reação Adversa",
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.note.author[x]",
-                "path": "AllergyIntolerance.note.author[x]",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.note.time",
-                "path": "AllergyIntolerance.note.time",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction",
-                "path": "AllergyIntolerance.reaction",
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.reaction.substance",
-                "path": "AllergyIntolerance.reaction.substance",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation",
-                "path": "AllergyIntolerance.reaction.manifestation",
-                "short": "Sinais e sintomas clínicos associados ao evento",
-                "definition": "Sinais e/ou sintomas clínicos observados ou associados ao evento de reação adversa.",
-                "max": "1",
-                "binding": {
-                    "strength": "required",
-                    "description": "Reações Adversas da MedDRA",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRReacoesAdversasMedDRA-1.0"
-                }
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation.coding",
-                "path": "AllergyIntolerance.reaction.manifestation.coding",
-                "max": "1"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation.coding.system",
-                "path": "AllergyIntolerance.reaction.manifestation.coding.system",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation.coding.code",
-                "path": "AllergyIntolerance.reaction.manifestation.coding.code",
-                "min": 1
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation.coding.display",
-                "path": "AllergyIntolerance.reaction.manifestation.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation.coding.userSelected",
-                "path": "AllergyIntolerance.reaction.manifestation.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.description",
-                "path": "AllergyIntolerance.reaction.description",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.onset",
-                "path": "AllergyIntolerance.reaction.onset",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.severity",
-                "path": "AllergyIntolerance.reaction.severity",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.exposureRoute",
-                "path": "AllergyIntolerance.reaction.exposureRoute",
-                "max": "0"
-            },
-            {
-                "id": "AllergyIntolerance.reaction.note",
-                "path": "AllergyIntolerance.reaction.note",
-                "max": "0"
-            }
-        ]
-    }
+  "resourceType": "StructureDefinition",
+  "id": "BRAlergiaReacaoAdversa-1.0",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2022-06-02T20:21:40.9790981+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAlergiaReacaoAdversa-1.0",
+  "version": "01.10",
+  "name": "BRAlergiaReacaoAdversa",
+  "title": "Alergia ou Reação Adversa",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-09-20T20:40:24.2353053+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AllergyIntolerance",
+        "path": "AllergyIntolerance",
+        "short": "Alergia ou Reação Adversa",
+        "definition": "Reatividade alterada a um antígeno pode resultar em reações patológicas consequentes à exposição subsequente àquele antígeno particular.",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.contained",
+        "path": "AllergyIntolerance.contained",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.identifier",
+        "path": "AllergyIntolerance.identifier",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus",
+        "path": "AllergyIntolerance.verificationStatus",
+        "short": "Grau de Certeza",
+        "definition": "Indica o grau de certeza que se possui ao avaliar uma alergia ou reação adversa.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Grau de Certeza de Alergias e Reações Adversas",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRGrauCertezaAlergiasReacoesAdversas-1.0"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding",
+        "path": "AllergyIntolerance.verificationStatus.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding.system",
+        "path": "AllergyIntolerance.verificationStatus.coding.system",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding.code",
+        "path": "AllergyIntolerance.verificationStatus.coding.code",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding.display",
+        "path": "AllergyIntolerance.verificationStatus.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding.userSelected",
+        "path": "AllergyIntolerance.verificationStatus.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.text",
+        "path": "AllergyIntolerance.verificationStatus.text",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.type",
+        "path": "AllergyIntolerance.type",
+        "short": "Tipo de Reação",
+        "definition": "Tipo de mecanismos fisiológico subjacente à reação.\r\nallergy: alergia\r\nintolerance: intolerância",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.category",
+        "path": "AllergyIntolerance.category",
+        "short": "Categoria do Agente Causador",
+        "definition": "Categoriza a substância responsável por causar uma alergia ou reação adversa.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Categoria do Agente da Alergia ou Reação Adversa",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCategoriaAgenteAlergiasReacoesAdversas-1.0"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.criticality",
+        "path": "AllergyIntolerance.criticality",
+        "short": "Criticidade",
+        "definition": "Estimativa da criticidade do dano clínico ou gravidade da reação a uma substância identificada.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Criticidade",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCriticidadeAlergiasReacoesAdversas-1.0"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.code",
+        "path": "AllergyIntolerance.code",
+        "short": "Agente ou Substância",
+        "definition": "Agente ou substância específica responsável pela alergia ou reação adversa.",
+        "requirements": "Pode utilizar a descrição em texto livre, no elemento text, ou texto codificado utilizando o Catálogo Brasileiro de Alergias e Reações Adversas - CBARA (preferencial).",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Alérgenos",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRAlergenos-1.0"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.code.coding",
+        "path": "AllergyIntolerance.code.coding",
+        "short": "Agente ou Substância Codificada",
+        "definition": "Texto codificado do agente ou substância causador da alergia ou reação adversa.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.system",
+        "path": "AllergyIntolerance.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.code",
+        "path": "AllergyIntolerance.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.display",
+        "path": "AllergyIntolerance.code.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.code.coding.userSelected",
+        "path": "AllergyIntolerance.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.code.text",
+        "path": "AllergyIntolerance.code.text",
+        "short": "Agente ou Substância em Texto Livre",
+        "definition": "Descrição em texto livre do agente ou substância causador da alergia ou reação adversa.",
+        "requirements": "Um e somente um agente ou substância deve ser informado em cada recurso de AllergyIntolerance que compor um documento. Ou seja, na hipótese de se informar mais de um agente ou substância, deve ser enviado um recurso AllergyIntolerance para cada um deles no documento.",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.patient",
+        "path": "AllergyIntolerance.patient",
+        "short": "Indivíduo",
+        "definition": "Indivíduo que possui a alergia ou reação adversa.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.patient.reference",
+        "path": "AllergyIntolerance.patient.reference",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.patient.type",
+        "path": "AllergyIntolerance.patient.type",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier",
+        "path": "AllergyIntolerance.patient.identifier",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier.use",
+        "path": "AllergyIntolerance.patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier.type",
+        "path": "AllergyIntolerance.patient.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier.system",
+        "path": "AllergyIntolerance.patient.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier.value",
+        "path": "AllergyIntolerance.patient.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier.period",
+        "path": "AllergyIntolerance.patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.patient.identifier.assigner",
+        "path": "AllergyIntolerance.patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.patient.display",
+        "path": "AllergyIntolerance.patient.display",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.encounter",
+        "path": "AllergyIntolerance.encounter",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.onset[x]",
+        "path": "AllergyIntolerance.onset[x]",
+        "short": "Data da Instalação da Alergia ou Reação Adversa",
+        "definition": "Ano, mês e ano ou dia, mês e ano, podendo conter também a hora em que a alergia ou reação adversa foi conhecida.",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.recordedDate",
+        "path": "AllergyIntolerance.recordedDate",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.recorder",
+        "path": "AllergyIntolerance.recorder",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.asserter",
+        "path": "AllergyIntolerance.asserter",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.lastOccurrence",
+        "path": "AllergyIntolerance.lastOccurrence",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.note",
+        "path": "AllergyIntolerance.note",
+        "short": "Evolução da Alergia ou Reação Adversa",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.note.author[x]",
+        "path": "AllergyIntolerance.note.author[x]",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.note.time",
+        "path": "AllergyIntolerance.note.time",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction",
+        "path": "AllergyIntolerance.reaction",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.reaction.substance",
+        "path": "AllergyIntolerance.reaction.substance",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation",
+        "path": "AllergyIntolerance.reaction.manifestation",
+        "short": "Sinais e sintomas clínicos associados ao evento",
+        "definition": "Sinais e/ou sintomas clínicos observados ou associados ao evento de reação adversa.",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Reações Adversas da MedDRA",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRReacoesAdversasMedDRA-1.0"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation.coding",
+        "path": "AllergyIntolerance.reaction.manifestation.coding",
+        "max": "1"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation.coding.system",
+        "path": "AllergyIntolerance.reaction.manifestation.coding.system",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation.coding.code",
+        "path": "AllergyIntolerance.reaction.manifestation.coding.code",
+        "min": 1
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation.coding.display",
+        "path": "AllergyIntolerance.reaction.manifestation.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation.coding.userSelected",
+        "path": "AllergyIntolerance.reaction.manifestation.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.description",
+        "path": "AllergyIntolerance.reaction.description",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.onset",
+        "path": "AllergyIntolerance.reaction.onset",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.severity",
+        "path": "AllergyIntolerance.reaction.severity",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.exposureRoute",
+        "path": "AllergyIntolerance.reaction.exposureRoute",
+        "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.reaction.note",
+        "path": "AllergyIntolerance.reaction.note",
+        "max": "0"
+      }
+    ]
+  }
 }

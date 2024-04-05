@@ -1,43 +1,43 @@
 {
-    "resourceType": "StructureDefinition",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResponsavelAtendimento",
-    "version": "01.00",
-    "name": "BRResponsavelAtendimento",
-    "title": "Responsável pelo Atendimento",
-    "status": "draft",
-    "date": "2022-05-26",
-    "description": "Representa se o profissional foi o responsável pelo atendimento registrado.",
-    "kind": "complex-type",
-    "abstract": false,
-    "context": [
-        {
-            "type": "element",
-            "expression": "Encounter.participant"
-        }
-    ],
-    "type": "Extension",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Extension.url",
-                "path": "Extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResponsavelAtendimento"
-            },
-            {
-                "id": "Extension.value[x]",
-                "path": "Extension.value[x]",
-                "type": [
-                    {
-                        "code": "boolean"
-                    },
-                    {
-                        "code": "Coding"
-                    }
-                ]
-            }
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResponsavelAtendimento",
+  "version": "01.00",
+  "name": "BRResponsavelAtendimento",
+  "title": "Responsável pelo Atendimento",
+  "status": "draft",
+  "date": "2022-05-26",
+  "description": "Representa se o profissional foi o responsável pelo atendimento registrado.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Encounter.participant"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResponsavelAtendimento"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
         ]
-    },
-    "id": "45e70fe0-1c5f-41c8-aa4c-7c7b78f22b0b"
+      }
+    ]
+  },
+  "id": "BRResponsavelAtendimento"
 }

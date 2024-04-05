@@ -1,55 +1,55 @@
 {
-    "resourceType": "CodeSystem",
-    "meta": {
-        "lastUpdated": "2020-03-11T18:15:59.439+00:00"
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-11T18:15:59.439+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+  "version": "1.1",
+  "name": "Modalidade Assistencial",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-03-11T18:16:19.9468275+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "01",
+      "display": "Atenção Básica"
     },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
-    "version": "1.1",
-    "name": "Modalidade Assistencial",
-    "status": "draft",
-    "experimental": false,
-    "date": "2020-03-11T18:16:19.9468275+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento",
-    "content": "complete",
-    "concept": [
-        {
-            "code": "01",
-            "display": "Atenção Básica"
-        },
-        {
-            "code": "02",
-            "display": "Atenção Domiciliar"
-        },
-        {
-            "code": "03",
-            "display": "Atenção Intermediária"
-        },
-        {
-            "code": "04",
-            "display": "Atenção Hospitalar"
-        },
-        {
-            "code": "05",
-            "display": "Atenção Psicossocial"
-        },
-        {
-            "code": "06",
-            "display": "Atenção à Urgência/Emergência"
-        },
-        {
-            "code": "07",
-            "display": "Ambulatorial Especializada"
-        },
-        {
-            "code": "08",
-            "display": "Assistência Farmacêutica"
-        },
-        {
-            "code": "09",
-            "display": "Assistência Ambulatorial"
-        }
-    ],
-    "id": "a895c4ff-0cbb-403f-975f-c793718bf011"
+    {
+      "code": "02",
+      "display": "Atenção Domiciliar"
+    },
+    {
+      "code": "03",
+      "display": "Atenção Intermediária"
+    },
+    {
+      "code": "04",
+      "display": "Atenção Hospitalar"
+    },
+    {
+      "code": "05",
+      "display": "Atenção Psicossocial"
+    },
+    {
+      "code": "06",
+      "display": "Atenção à Urgência/Emergência"
+    },
+    {
+      "code": "07",
+      "display": "Ambulatorial Especializada"
+    },
+    {
+      "code": "08",
+      "display": "Assistência Farmacêutica"
+    },
+    {
+      "code": "09",
+      "display": "Assistência Ambulatorial"
+    }
+  ],
+  "id": "BRModalidadeAssistencial"
 }

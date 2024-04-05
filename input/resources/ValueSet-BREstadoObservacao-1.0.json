@@ -1,35 +1,35 @@
 {
-    "resourceType": "ValueSet",
-    "meta": {
-        "lastUpdated": "2020-03-12T13:09:43.939+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoObservacao-1.0",
-    "version": "1.0",
-    "name": "Estado da Observação.",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-03-12T13:09:42.3921631+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Tipos de estados de uma observação.",
-    "immutable": false,
-    "compose": {
-        "include": [
-            {
-                "system": "http://hl7.org/fhir/observation-status",
-                "version": "*",
-                "concept": [
-                    {
-                        "code": "final",
-                        "display": "Concluída"
-                    },
-                    {
-                        "code": "entered-in-error",
-                        "display": "Cancelada por informação errada"
-                    }
-                ]
-            }
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-12T13:09:43.939+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoObservacao-1.0",
+  "version": "1.0",
+  "name": "Estado da Observação.",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-12T13:09:42.3921631+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Tipos de estados de uma observação.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/observation-status",
+        "version": "*",
+        "concept": [
+          {
+            "code": "final",
+            "display": "Concluída"
+          },
+          {
+            "code": "entered-in-error",
+            "display": "Cancelada por informação errada"
+          }
         ]
-    },
-    "id": "4cf9be42-aa2d-432f-a819-bca8b30eb195"
+      }
+    ]
+  },
+  "id": "BREstadoObservacao-1.0"
 }

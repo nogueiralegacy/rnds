@@ -1,88 +1,88 @@
 {
-    "resourceType": "StructureDefinition",
-    "meta": {
-        "lastUpdated": "2020-03-13T19:42:21.608+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMunicipio-1.0",
-    "version": "1.0",
-    "name": "BRMunicipio",
-    "title": "Município",
-    "status": "active",
-    "date": "2020-03-13T19:42:44.3852866+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Extensão para informar um município.",
-    "kind": "complex-type",
-    "abstract": false,
-    "context": [
-        {
-            "type": "element",
-            "expression": "Patient"
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "lastUpdated": "2020-03-13T19:42:21.608+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMunicipio-1.0",
+  "version": "1.0",
+  "name": "BRMunicipio",
+  "title": "Município",
+  "status": "active",
+  "date": "2020-03-13T19:42:44.3852866+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Extensão para informar um município.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Município",
+        "definition": "Informa o município."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMunicipio-1.0"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Município",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMunicipio-1.0"
         }
-    ],
-    "type": "Extension",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Extension",
-                "path": "Extension",
-                "short": "Município",
-                "definition": "Informa o município."
-            },
-            {
-                "id": "Extension.url",
-                "path": "Extension.url",
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMunicipio-1.0"
-            },
-            {
-                "id": "Extension.value[x]",
-                "path": "Extension.value[x]",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "binding": {
-                    "strength": "required",
-                    "description": "Município",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMunicipio-1.0"
-                }
-            },
-            {
-                "id": "Extension.value[x].coding",
-                "path": "Extension.value[x].coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Extension.value[x].coding.system",
-                "path": "Extension.value[x].coding.system",
-                "min": 1
-            },
-            {
-                "id": "Extension.value[x].coding.code",
-                "path": "Extension.value[x].coding.code",
-                "min": 1
-            },
-            {
-                "id": "Extension.value[x].coding.display",
-                "path": "Extension.value[x].coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Extension.value[x].coding.userSelected",
-                "path": "Extension.value[x].coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Extension.value[x].text",
-                "path": "Extension.value[x].text",
-                "max": "0"
-            }
-        ]
-    },
-    "id": "719f28b2-46fe-4c0e-9ec4-2b45a3f915fb"
+      },
+      {
+        "id": "Extension.value[x].coding",
+        "path": "Extension.value[x].coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.value[x].coding.system",
+        "path": "Extension.value[x].coding.system",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].coding.code",
+        "path": "Extension.value[x].coding.code",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].coding.display",
+        "path": "Extension.value[x].coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].coding.userSelected",
+        "path": "Extension.value[x].coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].text",
+        "path": "Extension.value[x].text",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRMunicipio-1.0"
 }

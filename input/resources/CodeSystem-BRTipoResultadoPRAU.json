@@ -1,31 +1,31 @@
 {
-    "resourceType": "CodeSystem",
-    "meta": {
-        "lastUpdated": "2020-03-26T13:16:11.587+00:00"
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-26T13:16:11.587+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoPRAU",
+  "version": "1.0",
+  "name": "Tipo de Resultado PRAU",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-26T13:16:09.8385573+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Code System utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo com o tipo de resultado PRAU.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Presença"
     },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoPRAU",
-    "version": "1.0",
-    "name": "Tipo de Resultado PRAU",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-03-26T13:16:09.8385573+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Code System utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo com o tipo de resultado PRAU.",
-    "content": "complete",
-    "concept": [
-        {
-            "code": "1",
-            "display": "Presença"
-        },
-        {
-            "code": "2",
-            "display": "Ausência"
-        },
-        {
-            "code": "3",
-            "display": "Inconclusivo"
-        }
-    ],
-    "id": "3bbc0e2f-2c01-46c8-afdd-7d1ebb9f2785"
+    {
+      "code": "2",
+      "display": "Ausência"
+    },
+    {
+      "code": "3",
+      "display": "Inconclusivo"
+    }
+  ],
+  "id": "BRTipoResultadoPRAU"
 }

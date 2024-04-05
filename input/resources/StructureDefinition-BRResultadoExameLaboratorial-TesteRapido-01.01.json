@@ -1,770 +1,770 @@
 {
-    "resourceType": "StructureDefinition",
-    "meta": {
-        "lastUpdated": "2020-04-29T19:58:25.704+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResultadoExameLaboratorial-TesteRapido-01.01",
-    "version": "01.01",
-    "name": "BRResultadoExameLaboratorialTesteRapido",
-    "title": "Resultado de Exame Laboratorial - Teste Rápido",
-    "status": "active",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Documento que apresenta resultados de exames laboratoriais de COVID-19, em testes rápidos.",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Composition",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Composition",
-                "path": "Composition",
-                "short": "Resultado de Exame Laboratorial",
-                "definition": "Documento que apresenta resultados de exames laboratoriais."
-            },
-            {
-                "id": "Composition.identifier",
-                "path": "Composition.identifier",
-                "max": "0"
-            },
-            {
-                "id": "Composition.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.status",
-                "short": "final | entered-in-error",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Estado do Documento",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"
-                }
-            },
-            {
-                "id": "Composition.type",
-                "path": "Composition.type",
-                "short": "Tipo de Documento",
-                "definition": "Especifica o tipo de documento que está sendo enviado na composição.",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Tipo de Documento",
-                    "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0"
-                }
-            },
-            {
-                "id": "Composition.type.coding",
-                "path": "Composition.type.coding",
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "Composition.type.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.type.coding.system",
-                "min": 1
-            },
-            {
-                "id": "Composition.type.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.type.coding.code",
-                "min": 1
-            },
-            {
-                "id": "Composition.type.coding.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.type.coding.display",
-                "max": "0"
-            },
-            {
-                "id": "Composition.type.coding.userSelected",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.type.coding.userSelected",
-                "max": "0"
-            },
-            {
-                "id": "Composition.type.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.type.text",
-                "max": "0"
-            },
-            {
-                "id": "Composition.category",
-                "path": "Composition.category",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject",
-                "path": "Composition.subject",
-                "short": "Sujeito da Composição",
-                "definition": "Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Composition.subject.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.subject.reference",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.subject.type",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject.identifier",
-                "path": "Composition.subject.identifier",
-                "min": 1
-            },
-            {
-                "id": "Composition.subject.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.subject.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject.identifier.type",
-                "path": "Composition.subject.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.subject.identifier.system",
-                "min": 1,
-                "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
-            },
-            {
-                "id": "Composition.subject.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.subject.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Composition.subject.identifier.period",
-                "path": "Composition.subject.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject.identifier.assigner",
-                "path": "Composition.subject.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Composition.subject.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.subject.display",
-                "max": "0"
-            },
-            {
-                "id": "Composition.encounter",
-                "path": "Composition.encounter",
-                "max": "0"
-            },
-            {
-                "id": "Composition.date",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.date",
-                "short": "Data e hora de Geração do Documento",
-                "definition": "Data e hora em que o documento foi gerado.",
-                "mustSupport": true
-            },
-            {
-                "id": "Composition.author",
-                "path": "Composition.author",
-                "short": "Responsável pelo Laudo",
-                "definition": "Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento.",
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0",
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Composition.author.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.author.reference",
-                "max": "0"
-            },
-            {
-                "id": "Composition.author.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.author.type",
-                "max": "0"
-            },
-            {
-                "id": "Composition.author.identifier",
-                "path": "Composition.author.identifier",
-                "min": 1
-            },
-            {
-                "id": "Composition.author.identifier.use",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.author.identifier.use",
-                "max": "0"
-            },
-            {
-                "id": "Composition.author.identifier.type",
-                "path": "Composition.author.identifier.type",
-                "max": "0"
-            },
-            {
-                "id": "Composition.author.identifier.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.author.identifier.system",
-                "definition": "Utilize http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 para Cadastro Nacional de Estabelecimentos de Saúde - CENS (preferencial).\r\nUtilize http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0 para Pessoa Jurídica (CNPJ) ou Profissional Liberal (CPF).",
-                "min": 1
-            },
-            {
-                "id": "Composition.author.identifier.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.author.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "Composition.author.identifier.period",
-                "path": "Composition.author.identifier.period",
-                "max": "0"
-            },
-            {
-                "id": "Composition.author.identifier.assigner",
-                "path": "Composition.author.identifier.assigner",
-                "max": "0"
-            },
-            {
-                "id": "Composition.author.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.author.display",
-                "max": "0"
-            },
-            {
-                "id": "Composition.title",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.title",
-                "short": "Título do Documento",
-                "definition": "Título do documento em linguagem humana.",
-                "fixedString": "Resultado de Exame Laboratorial - Teste Rapido",
-                "mustSupport": true
-            },
-            {
-                "id": "Composition.confidentiality",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.confidentiality",
-                "max": "0"
-            },
-            {
-                "id": "Composition.attester",
-                "path": "Composition.attester",
-                "max": "0"
-            },
-            {
-                "id": "Composition.custodian",
-                "path": "Composition.custodian",
-                "max": "0"
-            },
-            {
-                "id": "Composition.relatesTo",
-                "path": "Composition.relatesTo",
-                "short": "Relação a Outros Documentos",
-                "definition": "Indica uma relação entre esse documento e outro documento (ou composição) existente.",
-                "requirements": "Este elemento deve ser utilizado exclusivamente para indicar que este documento substitui (replaces) outro documento / composição; ou seja, é utilizado para cancelar o anterior e passar a considerar este no seu lugar. Este documento receberá um ID próprio; o documento anterior continuará disponível na RNDS e poderá ser recuperado integralmente por referência direta ao seu ID, garantindo a rastreabilidade do processo, mas não estará diretamente disponível na timeline do cidadão.",
-                "max": "1"
-            },
-            {
-                "id": "Composition.relatesTo.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.relatesTo.code",
-                "short": "Tipo de Relacionamento",
-                "definition": "Indica o tipo de relacionamento que este documento tem com o outro documento (composição).",
-                "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
-                "fixedCode": "replaces"
-            },
-            {
-                "id": "Composition.relatesTo.target[x]",
-                "path": "Composition.relatesTo.target[x]",
-                "short": "Documento a Ser Substituído",
-                "definition": "Referência ao documento anterior que este documento está substituindo.",
-                "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
-                "type": [
-                    {
-                        "code": "Reference"
-                    }
-                ]
-            },
-            {
-                "id": "Composition.relatesTo.target[x].id",
-                "path": "Composition.relatesTo.target[x].id",
-                "max": "0"
-            },
-            {
-                "id": "Composition.relatesTo.target[x].reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.relatesTo.target[x].reference",
-                "min": 1
-            },
-            {
-                "id": "Composition.relatesTo.target[x].type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.relatesTo.target[x].type",
-                "max": "0"
-            },
-            {
-                "id": "Composition.relatesTo.target[x].identifier",
-                "path": "Composition.relatesTo.target[x].identifier",
-                "max": "0"
-            },
-            {
-                "id": "Composition.relatesTo.target[x].display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.relatesTo.target[x].display",
-                "max": "0"
-            },
-            {
-                "id": "Composition.event",
-                "path": "Composition.event",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section",
-                "path": "Composition.section",
-                "short": "Seções do Documento",
-                "definition": "Referencia todas as seções (profiles/resources) contidos neste documento.",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "Composition.section.title",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.title",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.code",
-                "path": "Composition.section.code",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.author",
-                "path": "Composition.section.author",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.focus",
-                "path": "Composition.section.focus",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.text",
-                "path": "Composition.section.text",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.mode",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.mode",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.orderedBy",
-                "path": "Composition.section.orderedBy",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.entry",
-                "path": "Composition.section.entry",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoCOVID19-TesteRapido-01.01"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Composition.section.entry.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.entry.reference",
-                "min": 1
-            },
-            {
-                "id": "Composition.section.entry.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.entry.type",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.entry.identifier",
-                "path": "Composition.section.entry.identifier",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.entry.display",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.entry.display",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.emptyReason",
-                "path": "Composition.section.emptyReason",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section",
-                "path": "Composition.section.section",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.title",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.section.title",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.code",
-                "path": "Composition.section.section.code",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.author",
-                "path": "Composition.section.section.author",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.focus",
-                "path": "Composition.section.section.focus",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.text",
-                "path": "Composition.section.section.text",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.mode",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                        "valueCode": "normative"
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-                        "valueCode": "4.0.0"
-                    }
-                ],
-                "path": "Composition.section.section.mode",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.orderedBy",
-                "path": "Composition.section.section.orderedBy",
-                "max": "0"
-            },
-            {
-                "id": "Composition.section.section.emptyReason",
-                "path": "Composition.section.section.emptyReason",
-                "max": "0"
-            }
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "lastUpdated": "2020-04-29T19:58:25.704+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRResultadoExameLaboratorial-TesteRapido-01.01",
+  "version": "01.01",
+  "name": "BRResultadoExameLaboratorialTesteRapido",
+  "title": "Resultado de Exame Laboratorial - Teste Rápido",
+  "status": "active",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Documento que apresenta resultados de exames laboratoriais de COVID-19, em testes rápidos.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Resultado de Exame Laboratorial",
+        "definition": "Documento que apresenta resultados de exames laboratoriais."
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.status",
+        "short": "final | entered-in-error",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado do Documento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Tipo de Documento",
+        "definition": "Especifica o tipo de documento que está sendo enviado na composição.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Tipo de Documento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.type.coding.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.coding.userSelected",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "Sujeito da Composição",
+        "definition": "Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier",
+        "path": "Composition.subject.identifier",
+        "min": 1
+      },
+      {
+        "id": "Composition.subject.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.type",
+        "path": "Composition.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.subject.identifier.system",
+        "min": 1,
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+      },
+      {
+        "id": "Composition.subject.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.subject.identifier.period",
+        "path": "Composition.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.assigner",
+        "path": "Composition.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Composition.date",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.date",
+        "short": "Data e hora de Geração do Documento",
+        "definition": "Data e hora em que o documento foi gerado.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Responsável pelo Laudo",
+        "definition": "Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.author.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.author.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier",
+        "path": "Composition.author.identifier",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.author.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.type",
+        "path": "Composition.author.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.author.identifier.system",
+        "definition": "Utilize http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0 para Cadastro Nacional de Estabelecimentos de Saúde - CENS (preferencial).\r\nUtilize http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0 para Pessoa Jurídica (CNPJ) ou Profissional Liberal (CPF).",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.author.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.period",
+        "path": "Composition.author.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.assigner",
+        "path": "Composition.author.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.author.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.title",
+        "short": "Título do Documento",
+        "definition": "Título do documento em linguagem humana.",
+        "fixedString": "Resultado de Exame Laboratorial - Teste Rapido",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.confidentiality",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.confidentiality",
+        "max": "0"
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "max": "0"
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "short": "Relação a Outros Documentos",
+        "definition": "Indica uma relação entre esse documento e outro documento (ou composição) existente.",
+        "requirements": "Este elemento deve ser utilizado exclusivamente para indicar que este documento substitui (replaces) outro documento / composição; ou seja, é utilizado para cancelar o anterior e passar a considerar este no seu lugar. Este documento receberá um ID próprio; o documento anterior continuará disponível na RNDS e poderá ser recuperado integralmente por referência direta ao seu ID, garantindo a rastreabilidade do processo, mas não estará diretamente disponível na timeline do cidadão.",
+        "max": "1"
+      },
+      {
+        "id": "Composition.relatesTo.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.relatesTo.code",
+        "short": "Tipo de Relacionamento",
+        "definition": "Indica o tipo de relacionamento que este documento tem com o outro documento (composição).",
+        "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
+        "fixedCode": "replaces"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]",
+        "path": "Composition.relatesTo.target[x]",
+        "short": "Documento a Ser Substituído",
+        "definition": "Referência ao documento anterior que este documento está substituindo.",
+        "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
+        "type": [
+          {
+            "code": "Reference"
+          }
         ]
-    },
-    "id": "628b6699-d199-46c5-b67e-efbd636a9263"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].id",
+        "path": "Composition.relatesTo.target[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.relatesTo.target[x].reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.relatesTo.target[x].type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.relatesTo.target[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].identifier",
+        "path": "Composition.relatesTo.target[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.relatesTo.target[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "short": "Seções do Documento",
+        "definition": "Referencia todas as seções (profiles/resources) contidos neste documento.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.code",
+        "path": "Composition.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.mode",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRDiagnosticoCOVID19-TesteRapido-01.01"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section.entry.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.entry.reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.section.entry.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.code",
+        "path": "Composition.section.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.author",
+        "path": "Composition.section.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.focus",
+        "path": "Composition.section.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.text",
+        "path": "Composition.section.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.mode",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Composition.section.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.orderedBy",
+        "path": "Composition.section.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section.emptyReason",
+        "path": "Composition.section.section.emptyReason",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRResultadoExameLaboratorial-TesteRapido-01.01"
 }

@@ -1,31 +1,31 @@
 {
-    "resourceType": "CodeSystem",
-    "meta": {
-        "lastUpdated": "2020-03-26T13:16:11.587+00:00"
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-03-26T13:16:11.587+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoRSCUL",
+  "version": "1.0",
+  "name": "Tipo de Resultado RSCUL",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-26T13:16:09.8385573+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Code System utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo com o tipo de resultado RSCUL.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Não houve crescimento"
     },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoRSCUL",
-    "version": "1.0",
-    "name": "Tipo de Resultado RSCUL",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-03-26T13:16:09.8385573+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Code System utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo com o tipo de resultado RSCUL.",
-    "content": "complete",
-    "concept": [
-        {
-            "code": "1",
-            "display": "Não houve crescimento"
-        },
-        {
-            "code": "2",
-            "display": "Houve crescimento"
-        },
-        {
-            "code": "3",
-            "display": "Inconclusivo"
-        }
-    ],
-    "id": "b57415b1-d9f0-48ec-8a96-c9b7207ffdcf"
+    {
+      "code": "2",
+      "display": "Houve crescimento"
+    },
+    {
+      "code": "3",
+      "display": "Inconclusivo"
+    }
+  ],
+  "id": "BRTipoResultadoRSCUL"
 }

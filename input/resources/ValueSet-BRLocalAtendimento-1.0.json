@@ -1,26 +1,26 @@
 {
-    "resourceType": "ValueSet",
-    "id": "99959c68-c939-47a5-a94e-d205dcf7c397",
-    "meta": {
-        "versionId": "1",
-        "lastUpdated": "2020-09-17T18:38:48.188+00:00"
-    },
-    "language": "pt-BR",
-    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRLocalAtendimento-1.0",
-    "version": "1.0",
-    "name": "Local de Atendimento (canônico)",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-09-17T18:38:53.4321084+00:00",
-    "publisher": "Ministério da Saúde do Brasil",
-    "description": "Classifica de forma genérica o local onde o atendimento ocorreu.",
-    "immutable": false,
-    "compose": {
-        "include": [
-            {
-                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRLocalAtendimento",
-                "version": "*"
-            }
-        ]
-    }
+  "resourceType": "ValueSet",
+  "id": "BRLocalAtendimento-1.0",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-17T18:38:48.188+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRLocalAtendimento-1.0",
+  "version": "1.0",
+  "name": "Local de Atendimento (canônico)",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-09-17T18:38:53.4321084+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica de forma genérica o local onde o atendimento ocorreu.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRLocalAtendimento",
+        "version": "*"
+      }
+    ]
+  }
 }
