@@ -21,13 +21,7 @@
     },
     {
       "code": "000102",
-      "display": "Neoplasias",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Neoplasias"
     },
     {
       "code": "000103",
@@ -43,13 +37,7 @@
     },
     {
       "code": "000106",
-      "display": "Doenças Cardiovasculares e Cerebrovasculares",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Doenças Cardiovasculares e Cerebrovasculares"
     },
     {
       "code": "000107",
@@ -57,13 +45,7 @@
     },
     {
       "code": "000108",
-      "display": "Indivíduos Transplantados de Órgão Sólido",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Indivíduos Transplantados de Órgão Sólido"
     },
     {
       "code": "000109",
@@ -75,23 +57,11 @@
     },
     {
       "code": "000111",
-      "display": "Outros Imunocomprometidos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Outros Imunocomprometidos"
     },
     {
       "code": "000112",
-      "display": "Indivíduos Transplantados de Medula Óssea",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Indivíduos Transplantados de Medula Óssea"
     },
     {
       "code": "000114",
@@ -115,93 +85,39 @@
     },
     {
       "code": "000201",
-      "display": "Pessoas de 18 a 64 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 18 a 64 anos"
     },
     {
       "code": "000202",
-      "display": "Pessoas de 65 a 69 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 65 a 69 anos"
     },
     {
       "code": "000203",
-      "display": "Pessoas de 70 a 74 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 70 a 74 anos"
     },
     {
       "code": "000204",
-      "display": "Pessoas de 75 a 79 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 75 a 79 anos"
     },
     {
       "code": "000205",
-      "display": "Pessoas de 80 anos ou mais",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 80 anos ou mais"
     },
     {
       "code": "000206",
-      "display": "Pessoas de 12 a 17 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 12 a 17 anos"
     },
     {
       "code": "000207",
-      "display": "Pessoas de 5 a 11 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 5 a 11 anos"
     },
     {
       "code": "000208",
-      "display": "Pessoas de 3 a 4 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 3 a 4 anos"
     },
     {
       "code": "000209",
-      "display": "Pessoas de 6 meses a 2 anos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 6 meses a 2 anos"
     },
     {
       "code": "000210",
@@ -209,13 +125,7 @@
     },
     {
       "code": "000301",
-      "display": "Pessoas de 60 nos ou mais Institucionalizadas",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Pessoas de 60 nos ou mais Institucionalizadas"
     },
     {
       "code": "000302",
@@ -271,43 +181,19 @@
     },
     {
       "code": "000603",
-      "display": "Crianças Quilombolas",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Crianças Quilombolas"
     },
     {
       "code": "000604",
-      "display": "Crianças Ribeirinhas",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Crianças Ribeirinhas"
     },
     {
       "code": "000701",
-      "display": "Povos indígenas em terras indígenas",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Povos indígenas em terras indígenas"
     },
     {
       "code": "000702",
-      "display": "Crianças Indígenas",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Crianças Indígenas"
     },
     {
       "code": "000703",
@@ -527,13 +413,7 @@
     },
     {
       "code": "999999",
-      "display": "Outros Grupos",
-      "property": [
-        {
-          "code": "inactive",
-          "valueBoolean": true
-        }
-      ]
+      "display": "Outros Grupos"
     }
   ],
   "id": "BRGrupoAtendimento"

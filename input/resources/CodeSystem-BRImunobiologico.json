@@ -102,13 +102,7 @@
     {
       "code": "18",
       "display": "VR",
-      "definition": "Vacina raiva embrião de galinha",
-      "property": [
-        {
-          "code": "inativo",
-          "valueBoolean": true
-        }
-      ]
+      "definition": "Vacina raiva embrião de galinha"
     },
     {
       "code": "19",
@@ -573,12 +567,6 @@
           "language": "es",
           "value": "XM9QW8 Vacuna COVID-19, vector viral no replicante"
         }
-      ],
-      "property": [
-        {
-          "code": "inativo",
-          "valueBoolean": true
-        }
       ]
     },
     {
@@ -594,12 +582,6 @@
           "language": "es",
           "value": "XM1NL1 Vacuna COVID-19, virus inactivado"
         }
-      ],
-      "property": [
-        {
-          "code": "inativo",
-          "valueBoolean": true
-        }
       ]
     },
     {
@@ -614,12 +596,6 @@
         {
           "language": "es",
           "value": "XM0GQ8 Vacuna COVID-19, basada en ARN"
-        }
-      ],
-      "property": [
-        {
-          "code": "inativo",
-          "valueBoolean": true
         }
       ]
     },
