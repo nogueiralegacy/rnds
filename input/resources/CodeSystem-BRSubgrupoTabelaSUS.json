@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "BRSubgrupoTabelaSUS",
   "meta": {
-    "lastUpdated": "2022-10-07T17:23:44.690977+00:00"
+      "lastUpdated": "2022-10-07T17:23:44.690977+00:00"
   },
   "language": "pt-BR",
   "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRSubgrupoTabelaSUS",
@@ -14,242 +14,601 @@
   "publisher": "Ministério da Saúde do Brasil",
   "description": "O subgrupo é o segundo nível da hierarquia da Tabela SUS e seus códigos ajudam a classificar e localizar procedimentos.",
   "content": "complete",
+  "property" : [{
+    "code" : "group",
+    "description" : "Grupo",
+    "type" : "code"
+  }],
   "concept": [
-    {
-      "code": "0101",
-      "display": "Ações coletivas/individuais em saúde"
-    },
-    {
-      "code": "0102",
-      "display": "Vigilância em saúde"
-    },
-    {
-      "code": "0201",
-      "display": "Coleta de material"
-    },
-    {
-      "code": "0202",
-      "display": "Diagnóstico em laboratório clínico"
-    },
-    {
-      "code": "0203",
-      "display": "Diagnóstico por anatomia patológica e citopatologia"
-    },
-    {
-      "code": "0204",
-      "display": "Diagnóstico por radiologia"
-    },
-    {
-      "code": "0205",
-      "display": "Diagnóstico por ultrasonografia"
-    },
-    {
-      "code": "0206",
-      "display": "Diagnóstico por tomografia"
-    },
-    {
-      "code": "0207",
-      "display": "Diagnóstico por ressonância magnética"
-    },
-    {
-      "code": "0208",
-      "display": "Diagnóstico por medicina nuclear in vivo"
-    },
-    {
-      "code": "0209",
-      "display": "Diagnóstico por endoscopia"
-    },
-    {
-      "code": "0210",
-      "display": "Diagnóstico por radiologia intervencionista"
-    },
-    {
-      "code": "0211",
-      "display": "Métodos diagnósticos em especialidades"
-    },
-    {
-      "code": "0212",
-      "display": "Diagnóstico e procedimentos especiais em hemoterapia"
-    },
-    {
-      "code": "0213",
-      "display": "Diagnóstico em vigilância epidemiológica e ambiental"
-    },
-    {
-      "code": "0214",
-      "display": "Diagnóstico por teste rápido"
-    },
-    {
-      "code": "0301",
-      "display": "Consultas / Atendimentos / Acompanhamentos"
-    },
-    {
-      "code": "0302",
-      "display": "Fisioterapia"
-    },
-    {
-      "code": "0303",
-      "display": "Tratamentos clínicos (outras especialidades)"
-    },
-    {
-      "code": "0304",
-      "display": "Tratamento em oncologia"
-    },
-    {
-      "code": "0305",
-      "display": "Tratamento em nefrologia"
-    },
-    {
-      "code": "0306",
-      "display": "Hemoterapia"
-    },
-    {
-      "code": "0307",
-      "display": "Tratamentos odontológicos"
-    },
-    {
-      "code": "0308",
-      "display": "Tratamento de lesões, envenenamentos e outros, decorrentes de causas externas"
-    },
-    {
-      "code": "0309",
-      "display": "Terapias especializadas"
-    },
-    {
-      "code": "0310",
-      "display": "Parto e nascimento"
-    },
-    {
-      "code": "0401",
-      "display": "Pequenas cirurgias e cirurgias de pele, tecido subcutâneo e mucosa"
-    },
-    {
-      "code": "0402",
-      "display": "Cirurgia de glândulas endócrinas"
-    },
-    {
-      "code": "0403",
-      "display": "Cirurgia do sistema nervoso central e periférico"
-    },
-    {
-      "code": "0404",
-      "display": "Cirurgia das vias aéreas superiores, da face, da cabeça e do pescoço"
-    },
-    {
-      "code": "0405",
-      "display": "Cirurgia do aparelho da visão"
-    },
-    {
-      "code": "0406",
-      "display": "Cirurgia do aparelho circulatório"
-    },
-    {
-      "code": "0407",
-      "display": "Cirurgia do aparelho digestivo, orgãos anexos e parede abdominal"
-    },
-    {
-      "code": "0408",
-      "display": "Cirurgia do sistema osteomuscular"
-    },
-    {
-      "code": "0409",
-      "display": "Cirurgia do aparelho geniturinário"
-    },
-    {
-      "code": "0410",
-      "display": "Cirurgia de mama"
-    },
-    {
-      "code": "0411",
-      "display": "Cirurgia obstétrica"
-    },
-    {
-      "code": "0412",
-      "display": "Cirurgia torácica"
-    },
-    {
-      "code": "0413",
-      "display": "Cirurgia reparadora"
-    },
-    {
-      "code": "0414",
-      "display": "Bucomaxilofacial"
-    },
-    {
-      "code": "0415",
-      "display": "Outras cirurgias"
-    },
-    {
-      "code": "0416",
-      "display": "Cirurgia em oncologia"
-    },
-    {
-      "code": "0417",
-      "display": "Anestesiologia"
-    },
-    {
-      "code": "0418",
-      "display": "Cirurgia em nefrologia"
-    },
-    {
-      "code": "0501",
-      "display": "Coleta e exames para fins de doação de orgãos, tecidos e células e de transplante"
-    },
-    {
-      "code": "0502",
-      "display": "Avaliação de morte encefálica"
-    },
-    {
-      "code": "0503",
-      "display": "Ações relacionadas à doação de orgãos e tecidos para transplante"
-    },
-    {
-      "code": "0504",
-      "display": "Processamento de tecidos para transplante"
-    },
-    {
-      "code": "0505",
-      "display": "Transplante de orgãos, tecidos e células"
-    },
-    {
-      "code": "0506",
-      "display": "Acompanhamento e intercorrências no pré e pós-transplante"
-    },
-    {
-      "code": "0601",
-      "display": "Medicamentos de dispensação excepcional"
-    },
-    {
-      "code": "0602",
-      "display": "Medicamentos estratégicos"
-    },
-    {
-      "code": "0603",
-      "display": "Medicamentos de âmbito hospitalar e urgência"
-    },
-    {
-      "code": "0604",
-      "display": "Componente Especializado da Assitencia Farmaceutica"
-    },
-    {
-      "code": "0701",
-      "display": "Órteses, próteses e materiais especiais não relacionados ao ato cirúrgico"
-    },
-    {
-      "code": "0702",
-      "display": "Órteses, próteses e materiais especiais relacionados ao ato cirúrgico"
-    },
-    {
-      "code": "0801",
-      "display": "Ações relacionadas ao estabelecimento"
-    },
-    {
-      "code": "0802",
-      "display": "Ações relacionadas ao atendimento"
-    },
-    {
-      "code": "0803",
-      "display": "Autorização / Regulação"
-    }
+      {
+          "code": "0101",
+          "display": "Ações coletivas/individuais em saúde",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "01"
+              }
+          ]
+      },
+      {
+          "code": "0102",
+          "display": "Vigilância em saúde",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "01"
+              }
+          ]
+      },
+      {
+          "code": "0201",
+          "display": "Coleta de material",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0202",
+          "display": "Diagnóstico em laboratório clínico",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0203",
+          "display": "Diagnóstico por anatomia patológica e citopatologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0204",
+          "display": "Diagnóstico por radiologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0205",
+          "display": "Diagnóstico por ultrasonografia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0206",
+          "display": "Diagnóstico por tomografia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0207",
+          "display": "Diagnóstico por ressonância magnética",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0208",
+          "display": "Diagnóstico por medicina nuclear in vivo",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0209",
+          "display": "Diagnóstico por endoscopia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0210",
+          "display": "Diagnóstico por radiologia intervencionista",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0211",
+          "display": "Métodos diagnósticos em especialidades",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0212",
+          "display": "Diagnóstico e procedimentos especiais em hemoterapia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0213",
+          "display": "Diagnóstico em vigilância epidemiológica e ambiental",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0214",
+          "display": "Diagnóstico por teste rápido",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "02"
+              }
+          ]
+      },
+      {
+          "code": "0301",
+          "display": "Consultas / Atendimentos / Acompanhamentos",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0302",
+          "display": "Fisioterapia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0303",
+          "display": "Tratamentos clínicos (outras especialidades)",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0304",
+          "display": "Tratamento em oncologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0305",
+          "display": "Tratamento em nefrologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0306",
+          "display": "Hemoterapia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0307",
+          "display": "Tratamentos odontológicos",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0308",
+          "display": "Tratamento de lesões, envenenamentos e outros, decorrentes de causas externas",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0309",
+          "display": "Terapias especializadas",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0310",
+          "display": "Parto e nascimento",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "03"
+              }
+          ]
+      },
+      {
+          "code": "0401",
+          "display": "Pequenas cirurgias e cirurgias de pele, tecido subcutâneo e mucosa",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0402",
+          "display": "Cirurgia de glândulas endócrinas",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0403",
+          "display": "Cirurgia do sistema nervoso central e periférico",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0404",
+          "display": "Cirurgia das vias aéreas superiores, da face, da cabeça e do pescoço",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0405",
+          "display": "Cirurgia do aparelho da visão",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0406",
+          "display": "Cirurgia do aparelho circulatório",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0407",
+          "display": "Cirurgia do aparelho digestivo, orgãos anexos e parede abdominal",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0408",
+          "display": "Cirurgia do sistema osteomuscular",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0409",
+          "display": "Cirurgia do aparelho geniturinário",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0410",
+          "display": "Cirurgia de mama",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0411",
+          "display": "Cirurgia obstétrica",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0412",
+          "display": "Cirurgia torácica",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0413",
+          "display": "Cirurgia reparadora",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0414",
+          "display": "Bucomaxilofacial",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0415",
+          "display": "Outras cirurgias",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0416",
+          "display": "Cirurgia em oncologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0417",
+          "display": "Anestesiologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0418",
+          "display": "Cirurgia em nefrologia",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "04"
+              }
+          ]
+      },
+      {
+          "code": "0501",
+          "display": "Coleta e exames para fins de doação de orgãos, tecidos e células e de transplante",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "05"
+              }
+          ]
+      },
+      {
+          "code": "0502",
+          "display": "Avaliação de morte encefálica",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "05"
+              }
+          ]
+      },
+      {
+          "code": "0503",
+          "display": "Ações relacionadas à doação de orgãos e tecidos para transplante",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "05"
+              }
+          ]
+      },
+      {
+          "code": "0504",
+          "display": "Processamento de tecidos para transplante",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "05"
+              }
+          ]
+      },
+      {
+          "code": "0505",
+          "display": "Transplante de orgãos, tecidos e células",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "05"
+              }
+          ]
+      },
+      {
+          "code": "0506",
+          "display": "Acompanhamento e intercorrências no pré e pós-transplante",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "05"
+              }
+          ]
+      },
+      {
+          "code": "0601",
+          "display": "Medicamentos de dispensação excepcional",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "06"
+              }
+          ]
+      },
+      {
+          "code": "0602",
+          "display": "Medicamentos estratégicos",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "06"
+              }
+          ]
+      },
+      {
+          "code": "0603",
+          "display": "Medicamentos de âmbito hospitalar e urgência",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "06"
+              }
+          ]
+      },
+      {
+          "code": "0604",
+          "display": "Componente Especializado da Assitencia Farmaceutica",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "06"
+              }
+          ]
+      },
+      {
+          "code": "0701",
+          "display": "Órteses, próteses e materiais especiais não relacionados ao ato cirúrgico",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "07"
+              }
+          ]
+      },
+      {
+          "code": "0702",
+          "display": "Órteses, próteses e materiais especiais relacionados ao ato cirúrgico",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "07"
+              }
+          ]
+      },
+      {
+          "code": "0801",
+          "display": "Ações relacionadas ao estabelecimento",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "08"
+              }
+          ]
+      },
+      {
+          "code": "0802",
+          "display": "Ações relacionadas ao atendimento",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "08"
+              }
+          ]
+      },
+      {
+          "code": "0803",
+          "display": "Autorização / Regulação",
+          "property": [
+              {
+                  "code": "group",
+                  "valueCode": "08"
+              }
+          ]
+      }
   ]
 }
