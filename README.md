@@ -51,7 +51,7 @@ Mudanças foram feitas nos arquivos disponibilizados pela RNDS no [simplifier](h
 | ValueSet | ValueSet-BREstadoDocumento-1.0 | O elemento "name" tem o mesmo valor que a instância http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0, comprometendo o utilização de ferramentas externas | Trocando o valor do elemento "name" para "Estado do Documento", essa alteração não acarreta em prejuízos |
 | ValueSet | ValueSet-BRNomeExameTRCOVID19LOINC-1.0 | O elemento "name" tem o mesmo valor que a instância http://www.saude.gov.br/fhir/r4/ValueSet/BRNomeExame-2.0, comprometendo o utilização de ferramentas externas | Trocando o valor do elemento "name" para "Nome do Exame TR COVID-19 LOINC", essa alteração não acarreta em prejuízos |
 | StructureDefinition | StructureDefinition-BRProcedimentoRealizado-1.0 | licing declarado de forma inadequada no elemento "performer". | Foi acrescentado o discriminator no elemento "performer". |
-
+| CodeSystem | CodeSystem-BRAlergenosCBARA.json,  CodeSystem-BRGrupoAtendimento.json, CodeSystem-BRImunobiologico.json, CodeSystem-BRSubgrupoTabelaSUS.json | Elemento "property" implantado de forma incorreta. | Uso adequado do elemento "property".| 
 ## Desenvolvedores FHIR
 
 Os passos abaixo dependem dos aplicativos **hapi-fhir-cli.jar** disponível em https://github.com/hapifhir/hapi-fhir/releases e **fhir** disponível em 
