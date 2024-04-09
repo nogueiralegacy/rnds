@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2022-05-23T11:15:35.881+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRPosicaoIndividuo",
+  "version": "01.00",
+  "name": "Posição do Indivíduo",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-05-23T11:15:35.881+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "ValueSet utilizado para identificar a posição do indivíduo no momento da ação / procedimento.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPosicaoIndividuo",
+        "version": "*"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "*",
+        "concept": [
+          {
+            "code": "LA11868-9",
+            "display": "Sentado"
+          },
+          {
+            "code": "LA11869-7",
+            "display": "Deitado"
+          },
+          {
+            "code": "LA11870-5",
+            "display": "De pé"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "BRPosicaoIndividuo"
+}

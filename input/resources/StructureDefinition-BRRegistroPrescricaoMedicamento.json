@@ -1,0 +1,273 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegistroPrescricaoMedicamento",
+  "version": "01.00",
+  "name": "BRRegistroPrescricaoMedicamento",
+  "title": "Registro de Prescrição de Medicamento",
+  "status": "draft",
+  "description": "Modelo que gera o documento de Registro de Prescrição de Medicamento",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Modelo que gera o documento de Registro de Prescrição de Medicamento"
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Tipo de documento",
+        "definition": "Especifica o tipo de documento que está sendo enviado na composição.",
+        "binding": {
+          "strength": "required",
+          "description": "Tipo de documentos.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "min": 1,
+        "fixedCode": "RPM"
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.coding.userSelected",
+        "path": "Composition.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.text",
+        "path": "Composition.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "Sujeito da prescrição",
+        "definition": "Quem ou o quê a prescrição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.subject.reference",
+        "path": "Composition.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.type",
+        "path": "Composition.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.display",
+        "path": "Composition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "short": "Data e hora em que o medicamento foi prescrito.",
+        "definition": "Data e hora da prescrição."
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Responsável por gerar o documento.",
+        "definition": "Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.type",
+        "path": "Composition.author.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier",
+        "path": "Composition.author.identifier",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.display",
+        "path": "Composition.author.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Título do documento",
+        "definition": "Título do documento."
+      },
+      {
+        "id": "Composition.confidentiality",
+        "path": "Composition.confidentiality",
+        "max": "0"
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "max": "0"
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "short": "Relação a Outros Documentos",
+        "definition": "Indica uma relação entre esse documento e outro documento (ou composição) existente."
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "short": "Seções do documento",
+        "definition": "Referencia todas as seções (profiles/resources) contidos neste documento.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.section.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.code",
+        "path": "Composition.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPrescricaoMedicamento",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedicamento"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.section.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRRegistroPrescricaoMedicamento"
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRProcedimentosNacionais-1.0",
+  "meta": {
+    "lastUpdated": "2020-04-07T18:23:28.563+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0",
+  "version": "1.0",
+  "name": "Procedimento realizado",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-04-07T18:23:26.5540616+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Value Set das classificações brasileiras para procedimentos adotadas em contexto nacional, os codesystems apresentam os códigos da competência atual, para o envio de competência anterior os códigos devem ser consultados na RTS",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
+        "version": "*"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
+        "version": "*"
+      }
+    ]
+  }
+}

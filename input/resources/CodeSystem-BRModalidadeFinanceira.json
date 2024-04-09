@@ -1,0 +1,27 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2022-01-21T14:38:40.0457007+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeFinanceira",
+  "version": "01.10",
+  "name": "Modalidade Financeira",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-01-21T14:38:40.0457007+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Códigos para representação de qual modalidade de estabelecimento ou financiamento que a dispensação está sendo realizada.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "01",
+      "display": "Unidade de saúde pública ou privada, com pagamento pelo SUS"
+    },
+    {
+      "code": "02",
+      "display": "Drogaria comercial, com pagamento (gratuidade de copagamento) pelo Programa Farmácia Popular do Brasil"
+    }
+  ],
+  "id": "BRModalidadeFinanceira"
+}

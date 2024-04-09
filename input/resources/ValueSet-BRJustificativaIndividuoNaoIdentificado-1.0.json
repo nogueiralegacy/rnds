@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRJustificativaIndividuoNaoIdentificado-1.0",
+  "meta": {
+    "lastUpdated": "2020-04-07T20:51:20.256+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRJustificativaIndividuoNaoIdentificado-1.0",
+  "version": "1.0",
+  "name": "Justificativa da Impossibilidade de Identificação do Indivíduo",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-04-07T20:51:17.5349531+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica as razões pelo qual não foi possível obter os dados de identificação do indivíduo em um contato assistencial. (Port. nº 84/SAS/MS/1997 e Port. nº02/SAS/SGEP/MS/2012)",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRJustificativaIndividuoNaoIdentificado",
+        "version": "*"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "lastUpdated": "2020-03-13T18:10:36.355+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacao-1.0",
+  "version": "1.0",
+  "name": "BREstrategiaVacinacao",
+  "title": "Estratégia de Vacinação",
+  "status": "active",
+  "date": "2020-03-13T18:10:59.8218584+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Identifica a estratégia de vacinação adotada.",
+  "purpose": "Informação sobre o tipo de estratégia referente ao imunobiológico administrado.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Immunization.protocolApplied"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Estratégia de Vacinação",
+        "definition": "Identifica a estratégia de vacinação adotada."
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacao-1.0"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Estratégia de Vacinação",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstrategiaVacinacao-1.0"
+        }
+      },
+      {
+        "id": "Extension.value[x].coding",
+        "path": "Extension.value[x].coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.value[x].coding.system",
+        "path": "Extension.value[x].coding.system",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].coding.code",
+        "path": "Extension.value[x].coding.code",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].coding.display",
+        "path": "Extension.value[x].coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].coding.userSelected",
+        "path": "Extension.value[x].coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].text",
+        "path": "Extension.value[x].text",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BREstrategiaVacinacao-1.0"
+}

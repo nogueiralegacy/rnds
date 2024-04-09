@@ -1,0 +1,545 @@
+{
+  "resourceType": "CodeSystem",
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRGrupoAtendimento",
+  "version": "3.0",
+  "name": "Grupo de Atendimento",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-08-20T14:59:27.326+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Domínio que identifica o tipo de grupo de atendimento que o indivíduo apresentou para a vacinação em campanha.",
+  "content": "complete",
+  "property" : [{
+    "code" : "inactive",
+    "description" : "Inativo",
+    "type" : "boolean"
+  }],
+  "concept": [
+      {
+          "code": "00",
+          "display": "Sem registro no modelo de informação de origem"
+      },
+      {
+          "code": "000101",
+          "display": "Hemoglobinopatia grave"
+      },
+      {
+          "code": "000102",
+          "display": "Neoplasias",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000103",
+          "display": "Diabetes Mellitus"
+      },
+      {
+          "code": "000104",
+          "display": "Pneumopatias Crônicas Graves"
+      },
+      {
+          "code": "000105",
+          "display": "Doença Renal Crônica"
+      },
+      {
+          "code": "000106",
+          "display": "Doenças Cardiovasculares e Cerebrovasculares",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000107",
+          "display": "Hipertensão de difícil controle ou com complicações/lesão de órgão alvo"
+      },
+      {
+          "code": "000108",
+          "display": "Indivíduos Transplantados de Órgão Sólido",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000109",
+          "display": "Obesidade Grave (Imc≥40)"
+      },
+      {
+          "code": "000110",
+          "display": "Síndrome de Down"
+      },
+      {
+          "code": "000111",
+          "display": "Outros Imunocomprometidos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000112",
+          "display": "Indivíduos Transplantados de Medula Óssea",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000114",
+          "display": "Cirrose hepática"
+      },
+      {
+          "code": "000115",
+          "display": "Doença neurológica crônica"
+      },
+      {
+          "code": "000116",
+          "display": "Doença cardiovascular"
+      },
+      {
+          "code": "000117",
+          "display": "Imunocomprometidos"
+      },
+      {
+          "code": "000118",
+          "display": "Trissomias"
+      },
+      {
+          "code": "000201",
+          "display": "Pessoas de 18 a 64 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000202",
+          "display": "Pessoas de 65 a 69 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000203",
+          "display": "Pessoas de 70 a 74 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000204",
+          "display": "Pessoas de 75 a 79 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000205",
+          "display": "Pessoas de 80 anos ou mais",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000206",
+          "display": "Pessoas de 12 a 17 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000207",
+          "display": "Pessoas de 5 a 11 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000208",
+          "display": "Pessoas de 3 a 4 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000209",
+          "display": "Pessoas de 6 meses a 2 anos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000210",
+          "display": "Faixa Etária"
+      },
+      {
+          "code": "000301",
+          "display": "Pessoas de 60 nos ou mais Institucionalizadas",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000302",
+          "display": "Pessoas Institucionalizadas"
+      },
+      {
+          "code": "000401",
+          "display": "Marinha do Brasil - MB"
+      },
+      {
+          "code": "000402",
+          "display": "Exército Brasileiro - EB"
+      },
+      {
+          "code": "000403",
+          "display": "Força Aérea Brasileira - FAB"
+      },
+      {
+          "code": "000501",
+          "display": "Bombeiro Civil"
+      },
+      {
+          "code": "000502",
+          "display": "Bombeiro Militar"
+      },
+      {
+          "code": "000503",
+          "display": "Guarda Municipal"
+      },
+      {
+          "code": "000504",
+          "display": "Policial Rodoviário Federal"
+      },
+      {
+          "code": "000505",
+          "display": "Policial Civil"
+      },
+      {
+          "code": "000506",
+          "display": "Policial Federal"
+      },
+      {
+          "code": "000507",
+          "display": "Policial Militar"
+      },
+      {
+          "code": "000601",
+          "display": "Quilombola"
+      },
+      {
+          "code": "000602",
+          "display": "Ribeirinha"
+      },
+      {
+          "code": "000603",
+          "display": "Crianças Quilombolas",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000604",
+          "display": "Crianças Ribeirinhas",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000701",
+          "display": "Povos indígenas em terras indígenas",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000702",
+          "display": "Crianças Indígenas",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "000703",
+          "display": "Povos indígenas vivendo em terras indígenas"
+      },
+      {
+          "code": "000704",
+          "display": "Povos indígenas vivendo fora das terras indígenas"
+      },
+      {
+          "code": "000801",
+          "display": "Ensino Básico"
+      },
+      {
+          "code": "000802",
+          "display": "Ensino Superior"
+      },
+      {
+          "code": "000901",
+          "display": "Auxiliar de Veterinário"
+      },
+      {
+          "code": "000902",
+          "display": "Biólogo"
+      },
+      {
+          "code": "000903",
+          "display": "Biomédico"
+      },
+      {
+          "code": "000904",
+          "display": "Cozinheiro e Auxiliares"
+      },
+      {
+          "code": "000905",
+          "display": "Cuidador de Idosos"
+      },
+      {
+          "code": "000906",
+          "display": "Doula/Parteira"
+      },
+      {
+          "code": "000907",
+          "display": "Enfermeiro(a)"
+      },
+      {
+          "code": "000908",
+          "display": "Farmacêutico"
+      },
+      {
+          "code": "000909",
+          "display": "Fisioterapeutas"
+      },
+      {
+          "code": "000910",
+          "display": "Fonoaudiólogo"
+      },
+      {
+          "code": "000911",
+          "display": "Funcionário do Sistema Funerário que tenham contato com cadáveres potencialmente contaminados"
+      },
+      {
+          "code": "000912",
+          "display": "Médico"
+      },
+      {
+          "code": "000913",
+          "display": "Médico Veterinário"
+      },
+      {
+          "code": "000914",
+          "display": "Motorista de Ambulância"
+      },
+      {
+          "code": "000915",
+          "display": "Nutricionista"
+      },
+      {
+          "code": "000916",
+          "display": "Odontologista"
+      },
+      {
+          "code": "000917",
+          "display": "Profissionais e Auxiliares de limpeza"
+      },
+      {
+          "code": "000918",
+          "display": "Profissionais de Educação Física"
+      },
+      {
+          "code": "000919",
+          "display": "Psicólogo"
+      },
+      {
+          "code": "000920",
+          "display": "Recepcionista"
+      },
+      {
+          "code": "000921",
+          "display": "Segurança"
+      },
+      {
+          "code": "000922",
+          "display": "Assistente Social"
+      },
+      {
+          "code": "000923",
+          "display": "Técnico de Enfermagem"
+      },
+      {
+          "code": "000924",
+          "display": "Técnico de Veterinário"
+      },
+      {
+          "code": "000925",
+          "display": "Terapeuta Ocupacional"
+      },
+      {
+          "code": "000926",
+          "display": "Outros"
+      },
+      {
+          "code": "000927",
+          "display": "Auxiliar de Enfermagem"
+      },
+      {
+          "code": "000928",
+          "display": "Técnico de Odontologia"
+      },
+      {
+          "code": "000929",
+          "display": "Acadêmicos/estudantes em estágio em estabelecimentos de saúde"
+      },
+      {
+          "code": "000930",
+          "display": "Agente de Combate a Endemias - ACE"
+      },
+      {
+          "code": "000931",
+          "display": "Agente Comunitário de Saúde - ACS"
+      },
+      {
+          "code": "000932",
+          "display": "Auxiliar em Saúde Bucal - ASB"
+      },
+      {
+          "code": "000933",
+          "display": "Técnico em Saúde Bucal - TSB"
+      },
+      {
+          "code": "001001",
+          "display": "Aéreo"
+      },
+      {
+          "code": "001002",
+          "display": "Caminhoneiro"
+      },
+      {
+          "code": "001003",
+          "display": "Coletivo Rodoviário Passageiros Urbano e de Longo Curso"
+      },
+      {
+          "code": "001004",
+          "display": "Ferroviário"
+      },
+      {
+          "code": "001005",
+          "display": "Metroviário"
+      },
+      {
+          "code": "001006",
+          "display": "Aquaviário"
+      },
+      {
+          "code": "001101",
+          "display": "Pessoas com Deficiência Institucionalizadas"
+      },
+      {
+          "code": "001102",
+          "display": "Pessoas com Deficiência Permanente"
+      },
+      {
+          "code": "001201",
+          "display": "Pessoas em Situação de Rua"
+      },
+      {
+          "code": "001301",
+          "display": "Trabalhadores Portuários"
+      },
+      {
+          "code": "001401",
+          "display": "Funcionário do Sistema de Privação de Liberdade"
+      },
+      {
+          "code": "001501",
+          "display": "População Privada de Liberdade"
+      },
+      {
+          "code": "001502",
+          "display": "Adolescentes cumprindo medidas Socioeducativas"
+      },
+      {
+          "code": "001601",
+          "display": "Trabalhadores Industriais"
+      },
+      {
+          "code": "001701",
+          "display": "Trabalhadores de limpeza urbana e manejo de resíduos sólidos"
+      },
+      {
+          "code": "001801",
+          "display": "Gestante"
+      },
+      {
+          "code": "001901",
+          "display": "Puérpera"
+      },
+      {
+          "code": "999999",
+          "display": "Outros Grupos",
+          "property": [
+              {
+                  "code": "inactive",
+                  "valueBoolean": true
+              }
+          ]
+      }
+  ],
+  "id": "BRGrupoAtendimento"
+}

@@ -1,0 +1,160 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BRMedDRA",
+  "meta": {
+    "lastUpdated": "2022-12-02T15:35:49.359189+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRMedDRA",
+  "version": "1.2.0",
+  "name": "MedDRA",
+  "title": "Medical Dictionary for Regulatory Activities (MedDRA)",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-12-02T15:35:49.327439+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Medical Dictionary for Regulatory Activities.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "10002198",
+      "display": "Anafilaxia",
+      "definition": "Anafilaxia é uma reação alérgica aguda e grave que começa subitamente, entre menos de um minuto e até algumas horas após a exposição a um alérgeno, ao qual a pessoa desenvolveu hipersensibilidade, e que pode ser fatal."
+    },
+    {
+      "code": "10002424",
+      "display": "Angioedema",
+      "definition": "Edema súbito da derme, tecido subcutâneo, mucosa e tecido submucoso."
+    },
+    {
+      "code": "10003246",
+      "display": "Artrite",
+      "definition": "Inflamação numa ou mais articulações."
+    },
+    {
+      "code": "10003553",
+      "display": "Asma",
+      "definition": "Asma é uma doença inflamatória das vias aéreas."
+    },
+    {
+      "code": "10006482",
+      "display": "Broncoespasmo",
+      "definition": "Estreitamento do lúmen brônquico, em consequência da contração da musculatura brônquica."
+    },
+    {
+      "code": "10010741",
+      "display": "Conjuntivite",
+      "definition": "Inflamação da conjuntiva."
+    },
+    {
+      "code": "10003639",
+      "display": "Dermatite atópica",
+      "definition": "Caracteriza-se pela presença de erupções pruriginosas e com crosta."
+    },
+    {
+      "code": "10012442",
+      "display": "Dermatite de contato",
+      "definition": "Reação inflamatória que ocorre devido ao contato da pele com um agente irritante."
+    },
+    {
+      "code": "10012735",
+      "display": "Diarréia",
+      "definition": "Evacuação de fezes líquidas de forma frequente e sem controle, podendo ser aguda ou crônica"
+    },
+    {
+      "code": "10013968",
+      "display": "Dispnéia",
+      "definition": "É uma sensação de dificuldade em respirar."
+    },
+    {
+      "code": "10014184",
+      "display": "Eczema",
+      "definition": "Tipo de inflamação cutânea."
+    },
+    {
+      "code": "10023845",
+      "display": "Edema de Glote",
+      "definition": "Edema súbito da glote que impede a passagem de ar."
+    },
+    {
+      "code": "10015218",
+      "display": "Eritema Multiforme",
+      "definition": "Reação imunológica da pele e mucosas."
+    },
+    {
+      "code": "10012441",
+      "display": "Exantema bolhoso",
+      "definition": "Erupção cutânea constituída por bolhas."
+    },
+    {
+      "code": "10037868",
+      "display": "Exantema maculopapular",
+      "definition": "Erupção cutânea que se caracteriza pelo aparecimento de manchas e pápulas eritematosas."
+    },
+    {
+      "code": "10034972",
+      "display": "Fotossensibilidade",
+      "definition": "Queimaduras ou outras reações cutâneas desencadeadas pela exposição aos raios ultravioleta."
+    },
+    {
+      "code": "10028116",
+      "display": "Mucosite",
+      "definition": "A mucosite é uma inflamação da mucosa do tubo digestivo."
+    },
+    {
+      "code": "10029117",
+      "display": "Nefrite",
+      "definition": "Processo inflamatório localizado ao rim."
+    },
+    {
+      "code": "10007617",
+      "display": "Parada Cardiorespiratória",
+      "definition": "Interrupção súbita da circulação sanguínea e dos movimentos respiratórios."
+    },
+    {
+      "code": "10037087",
+      "display": "Prurido",
+      "definition": "Sensação de irritação intensa da pele, que induz a coceira."
+    },
+    {
+      "code": "10039083",
+      "display": "Rinite",
+      "definition": "Irritação e inflamação crônica ou aguda da mucosa nasal."
+    },
+    {
+      "code": "10073508",
+      "display": "Síndrome de DRESS",
+      "definition": "Reação adversa sistêmica a um fármaco, consistindo em erupções cutâneas graves, febre, adenopatias, hepatite e alterações hematológicas (hipereosinofilia e linfocitose atípica)."
+    },
+    {
+      "code": "10044223",
+      "display": "Síndrome de Lyell",
+      "definition": "Lesão dermatológica rara, de extrema gravidade, caracterizada pelo aparecimento súbito de febre elevada, sinais de toxicidade sistémica e exfoliação mucocutânea intensa."
+    },
+    {
+      "code": "10042033",
+      "display": "Síndrome de Stevens-Johnson",
+      "definition": "Erupções cutâneas generalizadas, febre, mucosite oral e conjuntivite purulenta graves."
+    },
+    {
+      "code": "10011224",
+      "display": "Tosse",
+      "definition": "Resposta reflexa ou voluntária do organismo, resultante de irritação das vias áreas e que funciona como uma contração espasmódica e normalmente repetitiva, do tórax."
+    },
+    {
+      "code": "10046735",
+      "display": "Urticária",
+      "definition": "Tipo de erupção cutânea, pruriginosa, caracterizada por placas salientes, que se assemelham às produzidas pela urtiga."
+    },
+    {
+      "code": "10047115",
+      "display": "Vasculite",
+      "definition": "Inflamação vascular, que pode estender-se ao endotélio, causando estenose e/ou oclusão."
+    },
+    {
+      "code": "10047700",
+      "display": "Vômito",
+      "definition": "É a expulsão ativa do conteúdo gástrico pela boca."
+    }
+  ]
+}

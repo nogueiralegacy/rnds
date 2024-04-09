@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRCID10-1.0",
+  "meta": {
+    "lastUpdated": "2020-03-11T19:14:51.806+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCID10-1.0",
+  "version": "1.0",
+  "name": "Classificação Internacional de Doenças - Décima Revisão - CID-10",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-11T19:15:12.2909517+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classificação Internacional de Doenças - Décima Revisão - CID-10",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+        "version": "*"
+      }
+    ]
+  }
+}

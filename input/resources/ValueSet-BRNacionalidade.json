@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRNacionalidade",
+  "meta": {
+    "lastUpdated": "2021-12-29T08:40:10.279+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRNacionalidade",
+  "version": "01.00",
+  "name": "Nacionalidade",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-12-29T08:40:10.279+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Códigos para representação de nacionalidade.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade",
+        "version": "*"
+      }
+    ]
+  }
+}

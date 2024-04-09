@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BRFrequenciaUsoSubstancia",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-20T22:59:38.544+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFrequenciaUsoSubstancia",
+  "version": "201701A",
+  "name": "Frequência de Uso de Substância",
+  "title": "Frequência de Uso de Substância",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-09-20T22:59:37.2719923+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Identifica a frequência de uso da substância conforme declaração do indivíduo, de acordo com o especificado no modelo de informação do Registro de Atendimento Clínico da Resolução CIT nº 33/2018.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "nunca",
+      "display": "Nunca"
+    },
+    {
+      "code": "uma-ou-duas",
+      "display": "1 ou 2 vezes"
+    }
+  ]
+}

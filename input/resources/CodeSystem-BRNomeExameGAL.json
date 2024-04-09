@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BRNomeExameGAL",
+  "meta": {
+    "lastUpdated": "2020-05-05T11:53:58.110+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameGAL",
+  "version": "20200504",
+  "name": "Exames do GAL",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-05-05T11:53:58.0082379+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o exame laboratorial realizado em amostra biológica para diagnóstico laboratorial, de acordo com o Gerenciador de Ambiente Laboratorial (GAL).",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "coronavirusnCoV",
+      "display": "Novo coronavírus (2019-nCoV)"
+    },
+    {
+      "code": "COVID",
+      "display": "COVID-19, Biologia Molecular"
+    },
+    {
+      "code": "CVIDGG",
+      "display": "COVID-19, IgG"
+    },
+    {
+      "code": "CVIDGM",
+      "display": "COVID-19, IgM"
+    }
+  ]
+}

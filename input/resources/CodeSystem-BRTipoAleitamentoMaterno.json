@@ -1,0 +1,36 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BRTipoAleitamentoMaterno",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-20T22:50:41.993+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAleitamentoMaterno",
+  "version": "201701A",
+  "name": "Tipo de Aleitamento Materno",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-09-20T22:50:40.2386423+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o tipo de aleitamento materno realizado a uma criança.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "exclusivo",
+      "display": "Exclusivo"
+    },
+    {
+      "code": "predominante",
+      "display": "Predominante"
+    },
+    {
+      "code": "complementado",
+      "display": "Complementado"
+    },
+    {
+      "code": "inexistente",
+      "display": "Inexistente"
+    }
+  ]
+}

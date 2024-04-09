@@ -1,0 +1,99 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRTipoDocumentoIndividuo-1.0",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-03-12T13:27:33.411+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumentoIndividuo-1.0",
+  "version": "1.0",
+  "name": "Tipo de Documento do Indivíduo",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-12T13:27:32.6850777+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o tipo de documento que está sendo utilizado para identificar o indivíduo.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "version": "*",
+        "concept": [
+          {
+            "code": "HC",
+            "display": "Número do Cartão Nacional de Saúde (CNS)"
+          },
+          {
+            "code": "RRI",
+            "display": "Número do Registro Geral (RG)"
+          },
+          {
+            "code": "MCT",
+            "display": "Número da Certidão de Casamento"
+          },
+          {
+            "code": "PPN",
+            "display": "Número do Passaporte"
+          },
+          {
+            "code": "RN",
+            "display": "Número de inscrição no Conselho Regional de Enfermagem (COREn)"
+          },
+          {
+            "code": "SS",
+            "display": "Número de Identificação Social (NIS/PIS/PASEP)"
+          },
+          {
+            "code": "DL",
+            "display": "Número da Carteira Nacional de Habilitação (CNH)"
+          },
+          {
+            "code": "BCT",
+            "display": "Número do Documento de Nascido Vivo (DN/DNV)"
+          },
+          {
+            "code": "BR",
+            "display": "Número da Certidão de Nascimento"
+          },
+          {
+            "code": "IND",
+            "display": "Número da Certidão de Índio"
+          },
+          {
+            "code": "MI",
+            "display": "Número do Certificado de Reservista"
+          },
+          {
+            "code": "MD",
+            "display": "Número de inscrição no Conselho Regional de Medicina (CRM)"
+          },
+          {
+            "code": "DDS",
+            "display": "Número de inscrição no Conselho Regional Odontologia (CRO)"
+          },
+          {
+            "code": "TAX",
+            "display": "Número de inscrição no Cadastro de Pessoas Físicas (CPF)"
+          }
+        ]
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
+        "version": "*"
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
+        "version": "*",
+        "concept": [
+          {
+            "code": "AUTH"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,749 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPrescricaoMedicamento",
+  "version": "1.0.1",
+  "name": "BRPrescricaoMedicamento",
+  "title": "Prescrição de Medicamento",
+  "status": "draft",
+  "purpose": "Descreve a prescrição de um medicamento.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationRequest.implicitRules",
+        "path": "MedicationRequest.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.language",
+        "path": "MedicationRequest.language",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.contained",
+        "path": "MedicationRequest.contained",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.identifier",
+        "path": "MedicationRequest.identifier",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.statusReason",
+        "path": "MedicationRequest.statusReason",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.priority",
+        "path": "MedicationRequest.priority",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.doNotPerform",
+        "path": "MedicationRequest.doNotPerform",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.reported[x]",
+        "path": "MedicationRequest.reported[x]",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.medication[x]",
+        "path": "MedicationRequest.medication[x]",
+        "short": "Medicamento",
+        "definition": "Identificação e informações sobre o medicamento prescrito.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRMedicamento"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Justificativa da ausência de dados estruturados sobre o medicamento.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRPrescricaoNaoEstruturada"
+        }
+      },
+      {
+        "id": "MedicationRequest.subject",
+        "path": "MedicationRequest.subject",
+        "short": "Sujeito da Composição",
+        "definition": "Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.subject.reference",
+        "path": "MedicationRequest.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.subject.type",
+        "path": "MedicationRequest.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.subject.identifier",
+        "path": "MedicationRequest.subject.identifier",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.subject.identifier.use",
+        "path": "MedicationRequest.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.subject.identifier.type",
+        "path": "MedicationRequest.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.subject.identifier.period",
+        "path": "MedicationRequest.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.subject.identifier.assigner",
+        "path": "MedicationRequest.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.subject.display",
+        "path": "MedicationRequest.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.encounter",
+        "path": "MedicationRequest.encounter",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.supportingInformation",
+        "path": "MedicationRequest.supportingInformation",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.authoredOn",
+        "path": "MedicationRequest.authoredOn",
+        "short": "Data e hora da prescrição",
+        "definition": "Data e hora da prescrição realizada.",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.requester",
+        "path": "MedicationRequest.requester",
+        "short": "Estabelecimento de Saúde prescritor",
+        "definition": "Identifica pelo número de inscrição no Cadastro Nacional de Estabelecimentos de Saúde o Estabelecimento de Saúde que realizou a prescrição de medicamento.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.requester.reference",
+        "path": "MedicationRequest.requester.reference",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.requester.type",
+        "path": "MedicationRequest.requester.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.requester.identifier",
+        "path": "MedicationRequest.requester.identifier",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.requester.identifier.use",
+        "path": "MedicationRequest.requester.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.requester.identifier.type",
+        "path": "MedicationRequest.requester.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.requester.identifier.period",
+        "path": "MedicationRequest.requester.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.requester.identifier.assigner",
+        "path": "MedicationRequest.requester.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.requester.display",
+        "path": "MedicationRequest.requester.display",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.performer",
+        "path": "MedicationRequest.performer",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.performerType",
+        "path": "MedicationRequest.performerType",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder",
+        "path": "MedicationRequest.recorder",
+        "short": "Profissional prescritor",
+        "definition": "Identificação e informações do profissional que realizou a prescrição de medicamento.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.recorder.reference",
+        "path": "MedicationRequest.recorder.reference",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder.type",
+        "path": "MedicationRequest.recorder.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder.identifier",
+        "path": "MedicationRequest.recorder.identifier",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.recorder.identifier.use",
+        "path": "MedicationRequest.recorder.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder.identifier.type",
+        "path": "MedicationRequest.recorder.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder.identifier.period",
+        "path": "MedicationRequest.recorder.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder.identifier.assigner",
+        "path": "MedicationRequest.recorder.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.recorder.display",
+        "path": "MedicationRequest.recorder.display",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.reasonCode",
+        "path": "MedicationRequest.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.reasonReference",
+        "path": "MedicationRequest.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.instantiatesCanonical",
+        "path": "MedicationRequest.instantiatesCanonical",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.instantiatesUri",
+        "path": "MedicationRequest.instantiatesUri",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.basedOn",
+        "path": "MedicationRequest.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.groupIdentifier",
+        "path": "MedicationRequest.groupIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.courseOfTherapyType",
+        "path": "MedicationRequest.courseOfTherapyType",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.insurance",
+        "path": "MedicationRequest.insurance",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.note",
+        "path": "MedicationRequest.note",
+        "short": "Notas não estruturadas",
+        "definition": "Definição da descrição do uso do medicamento e prescrição não estruturada.",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction",
+        "path": "MedicationRequest.dosageInstruction",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.sequence",
+        "path": "MedicationRequest.dosageInstruction.sequence",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.text",
+        "path": "MedicationRequest.dosageInstruction.text",
+        "short": "Prescrição e/ou Posologia Não Estruturada",
+        "definition": "Descrição da prescrição e/ou posologia de medicamento de forma livre, em texto. O profissional prescritor deverá descrever todas as informações necessárias a uma prescrição e/ou posologia, entre outros elementos relevantes."
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.additionalInstruction",
+        "path": "MedicationRequest.dosageInstruction.additionalInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.patientInstruction",
+        "path": "MedicationRequest.dosageInstruction.patientInstruction",
+        "short": "Orientações sobre o uso do medicamento",
+        "definition": "Orientações sobre o uso do medicamento prescrito."
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing",
+        "path": "MedicationRequest.dosageInstruction.timing",
+        "short": "Frequência de uso do medicamento",
+        "definition": "Frequência de uso do medicamento"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.event",
+        "path": "MedicationRequest.dosageInstruction.timing.event",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.extension:period",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+        "sliceName": "period",
+        "short": "Extensão - Intervalo entre doses",
+        "definition": "Descritor quantitativo da unidade de tempo entre doses.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIntervaloDoses"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.extension:period.url",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIntervaloDoses"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.extension:when",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension",
+        "sliceName": "when",
+        "short": "Extensão - Turno do dia",
+        "definition": "Em qual momento do dia ocorre o consumo do medicamento: Manhã, tarde, noite.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRTurno"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.extension:when.url",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRTurno"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.extension:when.value[x].id",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.extension.value[x].id",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.count",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.count",
+        "short": "Repetições de dose",
+        "definition": "Número de doses a cada uso do medicamento (ex.: 1x, 2x, 3x 4x etc.)",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.countMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.countMax",
+        "short": "Quantidade total de doses",
+        "definition": "Representa a quantidade total de doses prescritas para o medicamento: se for mais de uma, deve ser considerado como 'Dose Contínua'; do contrário, deve ser considerado como 'Dose Única'.",
+        "min": 1,
+        "minValuePositiveInt": 1,
+        "maxValuePositiveInt": 2147483647
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.duration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.durationMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.durationMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.durationUnit",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.durationUnit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+        "short": "Intervalo de dose",
+        "definition": "Intervalo, em horas, de cada uso do medicamento."
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.frequencyMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.frequencyMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.period",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.period",
+        "short": "Intervalo entre doses",
+        "definition": "Descritor quantitativo da unidade de tempo entre doses.",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.periodUnit",
+        "short": "Unidade de tempo entre doses",
+        "definition": "Unidade de tempo entre doses (ex.: hora, dia, semana, mês etc.), em unidades  UCUM.",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.dayOfWeek",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.dayOfWeek",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.timeOfDay",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.timeOfDay",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.when",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.when",
+        "short": "Turno do dia",
+        "definition": "Em qual momento do dia ocorre o consumo do medicamento: Manhã, tarde, noite.",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.offset",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.offset",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.code",
+        "path": "MedicationRequest.dosageInstruction.timing.code",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.asNeeded[x]",
+        "path": "MedicationRequest.dosageInstruction.asNeeded[x]",
+        "short": "Uso se necessário",
+        "definition": "Representa a necessidade do uso contínuo do medicamento.",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.site",
+        "path": "MedicationRequest.dosageInstruction.site",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.route",
+        "path": "MedicationRequest.dosageInstruction.route",
+        "short": "Via de Administração",
+        "definition": "Via de Adiministração do medicamento prescrito.",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "description": "Via de Administração",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRViaAdministracao-1.0"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.method",
+        "path": "MedicationRequest.dosageInstruction.method",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate",
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type",
+        "short": "Unidade de consumo da dose",
+        "definition": "Unidade de consumo do medicamento prescrito (ex.: comprimido, cápsula, aplicação, mL, gota, copo dosador, infusão etc.).",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "description": "Unidade de consumo da dose",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRUnidadeConsumo"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type.coding",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type.coding",
+        "binding": {
+          "strength": "required",
+          "description": "Determina a unidade de consumo",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRUnidadeConsumo"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type.coding.version",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type.coding.display",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type.coding.userSelected",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.type.text",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.type.text",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "short": "Quantidade da Dose",
+        "definition": "Quantidade da unidade de consumo do medicamento prescrito a cada dose.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].unit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].system",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].code",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "max": "0",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerPeriod",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerAdministration",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerAdministration",
+        "short": "Quantidade a ser dispensada por atendimento",
+        "definition": "Quantidade máxima da dose a ser dispensada por atendimento.",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerAdministration.unit",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerAdministration.unit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerAdministration.system",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerAdministration.system",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerAdministration.code",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerAdministration.code",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.maxDosePerLifetime",
+        "path": "MedicationRequest.dosageInstruction.maxDosePerLifetime",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.initialFill",
+        "path": "MedicationRequest.dispenseRequest.initialFill",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.dispenseInterval",
+        "path": "MedicationRequest.dispenseRequest.dispenseInterval",
+        "short": "Intervalo em horas de cada dose do medicamento",
+        "definition": "Intervalo, em horas, de cada uso do medicamento.",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.validityPeriod",
+        "path": "MedicationRequest.dispenseRequest.validityPeriod",
+        "short": "Duração de uso do medicamento",
+        "definition": "Representa a duração do uso do medicamento prescrito.",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+        "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.quantity",
+        "path": "MedicationRequest.dispenseRequest.quantity",
+        "short": "Total do tratamento"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.quantity.value",
+        "path": "MedicationRequest.dispenseRequest.quantity.value",
+        "min": 1
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.quantity.unit",
+        "path": "MedicationRequest.dispenseRequest.quantity.unit",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.quantity.system",
+        "path": "MedicationRequest.dispenseRequest.quantity.system",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.quantity.code",
+        "path": "MedicationRequest.dispenseRequest.quantity.code",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+        "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.dispenseRequest.performer",
+        "path": "MedicationRequest.dispenseRequest.performer",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.substitution",
+        "path": "MedicationRequest.substitution",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.priorPrescription",
+        "path": "MedicationRequest.priorPrescription",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.detectedIssue",
+        "path": "MedicationRequest.detectedIssue",
+        "max": "0"
+      },
+      {
+        "id": "MedicationRequest.eventHistory",
+        "path": "MedicationRequest.eventHistory",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRPrescricaoMedicamento"
+}

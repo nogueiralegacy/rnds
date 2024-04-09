@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BREstadoContatoAssistencial-1.0",
+  "meta": {
+    "lastUpdated": "2020-04-07T21:01:37.692+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoContatoAssistencial-1.0",
+  "version": "1.0",
+  "name": "Estado do Contato Assistencial",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-04-07T21:01:35.632661+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica o estado de um Contato Assistencial.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/encounter-status",
+        "version": "*",
+        "concept": [
+          {
+            "code": "finished",
+            "display": "Contato Assistencial finalizado ou concluído"
+          },
+          {
+            "code": "entered-in-error",
+            "display": "Contato Assistencial anulado por informação errada"
+          }
+        ]
+      }
+    ]
+  }
+}

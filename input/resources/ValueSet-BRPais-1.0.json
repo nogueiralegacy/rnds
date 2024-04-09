@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRPais-1.0",
+  "meta": {
+    "lastUpdated": "2020-03-13T21:12:15.917+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRPais-1.0",
+  "version": "1.0",
+  "name": "País",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-13T21:12:40.0380164+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Códigos para representação de países.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRPais"
+      }
+    ]
+  }
+}

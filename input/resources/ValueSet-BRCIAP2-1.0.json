@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2020-03-11T18:43:23.180+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCIAP2-1.0",
+  "version": "1.0",
+  "name": "Classificação Internacional de Atenção Primária - Segunda Edição - CIAP2",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-11T18:43:43.0294815+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica os problemas identificados no contato assistencial pelos profissionais de saúde, os motivos da contato assistencial e as respostas propostas pela equipe seguindo a sistematização SOA.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
+        "version": "*"
+      }
+    ]
+  },
+  "id": "BRCIAP2-1.0"
+}

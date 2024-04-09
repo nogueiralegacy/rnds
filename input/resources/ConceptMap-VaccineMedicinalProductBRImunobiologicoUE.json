@@ -1,0 +1,106 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "VaccineMedicinalProductBRImunobiologicoUE",
+  "url": "http://www.saude.gov.br/fhir/r4/ConceptMap/VaccineMedicinalProductBRImunobiologicoUE",
+  "version": "01.00",
+  "name": "Mapeamento dos códigos do Vaccine Medicinal Product para os códigos do Imunobiologico",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-03-17",
+  "publisher": "Ministério da Saúde",
+  "description": "Um mapeamento dos códigos entre Vaccine Medicinal Product e Imunobiologico",
+  "targetUri": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologicoUE",
+  "group": [
+    {
+      "source": "https://ec.europa.eu/health/documents/community-register/html/",
+      "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "element": [
+        {
+          "code": "EU/1/20/1528",
+          "display": "Comirnaty",
+          "target": [
+            {
+              "code": "87",
+              "display": "COVID-19 PFIZER - COMIRNATY",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "99",
+              "display": "COVID-19 PEDIÁTRICA - PFIZER COMIRNATY",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": [
+        {
+          "code": "CoronaVac",
+          "display": "CoronaVac",
+          "target": [
+            {
+              "code": "86",
+              "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "98",
+              "display": "COVID-19 SINOVAC - CORONAVAC",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": [
+        {
+          "code": "Covid-19-recombinant",
+          "display": "Covid-19 (recombinant)",
+          "target": [
+            {
+              "code": "85",
+              "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://ec.europa.eu/health/documents/community-register/html/",
+      "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "element": [
+        {
+          "code": "EU/1/20/1525",
+          "display": "COVID-19 Vaccine Janssen",
+          "target": [
+            {
+              "code": "88",
+              "display": "COVID-19 JANSSEN - Ad26.COV2.S",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "https://ec.europa.eu/health/documents/community-register/html/",
+      "target": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+      "element": [
+        {
+          "code": "EU/1/21/1529",
+          "display": "Vaxsevria",
+          "target": [
+            {
+              "code": "89",
+              "display": "COVID-19 ASTRAZENECA - ChAdOx1-S",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAtestado",
+  "version": "1.0.1",
+  "name": "BRAtestado",
+  "title": "Atestado Digital",
+  "status": "active",
+  "description": "Informações de atestado médico/odontológico",
+  "purpose": "Modelo destinado a estruturar as informações de atestado médico/odontológico",
+  "kind": "resource",
+  "abstract": false,
+  "type": "CarePlan",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CarePlan",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CarePlan",
+        "path": "CarePlan",
+        "short": "Atestado médico/odontológico"
+      },
+      {
+        "id": "CarePlan.identifier",
+        "path": "CarePlan.identifier",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.instantiatesCanonical",
+        "path": "CarePlan.instantiatesCanonical",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.instantiatesUri",
+        "path": "CarePlan.instantiatesUri",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.basedOn",
+        "path": "CarePlan.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.replaces",
+        "path": "CarePlan.replaces",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.partOf",
+        "path": "CarePlan.partOf",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.status",
+        "path": "CarePlan.status",
+        "short": "Estado do atestado.",
+        "fixedCode": "active",
+        "binding": {
+          "strength": "required",
+          "description": "Estado do atestado.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoAtestado"
+        }
+      },
+      {
+        "id": "CarePlan.intent",
+        "path": "CarePlan.intent",
+        "short": "Intenção do atestado",
+        "fixedCode": "plan",
+        "binding": {
+          "strength": "required",
+          "description": "Intenção do atestado médico/odontológico",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRIntencaoAtestado"
+        }
+      },
+      {
+        "id": "CarePlan.category",
+        "path": "CarePlan.category",
+        "short": "Tipo do atestado",
+        "definition": "Determina se é um atestado médico ou odontológico.",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Tipo do atestado.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoAtestado"
+        }
+      },
+      {
+        "id": "CarePlan.category.coding",
+        "path": "CarePlan.category.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "CarePlan.category.coding.system",
+        "path": "CarePlan.category.coding.system",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.category.coding.code",
+        "path": "CarePlan.category.coding.code",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.category.coding.userSelected",
+        "path": "CarePlan.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.category.text",
+        "path": "CarePlan.category.text",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.title",
+        "path": "CarePlan.title",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.description",
+        "path": "CarePlan.description",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject",
+        "path": "CarePlan.subject",
+        "short": "Identificação do Indivíduo",
+        "definition": "Identifica o indivíduo o qual se refere este atestado.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.subject.reference",
+        "path": "CarePlan.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject.type",
+        "path": "CarePlan.subject.type",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject.identifier",
+        "path": "CarePlan.subject.identifier",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.subject.identifier.use",
+        "path": "CarePlan.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject.identifier.type",
+        "path": "CarePlan.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject.identifier.system",
+        "path": "CarePlan.subject.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.subject.identifier.value",
+        "path": "CarePlan.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.subject.identifier.period",
+        "path": "CarePlan.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject.identifier.assigner",
+        "path": "CarePlan.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.subject.display",
+        "path": "CarePlan.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.encounter",
+        "path": "CarePlan.encounter",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.period",
+        "path": "CarePlan.period",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.created",
+        "path": "CarePlan.created",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.author",
+        "path": "CarePlan.author",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.contributor",
+        "path": "CarePlan.contributor",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.careTeam",
+        "path": "CarePlan.careTeam",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses",
+        "path": "CarePlan.addresses",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCID10Avaliado-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.addresses.reference",
+        "path": "CarePlan.addresses.reference",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.addresses.type",
+        "path": "CarePlan.addresses.type",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier",
+        "path": "CarePlan.addresses.identifier",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier.use",
+        "path": "CarePlan.addresses.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier.type",
+        "path": "CarePlan.addresses.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier.system",
+        "path": "CarePlan.addresses.identifier.system",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier.value",
+        "path": "CarePlan.addresses.identifier.value",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier.period",
+        "path": "CarePlan.addresses.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.identifier.assigner",
+        "path": "CarePlan.addresses.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.addresses.display",
+        "path": "CarePlan.addresses.display",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.supportingInfo",
+        "path": "CarePlan.supportingInfo",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.goal",
+        "path": "CarePlan.goal",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity",
+        "path": "CarePlan.activity",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "CarePlan.activity.id",
+        "path": "CarePlan.activity.id",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.outcomeCodeableConcept",
+        "path": "CarePlan.activity.outcomeCodeableConcept",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.outcomeReference",
+        "path": "CarePlan.activity.outcomeReference",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.progress",
+        "path": "CarePlan.activity.progress",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.reference",
+        "path": "CarePlan.activity.reference",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail",
+        "path": "CarePlan.activity.detail",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.activity.detail.id",
+        "path": "CarePlan.activity.detail.id",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.kind",
+        "path": "CarePlan.activity.detail.kind",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.instantiatesCanonical",
+        "path": "CarePlan.activity.detail.instantiatesCanonical",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.instantiatesUri",
+        "path": "CarePlan.activity.detail.instantiatesUri",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.code",
+        "path": "CarePlan.activity.detail.code",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.reasonCode",
+        "path": "CarePlan.activity.detail.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.reasonReference",
+        "path": "CarePlan.activity.detail.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.goal",
+        "path": "CarePlan.activity.detail.goal",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.status",
+        "path": "CarePlan.activity.detail.status",
+        "fixedCode": "unknown",
+        "binding": {
+          "strength": "required",
+          "description": "Estado do afastamento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoAfastamentoAtestado"
+        }
+      },
+      {
+        "id": "CarePlan.activity.detail.statusReason",
+        "path": "CarePlan.activity.detail.statusReason",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.doNotPerform",
+        "path": "CarePlan.activity.detail.doNotPerform",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x]",
+        "path": "CarePlan.activity.detail.scheduled[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Timing"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].event",
+        "path": "CarePlan.activity.detail.scheduled[x].event",
+        "short": "Data de início do afastamento",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.id",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.id",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.bounds[x]",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.bounds[x]",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.count",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.count",
+        "short": "Tempo de afastamento",
+        "definition": "Tempo do afastamento quantificado em dias.",
+        "min": 1
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.countMax",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.countMax",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.duration",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.duration",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.durationMax",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.durationMax",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.durationUnit",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.durationUnit",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.frequency",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.frequency",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.frequencyMax",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.frequencyMax",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.period",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.period",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.periodMax",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.periodMax",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.periodUnit",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.periodUnit",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.dayOfWeek",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.dayOfWeek",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.timeOfDay",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.timeOfDay",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.when",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.when",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].repeat.offset",
+        "path": "CarePlan.activity.detail.scheduled[x].repeat.offset",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.scheduled[x].code",
+        "path": "CarePlan.activity.detail.scheduled[x].code",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.location",
+        "path": "CarePlan.activity.detail.location",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.performer",
+        "path": "CarePlan.activity.detail.performer",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.product[x]",
+        "path": "CarePlan.activity.detail.product[x]",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.dailyAmount",
+        "path": "CarePlan.activity.detail.dailyAmount",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.quantity",
+        "path": "CarePlan.activity.detail.quantity",
+        "max": "0"
+      },
+      {
+        "id": "CarePlan.activity.detail.description",
+        "path": "CarePlan.activity.detail.description",
+        "short": "Informações adicionais",
+        "definition": "Informações adicionais sobre o afastamento."
+      },
+      {
+        "id": "CarePlan.note",
+        "path": "CarePlan.note",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRAtestado"
+}

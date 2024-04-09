@@ -1,0 +1,999 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2023-09-22T15:22:24.3998684+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRegulacaoAssistencial",
+  "version": "1.0",
+  "name": "BRRegulacaoAssistencial",
+  "title": "Regulação Assistencial",
+  "status": "active",
+  "date": "2023-04-04",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Documento público que coleta os dados da regulação assistencial",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Regulação Assistencial",
+        "definition": "Documento que representa o documento de regulação assistencial.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "final | entered-in-error",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado do Documento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Tipo de Documento",
+        "definition": "Especifica o tipo de documento que está sendo enviado na composição.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Tipo de Documento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type.id",
+        "path": "Composition.type.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.id",
+        "path": "Composition.type.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "min": 1,
+        "fixedCode": "RA"
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.coding.userSelected",
+        "path": "Composition.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.text",
+        "path": "Composition.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "short": "Modalidade Assistencial",
+        "definition": "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento.\r\nReferência: https://rts.saude.gov.br/#/modalidade-assistencial",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Modalidade Assistencial",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA"
+        }
+      },
+      {
+        "id": "Composition.category.coding",
+        "path": "Composition.category.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.category.coding.system",
+        "path": "Composition.category.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.category.coding.code",
+        "path": "Composition.category.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Composition.category.coding.display",
+        "path": "Composition.category.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category.coding.userSelected",
+        "path": "Composition.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category.text",
+        "path": "Composition.category.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "Sujeito da Composição",
+        "definition": "Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
+        "comment": "Nesta versão, a RNDS suportará somente indivíduos.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient",
+        "path": "Composition.subject.extension",
+        "sliceName": "unidentifiedPatient",
+        "short": "Dados do Indivíduo Não Identificado",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:gender",
+        "path": "Composition.subject.extension.extension",
+        "sliceName": "gender",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:gender.url",
+        "path": "Composition.subject.extension.extension.url",
+        "fixedUri": "gender"
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:birthYear",
+        "path": "Composition.subject.extension.extension",
+        "sliceName": "birthYear",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:birthYear.url",
+        "path": "Composition.subject.extension.extension.url",
+        "fixedUri": "birthYear"
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:reason",
+        "path": "Composition.subject.extension.extension",
+        "sliceName": "reason",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:reason.url",
+        "path": "Composition.subject.extension.extension.url",
+        "fixedUri": "reason"
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.url",
+        "path": "Composition.subject.extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+      },
+      {
+        "id": "Composition.subject.reference",
+        "path": "Composition.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.type",
+        "path": "Composition.subject.type",
+        "max": "0",
+        "fixedUri": "Patient"
+      },
+      {
+        "id": "Composition.subject.identifier.use",
+        "path": "Composition.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.type",
+        "path": "Composition.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.system",
+        "path": "Composition.subject.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.subject.identifier.value",
+        "path": "Composition.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.subject.identifier.period",
+        "path": "Composition.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.assigner",
+        "path": "Composition.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.display",
+        "path": "Composition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "short": "Data/hora de Geração do Documento",
+        "definition": "Data e hora em que o documento foi gerado.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Reponsável pelo Contato Assistencial",
+        "definition": "Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento.",
+        "comment": "Nesta versão da RNDS somente serão suportadas edições provenientes de Estabelecimentos de Saúde.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.type",
+        "path": "Composition.author.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier",
+        "path": "Composition.author.identifier",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.use",
+        "path": "Composition.author.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.type",
+        "path": "Composition.author.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.system",
+        "path": "Composition.author.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.value",
+        "path": "Composition.author.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.period",
+        "path": "Composition.author.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.assigner",
+        "path": "Composition.author.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.display",
+        "path": "Composition.author.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Título do documento",
+        "definition": "Título do documento em linguagem humana.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.confidentiality",
+        "path": "Composition.confidentiality",
+        "max": "0"
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "max": "0"
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "short": "Relação a Outros Documentos",
+        "definition": "Indica uma relação entre esse documento e outro documento (ou composição) existente.",
+        "requirements": "Este elemento deve ser utilizado exclusivamente para indicar que este documento substitui (replaces) outro documento / composição; ou seja, é utilizado para cancelar o anterior e passar a considerar este no seu lugar. Este documento receberá um ID próprio; o documento anterior continuará disponível na RNDS e poderá ser recuperado integralmente por referência direta ao seu ID, garantindo a rastreabilidade do processo, mas não estará diretamente disponível na timeline do cidadão.",
+        "max": "1"
+      },
+      {
+        "id": "Composition.relatesTo.code",
+        "path": "Composition.relatesTo.code",
+        "short": "Tipo de Relacionamento",
+        "definition": "Indica o tipo de relacionamento que este documento tem com o outro documento (composição).",
+        "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
+        "fixedCode": "replaces"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]",
+        "path": "Composition.relatesTo.target[x]",
+        "short": "Documento a Ser Substituído",
+        "definition": "Referência ao documento anterior que este documento está substituindo.",
+        "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ]
+      },
+      {
+        "id": "Composition.relatesTo.target[x].id",
+        "path": "Composition.relatesTo.target[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].reference",
+        "path": "Composition.relatesTo.target[x].reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.relatesTo.target[x].type",
+        "path": "Composition.relatesTo.target[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].identifier",
+        "path": "Composition.relatesTo.target[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].display",
+        "path": "Composition.relatesTo.target[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code.coding.code"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Evento de regulação",
+        "definition": "Definição dos eventos de um processo de regulação",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest",
+        "path": "Composition.event",
+        "sliceName": "regulationRequest",
+        "short": "Evento de solicitação de procedimento regulado",
+        "definition": "Evento destinado a modelar a solicitação de um serviço, bem como o estabelecimento solicitante.",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.id",
+        "path": "Composition.event.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.code",
+        "path": "Composition.event.code",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Lista de códigos descritores de um evento de regulação.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
+        }
+      },
+      {
+        "id": "Composition.event:regulationRequest.code.id",
+        "path": "Composition.event.code.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.code.coding",
+        "path": "Composition.event.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.event:regulationRequest.code.coding.system",
+        "path": "Composition.event.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.code.coding.code",
+        "path": "Composition.event.code.coding.code",
+        "min": 1,
+        "fixedCode": "pending"
+      },
+      {
+        "id": "Composition.event:regulationRequest.code.coding.userSelected",
+        "path": "Composition.event.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.code.text",
+        "path": "Composition.event.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.period",
+        "path": "Composition.event.period",
+        "short": "Data da solicitação",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.period.id",
+        "path": "Composition.event.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.period.start",
+        "path": "Composition.event.period.start",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.period.end",
+        "path": "Composition.event.period.end",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail",
+        "path": "Composition.event.detail",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.id",
+        "path": "Composition.event.detail.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.type",
+        "path": "Composition.event.detail.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.id",
+        "path": "Composition.event.detail.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.use",
+        "path": "Composition.event.detail.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type",
+        "path": "Composition.event.detail.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.id",
+        "path": "Composition.event.detail.identifier.type.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.coding",
+        "path": "Composition.event.detail.identifier.type.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.coding.id",
+        "path": "Composition.event.detail.identifier.type.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.coding.system",
+        "path": "Composition.event.detail.identifier.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.coding.code",
+        "path": "Composition.event.detail.identifier.type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.coding.userSelected",
+        "path": "Composition.event.detail.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.type.text",
+        "path": "Composition.event.detail.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.system",
+        "path": "Composition.event.detail.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.value",
+        "path": "Composition.event.detail.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.period",
+        "path": "Composition.event.detail.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.identifier.assigner",
+        "path": "Composition.event.detail.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationRequest.detail.display",
+        "path": "Composition.event.detail.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester",
+        "path": "Composition.event",
+        "sliceName": "returnedToRequester",
+        "short": "Evento de devolução ao solicitante",
+        "definition": "Evento destinado a modelar a devolução (feita por um estabelecimento regulador) de um serviço ao estabelecimento solicitante."
+      },
+      {
+        "id": "Composition.event:returnedToRequester.id",
+        "path": "Composition.event.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code",
+        "path": "Composition.event.code",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Lista de códigos descritores de um evento de regulação.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
+        }
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.id",
+        "path": "Composition.event.code.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.coding",
+        "path": "Composition.event.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.coding.id",
+        "path": "Composition.event.code.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.coding.system",
+        "path": "Composition.event.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.coding.code",
+        "path": "Composition.event.code.coding.code",
+        "min": 1,
+        "fixedCode": "returned-to-requester"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.coding.userSelected",
+        "path": "Composition.event.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.code.text",
+        "path": "Composition.event.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.period.id",
+        "path": "Composition.event.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.period.start",
+        "path": "Composition.event.period.start",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:returnedToRequester.period.end",
+        "path": "Composition.event.period.end",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail",
+        "path": "Composition.event.detail",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.id",
+        "path": "Composition.event.detail.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.reference",
+        "path": "Composition.event.detail.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.type",
+        "path": "Composition.event.detail.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier",
+        "path": "Composition.event.detail.identifier",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.id",
+        "path": "Composition.event.detail.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.use",
+        "path": "Composition.event.detail.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.type",
+        "path": "Composition.event.detail.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.system",
+        "path": "Composition.event.detail.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.value",
+        "path": "Composition.event.detail.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.period",
+        "path": "Composition.event.detail.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.identifier.assigner",
+        "path": "Composition.event.detail.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:returnedToRequester.detail.display",
+        "path": "Composition.event.detail.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking",
+        "path": "Composition.event",
+        "sliceName": "regulationBooking",
+        "short": "Evento de agendamento de procedimento regulado",
+        "definition": "Evento destinado a modelar o agendamento de um serviço, bem como o estabelecimento executante."
+      },
+      {
+        "id": "Composition.event:regulationBooking.id",
+        "path": "Composition.event.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.code",
+        "path": "Composition.event.code",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Lista de códigos descritores de um evento de regulação.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRStatusRegulacaoAssistencial"
+        }
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.id",
+        "path": "Composition.event.code.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.coding",
+        "path": "Composition.event.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.coding.id",
+        "path": "Composition.event.code.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.coding.system",
+        "path": "Composition.event.code.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.coding.code",
+        "path": "Composition.event.code.coding.code",
+        "min": 1,
+        "fixedCode": "booked"
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.coding.userSelected",
+        "path": "Composition.event.code.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.code.text",
+        "path": "Composition.event.code.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.period.id",
+        "path": "Composition.event.period.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.period.start",
+        "path": "Composition.event.period.start",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationBooking.period.end",
+        "path": "Composition.event.period.end",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail",
+        "path": "Composition.event.detail",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.id",
+        "path": "Composition.event.detail.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.type",
+        "path": "Composition.event.detail.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.id",
+        "path": "Composition.event.detail.identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.use",
+        "path": "Composition.event.detail.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.type",
+        "path": "Composition.event.detail.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.system",
+        "path": "Composition.event.detail.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.value",
+        "path": "Composition.event.detail.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.period",
+        "path": "Composition.event.detail.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.identifier.assigner",
+        "path": "Composition.event.detail.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event:regulationBooking.detail.display",
+        "path": "Composition.event.detail.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "short": "Seções do documento",
+        "definition": "Referencia todas as seções (profiles/resources) contidos neste documento.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section.id",
+        "path": "Composition.section.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.code",
+        "path": "Composition.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.entry.id",
+        "path": "Composition.section.entry.id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.section.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRRegulacaoAssistencial"
+}

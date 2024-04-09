@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRRegistroOrigem",
+  "meta": {
+    "lastUpdated": "2022-01-21T14:38:40.0457007+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRRegistroOrigem",
+  "version": "1.0",
+  "name": "Registro de Origem",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-01-21T14:38:40.0457007+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Códigos para representação da Origem do Registro de Imunobiológico.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRRegistroOrigem",
+        "version": "*"
+      }
+    ]
+  }
+}

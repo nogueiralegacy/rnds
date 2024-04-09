@@ -1,0 +1,718 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+      "lastUpdated": "2021-01-20T14:39:24.326+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRImunobiologico",
+  "version": "02.16",
+  "name": "Imunobiológico",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-01-12T18:40:15.6103207+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Classifica os tipos de imunobiológicos.",
+  "content": "complete",
+  "property" : [{
+    "code" : "inativo",
+    "description" : "Inativo",
+    "type" : "boolean"
+  }],
+  "concept": [
+      {
+          "code": "1",
+          "display": "IGHT",
+          "definition": "Imunoglobulina humana antitétano"
+      },
+      {
+          "code": "2",
+          "display": "SAT",
+          "definition": "Soro antitetânico"
+      },
+      {
+          "code": "3",
+          "display": "SARC",
+          "definition": "Soro antiaracnídico"
+      },
+      {
+          "code": "4",
+          "display": "SAESCOR",
+          "definition": "Soro antiescorpiônico"
+      },
+      {
+          "code": "5",
+          "display": "DT",
+          "definition": "Vacina difteria e tétano infantil"
+      },
+      {
+          "code": "6",
+          "display": "SAELAP",
+          "definition": "Soro antielapídico"
+      },
+      {
+          "code": "7",
+          "display": "SAR",
+          "definition": "Soro antirrábico"
+      },
+      {
+          "code": "8",
+          "display": "SABOTR",
+          "definition": "Soro antibotrópico (pentavalente)"
+      },
+      {
+          "code": "9",
+          "display": "HepB",
+          "definition": "Vacina hepatite B"
+      },
+      {
+          "code": "10",
+          "display": "SAD",
+          "definition": "Soro antidiftérico"
+      },
+      {
+          "code": "11",
+          "display": "SABOCR",
+          "definition": "Soro antibotrópico (pentavalente) e anticrotálico"
+      },
+      {
+          "code": "12",
+          "display": "SABOLA",
+          "definition": "Soro antibotrópico (pentavalente) e antilaquético"
+      },
+      {
+          "code": "13",
+          "display": "Meningo AC",
+          "definition": "Vacina meningocócica AC"
+      },
+      {
+          "code": "14",
+          "display": "VFA",
+          "definition": "Vacina febre amarela"
+      },
+      {
+          "code": "15",
+          "display": "BCG",
+          "definition": "Vacina BCG"
+      },
+      {
+          "code": "16",
+          "display": "SACROT",
+          "definition": "Soro anticrotálico"
+      },
+      {
+          "code": "17",
+          "display": "Hib",
+          "definition": "Vacina Hib"
+      },
+      {
+          "code": "18",
+          "display": "VR",
+          "definition": "Vacina raiva embrião de galinha",
+          "property": [
+              {
+                  "code": "inativo",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "19",
+          "display": "IGHV",
+          "definition": "Imunoglobulina humana antivaricela"
+      },
+      {
+          "code": "20",
+          "display": "IGHHB",
+          "definition": "Imunoglobulina humana anti-hepatite B"
+      },
+      {
+          "code": "21",
+          "display": "VPP23",
+          "definition": "Vacina pneumo 23"
+      },
+      {
+          "code": "22",
+          "display": "VIP",
+          "definition": "Vacina polio injetável"
+      },
+      {
+          "code": "23",
+          "display": "IGHR",
+          "definition": "Imunoglobulina humana antirrábica"
+      },
+      {
+          "code": "24",
+          "display": "SCR",
+          "definition": "Vacina sarampo, caxumba, rubéola"
+      },
+      {
+          "code": "25",
+          "display": "dT",
+          "definition": "Vacina difteria e tétano adulto"
+      },
+      {
+          "code": "26",
+          "display": "VPC10",
+          "definition": "Vacina pneumo 10"
+      },
+      {
+          "code": "27",
+          "display": "SLATRO",
+          "definition": "Soro latrodectus"
+      },
+      {
+          "code": "28",
+          "display": "VOP",
+          "definition": "Vacina polio oral"
+      },
+      {
+          "code": "29",
+          "display": "PENTA acelular",
+          "definition": "Vacina penta acelular (DTPa/VIP/Hib)"
+      },
+      {
+          "code": "30",
+          "display": "FTp",
+          "definition": "Vacina febre tifóide"
+      },
+      {
+          "code": "31",
+          "display": "SALOXO",
+          "definition": "Soro antiloxoscélico (trivalente)"
+      },
+      {
+          "code": "32",
+          "display": "SALONO",
+          "definition": "Soro antilonômico"
+      },
+      {
+          "code": "33",
+          "display": "INF3",
+          "definition": "Vacina influenza trivalente",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "Influenza vaccine trivalent"
+              },
+              {
+                  "language": "es",
+                  "value": "Vacuna influenza trivalente"
+              }
+          ]
+      },
+      {
+          "code": "34",
+          "display": "VAR",
+          "definition": "Vacina varicela"
+      },
+      {
+          "code": "35",
+          "display": "HA",
+          "definition": "Vacina hepatite A"
+      },
+      {
+          "code": "36",
+          "display": "SR",
+          "definition": "Vacina sarampo, rubéola"
+      },
+      {
+          "code": "37",
+          "display": "Vero",
+          "definition": "Vacina raiva em cultivo celular vero"
+      },
+      {
+          "code": "38",
+          "display": "SBOTULTRI",
+          "definition": "Soro antibotulínico (trivalente)"
+      },
+      {
+          "code": "39",
+          "display": "Tetra",
+          "definition": "Vacina DTP/Hib"
+      },
+      {
+          "code": "40",
+          "display": "Pncc7V",
+          "definition": "Vacina pneumocócica 7V"
+      },
+      {
+          "code": "41",
+          "display": "MenC",
+          "definition": "Vacina meningo C"
+      },
+      {
+          "code": "42",
+          "display": "PENTA",
+          "definition": "Vacina penta (DTP/HepB/Hib)"
+      },
+      {
+          "code": "43",
+          "display": "HEXA",
+          "definition": "Vacina hexa (DTPa/HepB/VIP/Hib)"
+      },
+      {
+          "code": "44",
+          "display": "H1N1",
+          "definition": "Vacina Influenza H1N1"
+      },
+      {
+          "code": "45",
+          "display": "ROTA",
+          "definition": "Vacina rotavírus"
+      },
+      {
+          "code": "46",
+          "display": "DTP",
+          "definition": "Vacina DTP"
+      },
+      {
+          "code": "47",
+          "display": "DTPa",
+          "definition": "Vacina DTPa infantil"
+      },
+      {
+          "code": "48",
+          "display": "DILSRC",
+          "definition": "Diluente para vacina sarampo, caxumba, rubéola"
+      },
+      {
+          "code": "49",
+          "display": "DILVFA",
+          "definition": "Diluente para vacina febre amarela"
+      },
+      {
+          "code": "50",
+          "display": "DILHib",
+          "definition": "Diluente para vacina haemophilus influenzae B"
+      },
+      {
+          "code": "51",
+          "display": "Fta",
+          "definition": "Vacina febre tifóide (atenuada)"
+      },
+      {
+          "code": "52",
+          "display": "DilMengAC",
+          "definition": "Diluente meningo AC"
+      },
+      {
+          "code": "53",
+          "display": "DILSR",
+          "definition": "Diluente para vacina sarampo, rubéola"
+      },
+      {
+          "code": "54",
+          "display": "DILVAR",
+          "definition": "Diluente para vacina varicela"
+      },
+      {
+          "code": "55",
+          "display": "HepAinf",
+          "definition": "Vacina hepatite A infantil"
+      },
+      {
+          "code": "56",
+          "display": "SCRV",
+          "definition": "Vacina sarampo, caxumba, rubéola e varicela"
+      },
+      {
+          "code": "57",
+          "display": "dTpa",
+          "definition": "Vacina dTpa adulto"
+      },
+      {
+          "code": "58",
+          "display": "TETRA acelular",
+          "definition": "Vacina DTPa/VIP"
+      },
+      {
+          "code": "59",
+          "display": "VPC13",
+          "definition": "Vacina pneumo 13"
+      },
+      {
+          "code": "60",
+          "display": "HPV2",
+          "definition": "Vacina HPV bivalente"
+      },
+      {
+          "code": "61",
+          "display": "TT",
+          "definition": "Vacina toxóide tetânico"
+      },
+      {
+          "code": "62",
+          "display": "HAeHBped",
+          "definition": "Hepatite AeB (pediátrica)"
+      },
+      {
+          "code": "63",
+          "display": "HAeHB",
+          "definition": "Vacina hepatite AeB (uso adulto)"
+      },
+      {
+          "code": "64",
+          "display": "FLU ID",
+          "definition": "Vacina influenza ID"
+      },
+      {
+          "code": "65",
+          "display": "ROTA5",
+          "definition": "Vacina rotavírus pentavalente"
+      },
+      {
+          "code": "66",
+          "display": "MEN BC",
+          "definition": "Vacina meningocócica B/C"
+      },
+      {
+          "code": "67",
+          "display": "HPV4",
+          "definition": "Vacina HPV quadrivalente"
+      },
+      {
+          "code": "68",
+          "display": "HPV Bi",
+          "definition": "Vacina HPV bivalente"
+      },
+      {
+          "code": "69",
+          "display": "SABOT",
+          "definition": "Soro antibotulínico AB (bivalente)"
+      },
+      {
+          "code": "70",
+          "display": "Sarampo",
+          "definition": "Vacina sarampo"
+      },
+      {
+          "code": "71",
+          "display": "Rubeola",
+          "definition": "Vacina rubéola"
+      },
+      {
+          "code": "72",
+          "display": "Gripe Sazonal",
+          "definition": "Vacina gripe"
+      },
+      {
+          "code": "73",
+          "display": "Quadrupla Viral",
+          "definition": "Vacina quádrupla viral"
+      },
+      {
+          "code": "74",
+          "display": "MenACWY",
+          "definition": "Vacina meningo ACWY"
+      },
+      {
+          "code": "75",
+          "display": "COLERA",
+          "definition": "Vacina cólera"
+      },
+      {
+          "code": "76",
+          "display": "VHZ",
+          "definition": "Vacina herpes-zóster"
+      },
+      {
+          "code": "77",
+          "display": "INF4",
+          "definition": "Vacina influenza tetravalente",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "Influenza vaccine tetravalent"
+              },
+              {
+                  "language": "es",
+                  "value": "Vacuna influenza tetravalente"
+              }
+          ]
+      },
+      {
+          "code": "78",
+          "display": "MenB",
+          "definition": "Vacina meningo B"
+      },
+      {
+          "code": "79",
+          "display": "DILBCG",
+          "definition": "Diluente para vacina BCG"
+      },
+      {
+          "code": "80",
+          "display": "DILVRvero",
+          "definition": "Diluente para vacina raiva cultivo celulas vero"
+      },
+      {
+          "code": "81",
+          "display": "DILMenC",
+          "definition": "Diluente para vacina meningo C"
+      },
+      {
+          "code": "82",
+          "display": "Dengue",
+          "definition": "Vacina dengue"
+      },
+      {
+          "code": "83",
+          "display": "HEPAad",
+          "definition": "Vacina hepatite A adulto"
+      },
+      {
+          "code": "84",
+          "display": "VFA-F",
+          "definition": "Vacina febre amarela fracionada"
+      },
+      {
+          "code": "85",
+          "display": "COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD",
+          "definition": "Vacina Covid-19 ASTRAZENECA/FIOCRUZ - COVISHIELD, recombinante",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM9QW8 COVID-19 vaccine, non-replicating viral vector"
+              },
+              {
+                  "language": "es",
+                  "value": "XM9QW8 Vacuna COVID-19, vector viral no replicante"
+              }
+          ]
+      },
+      {
+          "code": "86",
+          "display": "COVID-19 SINOVAC/BUTANTAN - CORONAVAC",
+          "definition": "Vacina COVID-19 SINOVAC/BUTANTAN - CORONAVAC, inativada",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM1NL1 COVID-19 vaccine, inactivated virus"
+              },
+              {
+                  "language": "es",
+                  "value": "XM1NL1 Vacuna COVID-19, virus inactivado"
+              }
+          ]
+      },
+      {
+          "code": "87",
+          "display": "COVID-19 PFIZER - COMIRNATY",
+          "definition": "Vacina COVID-19 PFIZER - COMIRNATY, RNAm",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM0GQ8 COVID-19 vaccine, RNA based"
+              },
+              {
+                  "language": "es",
+                  "value": "XM0GQ8 Vacuna COVID-19, basada en ARN"
+              }
+          ]
+      },
+      {
+          "code": "88",
+          "display": "COVID-19 JANSSEN - Ad26.COV2.S",
+          "definition": "Vacina COVID-19 JANSSEN - Ad26.COV2.S, recombinante",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM9QW8 COVID-19 vaccine, non-replicating viral vector"
+              },
+              {
+                  "language": "es",
+                  "value": "XM9QW8 Vacuna COVID-19, vector viral no replicante"
+              }
+          ]
+      },
+      {
+          "code": "89",
+          "display": "COVID-19 ASTRAZENECA - ChAdOx1-S",
+          "definition": "Vacina COVID-19 ASTRAZENECA - ChAdOx1-S, recombinante",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM9QW8 COVID-19 vaccine, non-replicating viral vector"
+              },
+              {
+                  "language": "es",
+                  "value": "XM9QW8 Vacuna COVID-19, vector viral no replicante"
+              }
+          ]
+      },
+      {
+          "code": "90",
+          "display": "DILSCRV",
+          "definition": "Diluente para vacina sarampo, caxumba, rubéola e varicela"
+      },
+      {
+          "code": "91",
+          "display": "DILVR",
+          "definition": "Diluente para vacina raiva cultivo embrião de galinha"
+      },
+      {
+          "code": "92",
+          "display": "VRvero",
+          "definition": "Vacina raiva cultivo celulas vero"
+      },
+      {
+          "code": "93",
+          "display": "HPV9",
+          "definition": "Vacina HPV nonavalente"
+      },
+      {
+          "code": "94",
+          "display": "DILCOV",
+          "definition": "Diluente Covid-19"
+      },
+      {
+          "code": "95",
+          "display": "COVID-19 GAMALEYA - SPUTNIK V",
+          "definition": "Vacina COVID-19 GAMALEYA - SPUTNIK V recombinante",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM9QW8 COVID-19 vaccine, non-replicating viral vector"
+              },
+              {
+                  "language": "es",
+                  "value": "XM9QW8 Vacuna COVID-19, vector viral no replicante"
+              }
+          ],
+          "property": [
+              {
+                  "code": "inativo",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "96",
+          "display": "COVID-19 BHARAT - COVAXIN",
+          "definition": "Vacina Covid-19 COVID-19 BHARAT - COVAXIN inativada",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM1NL1 COVID-19 vaccine, inactivated virus"
+              },
+              {
+                  "language": "es",
+                  "value": "XM1NL1 Vacuna COVID-19, virus inactivado"
+              }
+          ],
+          "property": [
+              {
+                  "code": "inativo",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "97",
+          "display": "COVID-19 MODERNA",
+          "definition": "Vacina COVID-19 MODERNA RNAm",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM0GQ8 COVID-19 vaccine, RNA based"
+              },
+              {
+                  "language": "es",
+                  "value": "XM0GQ8 Vacuna COVID-19, basada en ARN"
+              }
+          ],
+          "property": [
+              {
+                  "code": "inativo",
+                  "valueBoolean": true
+              }
+          ]
+      },
+      {
+          "code": "98",
+          "display": "COVID-19 SINOVAC - CORONAVAC",
+          "definition": "Vacina COVID-19 SINOVAC - CORONAVAC inativada",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM1NL1 COVID-19 vaccine, inactivated virus"
+              },
+              {
+                  "language": "es",
+                  "value": "XM1NL1 Vacuna COVID-19, virus inactivado"
+              }
+          ]
+      },
+      {
+          "code": "99",
+          "display": "COVID-19 PFIZER - COMIRNATY PEDIÁTRICA",
+          "definition": "Vacina COVID-19 PFIZER - COMIRNATY PEDIÁTRICA, RNAm",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM0GQ8 COVID-19 vaccine, RNA based"
+              },
+              {
+                  "language": "es",
+                  "value": "XM0GQ8 Vacuna COVID-19, basada en ARN"
+              }
+          ]
+      },
+      {
+          "code": "100",
+          "display": "VVBN",
+          "definition": "Vacina Varíola Bavarian Nordic"
+      },
+      {
+          "code": "101",
+          "display": "VZR",
+          "definition": "Vacina Herpes-Zoster, recombinante"
+      },
+      {
+          "code": "102",
+          "display": "COVID-19 PFIZER - COMIRNATY PEDIÁTRICA MENOR DE 5 ANOS",
+          "definition": "Vacina COVID-19 PFIZER - COMIRNATY PEDIÁTRICA MENOR DE 5 ANOS, RNAm",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM0GQ8 COVID-19 vaccine, RNA based"
+              },
+              {
+                  "language": "es",
+                  "value": "XM0GQ8 Vacuna COVID-19, basada en ARN"
+              }
+          ]
+      },
+      {
+          "code": "103",
+          "display": "COVID-19 PFIZER - COMIRNATY BIVALENTE",
+          "definition": "Vacina COVID-19 PFIZER - COMIRNATY BIVALENTE, RNAm",
+          "designation": [
+              {
+                  "language": "en",
+                  "value": "XM0GQ8 COVID-19 vaccine, RNA based"
+              },
+              {
+                  "language": "es",
+                  "value": "XM0GQ8 Vacuna COVID-19, basada en ARN"
+              }
+          ]
+      },
+      {
+          "code": "104",
+          "display": "DNG",
+          "definition": "Vacina dengue (atenuada)"
+      },
+      {
+          "code": "105",
+          "display": "COVID-19 MODERNA - SPIKEVAX BIVALENTE",
+          "definition": "Vacina Covid-19-RNAm, Moderna (Spikevax) bivalente"
+      },
+      {
+          "code": "106",
+          "display": "VPC15",
+          "definition": "Vacina adsorvida pneumocócica 15-valente (conjugada, polissacarídica)"
+      }
+  ],
+  "id": "BRImunobiologico"
+}

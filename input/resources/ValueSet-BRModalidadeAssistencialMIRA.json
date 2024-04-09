@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2023-04-13T13:17:22.715+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencialMIRA",
+  "version": "1.0",
+  "name": "Modalidade Assistencial MIRA",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-04-13T13:17:18.5012669+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Modalidade assistencial que gerou a solicitação do procedimento.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial",
+        "version": "*",
+        "concept": [
+          {
+            "code": "04",
+            "display": "Atenção Hospitalar"
+          },
+          {
+            "code": "09",
+            "display": "Assistência Ambulatorial"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "BRModalidadeAssistencialMIRA"
+}

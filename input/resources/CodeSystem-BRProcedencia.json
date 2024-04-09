@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BRProcedencia",
+  "meta": {
+    "lastUpdated": "2020-04-17T14:46:11.153+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRProcedencia",
+  "version": "201701A",
+  "name": "Procedência",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-04-17T14:46:08.158574+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Identifica o serviço que encaminhou o indivíduo ou a sua iniciativa/de seu responsável na busca pelo acesso ao serviço de saúde.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "09",
+      "display": "Demanda espontânea"
+    },
+    {
+      "code": "10",
+      "display": "Ordem Judicial"
+    },
+    {
+      "code": "11",
+      "display": "Retorno"
+    },
+    {
+      "code": "12",
+      "display": "Demanda referenciada"
+    },
+    {
+      "code": "99",
+      "display": "Informação ausente no modelo de origem"
+    }
+  ]
+}

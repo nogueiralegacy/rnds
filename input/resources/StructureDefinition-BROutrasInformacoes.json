@@ -1,0 +1,39 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BROutrasInformacoes",
+  "name": "BROutrasInformacoes",
+  "title": "Outras Informações",
+  "status": "draft",
+  "date": "2022-05-26",
+  "description": "Representa quaisquer outras informações acerca dos dados de desfecho do atendimento registrad.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Encounter.hospitalization"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BROutrasInformacoes"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "BROutrasInformacoes"
+}

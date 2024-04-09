@@ -1,0 +1,628 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "lastUpdated": "2021-09-03T09:14:27.302+00:00"
+  },
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRImunobiologicoAdministrado-2.0",
+  "version": "02.11",
+  "name": "BRImunobiologicoAdministrado",
+  "title": "Imunobiológico Administrado",
+  "status": "active",
+  "date": "2021-09-03",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Representa um imunobiológico administrado.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization",
+        "path": "Immunization",
+        "short": "Imunobiológico Administrado",
+        "definition": "Representa o imunobiológico administrado.",
+        "alias": [
+          "Vacinação",
+          "Vacina Administrada"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.identifier",
+        "path": "Immunization.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.status",
+        "path": "Immunization.status",
+        "short": "Estado da Administração do Imunobiológico",
+        "fixedCode": "completed",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado do Evento",
+          "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status"
+        }
+      },
+      {
+        "id": "Immunization.statusReason",
+        "path": "Immunization.statusReason",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "short": "Imunobiológico Administrado",
+        "definition": "Imunobiolótio que foi administrado.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Imunobiológico",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRImunobiologico-1.0"
+        }
+      },
+      {
+        "id": "Immunization.vaccineCode.coding",
+        "path": "Immunization.vaccineCode.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Immunization.vaccineCode.coding.system",
+        "path": "Immunization.vaccineCode.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Immunization.vaccineCode.coding.code",
+        "path": "Immunization.vaccineCode.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Immunization.vaccineCode.coding.display",
+        "path": "Immunization.vaccineCode.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.vaccineCode.coding.userSelected",
+        "path": "Immunization.vaccineCode.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.vaccineCode.text",
+        "path": "Immunization.vaccineCode.text",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "short": "Indivíduo",
+        "definition": "Indivíduo que recebeu o imunobiológico.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.patient.identifier.use",
+        "path": "Immunization.patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.patient.identifier.type",
+        "path": "Immunization.patient.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.patient.identifier.system",
+        "path": "Immunization.patient.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Immunization.patient.identifier.value",
+        "path": "Immunization.patient.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Immunization.patient.identifier.period",
+        "path": "Immunization.patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.patient.identifier.assigner",
+        "path": "Immunization.patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.patient.display",
+        "path": "Immunization.patient.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.encounter",
+        "path": "Immunization.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.occurrence[x]",
+        "path": "Immunization.occurrence[x]",
+        "short": "Data da Administração do Imunobiológico",
+        "definition": "Data ou data e hora que o imunobiológico foi administrado.",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.recorded",
+        "path": "Immunization.recorded",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "short": "Indicação da fonte do registro",
+        "definition": "Indica se o registro é de fonte própria (true) ou se é derivado de uma fonte externa (false)."
+      },
+      {
+        "id": "Immunization.reportOrigin",
+        "path": "Immunization.reportOrigin",
+        "short": "Registro de Origem",
+        "definition": "Referencia a origem deste registro de fonte externa.",
+        "binding": {
+          "strength": "required",
+          "description": "Registro de Origem",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRRegistroOrigem"
+        }
+      },
+      {
+        "id": "Immunization.location",
+        "path": "Immunization.location",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer",
+        "path": "Immunization.manufacturer",
+        "short": "Fabricante",
+        "definition": "Fabricante do imunobiológico.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.manufacturer.reference",
+        "path": "Immunization.manufacturer.reference",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.type",
+        "path": "Immunization.manufacturer.type",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier",
+        "path": "Immunization.manufacturer.identifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type",
+        "path": "Immunization.manufacturer.identifier.type",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding",
+        "path": "Immunization.manufacturer.identifier.type.coding",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding.id",
+        "path": "Immunization.manufacturer.identifier.type.coding.id",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding.system",
+        "path": "Immunization.manufacturer.identifier.type.coding.system",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding.version",
+        "path": "Immunization.manufacturer.identifier.type.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding.code",
+        "path": "Immunization.manufacturer.identifier.type.coding.code",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding.display",
+        "path": "Immunization.manufacturer.identifier.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.coding.userSelected",
+        "path": "Immunization.manufacturer.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.type.text",
+        "path": "Immunization.manufacturer.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.system",
+        "path": "Immunization.manufacturer.identifier.system",
+        "short": "Fabricante PNI",
+        "definition": "URL que define o system BRFabricantePNI como referência para esse elemento.",
+        "min": 1,
+        "fixedUri": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRFabricantePNI",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.value",
+        "path": "Immunization.manufacturer.identifier.value",
+        "short": "Fabricante do imunobiológico.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "O código do fabricante do imunobiológico.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRFabricanteImunobiologico-1.0"
+        }
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.period",
+        "path": "Immunization.manufacturer.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.identifier.assigner",
+        "path": "Immunization.manufacturer.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer.display",
+        "path": "Immunization.manufacturer.display",
+        "short": "Nome do fabricante",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.lotNumber",
+        "path": "Immunization.lotNumber",
+        "short": "Lote",
+        "definition": "Código do lote do imunobiológico.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.expirationDate",
+        "path": "Immunization.expirationDate",
+        "short": "Data de expiração do imunobiológico",
+        "definition": "Data de expiração do imunobiológico"
+      },
+      {
+        "id": "Immunization.site",
+        "path": "Immunization.site",
+        "short": "Local de Aplicação",
+        "definition": "Local do corpo humano onde o imunobiológico foi administrado.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Local de Aplicação",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRLocalAplicacao-1.0"
+        }
+      },
+      {
+        "id": "Immunization.site.coding",
+        "path": "Immunization.site.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Immunization.site.coding.system",
+        "path": "Immunization.site.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Immunization.site.coding.code",
+        "path": "Immunization.site.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Immunization.site.coding.display",
+        "path": "Immunization.site.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.site.coding.userSelected",
+        "path": "Immunization.site.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.site.text",
+        "path": "Immunization.site.text",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.route",
+        "path": "Immunization.route",
+        "short": "Via de Administração",
+        "definition": "Via que o imunobiológico foi administrado.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Via de Administração",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRViaAdministracao-1.0"
+        }
+      },
+      {
+        "id": "Immunization.route.coding",
+        "path": "Immunization.route.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Immunization.route.coding.system",
+        "path": "Immunization.route.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Immunization.route.coding.code",
+        "path": "Immunization.route.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Immunization.route.coding.display",
+        "path": "Immunization.route.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.route.coding.userSelected",
+        "path": "Immunization.route.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.route.text",
+        "path": "Immunization.route.text",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.doseQuantity",
+        "path": "Immunization.doseQuantity",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.performer",
+        "path": "Immunization.performer",
+        "short": "Profissional Executante",
+        "definition": "Informações sobre o profissional que administrou o imunobiológico.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.performer.function",
+        "path": "Immunization.performer.function",
+        "short": "Ocupação do Profissional",
+        "definition": "Atividade desempenhada pelo profissional que administrou o imunobiológico.",
+        "max": "0",
+        "mustSupport": false
+      },
+      {
+        "id": "Immunization.performer.function.coding",
+        "path": "Immunization.performer.function.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Immunization.performer.function.coding.system",
+        "path": "Immunization.performer.function.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Immunization.performer.function.coding.code",
+        "path": "Immunization.performer.function.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Immunization.performer.function.coding.display",
+        "path": "Immunization.performer.function.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.performer.function.coding.userSelected",
+        "path": "Immunization.performer.function.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.performer.function.text",
+        "path": "Immunization.performer.function.text",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.performer.actor",
+        "path": "Immunization.performer.actor",
+        "short": "Profissional",
+        "definition": "Profissional que administrou o imunobiológico.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.performer.actor.reference",
+        "path": "Immunization.performer.actor.reference",
+        "min": 1
+      },
+      {
+        "id": "Immunization.performer.actor.type",
+        "path": "Immunization.performer.actor.type",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.performer.actor.identifier",
+        "path": "Immunization.performer.actor.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.performer.actor.display",
+        "path": "Immunization.performer.actor.display",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.note",
+        "path": "Immunization.note",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reasonCode",
+        "path": "Immunization.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reasonReference",
+        "path": "Immunization.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.isSubpotent",
+        "path": "Immunization.isSubpotent",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.subpotentReason",
+        "path": "Immunization.subpotentReason",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.education",
+        "path": "Immunization.education",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.programEligibility",
+        "path": "Immunization.programEligibility",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.fundingSource",
+        "path": "Immunization.fundingSource",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reaction",
+        "path": "Immunization.reaction",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.protocolApplied",
+        "path": "Immunization.protocolApplied",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.protocolApplied.extension",
+        "path": "Immunization.protocolApplied.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Immunization.protocolApplied.extension:strategy",
+        "path": "Immunization.protocolApplied.extension",
+        "sliceName": "strategy",
+        "definition": "Identifica a estratégia de vacinação em que esta administração aconteceu.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacao-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.protocolApplied.extension:estrategiaVacinacaoPesquisa",
+        "path": "Immunization.protocolApplied.extension",
+        "sliceName": "estrategiaVacinacaoPesquisa",
+        "short": "Estratégia de Vacinação Pesquisa",
+        "definition": "Extensão para as informações relacionadas aos dados da pesquisa clínica registrada na ANVISA que realizou a administração do imunobiológico.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstrategiaVacinacaoPesquisa-1.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Immunization.protocolApplied.series",
+        "path": "Immunization.protocolApplied.series",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.protocolApplied.authority",
+        "path": "Immunization.protocolApplied.authority",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.protocolApplied.targetDisease",
+        "path": "Immunization.protocolApplied.targetDisease",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.protocolApplied.doseNumber[x]",
+        "path": "Immunization.protocolApplied.doseNumber[x]",
+        "short": "Dose",
+        "definition": "Dose do imunobiológico administrado.",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Dose do Imunobiológico",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRDose-1.0"
+        }
+      },
+      {
+        "id": "Immunization.protocolApplied.seriesDoses[x]",
+        "path": "Immunization.protocolApplied.seriesDoses[x]",
+        "max": "0"
+      }
+    ]
+  },
+  "id": "BRImunobiologicoAdministrado-2.0"
+}

@@ -1,0 +1,1073 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BRContatoAssistencial-1.0",
+  "meta": {
+    "lastUpdated": "2023-05-25T18:32:01.5951643+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRContatoAssistencial-1.0",
+  "version": "2.0",
+  "name": "BRContatoAssistencial",
+  "title": "Contato Assistencial",
+  "status": "draft",
+  "experimental": false,
+  "date": "2020-04-29T19:58:09.2865128+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Resumo ou sumário referente a um atendimento ininterrupto dispensado a um indivíduo em uma mesma modalidade assistencial e em um mesmo estabelecimento de saúde, gerado após a conclusão deste atendimento.\r\nReferência: <a href=\"https://wiki.saude.gov.br/cmd/index.php/Página_principal#Contato_Assistencial\">https://wiki.saude.gov.br/cmd/index.php/Página_principal#Contato_Assistencial</a>",
+  "purpose": "Reportar para o Sistema Único de Saúde dados mínimos referentes a um atendimento concluído, de forma a possibilitar seu compartilhamento entre profissionais de saúde, o próprio indivíduo que recebeu o atendimento, assim como possibilitar o uso secundário das informações para atividades faturamento, auditoria, formulação e monitoramento de políticas públicas, por exemplo, nas esferas municipal, estadual e federal.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter",
+        "path": "Encounter",
+        "short": "Contato Assistencial",
+        "definition": "Atenção à saúde dispensada a um indivíduo em uma modalidade assistencial, de forma ininterrupta e em um mesmo estabelecimento de saúde.",
+        "alias": [
+          "Atendimento",
+          "Visita",
+          "Internação",
+          "Consulta",
+          "Atendimento Ambulatorial"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.identifier",
+        "path": "Encounter.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.status",
+        "path": "Encounter.status",
+        "short": "finished | entered-in-error",
+        "definition": "Indica o estado que o contato assistencial se encontra quando é informado para a RNDS.",
+        "comment": "Na RNDS os contatos assistenciais somente são informados após terem sido finalizados, portanto somente a opção finished pode ser utilizada, ou entered-in-error, quando o contato assistencial foi enviado com erro.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado do Contato Assistencial",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoContatoAssistencial-1.0"
+        }
+      },
+      {
+        "id": "Encounter.statusHistory",
+        "path": "Encounter.statusHistory",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.class",
+        "path": "Encounter.class",
+        "label": "Modalidade Assistencial",
+        "short": "Modalidade Assistencial",
+        "definition": "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento.\r\nReferência: https://rts.saude.gov.br/#/modalidade-assistencial",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Modalidade Assistencial",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencial-1.0"
+        }
+      },
+      {
+        "id": "Encounter.class.system",
+        "path": "Encounter.class.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.class.code",
+        "path": "Encounter.class.code",
+        "min": 1
+      },
+      {
+        "id": "Encounter.class.display",
+        "path": "Encounter.class.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.class.userSelected",
+        "path": "Encounter.class.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.classHistory",
+        "path": "Encounter.classHistory",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceType",
+        "path": "Encounter.serviceType",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.priority",
+        "path": "Encounter.priority",
+        "label": "Caráter do Atendimento",
+        "short": "Caráter do Atendimento",
+        "definition": "Identifica o contato assistencial de acordo com a prioridade de sua realização.\r\nReferência: https://rts.saude.gov.br/#/carater-atendimento",
+        "alias": [
+          "Caráter de Atendimento",
+          "Caráter da Internação"
+        ],
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Identifica o contato assistencial de acordo com a prioridade de sua realização.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCaraterAtendimento-1.0"
+        }
+      },
+      {
+        "id": "Encounter.priority.coding",
+        "path": "Encounter.priority.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.priority.coding.system",
+        "path": "Encounter.priority.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.priority.coding.code",
+        "path": "Encounter.priority.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Encounter.priority.coding.display",
+        "path": "Encounter.priority.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.priority.coding.userSelected",
+        "path": "Encounter.priority.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.priority.text",
+        "path": "Encounter.priority.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject",
+        "path": "Encounter.subject",
+        "comment": "Na primeira versão não será suportado a identificação de grupos.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.subject.extension",
+        "path": "Encounter.subject.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Encounter.subject.extension:unidentifiedPatient",
+        "path": "Encounter.subject.extension",
+        "sliceName": "unidentifiedPatient",
+        "short": "Dados do Indivíduo Não Identificado",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.subject.extension:unidentifiedPatient.extension",
+        "path": "Encounter.subject.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3
+      },
+      {
+        "id": "Encounter.subject.extension:unidentifiedPatient.extension:gender",
+        "path": "Encounter.subject.extension.extension",
+        "sliceName": "gender",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.subject.extension:unidentifiedPatient.extension:birthYear",
+        "path": "Encounter.subject.extension.extension",
+        "sliceName": "birthYear",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.subject.extension:unidentifiedPatient.extension:reason",
+        "path": "Encounter.subject.extension.extension",
+        "sliceName": "reason",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.subject.reference",
+        "path": "Encounter.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.type",
+        "path": "Encounter.subject.type",
+        "max": "0",
+        "fixedUri": "Patient"
+      },
+      {
+        "id": "Encounter.subject.identifier.use",
+        "path": "Encounter.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.identifier.type",
+        "path": "Encounter.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.identifier.system",
+        "path": "Encounter.subject.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.subject.identifier.value",
+        "path": "Encounter.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Encounter.subject.identifier.period",
+        "path": "Encounter.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.identifier.assigner",
+        "path": "Encounter.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.subject.display",
+        "path": "Encounter.subject.display",
+        "short": "Nome ou descrição do sujeito",
+        "definition": "Nome do indivíduo ou descrição do sujeito do Contato Assistencial quando não for um indivíduo.",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.episodeOfCare",
+        "path": "Encounter.episodeOfCare",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.basedOn",
+        "path": "Encounter.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant",
+        "path": "Encounter.participant",
+        "short": "Participante(s) do Contato Assistencial",
+        "definition": "Identifica o(s) profissional(is) ou indivíduo(s) que teve(tiveram) algum tipo de participação no Contato Assistencial.",
+        "alias": [
+          "Profissionais do Atendimento",
+          "Profissional Responsável pela Alta"
+        ],
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.participant.extension",
+        "path": "Encounter.participant.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Encounter.participant.extension:function",
+        "path": "Encounter.participant.extension",
+        "sliceName": "function",
+        "definition": "Ocupação do profissional ou indivíduo que participou do contato assistencial.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BROcupacao-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.participant.extension:team",
+        "path": "Encounter.participant.extension",
+        "sliceName": "team",
+        "short": "Equipe",
+        "definition": "Identifica a equipe de saúde responsável pelo Contato Assistencial utilizando o Identificador Nacional de Equipes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIdentificacaoEquipe-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.participant.type",
+        "path": "Encounter.participant.type",
+        "short": "Tipo de Participação",
+        "definition": "Responsabilidade que o profissional ou indivíduo teve durante o Contato Assistencial.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Responsabilidade no Contato Assistencial",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRResponsabilidadeParticipante-1.0"
+        }
+      },
+      {
+        "id": "Encounter.participant.type.coding.system",
+        "path": "Encounter.participant.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.participant.type.coding.code",
+        "path": "Encounter.participant.type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Encounter.participant.type.coding.display",
+        "path": "Encounter.participant.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.type.coding.userSelected",
+        "path": "Encounter.participant.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.type.text",
+        "path": "Encounter.participant.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.period",
+        "path": "Encounter.participant.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual",
+        "path": "Encounter.participant.individual",
+        "short": "Participante",
+        "definition": "Identifica o profissional ou indivíduo teve alguma participação no Contato Assistencial.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLotacaoProfissional-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProfissional-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.participant.individual.reference",
+        "path": "Encounter.participant.individual.reference",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual.type",
+        "path": "Encounter.participant.individual.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual.identifier",
+        "path": "Encounter.participant.individual.identifier",
+        "min": 1
+      },
+      {
+        "id": "Encounter.participant.individual.identifier.use",
+        "path": "Encounter.participant.individual.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual.identifier.type",
+        "path": "Encounter.participant.individual.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual.identifier.system",
+        "path": "Encounter.participant.individual.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.participant.individual.identifier.value",
+        "path": "Encounter.participant.individual.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Encounter.participant.individual.identifier.period",
+        "path": "Encounter.participant.individual.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual.identifier.assigner",
+        "path": "Encounter.participant.individual.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.participant.individual.display",
+        "path": "Encounter.participant.individual.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.appointment",
+        "path": "Encounter.appointment",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.period",
+        "path": "Encounter.period",
+        "short": "Início e Término do Contato Assistencial",
+        "definition": "Data ou data/hora de adminissão e desfecho do Contato Assistencial.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.period.start",
+        "path": "Encounter.period.start",
+        "short": "Momento da Admissão",
+        "definition": "Competência (mês/ano), data ou data e hora do início do Contato Assistencial.",
+        "alias": [
+          "Data da Admissão",
+          "Data e Hora do Atendimento",
+          "Data e Hora da Admissão"
+        ],
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.period.end",
+        "path": "Encounter.period.end",
+        "short": "Momento do Desfecho",
+        "definition": "Competência (mês/ano), data ou data e hora do término do Contato Assistencial.",
+        "alias": [
+          "Data do Desfecho",
+          "Data e Hora da Saída da Internação"
+        ],
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.length",
+        "path": "Encounter.length",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonCode",
+        "path": "Encounter.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonReference",
+        "path": "Encounter.reasonReference",
+        "short": "Motivo do Atendimento",
+        "definition": "Motivação para o Contato Assistencial acontecer.",
+        "alias": [
+          "Motivo do Contato Assistencial",
+          "Diangóstico Principal",
+          "Motivo da Admissão"
+        ],
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRObservacaoDescritiva-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.reasonReference.reference",
+        "path": "Encounter.reasonReference.reference",
+        "min": 1
+      },
+      {
+        "id": "Encounter.reasonReference.type",
+        "path": "Encounter.reasonReference.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonReference.identifier",
+        "path": "Encounter.reasonReference.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.reasonReference.display",
+        "path": "Encounter.reasonReference.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis",
+        "path": "Encounter.diagnosis",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "condition.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Diagnósticos Secundários, Outros Problemas e Procedimentos",
+        "definition": "Referência a diagnóstico(s) secundário(s) avaliado(s), outro(s) problema(s) avaliado(s) e/ou procedimento(s) realizado(s) durante o contato assistencial.",
+        "alias": [
+          "Problemas/Diagnósticos Avaliados",
+          "Procedimento Executado",
+          "Procedimento Realizado"
+        ],
+        "min": 1
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis",
+        "path": "Encounter.diagnosis",
+        "sliceName": "problemAndDiagnosis",
+        "short": "Diagnósticos/Problemas Avaliados",
+        "definition": "Informações sobre a condição de saúde, lesão, deficiência ou qualquer outra questão que afete o bem-estar físico, mental ou social de um indivíduo identificadas em um contato assistencial. (adaptado do conceito de Problema/Diagnóstico do Clinical Knowledge Manager/OpenEHR)\r\nDevem ser listados os problemas/diangnósticos avaliados durante um contato.\r\nDiagnóstico secundário é(são) a(s) condição(ões) que coexiste(m) no momento da admissão, que se desenvolve(m) durante o contato assistencial ou que afeta(m) a atenção recebida e/ou a duração do contato assistencial. (adaptado do conceito disposto no Art. 3º da Portaria SAS/MS nº 1.324, de 27 de novembro de 2014)",
+        "alias": [
+          "Diagnóstico Secundário"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.condition",
+        "path": "Encounter.diagnosis.condition",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.condition.reference",
+        "path": "Encounter.diagnosis.condition.reference",
+        "min": 1
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.condition.type",
+        "path": "Encounter.diagnosis.condition.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.condition.identifier",
+        "path": "Encounter.diagnosis.condition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.condition.display",
+        "path": "Encounter.diagnosis.condition.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.use",
+        "path": "Encounter.diagnosis.use",
+        "binding": {
+          "strength": "required",
+          "description": "Papel de um problema/diagnóstico.",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRPapelProblemaDiagnostico"
+        }
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.use.coding",
+        "path": "Encounter.diagnosis.use.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.use.coding.system",
+        "path": "Encounter.diagnosis.use.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.use.coding.code",
+        "path": "Encounter.diagnosis.use.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.use.coding.userSelected",
+        "path": "Encounter.diagnosis.use.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.use.text",
+        "path": "Encounter.diagnosis.use.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:problemAndDiagnosis.rank",
+        "path": "Encounter.diagnosis.rank",
+        "short": "Diagnostico principal ou secundário"
+      },
+      {
+        "id": "Encounter.diagnosis:procedure",
+        "path": "Encounter.diagnosis",
+        "sliceName": "procedure",
+        "short": "Procedimento(s) Realizado(s)",
+        "definition": "Ação(ões) e/ou serviço(s) de saúde realizado(s) no/para o indivíduo.",
+        "alias": [
+          "Procedimento Executado"
+        ],
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.condition",
+        "path": "Encounter.diagnosis.condition",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProcedimentoRealizado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.condition.extension",
+        "path": "Encounter.diagnosis.condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.condition.extension:financier",
+        "path": "Encounter.diagnosis.condition.extension",
+        "sliceName": "financier",
+        "definition": "Agente, instituição ou entidade responsável por custear as ações e serviços de saúde.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRFinanciamento-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.condition.reference",
+        "path": "Encounter.diagnosis.condition.reference",
+        "min": 1
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.condition.identifier",
+        "path": "Encounter.diagnosis.condition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.condition.display",
+        "path": "Encounter.diagnosis.condition.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.use",
+        "path": "Encounter.diagnosis.use",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.diagnosis:procedure.rank",
+        "path": "Encounter.diagnosis.rank",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.account",
+        "path": "Encounter.account",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization",
+        "path": "Encounter.hospitalization",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.hospitalization.extension",
+        "path": "Encounter.hospitalization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Encounter.hospitalization.extension:otherInformations",
+        "path": "Encounter.hospitalization.extension",
+        "sliceName": "otherInformations",
+        "short": "Outras Informações",
+        "definition": "Representa quaisquer outras informações descritivas relacionadas aos dados de desfecho do atendimento registrado.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BROutrasInformacoes"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Encounter.hospitalization.preAdmissionIdentifier",
+        "path": "Encounter.hospitalization.preAdmissionIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.origin",
+        "path": "Encounter.hospitalization.origin",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource",
+        "path": "Encounter.hospitalization.admitSource",
+        "short": "Procedência",
+        "definition": "Identifica o serviço que encaminhou o indivíduo ou a sua iniciativa/de seu responsável na busca pelo acesso ao serviço de saúde.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Procedência",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedencia-1.0"
+        }
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding",
+        "path": "Encounter.hospitalization.admitSource.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.system",
+        "path": "Encounter.hospitalization.admitSource.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.code",
+        "path": "Encounter.hospitalization.admitSource.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.display",
+        "path": "Encounter.hospitalization.admitSource.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.coding.userSelected",
+        "path": "Encounter.hospitalization.admitSource.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.admitSource.text",
+        "path": "Encounter.hospitalization.admitSource.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.reAdmission",
+        "path": "Encounter.hospitalization.reAdmission",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.dietPreference",
+        "path": "Encounter.hospitalization.dietPreference",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.specialCourtesy",
+        "path": "Encounter.hospitalization.specialCourtesy",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.specialArrangement",
+        "path": "Encounter.hospitalization.specialArrangement",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.destination",
+        "path": "Encounter.hospitalization.destination",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition",
+        "path": "Encounter.hospitalization.dischargeDisposition",
+        "short": "Motivo de Desfecho",
+        "definition": "Caracteriza o motivo de conclusão total ou parcial do Contato Assistencial.",
+        "alias": [
+          "Desfecho da Internação"
+        ],
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Motivo do Desfecho",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRMotivoDesfecho-1.0"
+        }
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition.coding",
+        "path": "Encounter.hospitalization.dischargeDisposition.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition.coding.system",
+        "path": "Encounter.hospitalization.dischargeDisposition.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition.coding.code",
+        "path": "Encounter.hospitalization.dischargeDisposition.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition.coding.display",
+        "path": "Encounter.hospitalization.dischargeDisposition.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition.coding.userSelected",
+        "path": "Encounter.hospitalization.dischargeDisposition.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition.text",
+        "path": "Encounter.hospitalization.dischargeDisposition.text",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location",
+        "path": "Encounter.location",
+        "short": "Local de Atendimento",
+        "definition": "Local onde o atendimento aconteceu.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.location.location",
+        "path": "Encounter.location.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRLocalAtendimento-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.location.location.reference",
+        "path": "Encounter.location.location.reference",
+        "min": 1
+      },
+      {
+        "id": "Encounter.location.location.type",
+        "path": "Encounter.location.location.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.location.identifier",
+        "path": "Encounter.location.location.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.location.display",
+        "path": "Encounter.location.location.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.status",
+        "path": "Encounter.location.status",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.physicalType",
+        "path": "Encounter.location.physicalType",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.location.period",
+        "path": "Encounter.location.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider",
+        "path": "Encounter.serviceProvider",
+        "short": "Estabelecimento de Saúde do Contato Assistencial",
+        "definition": "Identifica pelo número de inscrição no Cadastro Nacional de Estabelecimentos de Saúde o Estabelecimento de Saúde que realizou o Contato Assistencial.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0",
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.serviceProvider.reference",
+        "path": "Encounter.serviceProvider.reference",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider.type",
+        "path": "Encounter.serviceProvider.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier",
+        "path": "Encounter.serviceProvider.identifier",
+        "min": 1
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier.use",
+        "path": "Encounter.serviceProvider.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier.type",
+        "path": "Encounter.serviceProvider.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier.system",
+        "path": "Encounter.serviceProvider.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier.value",
+        "path": "Encounter.serviceProvider.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier.period",
+        "path": "Encounter.serviceProvider.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider.identifier.assigner",
+        "path": "Encounter.serviceProvider.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.serviceProvider.display",
+        "path": "Encounter.serviceProvider.display",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.partOf",
+        "path": "Encounter.partOf",
+        "short": "Contato Assistencial anterior",
+        "definition": "Permite referenciar outro Contato Assistencial que tenha dado sequência a este, como por exemplo, um indivíduo realiza, em um mesmo Estabelecimento de Saúde, um Contato Assistencial que seja de Modalidade Assistencial Atenção à Urgência/Emergência, e necessite ser internado, dando continuidade em um Contato Assistencial de Atenção Hospitalar. Neste exemplo, este elemento seria utilizado no Contato Assistencial de Atenção Hospitalar, que faria referência ao Contato Assistencial de Atenção à Urgência/Emergência.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRContatoAssistencial-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.partOf.reference",
+        "path": "Encounter.partOf.reference",
+        "min": 1
+      },
+      {
+        "id": "Encounter.partOf.type",
+        "path": "Encounter.partOf.type",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.partOf.identifier",
+        "path": "Encounter.partOf.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Encounter.partOf.display",
+        "path": "Encounter.partOf.display",
+        "max": "0"
+      }
+    ]
+  }
+}

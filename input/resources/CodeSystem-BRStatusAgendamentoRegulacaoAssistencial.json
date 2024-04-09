@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BRStatusAgendamentoRegulacaoAssistencial",
+  "meta": {
+    "lastUpdated": "2020-03-26T13:19:48.112+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusAgendamentoRegulacaoAssistencial",
+  "version": "1.1",
+  "name": "Status de agendamento de regulação assistencial",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-26T13:19:46.9743559+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Status de agendamento de regulação assistencial.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "excluded",
+      "display": "Excluded",
+      "definition": "When document was excluded.",
+      "designation": [
+        {
+          "language": "pt-BR",
+          "value": "Excluído"
+        }
+      ]
+    },
+    {
+      "code": "returned-to-requester",
+      "display": "Returned to requester.",
+      "definition": "When document was returned to requester",
+      "designation": [
+        {
+          "language": "pt-BR",
+          "value": "Devolvido para o solicitante."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,750 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BRConjuntoMinimoDados-1.1",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2023-05-25T18:05:29.6576744+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRConjuntoMinimoDados-1.1",
+  "version": "2.0",
+  "name": "BRConjuntoMinimoDados",
+  "title": "Conjunto Mínimo de Dados",
+  "status": "draft",
+  "date": "2022-06-08",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Documento público que coleta os dados dos atendimentos em saúde realizados em qualquer estabelecimento de saúde do país, público ou privado, em cada contato assistencial",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Conjunto Mínimo de Dados",
+        "definition": "Documento que representa o Conjunto Mínimo de Dados.",
+        "alias": [
+          "Contato Assistencial",
+          "CMD",
+          "Minimum Health Data Set",
+          "Minimum Basic Health Data Set",
+          "MHDS",
+          "MBHDS",
+          "Atendimento",
+          "Internação"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "final | entered-in-error",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Estado do Documento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BREstadoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Tipo de Documento",
+        "definition": "Especifica o tipo de documento que está sendo enviado na composição.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Tipo de Documento",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoDocumento-1.0"
+        }
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.coding.userSelected",
+        "path": "Composition.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.type.text",
+        "path": "Composition.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "short": "Modalidade Assistencial",
+        "definition": "Classifica os contatos assistenciais de acordo com as especificidades do modo, local e duração do atendimento.\r\nReferência: https://rts.saude.gov.br/#/modalidade-assistencial",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Modalidade Assistencial",
+          "valueSet": "http://www.saude.gov.br/fhir/r4/ValueSet/BRModalidadeAssistencial-1.0"
+        }
+      },
+      {
+        "id": "Composition.category.coding",
+        "path": "Composition.category.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.category.coding.system",
+        "path": "Composition.category.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.category.coding.code",
+        "path": "Composition.category.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Composition.category.coding.display",
+        "path": "Composition.category.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category.coding.userSelected",
+        "path": "Composition.category.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.category.text",
+        "path": "Composition.category.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "Sujeito da Composição",
+        "definition": "Quem ou o quê a composição se refere. Pode ser um indivíduo, dispositivo, grupos (de indivíduos, dispositivos etc.).",
+        "comment": "Nesta versão, a RNDS suportará somente indivíduos.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension",
+        "path": "Composition.subject.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient",
+        "path": "Composition.subject.extension",
+        "sliceName": "unidentifiedPatient",
+        "short": "Dados do Indivíduo Não Identificado",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuoNaoIdentificado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension",
+        "path": "Composition.subject.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:gender",
+        "path": "Composition.subject.extension.extension",
+        "sliceName": "gender",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:birthYear",
+        "path": "Composition.subject.extension.extension",
+        "sliceName": "birthYear",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.extension:unidentifiedPatient.extension:reason",
+        "path": "Composition.subject.extension.extension",
+        "sliceName": "reason",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.reference",
+        "path": "Composition.subject.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.type",
+        "path": "Composition.subject.type",
+        "max": "0",
+        "fixedUri": "Patient"
+      },
+      {
+        "id": "Composition.subject.identifier.use",
+        "path": "Composition.subject.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.type",
+        "path": "Composition.subject.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.system",
+        "path": "Composition.subject.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.subject.identifier.value",
+        "path": "Composition.subject.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.subject.identifier.period",
+        "path": "Composition.subject.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.identifier.assigner",
+        "path": "Composition.subject.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.subject.display",
+        "path": "Composition.subject.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.encounter",
+        "path": "Composition.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "short": "Data/hora de Geração do Documento",
+        "definition": "Data e hora em que o documento foi gerado.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Reponsável pelo Contato Assistencial",
+        "definition": "Identifica a Pessoa Jurídica ou Pessoa Física (profissional liberal) responsável por gerar o documento.",
+        "comment": "Nesta versão da RNDS somente serão suportadas edições provenientes de Estabelecimentos de Saúde.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridicaProfissionalLiberal-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.type",
+        "path": "Composition.author.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier",
+        "path": "Composition.author.identifier",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.use",
+        "path": "Composition.author.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.type",
+        "path": "Composition.author.identifier.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.system",
+        "path": "Composition.author.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.value",
+        "path": "Composition.author.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Composition.author.identifier.period",
+        "path": "Composition.author.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.identifier.assigner",
+        "path": "Composition.author.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Composition.author.display",
+        "path": "Composition.author.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Título do documento",
+        "definition": "Título do documento em linguagem humana.",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.confidentiality",
+        "path": "Composition.confidentiality",
+        "max": "0"
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "max": "0"
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "short": "Relação a Outros Documentos",
+        "definition": "Indica uma relação entre esse documento e outro documento (ou composição) existente.",
+        "requirements": "Este elemento deve ser utilizado exclusivamente para indicar que este documento substitui (replaces) outro documento / composição; ou seja, é utilizado para cancelar o anterior e passar a considerar este no seu lugar. Este documento receberá um ID próprio; o documento anterior continuará disponível na RNDS e poderá ser recuperado integralmente por referência direta ao seu ID, garantindo a rastreabilidade do processo, mas não estará diretamente disponível na timeline do cidadão.",
+        "max": "1"
+      },
+      {
+        "id": "Composition.relatesTo.code",
+        "path": "Composition.relatesTo.code",
+        "short": "Tipo de Relacionamento",
+        "definition": "Indica o tipo de relacionamento que este documento tem com o outro documento (composição).",
+        "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
+        "fixedCode": "replaces"
+      },
+      {
+        "id": "Composition.relatesTo.target[x]",
+        "path": "Composition.relatesTo.target[x]",
+        "short": "Documento a Ser Substituído",
+        "definition": "Referência ao documento anterior que este documento está substituindo.",
+        "requirements": "O valor é fixado em replaces, pois a substituição de documentos é a única operação permitida na RNDS.",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ]
+      },
+      {
+        "id": "Composition.relatesTo.target[x].id",
+        "path": "Composition.relatesTo.target[x].id",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].reference",
+        "path": "Composition.relatesTo.target[x].reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.relatesTo.target[x].type",
+        "path": "Composition.relatesTo.target[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].identifier",
+        "path": "Composition.relatesTo.target[x].identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.relatesTo.target[x].display",
+        "path": "Composition.relatesTo.target[x].display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "entry.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Seções do documento",
+        "definition": "Referencia todas as seções (profiles/resources) contidos neste documento.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial",
+        "path": "Composition.section",
+        "sliceName": "informacoesContatoAssistencial",
+        "short": "Informações do Contato Assistencial",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.code",
+        "path": "Composition.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRContatoAssistencial-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:informacoesContatoAssistencial.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados",
+        "path": "Composition.section",
+        "sliceName": "problemasDiagnosticosAvaliados",
+        "short": "Problema(s)/Diagnóstico(s) Avaliado(s)",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.code",
+        "path": "Composition.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProblemaDiagnostico"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "short": "Motivo da Seção Vazia",
+        "max": "0",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason.coding",
+        "path": "Composition.section.emptyReason.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason.coding.system",
+        "path": "Composition.section.emptyReason.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason.coding.code",
+        "path": "Composition.section.emptyReason.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason.coding.display",
+        "path": "Composition.section.emptyReason.coding.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason.coding.userSelected",
+        "path": "Composition.section.emptyReason.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.emptyReason.text",
+        "path": "Composition.section.emptyReason.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:problemasDiagnosticosAvaliados.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados",
+        "path": "Composition.section",
+        "sliceName": "procedimentosRealizados",
+        "short": "Procedimento(s) Realizado(s)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.title",
+        "path": "Composition.section.title",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.code",
+        "path": "Composition.section.code",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.author",
+        "path": "Composition.section.author",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.focus",
+        "path": "Composition.section.focus",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.mode",
+        "path": "Composition.section.mode",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.orderedBy",
+        "path": "Composition.section.orderedBy",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRProcedimentoRealizado-1.0"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.entry.type",
+        "path": "Composition.section.entry.type",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.entry.identifier",
+        "path": "Composition.section.entry.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.entry.display",
+        "path": "Composition.section.entry.display",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:procedimentosRealizados.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      }
+    ]
+  }
+}

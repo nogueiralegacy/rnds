@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRLocalAplicacao-1.0",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2024-01-16T18:15:54.9540124+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRLocalAplicacao-1.0",
+  "version": "1.0",
+  "name": "LocalAplicacao",
+  "title": "Local de Aplicação",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-01-16T18:15:54.9540124+00:00",
+  "publisher": "UFG-CGIS",
+  "description": "Conjunto de localizações anatômicas de aplicação de uma substância.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRLocalAplicacao",
+        "version": "*"
+      }
+    ]
+  }
+}
