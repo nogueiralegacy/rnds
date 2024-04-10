@@ -1,18 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2021-12-28T17:23:29+00:00"
-  },
-  "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade",
-  "version": "01.00",
-  "name": "Nacionalidade",
   "status": "active",
-  "experimental": false,
-  "date": "2021-12-28T17:23:29+00:00",
-  "publisher": "Ministério da Saúde do Brasil",
-  "description": "Define a nacionalidade de um dado indivíduo.",
   "content": "complete",
+  "name": "Nacionalidade",
+  "id": "BRNacionalidade",
+  "description": "Define a nacionalidade de um dado indivíduo.",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade",
   "concept": [
     {
       "code": "B",
@@ -57,5 +50,12 @@
       ]
     }
   ],
-  "id": "BRNacionalidade"
+  "meta": {
+    "lastUpdated": "2021-12-28T17:23:29+00:00"
+  },
+  "language": "pt-BR",
+  "version": "01.00",
+  "experimental": false,
+  "publisher": "Ministério da Saúde do Brasil",
+  "count": 3
 }
