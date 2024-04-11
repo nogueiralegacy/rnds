@@ -17,7 +17,8 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNacionalidade",
+        "version": "*"
       }
     ]
   }
