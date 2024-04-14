@@ -15,6 +15,10 @@
   "publisher": "Instituto Brasileiro de Geografia e Estatística",
   "description": "As regiões geográficas, estados, distrito federal e municípios do Brasil.",
   "content": "complete",
+  "text" : {
+    "status" : "empty",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">BR Divisao Geografica</div>"
+  },
   "property": [
     {
       "code": "type",
@@ -38431,7 +38435,7 @@
             },
             {
               "code": "ethnical",
-              "valueCode": "paulista"
+              "valueString": "paulista"
             }
           ],
           "concept": [
