@@ -15,6 +15,10 @@
   "publisher": "Instituto Brasileiro de Geografia e Estatística",
   "description": "As regiões geográficas, estados, distrito federal e municípios do Brasil.",
   "content": "complete",
+  "text" : {
+    "status" : "empty",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">BR Divisao Geografica</div>"
+  },
   "property": [
     {
       "code": "type",
@@ -34,6 +38,18 @@
   ],
   "concept": [
     {
+      "code": "city",
+      "display": "Cidade"
+    },
+    {
+      "code": "ethnical",
+      "display": "Gentílico"
+    },
+    {
+      "code": "initials",
+      "display": "Sigla"
+    },
+    {      
       "code": "1",
       "display": "Norte",
       "property": [
@@ -47,7 +63,7 @@
         }
       ],
       "concept": [
-        {
+        {          
           "code": "11",
           "display": "Rondônia",
           "property": [
@@ -38431,7 +38447,7 @@
             },
             {
               "code": "ethnical",
-              "valueCode": "paulista"
+              "valueString": "paulista"
             }
           ],
           "concept": [
