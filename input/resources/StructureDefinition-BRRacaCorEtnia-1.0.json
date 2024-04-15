@@ -50,7 +50,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "min": 1
       },
       {
         "id": "Extension.extension:race",
