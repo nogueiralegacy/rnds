@@ -49,6 +49,10 @@
       "code": "initials",
       "display": "Sigla"
     },
+    {
+      "code": "state",
+      "display": "Estado"
+    },
     {      
       "code": "1",
       "display": "Norte",
