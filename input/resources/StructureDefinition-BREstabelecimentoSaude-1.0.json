@@ -30,6 +30,7 @@
       {
         "id": "Organization.extension",
         "path": "Organization.extension",
+        "min": 1,
         "slicing": {
           "discriminator": [
             {
@@ -73,18 +74,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Organization.extension:outsourcedAdministrator.value[x]",
-        "path": "Organization.extension.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRPessoaJuridica-1.0"
-            ]
-          }
-        ]
       },
       {
         "id": "Organization.identifier",

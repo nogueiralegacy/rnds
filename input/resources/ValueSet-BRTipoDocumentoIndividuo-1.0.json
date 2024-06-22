@@ -79,14 +79,12 @@
         ]
       },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador"
       }
     ],
     "exclude": [
       {
         "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoIdentificador",
-        "version": "*",
         "concept": [
           {
             "code": "AUTH"
