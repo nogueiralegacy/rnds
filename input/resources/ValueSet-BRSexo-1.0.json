@@ -18,7 +18,6 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/administrative-gender",
-        "version": "*",
         "concept": [
           {
             "code": "male",
