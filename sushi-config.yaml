@@ -6,7 +6,7 @@
 id: br.ufg.cgis.rnds-lite
 canonical: http://www.saude.gov.br/fhir/r4
 name: RndsLite
-# title: Example Title
+title: RNDS (não oficial)
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.8
