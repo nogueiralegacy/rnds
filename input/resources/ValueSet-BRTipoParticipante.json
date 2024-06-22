@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2023-04-13T13:17:22.715+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTipoParticipante",
+  "version": "1.0",
+  "name": "Tipo Participante",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-04-13T13:17:18.5012669+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Identificação do tipo do participante envolvido na solicitação.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante"
+      }
+    ]
+  },
+  "id": "BRTipoParticipante"
+}

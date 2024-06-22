@@ -4,7 +4,6 @@
   "meta": {
     "lastUpdated": "2020-03-26T13:19:48.112+00:00"
   },
-  "language": "pt-BR",
   "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRStatusRegulacaoAssistencial",
   "version": "1.0",
   "name": "Status da regulação assistencial",
