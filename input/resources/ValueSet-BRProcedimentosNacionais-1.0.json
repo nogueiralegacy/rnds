@@ -17,12 +17,10 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBHPMTUSS"
       },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS"
       }
     ]
   }
