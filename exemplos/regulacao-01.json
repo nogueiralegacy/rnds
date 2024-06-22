@@ -136,7 +136,7 @@
                                 "reference": "urn:uuid:transient-1"
                             }
                         ]
-                    },
+                    }
                 ],
                 "section": [
                     {
@@ -230,7 +230,7 @@
                             }
                         },
                         "status": "accepted"
-                    },
+                    }
                 ]
             }
         },
