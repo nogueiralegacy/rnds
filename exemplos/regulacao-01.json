@@ -11,7 +11,7 @@
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:transient-0",
+            "fullUrl": "urn:uuid:b484f0de-88ae-4c6c-bbdf-be88b1fe842b",
             "resource": {
                 "resourceType": "Composition",
                 "meta": {
@@ -74,7 +74,7 @@
                         },
                         "detail": [
                             {
-                                "reference": "urn:uuid:transient-2"
+                                "reference": "urn:uuid:5a6a9861-6222-43d5-bbc3-a125493e0eb5"
                             },
                             {
                                 "identifier": {
@@ -133,7 +133,7 @@
                                 }
                             },
                             {
-                                "reference": "urn:uuid:transient-1"
+                                "reference": "urn:uuid:fc4dfb4c-e340-4182-a16e-66c4cc9dd20d"
                             }
                         ]
                     }
@@ -142,7 +142,7 @@
                     {
                         "entry": [
                             {
-                                "reference": "urn:uuid:transient-1"
+                                "reference": "urn:uuid:fc4dfb4c-e340-4182-a16e-66c4cc9dd20d"
                             }
                         ]
                     }
@@ -150,7 +150,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:transient-1",
+            "fullUrl": "urn:uuid:fc4dfb4c-e340-4182-a16e-66c4cc9dd20d",
             "resource": {
                 "resourceType": "Appointment",
                 "meta": {
@@ -175,7 +175,7 @@
                         "coding": [
                             {
                                 "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-                                "code": "0406"
+                                "code": "0101050062"
                             }
                         ]
                     }
@@ -200,7 +200,7 @@
                 },
                 "reasonReference": [
                     {
-                        "reference": "urn:uuid:transient-3"
+                        "reference": "urn:uuid:5a6a9861-6222-43d5-bbc3-a125493e0eb6"
                     }
                 ],
                 "start": "2023-04-09T00:00:00.000000Z",
@@ -208,7 +208,7 @@
                 "created": "2023-03-09",
                 "basedOn": [
                     {
-                        "reference": "urn:uuid:transient-2"
+                        "reference": "urn:uuid:5a6a9861-6222-43d5-bbc3-a125493e0eb5"
                     }
                 ],
                 "participant": [
@@ -235,7 +235,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:transient-2",
+            "fullUrl": "urn:uuid:5a6a9861-6222-43d5-bbc3-a125493e0eb5",
             "resource": {
                 "resourceType": "ServiceRequest",
                 "meta": {
@@ -260,7 +260,7 @@
                     "coding": [
                         {
                             "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS",
-                            "code": "0406"
+                            "code": "0101050062"
                         }
                     ]
                 },
@@ -296,13 +296,13 @@
                 ],
                 "reasonReference": [
                     {
-                        "reference": "urn:uuid:transient-3"
+                        "reference": "urn:uuid:5a6a9861-6222-43d5-bbc3-a125493e0eb6"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:transient-3",
+            "fullUrl": "urn:uuid:5a6a9861-6222-43d5-bbc3-a125493e0eb6",
             "resource": {
                 "resourceType": "Condition",
                 "meta": {

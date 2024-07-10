@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2023-04-13T18:15:59.439+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante",
+  "version": "1.0",
+  "name": "Tipo Participante",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-04-13T18:16:19.9468275+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "Identificação do tipo do participante envolvido na solicitação.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "PCT",
+      "display": "Paciente"
+    },
+    {
+      "code": "ESS",
+      "display": "Estabelecimento de saúde solicitante"
+    },
+    {
+      "code": "ESE",
+      "display": "Estabelecimento de saúde executante"
+    },
+    {
+      "code": "ESR",
+      "display": "Estabelecimento de saúde regulador"
+    }
+  ],
+  "id": "BRTipoParticipante"
+}

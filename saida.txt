@@ -1,0 +1,71 @@
+FHIR Validation tool Version 6.3.7 (Git# d81fc5d82d02). Built 2024-05-10T05:03:14.916Z (43 days old)
+  Java:   11.0.22 from /usr/lib/jvm/java-11-openjdk-arm64 on aarch64 (64bit). 3998MB available
+
+WARNING: Default file encoding is US-ASCII which may cause unexpected results. 
+         To fix this issue, run this program with the parameter '-Dfile.encoding=UTF-8'
+         Future releases may not be able to run at all with encoding US-ASCII
+
+  Paths:  Current = /root/projetos/pacotes-rnds/rnds, Package Cache = /root/.fhir/packages
+  Params: exemplos/regulacao-01.json -version 4.0.1 -ig br.ufg.cgis.rnds-lite#dev
+  Locale: United States/US
+  Jurisdiction: United States of America
+Loading
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1 - 4576 resources (00:03.109)
+  Load hl7.fhir.uv.extensions.r4#1.0.0 - 1328 resources (00:02.509)
+  Load hl7.terminology#5.5.0 - 4224 resources (00:00.911)
+  Load hl7.terminology.r5#5.5.0 - 4224 resources (00:00.700)
+  Load hl7.fhir.uv.extensions#5.1.0 - 1396 resources (00:00.640)
+  Terminology server http://tx.fhir.org - Version Connected to Terminology Server at http://tx.fhir.org (00:02.152)
+  Load hl7.terminology.r4#5.5.0 - 4224 resources (00:00.536)
+  Load hl7.fhir.uv.extensions.r4#5.1.0 - 1396 resources (00:00.739)
+  Load br.ufg.cgis.rnds-lite#dev - 70 resources (00:00.146)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.fhir.uv.extensions.r4#1.0.0, hl7.terminology#5.5.0, hl7.terminology.r5#5.5.0, hl7.fhir.uv.extensions#5.1.0, hl7.terminology.r4#5.5.0, hl7.fhir.uv.extensions.r4#5.1.0, br.ufg.cgis.rnds-lite#dev]
+  Terminology Cache at /tmp/default-tx-cache
+  Get set...  go (00:00.215)
+Validating
+  Validate exemplos/regulacao-01.json
+Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1  Load br.ufg.cgis.rnds-lite#0.1.8 - 21 resources (00:02.097)
+..........20..........40..........60..........80.........|
+ 00:00.805
+Done. Times: Loading: 00:11.748, validation: 00:02.902. Memory = 626Mb
+
+*FAILURE*: 12 errors, 7 warnings, 19 notes
+  Error @ Bundle.entry[1].resource/*Appointment/null*/.serviceType[0] (line 174, col22): None of the codings provided are in the value set 'Procedimento realizado' (http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0|0.1.8), and a coding from this value set is required) (codes = http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS#0406)
+  Error @ Bundle.entry[1].resource/*Appointment/null*/.serviceType[0].coding[0].code (line 174, col22): Unknown code '0406' in the CodeSystem 'http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS' version '0.1.8'
+  Error @ Bundle.entry[2].resource/*ServiceRequest/null*/.code (line 259, col18): None of the codings provided are in the value set 'Procedimento realizado' (http://www.saude.gov.br/fhir/r4/ValueSet/BRProcedimentosNacionais-1.0|0.1.8), and a coding from this value set is required) (codes = http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS#0406)
+  Error @ Bundle.entry[2].resource/*ServiceRequest/null*/.code.coding[0].code (line 259, col18): Unknown code '0406' in the CodeSystem 'http://www.saude.gov.br/fhir/r4/CodeSystem/BRTabelaSUS' version '0.1.8'
+  Error @ Bundle.entry[0].fullUrl (line 14, col46): UUIDs must be valid and lowercase (transient-0)
+  Error @ Bundle.entry[1].fullUrl (line 153, col46): UUIDs must be valid and lowercase (transient-1)
+  Error @ Bundle.entry[2].fullUrl (line 238, col46): UUIDs must be valid and lowercase (transient-2)
+  Error @ Bundle.entry[3].fullUrl (line 305, col46): UUIDs must be valid and lowercase (transient-3)
+  Error @ Bundle.entry[0].resource/*Composition/null*/.event[0].detail[0] (line 76, col30): Unable to find a match for profile urn:uuid:transient-2 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0, http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+  Error @ Bundle.entry[0].resource/*Composition/null*/.event[2].detail[1] (line 135, col30): Unable to find a match for profile urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial, http://www.saude.gov.br/fhir/r4/StructureDefinition/BREstabelecimentoSaude-1.0
+  Error @ Bundle.entry[0].resource/*Composition/null*/.section[0].entry[0] (line 144, col30): Unable to find a match for profile urn:uuid:transient-1 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial
+  Error @ Bundle.entry[1].resource/*Appointment/null*/.basedOn[0] (line 210, col22): Unable to find a match for profile urn:uuid:transient-2 among choices: http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial
+  Information @ Bundle.entry[0].resource/*Composition/null*/.status (line 23, col34): Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1
+  Information @ Bundle.entry[0].resource/*Composition/null*/.category[0] (line 33, col22): Reference to draft CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|0.1.8
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.serviceCategory[0] (line 164, col22): Reference to draft CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|0.1.8
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.appointmentType (line 193, col18): Reference to draft CodeSystem http://hl7.org/fhir/request-priority|4.0.1
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.participant[0].type[0] (line 217, col30): Reference to draft CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante|0.1.8
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.participant[0].status (line 232, col45): Reference to draft CodeSystem http://hl7.org/fhir/participationstatus|4.0.1
+  Information @ Bundle.entry[2].resource/*ServiceRequest/null*/.status (line 246, col35): Reference to draft CodeSystem http://hl7.org/fhir/request-status|4.0.1
+  Information @ Bundle.entry[2].resource/*ServiceRequest/null*/.intent (line 247, col37): Reference to draft CodeSystem http://hl7.org/fhir/request-intent|4.0.1
+  Information @ Bundle.entry[2].resource/*ServiceRequest/null*/.category[0] (line 249, col22): Reference to draft CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeAssistencial|0.1.8
+  Information @ Bundle.entry[2].resource/*ServiceRequest/null*/.priority (line 258, col37): Reference to draft CodeSystem http://hl7.org/fhir/request-priority|4.0.1
+  Information @ Bundle.entry[3].resource/*Condition/null*/.code (line 333, col18): Reference to draft CodeSystem http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10|0.1.8
+  Information @ Bundle.entry[0].resource/*Composition/null*/.type (line 24, col18): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoDocumento#RA)
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.specialty[0] (line 184, col22): None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://www.saude.gov.br/fhir/r4/CodeSystem/BRCBO#225265)
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.appointmentType (line 193, col18): None of the codings provided are in the value set 'hl7VS-appointmentReasonCodes' (http://terminology.hl7.org/ValueSet/v2-0276|2.0.0), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/request-priority#urgent)
+  Information @ Bundle.entry[0].resource/*Composition/null*/.event[0].detail[0] (line 76, col30): Details for urn:uuid:transient-2 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial|0.1.8
+  Information @ Bundle.entry[0].resource/*Composition/null*/.event[2].detail[1] (line 135, col30): Details for urn:uuid:transient-1 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial|0.1.8
+  Information @ Bundle.entry[0].resource/*Composition/null*/.section[0].entry[0] (line 144, col30): Details for urn:uuid:transient-1 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRAgendamentoRegulacaoAssistencial|0.1.8
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.basedOn[0] (line 210, col22): Details for urn:uuid:transient-2 matching against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+  Information @ Bundle.entry[1].resource/*Appointment/null*/.basedOn[0] (line 210, col22): Details for urn:uuid:transient-2 matching against profile http://www.saude.gov.br/fhir/r4/StructureDefinition/BRRequisicaoRegulacaoAssistencial|0.1.8
+  Warning @ Bundle.entry[1].resource/*Appointment/null*/.participant[0].type[0] (line 217, col30): None of the codings provided are in the value set 'Participant type' (http://hl7.org/fhir/ValueSet/encounter-participant-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoParticipante#PCT)
+  Warning @ Bundle.entry[3].resource/*Condition/null*/.category[0] (line 323, col22): None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://www.saude.gov.br/fhir/r4/CodeSystem/BRCategoriaDiagnostico#01)
+  Warning @ Bundle.identifier.system (line 4, col74): URL value 'http://www.saude.gov.br/fhir/r4/NamingSystem/BRRNDS-1' does not resolve
+  Warning @ Bundle.entry[0].resource/*Composition/null*/ (line 15, col14): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+  Warning @ Bundle.entry[1].resource/*Appointment/null*/ (line 154, col14): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+  Warning @ Bundle.entry[2].resource/*ServiceRequest/null*/ (line 239, col14): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+  Warning @ Bundle.entry[3].resource/*Condition/null*/ (line 306, col14): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+Done. Times: Loading: 00:11.748, validation: 00:02.902. Max Memory = 3Gb
