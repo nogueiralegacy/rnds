@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BRResultadoQualitativoExame-2.0",
+  "meta": {
+    "lastUpdated": "2020-03-26T13:21:39.798+00:00"
+  },
+  "language": "pt-BR",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRResultadoQualitativoExame-2.0",
+  "version": "2.0",
+  "name": "Resultado Qualitativo do Exame",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-03-26T13:21:38.6543319+00:00",
+  "publisher": "Ministério da Saúde do Brasil",
+  "description": "ValueSet utilizado para definir o valor atribuído ao resultado de um exame laboratorial realizado por método de análise qualitativo.",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRResultadoQualitativoExame"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoAVIDEZ"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoDTNT"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoHISPT"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoPRAU"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoPSNG"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoRGNR"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoRSBAC"
+      },
+      {
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoResultadoRSCUL"
+      }
+    ]
+  }
+}
