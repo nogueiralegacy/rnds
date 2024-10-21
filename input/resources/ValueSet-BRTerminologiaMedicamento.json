@@ -17,25 +17,15 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmCATMAT",
-        "version": "*"
-      },
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmCATMAT"      },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmEAN",
-        "version": "*"
-      },
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmEAN"      },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmANVISA",
-        "version": "*"
-      },
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmANVISA"      },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmAMPP",
-        "version": "*"
-      },
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmAMPP"      },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmVMP",
-        "version": "*"
-      }
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRObmVMP"      }
     ]
   }
 }

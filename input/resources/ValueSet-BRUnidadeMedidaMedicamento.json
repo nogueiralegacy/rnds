@@ -16,9 +16,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida",
-        "version": "*"
-      }
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida"      }
     ]
   },
   "id": "BRUnidadeMedidaMedicamento"
