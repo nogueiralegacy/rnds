@@ -17,8 +17,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeTempo",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeTempo"
       }
     ]
   }
