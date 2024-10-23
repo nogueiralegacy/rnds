@@ -211,3 +211,6 @@ instanceOptions:
   # if InstanceOf references a profile:
   #
   # setId: always # always | standalone-only
+
+dependencies:
+ hl7.terminology.r4: 6.0.2
