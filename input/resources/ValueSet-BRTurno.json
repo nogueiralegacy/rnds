@@ -1,25 +1,23 @@
 {
   "resourceType": "ValueSet",
+  "id": "BRTurno",
   "meta": {
     "lastUpdated": "2021-12-01T13:16:09.8385573+00:00"
   },
   "language": "pt-BR",
-  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRUnidadeConsumo",
+  "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRTurno",
   "version": "01.00",
-  "name": "Unidade de Consumo",
+  "name": "Turno do dia",
   "status": "draft",
   "experimental": false,
   "date": "2021-12-01T13:16:09.8385573+00:00",
   "publisher": "Ministério da Saúde do Brasil",
-  "description": "ValueSet utilizado para definir a unidade de consumo de um medicamento prescrito.",
+  "description": "ValueSet utilizado para definir o turno de um dia.",
   "immutable": false,
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRUnidadeMedida",
-        "version": "*"
-      }
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTurno"      }
     ]
-  },
-  "id": "BRUnidadeConsumo"
+  }
 }

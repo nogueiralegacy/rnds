@@ -16,9 +16,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRViaAdministracao",
-        "version": "*"
-      }
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRViaAdministracao"      }
     ]
   },
   "id": "BRViaAdministracao-1.0"
