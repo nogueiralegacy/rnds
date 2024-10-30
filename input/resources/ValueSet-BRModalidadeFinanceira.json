@@ -17,9 +17,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeFinanceira",
-        "version": "*"
-      }
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRModalidadeFinanceira"      }
     ]
   }
 }
