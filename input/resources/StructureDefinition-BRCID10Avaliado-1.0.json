@@ -304,7 +304,7 @@
           ],
           "rules": "open"
         },
-        "min": 0
+        "min": 3
       },
       {
         "id": "Condition.subject.extension:unidentifiedPatient.extension:gender",
