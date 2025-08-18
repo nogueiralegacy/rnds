@@ -16,12 +16,10 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10"
       },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCIAP2"
       }
     ]
   },

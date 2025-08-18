@@ -20,7 +20,39 @@
     "type" : "code"
   }],
   "concept": [
-      {
+    {
+      "code": "01",
+      "display": "Grupo 01"
+    },
+    {
+      "code": "02",
+      "display": "Grupo 02"
+    },
+    {
+      "code": "03",
+      "display": "Grupo 03"
+    },
+    {
+      "code": "04",
+      "display": "Grupo 04"
+    },
+    {
+      "code": "05",
+      "display": "Grupo 05"
+    },
+    {
+      "code": "06",
+      "display": "Grupo 06"
+    },
+    {
+      "code": "07",
+      "display": "Grupo 07"
+    },
+    {
+      "code": "08",
+      "display": "Grupo 08"
+    },
+    {
           "code": "0101",
           "display": "Ações coletivas/individuais em saúde",
           "property": [
