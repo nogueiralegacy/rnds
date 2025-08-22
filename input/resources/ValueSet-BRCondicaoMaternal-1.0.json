@@ -1,0 +1,22 @@
+{
+    "resourceType": "ValueSet",
+    "id": "BRCondicaoMaternal-1.0",
+    "language": "pt-BR",
+    "url": "http://www.saude.gov.br/fhir/r4/ValueSet/BRCondicaoMaternal-1.0",
+    "version": "1.0",
+    "name": "BRCondicaoMaternal",
+    "title": "Condição Maternal",
+    "status": "active",
+    "experimental": false,
+    "date": "2021-08-19T19:16:00.146+00:00",
+    "publisher": "Ministério da Saúde do Brasil",
+    "description": "ValueSet utilizado para Indicar a condição maternal da pessoa vacinada.",
+    "immutable": false,
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCondicaoMaternal"
+            }
+        ]
+    }
+}

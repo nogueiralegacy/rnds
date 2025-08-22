@@ -1,22 +1,21 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "lastUpdated": "2021-08-19T14:10:22Z"
-  },
   "language": "pt-BR",
   "url": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCondicaoMaternal",
   "version": "1.0",
-  "name": "Condição Maternal",
+  "name": "BRCondicaoMaternal",
+  "title": "Condição Maternal",
   "status": "active",
   "experimental": false,
-  "date": "2021-08-19T14:10:22Z",
+  "date": "2021-08-19T14:10:22.301430+00:00",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Indicação da condição maternal da pessoa vacinada.",
+  "caseSensitive": true,
   "content": "complete",
   "concept": [
     {
       "code": "1",
-      "display": "Nenhuma"
+      "display": "Não se aplica"
     },
     {
       "code": "2",

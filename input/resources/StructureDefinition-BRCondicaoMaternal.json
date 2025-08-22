@@ -4,14 +4,19 @@
   "url": "http://www.saude.gov.br/fhir/r4/StructureDefinition/BRCondicaoMaternal",
   "version": "1.0",
   "name": "BRCondicaoMaternal",
-  "title": "CondicaoMaternal",
+  "title": "Condição Maternal",
   "status": "active",
   "date": "2021-09-17",
   "publisher": "Ministério da Saúde do Brasil",
   "description": "Indicação da condição maternal da pessoa vacinada (Nenhuma, Gestante, Puérpera). O campo é de preenchimento obrigatório para indivíduos em idade fértil, independente do sexo.",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
+    {
+      "type": "element",
+      "expression": "Immunization"
+    },
     {
       "type": "element",
       "expression": "Immunization.protocolApplied"
