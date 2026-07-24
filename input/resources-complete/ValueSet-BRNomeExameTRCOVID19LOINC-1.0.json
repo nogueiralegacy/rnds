@@ -17,7 +17,6 @@
     "include": [
       {
         "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC",
-        "version": "*",
         "concept": [
           {
             "code": "94507-1",

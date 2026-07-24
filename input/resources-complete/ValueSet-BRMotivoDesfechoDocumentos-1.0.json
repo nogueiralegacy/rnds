@@ -20,7 +20,6 @@
     "include": [
       {
         "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRMotivoDesfecho",
-        "version": "*",
         "concept": [
           {
             "code": "01"

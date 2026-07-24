@@ -19,7 +19,6 @@
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
-        "version": "*",
         "concept": [
           {
             "code": "FRS",
@@ -84,8 +83,7 @@
         ]
       },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAmostraGAL",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRTipoAmostraGAL"
       }
     ]
   }

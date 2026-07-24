@@ -16,18 +16,15 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC"
       },
       {
-        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameGAL",
-        "version": "*"
+        "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameGAL"
       }
     ],
     "exclude": [
       {
         "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRNomeExameLOINC",
-        "version": "*",
         "concept": [
           {
             "code": "94764-8",
